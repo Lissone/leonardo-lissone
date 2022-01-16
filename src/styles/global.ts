@@ -8,8 +8,17 @@ export const GlobalStyle = createGlobalStyle`
   }
 
   :root {
-    --background: #494949;
-    --light: #f8f9fa;
+    --red-200: #D06C73;
+    --red-400: #CA3E47;
+
+    --gray-100: #D2D2D2;
+    --gray-300: #979797;
+    --gray-500: #7E7E7E;
+    --gray-600: #666666;
+    --gray-700: #525252;
+    --gray-800: #414141;
+    --gray-900: #313131;
+    --gray-900-opacity-80: rgba(49, 49, 49, 0.8);
   }
 
   @media (max-width: 1080px) {
@@ -31,17 +40,17 @@ export const GlobalStyle = createGlobalStyle`
   }
 
   body {
-    background: var(--background);
+    background: var(--gray-900);
   }
 
   body, input, textarea, button {
-    font: 500 1rem Inter, sans-serif;
-    color: var(--light);
+    font: 400 1rem Nunito, sans-serif;
+    color: var(--gray-300);
   }
 
   h1, h2, h3, h4, h5, h6 {
     font-weight: 600;
-    color: var(--light);
+    color: var(--gray-100);
   }
 
   h1 {
