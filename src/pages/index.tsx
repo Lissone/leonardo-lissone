@@ -1,17 +1,17 @@
 import Head from 'next/head'
 
-import styles from '@styles/home.module.scss'
+import { Container } from '@styles/home'
 
 export default function Home() {
   return (
     <>
       <Head>
-        <title>Home</title>
+        <title>Lissone Bio</title>
       </Head>
 
-      <main className={styles.container}>
+      <Container>
         <h1>Hello world</h1>
-      </main>
+      </Container>
     </>
   )
 }
