@@ -45,6 +45,9 @@ export const GlobalStyle = createGlobalStyle`
 
   body, input, textarea, button {
     font: 400 1rem Nunito, sans-serif;
+
+    border: 0;
+
     color: var(--gray-300);
   }
 

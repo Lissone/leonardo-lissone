@@ -10,7 +10,7 @@ export default function Home() {
       </Head>
 
       <Container>
-        <h1>Hello world</h1>
+        <h1>Home</h1>
       </Container>
     </>
   )
