@@ -9,7 +9,7 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>Lissone Bio</title>
+        <title>Leonardo Lissone</title>
       </Head>
 
       <Container>
