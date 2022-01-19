@@ -1,6 +1,7 @@
 import { AppProps } from 'next/app'
 
 import { FixedBorderLed } from '@components/FixedBorderLed'
+import { FixedSocials } from '@components/FixedSocials'
 import { Header } from '@components/Header'
 
 import { Container, Content } from '@styles/app'
@@ -17,7 +18,11 @@ export default function MyApp({ Component, pageProps }: AppProps) {
         <Content>
           <Header />
 
-          <Component {...pageProps} />
+          <main>
+            <FixedSocials />
+
+            <Component {...pageProps} />
+          </main>
         </Content>
       </Container>
     </>

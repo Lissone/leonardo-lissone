@@ -13,7 +13,7 @@ export function Presentation() {
   return (
     <Container id="presentation">
       <Content>
-        <img src="/images/cable-led.svg" alt="Cabo de led" />
+        <img src="/images/cable-presentation.svg" alt="Cabo de led" />
 
         <Column>
           <Heading>
