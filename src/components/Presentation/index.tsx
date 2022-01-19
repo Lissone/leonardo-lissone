@@ -11,9 +11,9 @@ import {
 
 export function Presentation() {
   return (
-    <Container>
+    <Container id="presentation">
       <Content>
-        <img src="/images/cable-led.svg" alt="Imagem de cabo de led" />
+        <img src="/images/cable-led.svg" alt="Cabo de led" />
 
         <Column>
           <Heading>
@@ -52,7 +52,7 @@ export function Presentation() {
       </Content>
 
       <ImageContainer>
-        <img src="/images/bearing-led.svg" alt="Imagem de rolamento com led" />
+        <img src="/images/bearing-led.svg" alt="Rolamento com led" />
       </ImageContainer>
     </Container>
   )

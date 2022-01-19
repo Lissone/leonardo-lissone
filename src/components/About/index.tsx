@@ -51,7 +51,7 @@ export function About() {
 
           <SkillsList>
             {technologies.map(technology => (
-              <li>
+              <li key={technology}>
                 <img src="/icons/arrow.svg" alt="Seta vermelha com led" />
                 {technology}
               </li>

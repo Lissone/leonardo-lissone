@@ -1,9 +1,10 @@
 import { Link as Scroll } from 'react-scroll'
 import styled from 'styled-components'
 
-export const Container = styled.div`
+export const Container = styled.section`
   width: 100%;
-  height: calc(100vh - 5.625rem);
+  height: 100vh;
+  padding-top: 5.625rem; // header height
   padding-left: 4rem;
 
   display: flex;
@@ -67,7 +68,6 @@ export const Heading = styled.div`
 
     text-transform: uppercase;
     line-height: 3.5rem;
-    border: 1px solid var(--gray-900-opacity-80);
     text-shadow: 0px 4px 40px rgba(202, 62, 71, 0.5);
 
     color: var(--red-400);
