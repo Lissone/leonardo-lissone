@@ -3,7 +3,7 @@ import styled from 'styled-components'
 export const Container = styled.section`
   width: 100%;
   height: 100vh;
-  padding-top: 5.625rem; // header height
+  padding-top: 1rem;
   padding-left: 12rem;
 
   position: relative;
@@ -37,7 +37,7 @@ export const Heading = styled.div`
 export const Cable = styled.img`
   position: absolute;
 
-  top: 11.15rem;
+  top: 6.5rem;
   right: 5rem;
 `
 
