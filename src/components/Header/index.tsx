@@ -30,7 +30,7 @@ export function Header() {
           <NavLink to="about">
             <Skills />
           </NavLink>
-          <NavLink to="jobs">
+          <NavLink to="work-experiences">
             <Suitcase />
           </NavLink>
           <NavLink to="projects">

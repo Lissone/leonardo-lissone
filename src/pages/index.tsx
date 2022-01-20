@@ -2,6 +2,7 @@ import Head from 'next/head'
 
 import { About } from '@components/About'
 import { Presentation } from '@components/Presentation'
+import { WorkExperiences } from '@components/WorkExperiences'
 
 import { Container } from '@styles/home'
 
@@ -16,6 +17,8 @@ export default function Home() {
         <Presentation />
 
         <About />
+
+        <WorkExperiences />
       </Container>
     </>
   )

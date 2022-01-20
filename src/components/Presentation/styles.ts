@@ -11,15 +11,6 @@ export const Container = styled.section`
   justify-content: space-between;
 `
 
-export const ImageContainer = styled.div`
-  display: flex;
-  align-items: center;
-
-  img {
-    height: 38rem;
-  }
-`
-
 export const Content = styled.div`
   padding-top: 6rem;
 
@@ -108,5 +99,14 @@ export const ContactButton = styled(Scroll)`
 
   &:hover {
     transform: scale(1.03);
+  }
+`
+
+export const ImageContainer = styled.div`
+  display: flex;
+  align-items: center;
+
+  img {
+    height: 38rem;
   }
 `

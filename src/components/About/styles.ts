@@ -2,8 +2,8 @@ import styled from 'styled-components'
 
 export const Container = styled.section`
   width: 100%;
-  height: calc(100vh - 5rem);
-  padding: 4rem 6rem 0 12rem;
+  height: 100vh;
+  padding: 3rem 6rem 0 12rem;
 
   position: relative;
 
@@ -69,7 +69,7 @@ export const SkillsList = styled.ul`
 export const Cable = styled.img`
   position: absolute;
 
-  top: 5.6rem;
+  top: 4.6rem;
   left: 31rem;
 `
 
