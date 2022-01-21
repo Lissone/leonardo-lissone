@@ -73,4 +73,24 @@ export const GlobalStyle = createGlobalStyle`
     opacity: 0.6;
     cursor: not-allowed;
   }
+
+  /* ===== Scrollbar ===== */
+  /* Firefox */
+  * {
+    scrollbar-width: auto;
+    scrollbar-color: var(--red-400) var(--gray-800);
+  }
+
+  /* Chrome, Edge, and Safari */
+  *::-webkit-scrollbar {
+    width: 10px;
+  }
+
+  *::-webkit-scrollbar-track {
+    background: var(--gray-800);
+  }
+
+  *::-webkit-scrollbar-thumb {
+    background-color: var(--red-400);
+  }
 `

@@ -43,6 +43,8 @@ export const LanguageSwitch = styled(Switch)`
 export const ResumeButton = styled.button`
   padding: 0.7rem 2.4rem;
 
+  font-weight: 600;
+
   border: 2px solid var(--red-400);
   border-radius: 0.2rem;
   box-shadow: 0px 0px 20px var(--red-400);
