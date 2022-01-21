@@ -18,7 +18,7 @@ export function Contact() {
         </Text>
 
         <ContactButton
-          href="https://www.linkedin.com/in/lissone/"
+          href="mailto:leonardo.lissonez@gmail.com"
           target="_blank"
           rel="noreferrer"
         >

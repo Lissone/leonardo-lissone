@@ -40,7 +40,7 @@ export const LanguageSwitch = styled(Switch)`
   box-shadow: 0rem 0rem 1.25rem var(--red-400);
 `
 
-export const ResumeButton = styled.button`
+export const ResumeButton = styled.a`
   padding: 0.7rem 2.4rem;
 
   font-weight: 600;

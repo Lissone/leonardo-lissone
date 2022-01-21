@@ -86,7 +86,9 @@ export function Header() {
             }
           />
 
-          <ResumeButton type="button">Resumo</ResumeButton>
+          <ResumeButton href="/photo.png" download>
+            Resumo
+          </ResumeButton>
         </Buttons>
       </Content>
     </Container>
