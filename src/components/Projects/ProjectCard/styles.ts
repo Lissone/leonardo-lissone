@@ -14,7 +14,7 @@ export const Container = styled.div`
     transform: scale(1.02);
 
     border-color: var(--red-400);
-    box-shadow: 0px 0px 15px var(--red-400);
+    box-shadow: 0rem 0rem 1rem var(--red-400);
   }
 
   :hover .project-card-actions {

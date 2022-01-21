@@ -66,7 +66,7 @@ export const ContactButton = styled.a`
 
   border: 1px solid var(--red-400);
   border-radius: 0.5rem;
-  box-shadow: 0px 0px 30px rgba(202, 62, 71, 0.7);
+  box-shadow: 0rem 0rem 1.875rem rgba(202, 62, 71, 0.7);
 
   color: var(--gray-300);
   background: var(--gray-900-opacity-80);

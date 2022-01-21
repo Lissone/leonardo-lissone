@@ -50,8 +50,8 @@ export function Header() {
             onColor="#313131"
             onHandleColor="#CA3E47"
             offHandleColor="#CA3E47"
-            boxShadow="0px 0px 10px #CA3E47"
-            activeBoxShadow="0px 0px 10px #CA3E47"
+            boxShadow="0rem 0rem 0.625rem #CA3E47"
+            activeBoxShadow="0rem 0rem 0.625rem #CA3E47"
             uncheckedIcon={
               <div
                 style={{

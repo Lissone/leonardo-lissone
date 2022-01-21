@@ -83,7 +83,7 @@ export const GlobalStyle = createGlobalStyle`
 
   /* Chrome, Edge, and Safari */
   *::-webkit-scrollbar {
-    width: 10px;
+    width: 0.625rem;
   }
 
   *::-webkit-scrollbar-track {

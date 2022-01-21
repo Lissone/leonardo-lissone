@@ -28,7 +28,7 @@ export const Heading = styled.div`
     font-weight: 700;
 
     line-height: 3.5rem;
-    text-shadow: 0px 4px 40px rgba(202, 62, 71, 0.5);
+    text-shadow: 0rem 0.25rem 2.5rem rgba(202, 62, 71, 0.5);
 
     color: var(--red-400);
   }

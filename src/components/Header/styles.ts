@@ -7,7 +7,7 @@ export const Container = styled.header`
   position: fixed;
   z-index: 100;
 
-  box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.25);
+  box-shadow: 0rem 0rem 1.875rem rgba(0, 0, 0, 0.25);
 
   background: var(--gray-800);
 `
@@ -37,7 +37,7 @@ export const Buttons = styled.div`
 
 export const LanguageSwitch = styled(Switch)`
   border: 2px solid var(--red-400);
-  box-shadow: 0px 0px 20px var(--red-400);
+  box-shadow: 0rem 0rem 1.25rem var(--red-400);
 `
 
 export const ResumeButton = styled.button`
@@ -47,7 +47,7 @@ export const ResumeButton = styled.button`
 
   border: 2px solid var(--red-400);
   border-radius: 0.2rem;
-  box-shadow: 0px 0px 20px var(--red-400);
+  box-shadow: 0rem 0rem 1.25rem var(--red-400);
 
   color: var(--red-400);
   background: var(--gray-900-opacity-80);

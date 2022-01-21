@@ -21,7 +21,7 @@ export const Tab = styled.li`
     padding: 1rem 2rem;
 
     font-size: 1.2rem;
-    border-left: 4px solid var(--gray-800);
+    border-left: 0.25rem solid var(--gray-800);
 
     color: var(--gray-500);
     background: none;
