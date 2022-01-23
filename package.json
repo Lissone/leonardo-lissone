@@ -1,8 +1,8 @@
 {
-  "name": "next-style-guide",
+  "name": "my-bio",
   "version": "1.0.0",
-  "description": "My application description",
-  "repository": "https://github.com/Lissone/next-style-guide.git",
+  "description": "Leonardo Lissone's bio portfolio.",
+  "repository": "https://github.com/Lissone/my-bio.git",
   "author": "Leonardo Dias Lissone <leonardo.lissonez@gmail.com>",
   "license": "MIT",
   "private": true,
