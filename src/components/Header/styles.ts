@@ -7,13 +7,16 @@ export const Container = styled.header`
   position: fixed;
   z-index: 100;
 
+  display: flex;
+  justify-content: center;
+
   box-shadow: 0rem 0rem 1.875rem rgba(0, 0, 0, 0.25);
 
   background: var(--gray-800);
 `
 
 export const Content = styled.div`
-  padding: 0 4rem;
+  max-width: 88rem;
 
   display: grid;
   grid-template-columns: 1fr 3fr 1fr;
