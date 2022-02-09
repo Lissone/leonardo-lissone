@@ -7,11 +7,18 @@ export const Container = styled.section`
 
   position: relative;
 
-  display: flex;
-  justify-content: space-between;
+  @media (min-width: 1550px) {
+    display: flex;
+    justify-content: center;
+  }
 `
 
 export const Content = styled.div`
+  display: flex;
+  gap: 20rem;
+`
+
+export const Column = styled.div`
   display: flex;
   flex-direction: column;
 `
@@ -32,6 +39,8 @@ export const Heading = styled.div`
 `
 
 export const Text = styled.div`
+  max-width: 43rem;
+
   padding-top: 2.5rem;
 
   display: flex;
@@ -66,15 +75,8 @@ export const SkillsList = styled.ul`
   }
 `
 
-export const Cable = styled.img`
-  position: absolute;
-
-  top: 6.5rem;
-  left: 31rem;
-`
-
 export const PhotoContainer = styled.div`
-  width: 100%;
+  margin: 0 auto;
 
   position: relative;
 
@@ -89,5 +91,20 @@ export const PhotoContainer = styled.div`
 
   img:nth-child(2) {
     top: 6rem;
+  }
+`
+
+export const Cable = styled.img`
+  margin-left: auto;
+  margin-right: auto;
+
+  position: absolute;
+
+  top: 6.5rem;
+  left: 11rem;
+  right: 0;
+
+  @media (min-width: 1550px) {
+    left: 25rem;
   }
 `
