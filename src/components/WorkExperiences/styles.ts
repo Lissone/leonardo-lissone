@@ -13,7 +13,7 @@ export const Container = styled.section`
 `
 
 export const Content = styled.div`
-  max-width: 68rem;
+  max-width: 62rem;
 
   margin: 0 auto;
   padding-top: 4rem;
@@ -45,7 +45,7 @@ export const Cable = styled.img`
 `
 
 export const ImageContainer = styled.div`
-  margin-left: 14rem;
+  /* margin-left: 2rem; */
 
   display: flex;
   align-items: center;
