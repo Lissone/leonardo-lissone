@@ -8,6 +8,8 @@ export const Container = styled.section`
   position: relative;
 
   @media (min-width: 1550px) {
+    padding-top: 8rem;
+
     display: flex;
     justify-content: center;
   }
@@ -95,8 +97,7 @@ export const PhotoContainer = styled.div`
 `
 
 export const Cable = styled.img`
-  margin-left: auto;
-  margin-right: auto;
+  margin: 0 auto;
 
   position: absolute;
 
@@ -105,6 +106,7 @@ export const Cable = styled.img`
   right: 0;
 
   @media (min-width: 1550px) {
+    top: 9.5rem;
     left: 25rem;
   }
 `

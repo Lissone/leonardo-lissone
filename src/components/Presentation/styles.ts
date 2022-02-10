@@ -113,4 +113,12 @@ export const ImageContainer = styled.div`
   img {
     height: 38rem;
   }
+
+  @media (min-width: 1550px) {
+    margin-left: 11rem;
+
+    img {
+      height: 44rem;
+    }
+  }
 `

@@ -45,8 +45,6 @@ export const Cable = styled.img`
 `
 
 export const ImageContainer = styled.div`
-  /* margin-left: 2rem; */
-
   display: flex;
   align-items: center;
 
