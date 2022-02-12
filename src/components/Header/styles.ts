@@ -16,11 +16,16 @@ export const Container = styled.header`
 `
 
 export const Content = styled.div`
-  max-width: 88rem;
+  max-width: 84rem;
 
   display: grid;
   grid-template-columns: 1fr 3fr 1fr;
   align-items: center;
+
+  @media (max-width: 1440px) {
+    padding-left: 3rem;
+    padding-right: 4rem;
+  }
 `
 
 export const Navigation = styled.nav`
@@ -35,7 +40,7 @@ export const Buttons = styled.div`
   display: flex;
   align-items: center;
   justify-content: flex-end;
-  gap: 3rem;
+  gap: 2rem;
 `
 
 export const LanguageSwitch = styled(Switch)`
