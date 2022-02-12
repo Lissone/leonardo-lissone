@@ -1,10 +1,13 @@
 import styled from 'styled-components'
 
 export const Container = styled.div`
+  margin: 0 auto;
+
   position: fixed;
 
   bottom: -1rem;
-  left: 4rem;
+  left: 0;
+  right: 85.5rem;
 
   z-index: 100;
 `

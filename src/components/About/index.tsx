@@ -1,6 +1,7 @@
 import {
   Container,
   Content,
+  Column,
   Heading,
   Text,
   HighlightText,
@@ -22,13 +23,13 @@ export function About() {
   return (
     <Container id="about">
       <Content>
-        <Heading>
-          <img src="/icons/arrow-heading.svg" alt="Seta grande com led" />
+        <Column>
+          <Heading>
+            <img src="/icons/arrow-heading.svg" alt="Seta grande com led" />
 
-          <h1>Sobre mim</h1>
-        </Heading>
+            <h1>Sobre mim</h1>
+          </Heading>
 
-        <div>
           <Text>
             <p>
               Atualmente fazendo estágio na área de <strong>desenvolvimento</strong> na{' '}
@@ -57,15 +58,17 @@ export function About() {
               </li>
             ))}
           </SkillsList>
-        </div>
+        </Column>
+
+        <Column>
+          <PhotoContainer>
+            <img src="/images/avatar-border.svg" alt="Borda do avatar" />
+            <img src="/photo.png" alt="Foto do Leonardo Lissone" />
+          </PhotoContainer>
+        </Column>
       </Content>
 
       <Cable src="/images/cable-about.svg" alt="Cabo de led" />
-
-      <PhotoContainer>
-        <img src="/images/avatar-border.svg" alt="Borda do avatar" />
-        <img src="/photo.png" alt="Foto do Leonardo Lissone" />
-      </PhotoContainer>
     </Container>
   )
 }

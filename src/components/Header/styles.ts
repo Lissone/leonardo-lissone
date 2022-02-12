@@ -7,17 +7,25 @@ export const Container = styled.header`
   position: fixed;
   z-index: 100;
 
+  display: flex;
+  justify-content: center;
+
   box-shadow: 0rem 0rem 1.875rem rgba(0, 0, 0, 0.25);
 
   background: var(--gray-800);
 `
 
 export const Content = styled.div`
-  padding: 0 4rem;
+  max-width: 84rem;
 
   display: grid;
   grid-template-columns: 1fr 3fr 1fr;
   align-items: center;
+
+  @media (max-width: 1440px) {
+    padding-left: 3rem;
+    padding-right: 4rem;
+  }
 `
 
 export const Navigation = styled.nav`
@@ -32,7 +40,7 @@ export const Buttons = styled.div`
   display: flex;
   align-items: center;
   justify-content: flex-end;
-  gap: 3rem;
+  gap: 2rem;
 `
 
 export const LanguageSwitch = styled(Switch)`

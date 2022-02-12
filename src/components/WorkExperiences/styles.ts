@@ -13,6 +13,9 @@ export const Container = styled.section`
 `
 
 export const Content = styled.div`
+  max-width: 62rem;
+
+  margin: 0 auto;
   padding-top: 4rem;
 
   display: flex;

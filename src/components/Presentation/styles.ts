@@ -12,6 +12,9 @@ export const Container = styled.section`
 `
 
 export const Content = styled.div`
+  max-width: 60rem;
+
+  margin: 0 auto;
   padding-top: 6rem;
 
   display: flex;
@@ -66,7 +69,6 @@ export const Heading = styled.div`
 `
 
 export const ResumeText = styled.div`
-  max-width: 56rem;
   padding-top: 1rem;
 
   display: flex;
@@ -103,10 +105,20 @@ export const ContactButton = styled(Scroll)`
 `
 
 export const ImageContainer = styled.div`
+  margin-left: 13.5rem;
+
   display: flex;
   align-items: center;
 
   img {
     height: 38rem;
+  }
+
+  @media (min-width: 1550px) {
+    margin-left: 11rem;
+
+    img {
+      height: 44rem;
+    }
   }
 `

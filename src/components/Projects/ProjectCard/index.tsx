@@ -1,5 +1,4 @@
 import { FiGithub, FiGlobe } from 'react-icons/fi'
-import ReactTooltip from 'react-tooltip'
 
 import {
   Container,
@@ -20,12 +19,10 @@ export function ProjectCard() {
           <img src="/portfolio-image.png" alt="Imagem de um projeto" />
 
           <CoverActions className="project-card-actions">
-            <ReactTooltip place="bottom" type="dark" effect="solid" />
-
-            <a data-tip="Repositório" href="#">
+            <a href="#">
               <FiGithub size={24} />
             </a>
-            <a data-tip="Web" href="#">
+            <a href="#">
               <FiGlobe size={24} />
             </a>
           </CoverActions>

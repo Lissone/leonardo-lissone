@@ -77,17 +77,3 @@ export const ContactButton = styled.a`
     transform: scale(1.03);
   }
 `
-
-// export const ImageContainer = styled.div`
-//   position: relative;
-
-//   display: flex;
-//   align-items: center;
-
-//   img {
-//     position: absolute;
-//     height: 38rem;
-
-//     transform: rotateZ(90deg);
-//   }
-// `
