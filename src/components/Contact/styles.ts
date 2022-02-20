@@ -3,7 +3,7 @@ import styled from 'styled-components'
 export const Container = styled.footer`
   width: 100%;
   height: calc(100vh - 5rem);
-  padding-top: 2rem;
+  padding-top: 4rem;
 
   display: flex;
   flex-direction: column;
@@ -23,6 +23,24 @@ export const Container = styled.footer`
     bottom: -12rem;
 
     transform: rotateZ(90deg);
+
+    @media (max-width: 630px) {
+      height: 34rem;
+
+      bottom: -9.2rem;
+    }
+
+    @media (max-width: 480px) {
+      height: 28rem;
+
+      bottom: -7.6rem;
+    }
+
+    @media (max-width: 370px) {
+      height: 24rem;
+
+      bottom: -6.5rem;
+    }
   }
 `
 
@@ -42,11 +60,19 @@ export const Subtitle = styled.div`
     font-weight: 400;
 
     color: var(--red-400);
+
+    @media (max-width: 440px) {
+      font-size: 1.4rem;
+    }
   }
 `
 
 export const Title = styled.h1`
   font-size: 2.5rem;
+
+  @media (max-width: 440px) {
+    font-size: 2rem;
+  }
 `
 
 export const Text = styled.p`
@@ -56,6 +82,10 @@ export const Text = styled.p`
   font-size: 1.2rem;
 
   text-align: center;
+
+  @media (max-width: 900px) {
+    max-width: 80%;
+  }
 `
 
 export const ContactButton = styled.a`
@@ -75,5 +105,29 @@ export const ContactButton = styled.a`
 
   &:hover {
     transform: scale(1.03);
+  }
+`
+
+export const Socials = styled.div`
+  margin-top: 3rem;
+
+  display: none;
+  gap: 2rem;
+
+  a {
+    transition: 0.3s all;
+
+    &:hover {
+      transform: scale(1.08);
+      filter: brightness(0.9);
+    }
+
+    svg {
+      color: var(--gray-600);
+    }
+  }
+
+  @media (max-width: 770px) {
+    display: flex;
   }
 `
