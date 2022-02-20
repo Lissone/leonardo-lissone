@@ -3,21 +3,47 @@ import styled from 'styled-components'
 export const Container = styled.section`
   width: 100%;
   height: 100vh;
-  padding: 5rem 6rem 0 12rem;
+  padding-top: 5rem;
 
   position: relative;
 
+  display: flex;
+  justify-content: center;
+
   @media (min-width: 1550px) {
     padding-top: 8rem;
+  }
 
-    display: flex;
-    justify-content: center;
+  @media (max-width: 920px) {
+    padding-left: 9rem;
+    padding-right: 4rem;
+
+    justify-content: flex-start;
+  }
+
+  @media (max-width: 770px) {
+    padding-left: 6rem;
+    padding-right: 4rem;
+  }
+
+  @media (max-width: 650px) {
+    padding-left: 3rem;
+    padding-right: 3rem;
   }
 `
 
 export const Content = styled.div`
   display: flex;
   gap: 20rem;
+
+  @media (max-width: 1500px) {
+    gap: 13rem;
+  }
+
+  @media (max-width: 1300px) {
+    flex-direction: column;
+    gap: 0;
+  }
 `
 
 export const Column = styled.div`
@@ -37,6 +63,11 @@ export const Heading = styled.div`
     text-shadow: 0rem 0.25rem 2.5rem rgba(202, 62, 71, 0.5);
 
     color: var(--red-400);
+
+    @media (max-width: 360px) {
+      font-size: 2.7rem;
+      line-height: 3.2rem;
+    }
   }
 `
 
@@ -51,6 +82,10 @@ export const Text = styled.div`
 
   p {
     font-size: 1.2rem;
+  }
+
+  @media (max-width: 920px) {
+    max-width: 100%;
   }
 `
 
@@ -94,19 +129,46 @@ export const PhotoContainer = styled.div`
   img:nth-child(2) {
     top: 6rem;
   }
-`
 
-export const Cable = styled.img`
-  margin: 0 auto;
+  @media (max-width: 1500px) {
+    img {
+      width: 28rem;
+      height: 28rem;
+    }
 
-  position: absolute;
+    img:nth-child(2) {
+      width: 22rem;
+      height: 22rem;
 
-  top: 6.5rem;
-  left: 11rem;
-  right: 0;
+      top: 6rem;
+    }
+  }
 
-  @media (min-width: 1550px) {
-    top: 9.5rem;
-    left: 25rem;
+  @media (max-width: 1300px) {
+    img {
+      width: 28rem;
+      height: 28rem;
+    }
+
+    img:nth-child(2) {
+      width: 22rem;
+      height: 22rem;
+
+      top: 6rem;
+    }
+  }
+
+  @media (max-width: 420px) {
+    img {
+      width: 22rem;
+      height: 22rem;
+    }
+
+    img:nth-child(2) {
+      width: 17.5rem;
+      height: 17.5rem;
+
+      top: 5.5rem;
+    }
   }
 `
