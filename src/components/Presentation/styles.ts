@@ -22,6 +22,11 @@ export const Container = styled.section`
     padding-left: 3rem;
     padding-right: 3rem;
   }
+
+  @media (max-width: 500px) {
+    height: 100%;
+    padding-bottom: 5.625rem;
+  }
 `
 
 export const Content = styled.div`
@@ -47,11 +52,6 @@ export const Column = styled.div`
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-
-  @media (max-width: 770px) {
-    justify-content: center;
-    align-items: center;
-  }
 `
 
 export const Heading = styled.div`
@@ -82,7 +82,6 @@ export const Heading = styled.div`
     font-size: 3rem;
     font-weight: 700;
 
-    text-align: center;
     text-transform: uppercase;
     line-height: 3.5rem;
     text-shadow: 0rem 0.25rem 2.5rem rgba(202, 62, 71, 0.5);
@@ -104,14 +103,9 @@ export const Heading = styled.div`
     }
   }
 
-  @media (max-width: 770px) {
-    align-items: center;
-    justify-content: center;
-  }
-
   @media (max-width: 430px) {
     h1 {
-      font-size: 2.25rem;
+      font-size: 2.15rem;
     }
   }
 `
@@ -125,10 +119,6 @@ export const ResumeText = styled.div`
 
   p {
     font-size: 1.2rem;
-  }
-
-  @media (max-width: 770px) {
-    text-align: center;
   }
 `
 
