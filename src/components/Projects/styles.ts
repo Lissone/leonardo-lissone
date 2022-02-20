@@ -16,13 +16,14 @@ export const Container = styled.section`
     flex-direction: column;
     align-items: center;
     gap: 2rem;
+  }
 
-    .cable {
-      position: absolute;
+  @media (max-width: 650px) {
+    padding: 2rem 3rem;
+  }
 
-      top: 1.4rem;
-      right: 44.3rem;
-    }
+  @media (max-width: 360px) {
+    padding: 2rem 1.5rem;
   }
 `
 
@@ -35,10 +36,15 @@ export const Heading = styled.div`
     font-size: 2.5rem;
     font-weight: 700;
 
-    line-height: 3.5rem;
+    text-align: center;
+    line-height: 3rem;
     text-shadow: 0rem 0.25rem 2.5rem rgba(202, 62, 71, 0.5);
 
     color: var(--red-400);
+
+    @media (max-width: 840px) {
+      font-size: 2rem;
+    }
   }
 
   button {
@@ -63,4 +69,12 @@ export const Content = styled.div`
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   gap: 3rem;
+
+  @media (max-width: 1350px) {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  @media (max-width: 850px) {
+    grid-template-columns: 1fr;
+  }
 `

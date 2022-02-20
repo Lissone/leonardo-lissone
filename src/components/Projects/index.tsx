@@ -7,10 +7,6 @@ export function Projects() {
   return (
     <Container id="projects">
       <header>
-        <img src="/images/led-light.svg" alt="Luz de led" />
-
-        <img src="/images/cable-projects.svg" alt="Cabo de led" className="cable" />
-
         <Heading>
           <h1>Alguns projetos que já desenvolvi</h1>
 
