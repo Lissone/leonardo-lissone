@@ -5,10 +5,7 @@ export const Container = styled.header`
   width: 100%;
 
   position: fixed;
-  z-index: 100;
-
-  display: flex;
-  justify-content: center;
+  z-index: 10;
 
   box-shadow: 0rem 0rem 1.875rem rgba(0, 0, 0, 0.25);
 
@@ -16,15 +13,63 @@ export const Container = styled.header`
 `
 
 export const Content = styled.div`
-  max-width: 84rem;
+  padding: 0 3rem;
 
   display: grid;
-  grid-template-columns: 1fr 3fr 1fr;
   align-items: center;
+  grid-template-columns: 1fr 4fr;
 
-  @media (max-width: 1440px) {
-    padding-left: 3rem;
-    padding-right: 4rem;
+  @media (max-width: 770px) {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  @media (max-width: 400px) {
+    padding-right: 1rem;
+  }
+`
+
+export const Hamburguer = styled.div`
+  display: none;
+
+  cursor: pointer;
+
+  @media (max-width: 770px) {
+    padding-right: 2rem;
+
+    display: flex;
+  }
+`
+
+interface MenuProps {
+  isOpen: boolean
+}
+
+export const Menu = styled.div<MenuProps>`
+  display: flex;
+  justify-content: space-between;
+
+  @media (max-width: 770px) {
+    width: 18rem;
+    height: 100vh;
+    max-height: ${({ isOpen }) => (isOpen ? '900px' : '0')};
+    padding-top: ${({ isOpen }) => (isOpen ? '3rem' : '0')};
+
+    position: fixed;
+    z-index: 15;
+
+    top: 0rem;
+    left: 0.65rem;
+
+    overflow: hidden;
+
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 6rem;
+
+    background: var(--gray-800);
+
+    transition: all 0.4s ease;
   }
 `
 
@@ -34,6 +79,10 @@ export const Navigation = styled.nav`
   display: flex;
   align-items: center;
   gap: 3rem;
+
+  @media (max-width: 770px) {
+    flex-direction: column;
+  }
 `
 
 export const Buttons = styled.div`
@@ -41,6 +90,10 @@ export const Buttons = styled.div`
   align-items: center;
   justify-content: flex-end;
   gap: 2rem;
+
+  @media (max-width: 770px) {
+    flex-direction: column;
+  }
 `
 
 export const LanguageSwitch = styled(Switch)`
@@ -64,5 +117,9 @@ export const ResumeButton = styled.a`
 
   &:hover {
     transform: scale(1.03);
+  }
+
+  @media (max-width: 770px) {
+    font-size: 1.3rem;
   }
 `
