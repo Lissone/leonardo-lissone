@@ -1,4 +1,4 @@
-import { Container, Content, Heading, Cable, ImageContainer } from './styles'
+import { Container, Content, Heading, ImageContainer } from './styles'
 import { Tabs } from './Tabs'
 import { HeadingContentTab, Highlight } from './Tabs/styles'
 
@@ -108,8 +108,6 @@ export function WorkExperiences() {
           </div>
         </Tabs>
       </Content>
-
-      <Cable src="/images/cable-work-experience.svg" alt="Cabo de led" />
 
       <ImageContainer>
         <img src="/images/prism-cut.svg" alt="Prima cortado com led" />

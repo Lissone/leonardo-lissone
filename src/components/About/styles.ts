@@ -14,6 +14,10 @@ export const Container = styled.section`
     padding-top: 8rem;
   }
 
+  @media (max-width: 1350px) {
+    height: 120vh;
+  }
+
   @media (max-width: 920px) {
     padding-left: 9rem;
     padding-right: 4rem;
@@ -40,7 +44,7 @@ export const Content = styled.div`
     gap: 13rem;
   }
 
-  @media (max-width: 1300px) {
+  @media (max-width: 1350px) {
     flex-direction: column;
     gap: 0;
   }

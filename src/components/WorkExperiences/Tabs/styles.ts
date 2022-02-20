@@ -1,20 +1,31 @@
 import styled from 'styled-components'
 
 export const Container = styled.div`
+  overflow: hidden;
+
   padding-top: 4rem;
 
   display: flex;
+
+  @media (max-width: 750px) {
+    flex-direction: column;
+  }
 `
 
 export const NavTabs = styled.ul`
   display: flex;
   flex-direction: column;
   align-items: start;
+
+  @media (max-width: 750px) {
+    overflow-x: auto;
+    overflow-y: hidden;
+
+    flex-direction: row;
+  }
 `
 
 export const Tab = styled.li`
-  width: 100%;
-
   list-style: none;
 
   button {
@@ -30,6 +41,11 @@ export const Tab = styled.li`
 
     &:hover {
       filter: brightness(0.85);
+    }
+
+    @media (max-width: 750px) {
+      border-left: 0;
+      border-top: 0.25rem solid var(--gray-800);
     }
   }
 
@@ -63,6 +79,11 @@ export const Content = styled.div`
       }
     }
   }
+
+  @media (max-width: 750px) {
+    padding-left: 0;
+    padding-top: 1.5rem;
+  }
 `
 
 export const HeadingContentTab = styled.div`
@@ -78,6 +99,16 @@ export const HeadingContentTab = styled.div`
 
     font-size: 1.4rem;
   }
+
+  @media (max-width: 480px) {
+    h1 {
+      font-size: 1.5rem;
+    }
+
+    span {
+      font-size: 1.2rem;
+    }
+  }
 `
 
 export const Highlight = styled.a`
@@ -91,5 +122,9 @@ export const Highlight = styled.a`
     text-decoration: underline;
 
     filter: brightness(0.9);
+  }
+
+  @media (max-width: 480px) {
+    font-size: 1.5rem;
   }
 `
