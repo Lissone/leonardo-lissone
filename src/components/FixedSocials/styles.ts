@@ -2,14 +2,19 @@ import styled from 'styled-components'
 
 export const Container = styled.div`
   margin: 0 auto;
+  margin-left: 5rem;
 
   position: fixed;
 
   bottom: -1rem;
   left: 0;
-  right: 85.5rem;
+  right: 90.5rem;
 
   z-index: 100;
+
+  @media (max-width: 770px) {
+    display: none;
+  }
 `
 
 export const Content = styled.div`

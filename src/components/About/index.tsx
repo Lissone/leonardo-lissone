@@ -6,7 +6,6 @@ import {
   Text,
   HighlightText,
   SkillsList,
-  Cable,
   PhotoContainer
 } from './styles'
 
@@ -67,8 +66,6 @@ export function About() {
           </PhotoContainer>
         </Column>
       </Content>
-
-      <Cable src="/images/cable-about.svg" alt="Cabo de led" />
     </Container>
   )
 }

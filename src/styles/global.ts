@@ -83,7 +83,8 @@ export const GlobalStyle = createGlobalStyle`
 
   /* Chrome, Edge, and Safari */
   *::-webkit-scrollbar {
-    width: 0.625rem;
+    width: 0.3rem;
+    height: 0.2rem;
   }
 
   *::-webkit-scrollbar-track {
@@ -92,5 +93,9 @@ export const GlobalStyle = createGlobalStyle`
 
   *::-webkit-scrollbar-thumb {
     background-color: var(--red-400);
+  }
+
+  ::-webkit-scrollbar-thumb:horizontal{
+    background-color: var(--gray-600);
   }
 `

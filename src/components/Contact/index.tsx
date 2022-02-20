@@ -1,4 +1,15 @@
-import { Container, Content, Subtitle, Title, Text, ContactButton } from './styles'
+import { BsInstagram } from 'react-icons/bs'
+import { FiGithub, FiLinkedin } from 'react-icons/fi'
+
+import {
+  Container,
+  Content,
+  Subtitle,
+  Title,
+  Text,
+  ContactButton,
+  Socials
+} from './styles'
 
 export function Contact() {
   return (
@@ -24,6 +35,20 @@ export function Contact() {
         >
           Contactar agora
         </ContactButton>
+
+        <Socials>
+          <a href="https://github.com/Lissone" target="_blank" rel="noreferrer">
+            <FiGithub size={30} />
+          </a>
+
+          <a href="https://www.linkedin.com/in/lissone/" target="_blank" rel="noreferrer">
+            <FiLinkedin size={30} />
+          </a>
+
+          <a href="https://www.instagram.com/Lissonez/" target="_blank" rel="noreferrer">
+            <BsInstagram size={29} />
+          </a>
+        </Socials>
       </Content>
 
       <img
