@@ -3,7 +3,6 @@ import styled from 'styled-components'
 export const Container = styled.section`
   width: 100%;
   height: 100vh;
-  padding-top: 1rem;
   padding-left: 12rem;
 
   position: relative;

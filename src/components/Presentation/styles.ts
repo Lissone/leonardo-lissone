@@ -10,7 +10,7 @@ export const Container = styled.section`
   display: flex;
   justify-content: space-between;
 
-  @media (max-width: 950px) {
+  @media (max-width: 965px) {
     padding-right: 6rem;
   }
 
@@ -34,8 +34,10 @@ export const Content = styled.div`
 
   margin: 0 auto;
   padding-top: 6rem;
+  padding-left: 7.5rem;
 
   display: flex;
+  flex-direction: column;
   align-items: flex-start;
 
   img {
@@ -46,12 +48,10 @@ export const Content = styled.div`
       display: none;
     }
   }
-`
 
-export const Column = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
+  @media (max-width: 770px) {
+    padding-left: 0;
+  }
 `
 
 export const Heading = styled.div`
