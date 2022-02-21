@@ -13,7 +13,7 @@ import {
 
 export function ProjectCard() {
   return (
-    <Container>
+    <Container data-aos="fade-up" data-aos-duration="1100">
       <Content>
         <Cover>
           <img src="/portfolio-image.png" alt="Imagem de um projeto" />

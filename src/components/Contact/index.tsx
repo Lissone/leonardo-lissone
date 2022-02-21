@@ -14,7 +14,7 @@ import {
 export function Contact() {
   return (
     <Container id="contact">
-      <Content>
+      <Content data-aos="fade-up">
         <Subtitle>
           <img src="/icons/arrow-heading.svg" alt="Seta grande com led" />
 
