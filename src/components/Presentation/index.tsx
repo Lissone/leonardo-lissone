@@ -34,7 +34,15 @@ export function Presentation() {
           </p>
         </ResumeText>
 
-        <ContactButton to="contact" smooth duration={1000} spy exact="true" offset={-80}>
+        <ContactButton
+          to="contact"
+          smooth
+          duration={1000}
+          spy
+          exact="true"
+          offset={-80}
+          data-aos="fade-right"
+        >
           Contactar agora
         </ContactButton>
       </Content>

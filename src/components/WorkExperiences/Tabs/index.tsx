@@ -9,23 +9,19 @@ interface TabsProps {
 export function Tabs({ children }: TabsProps) {
   const [activeTab, setActiveTab] = useState(children[0].props.id)
 
-  function handleChangeTab(newActiveTab: string) {
-    setActiveTab(newActiveTab)
-  }
-
   return (
     <Container>
       <NavTabs>
         {children.map(tab => (
           <Tab key={tab.props.id} className={activeTab === tab.props.id ? 'active' : ''}>
-            <button type="button" onClick={() => handleChangeTab(tab.props.id)}>
+            <button type="button" onClick={() => setActiveTab(tab.props.id)}>
               {tab.props.id}
             </button>
           </Tab>
         ))}
       </NavTabs>
 
-      <Content>
+      <Content data-aos="fade-up">
         {children.map(element => {
           if (element.props.id === activeTab) return element.props.children
         })}
