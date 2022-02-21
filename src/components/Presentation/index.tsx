@@ -11,7 +11,7 @@ import {
 export function Presentation() {
   return (
     <Container id="presentation">
-      <Content>
+      <Content data-aos="fade-right">
         <Heading>
           <h3>Olá,</h3>
           <h2>Eu sou</h2>
@@ -34,7 +34,15 @@ export function Presentation() {
           </p>
         </ResumeText>
 
-        <ContactButton to="contact" smooth duration={1000} spy exact="true" offset={-80}>
+        <ContactButton
+          to="contact"
+          smooth
+          duration={1000}
+          spy
+          exact="true"
+          offset={-80}
+          data-aos="fade-right"
+        >
           Contactar agora
         </ContactButton>
       </Content>

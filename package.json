@@ -2,7 +2,7 @@
   "name": "leonardo-lissone",
   "version": "1.0.0",
   "description": "Leonardo Lissone's bio portfolio.",
-  "repository": "https://github.com/Lissone/my-bio.git",
+  "repository": "https://github.com/Lissone/leonardo-lissone.git",
   "author": "Leonardo Dias Lissone <leonardo.lissonez@gmail.com>",
   "license": "MIT",
   "private": true,
@@ -31,6 +31,7 @@
     ]
   },
   "dependencies": {
+    "aos": "^2.3.4",
     "next": "11.0.0",
     "react": "17.0.2",
     "react-dom": "17.0.2",
@@ -43,6 +44,7 @@
   "devDependencies": {
     "@commitlint/cli": "^15.0.0",
     "@commitlint/config-conventional": "^15.0.0",
+    "@types/aos": "^3.0.4",
     "@types/react": "17.0.11",
     "@types/styled-components": "^5.1.20",
     "@typescript-eslint/eslint-plugin": "^4.27.0",

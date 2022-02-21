@@ -164,15 +164,15 @@ export const PhotoContainer = styled.div`
 
   @media (max-width: 420px) {
     img {
-      width: 22rem;
-      height: 22rem;
+      width: 21rem;
+      height: 21rem;
     }
 
     img:nth-child(2) {
-      width: 17.5rem;
-      height: 17.5rem;
+      width: 16.5rem;
+      height: 16.5rem;
 
-      top: 5.5rem;
+      top: 5.25rem;
     }
   }
 `

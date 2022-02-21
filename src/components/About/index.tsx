@@ -20,7 +20,7 @@ export function About() {
   ]
 
   return (
-    <Container id="about">
+    <Container id="about" data-aos="fade-up">
       <Content>
         <Column>
           <Heading>

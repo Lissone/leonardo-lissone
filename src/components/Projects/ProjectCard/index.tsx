@@ -13,7 +13,7 @@ import {
 
 export function ProjectCard() {
   return (
-    <Container>
+    <Container data-aos="fade-up" data-aos-duration="1100">
       <Content>
         <Cover>
           <img src="/portfolio-image.png" alt="Imagem de um projeto" />
@@ -43,15 +43,15 @@ export function ProjectCard() {
 
         <FeaturedInformation>
           <div>
-            <img src="/eslint.svg" alt="Ícone do eslint" />
+            <img src="/icons/eslint.svg" alt="Ícone do eslint" />
 
-            <img src="/prettier.svg" alt="Ícone do prettier" />
+            <img src="/icons/prettier.svg" alt="Ícone do prettier" />
           </div>
 
           <div>
-            <img src="/mobile.svg" alt="Ícone de celular" />
+            <img src="/icons/mobile.svg" alt="Ícone de celular" />
 
-            <img src="/web.svg" alt="Ícone de rede" />
+            <img src="/icons/web.svg" alt="Ícone de rede" />
           </div>
         </FeaturedInformation>
       </Content>

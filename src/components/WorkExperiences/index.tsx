@@ -5,7 +5,7 @@ import { HeadingContentTab, Highlight } from './Tabs/styles'
 export function WorkExperiences() {
   return (
     <Container id="work-experiences">
-      <Content>
+      <Content data-aos="fade-up">
         <Heading>
           <img src="/icons/arrow-heading.svg" alt="Seta grande com led" />
 
@@ -109,7 +109,7 @@ export function WorkExperiences() {
         </Tabs>
       </Content>
 
-      <ImageContainer>
+      <ImageContainer data-aos="fade-left">
         <img src="/images/prism-cut.svg" alt="Prima cortado com led" />
       </ImageContainer>
     </Container>
