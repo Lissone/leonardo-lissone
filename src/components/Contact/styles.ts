@@ -20,26 +20,26 @@ export const Container = styled.footer`
     height: 44rem;
 
     position: absolute;
-    bottom: -12rem;
+    bottom: -13.6rem;
 
     transform: rotateZ(90deg);
 
     @media (max-width: 630px) {
       height: 34rem;
 
-      bottom: -9.2rem;
+      bottom: -10.5rem;
     }
 
     @media (max-width: 480px) {
       height: 28rem;
 
-      bottom: -7.6rem;
+      bottom: -8.7rem;
     }
 
     @media (max-width: 370px) {
       height: 24rem;
 
-      bottom: -6.5rem;
+      bottom: -7.5rem;
     }
   }
 `
@@ -109,7 +109,7 @@ export const ContactButton = styled.a`
 `
 
 export const Socials = styled.div`
-  margin-top: 3rem;
+  margin-top: 4rem;
 
   display: none;
   gap: 2rem;
