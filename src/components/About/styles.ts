@@ -15,7 +15,7 @@ export const Container = styled.section`
   }
 
   @media (max-width: 1350px) {
-    height: 120vh;
+    height: 900px;
   }
 
   @media (max-width: 920px) {
@@ -28,6 +28,10 @@ export const Container = styled.section`
   @media (max-width: 770px) {
     padding-left: 6rem;
     padding-right: 4rem;
+  }
+
+  @media (max-height: 630px) {
+    padding-top: 3rem;
   }
 
   @media (max-width: 650px) {

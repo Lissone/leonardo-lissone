@@ -42,6 +42,10 @@ export const Container = styled.footer`
       bottom: -7.5rem;
     }
   }
+
+  @media (max-height: 630px) {
+    padding-top: 2rem;
+  }
 `
 
 export const Content = styled.div`
@@ -105,6 +109,10 @@ export const ContactButton = styled.a`
 
   &:hover {
     transform: scale(1.03);
+  }
+
+  @media (max-height: 630px) {
+    margin-top: 2rem;
   }
 `
 
