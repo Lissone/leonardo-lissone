@@ -14,13 +14,13 @@ import {
   Menu,
   Navigation,
   Buttons,
-  LanguageSwitch,
+  // LanguageSwitch,
   ResumeButton
 } from './styles'
 
 export function Header() {
   const [hamburguerIsOpen, setHamburguerIsOpen] = useState(false)
-  const [switchChecked, setSwitchChecked] = useState(false)
+  // const [switchChecked, setSwitchChecked] = useState(false)
 
   return (
     <Container>
@@ -48,7 +48,7 @@ export function Header() {
           </Navigation>
 
           <Buttons>
-            <LanguageSwitch
+            {/* <LanguageSwitch
               checked={switchChecked}
               onChange={setSwitchChecked}
               handleDiameter={26}
@@ -93,9 +93,9 @@ export function Header() {
                   EN
                 </div>
               }
-            />
+            /> */}
 
-            <ResumeButton href="/photo.png" download>
+            <ResumeButton href="/resume.pdf" target="_blank" rel="noopener noreferrer">
               Resumo
             </ResumeButton>
           </Buttons>
