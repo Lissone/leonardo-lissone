@@ -14,13 +14,22 @@ import {
   Menu,
   Navigation,
   Buttons,
-  // LanguageSwitch,
+  LanguageSwitch,
   ResumeButton
 } from './styles'
 
-export function Header() {
+interface HeaderProps {
+  language: string
+  resumeButtonLabel: string
+  toggleContentLanguage: () => void
+}
+
+export function Header({
+  language,
+  resumeButtonLabel,
+  toggleContentLanguage
+}: HeaderProps) {
   const [hamburguerIsOpen, setHamburguerIsOpen] = useState(false)
-  // const [switchChecked, setSwitchChecked] = useState(false)
 
   return (
     <Container>
@@ -48,9 +57,9 @@ export function Header() {
           </Navigation>
 
           <Buttons>
-            {/* <LanguageSwitch
-              checked={switchChecked}
-              onChange={setSwitchChecked}
+            <LanguageSwitch
+              checked={language === 'en-us'}
+              onChange={toggleContentLanguage}
               handleDiameter={26}
               width={100}
               height={40}
@@ -93,10 +102,10 @@ export function Header() {
                   EN
                 </div>
               }
-            /> */}
+            />
 
             <ResumeButton href="/resume.pdf" target="_blank" rel="noopener noreferrer">
-              Resumo
+              {resumeButtonLabel}
             </ResumeButton>
           </Buttons>
         </Menu>

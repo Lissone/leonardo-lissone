@@ -26,13 +26,13 @@
     "paths": {
       "@assets/*": ["assets/*"],
       "@routes/*": ["routes/*"],
-      "@utils/*": ["utils/*"],
       "@types/*": ["types/*"],
       "@services/*": ["services/*"],
       "@contexts/*": ["contexts/*"],
       "@hooks/*": ["hooks/*"],
       "@components/*": ["components/*"],
       "@pages/*": ["pages/*"],
+      "@utils/*": ["utils/*"],
       "@styles/*": ["styles/*"]
     }
   },

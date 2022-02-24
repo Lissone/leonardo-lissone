@@ -5,88 +5,54 @@ import { GetServerSideProps } from 'next'
 import Head from 'next/head'
 import { useEffect } from 'react'
 
+import { ContentType, PrismicContentDocumentResponse } from '@types/content'
+
 import { getPrismicClient } from '@services/prismic'
 
 import { About } from '@components/About'
 import { Contact } from '@components/Contact'
+import { Header } from '@components/Header'
 import { Presentation } from '@components/Presentation'
 import { Projects } from '@components/Projects'
 import { WorkExperiences } from '@components/WorkExperiences'
 
-import { Container } from '@styles/home'
+import usePersistedState from '@utils/usePersistedState'
 
-interface Content {
-  lang: string
-  socials: {
-    name: string
-    link: string
-  }[]
-  resumeButtonLabel: string
-  contactButtonLabel: string
-  resumeCv: string
-  presentationSection: {
-    heading: string[]
-    text: string[]
-  }
-  aboutSection: {
-    heading: string
-    text: string[]
-    profilePhoto: {
-      url: string
-      alt: string
-    }
-    recentTechnologies: string[]
-  }
-  jobsSection: {
-    heading: string
-    jobs: {
-      company: string
-      role: string
-      startDate: string
-      endDate: string
-      activities: string[]
-    }[]
-  }
-  projectsSection: {
-    heading: string
-    projects: {
-      thumbnail: {
-        url: string
-        alt: string
-      }
-      name: string
-      description: string[]
-      platform: string
-      isResponsive: boolean
-      mainTechnologies: string[]
-      goodHabits: string[]
-      link: {
-        url: string
-      }
-    }[]
-  }
-  contactSection: {
-    heading: string[]
-    text: string[]
-  }
-}
+import { Container } from '@styles/home'
 
 interface HomeProps {
   contentLangs: {
-    [key: string]: Content
+    [key: string]: ContentType
   }
 }
 
 export default function Home({ contentLangs }: HomeProps) {
+  const [contentLanguage, setContentLanguage] = usePersistedState(
+    'content_language',
+    contentLangs['pt-br']
+  )
+
   useEffect(() => {
     Aos.init({ duration: 1500 })
   }, [])
+
+  function toggleContentLanguage() {
+    setContentLanguage(
+      contentLanguage.lang === 'pt-br' ? contentLangs['en-us'] : contentLangs['pt-br']
+    )
+  }
 
   return (
     <>
       <Head>
         <title>Leonardo Lissone</title>
       </Head>
+
+      <Header
+        language={contentLanguage.lang}
+        resumeButtonLabel={contentLanguage.resumeButtonLabel}
+        toggleContentLanguage={toggleContentLanguage}
+      />
 
       <Container>
         <Presentation />
@@ -103,84 +69,14 @@ export default function Home({ contentLangs }: HomeProps) {
   )
 }
 
-/* eslint-disable camelcase */
-
-interface PrismicResponse {
-  results: {
-    uid?: string // lang
-    data: {
-      socials: {
-        name: string
-        link: string
-      }[]
-      resume_button_label: string
-      resume_pdf: {
-        url: string
-      }
-      presentation_heading: {
-        text: string
-      }[]
-      presentation_text: {
-        text: string
-      }[]
-      contact_button_label: string
-      about_heading: string
-      about_text: {
-        text: string
-      }[]
-      profile_photo: {
-        url: string
-        alt: string
-      }
-      recent_technologies: {
-        technology: string
-      }[]
-      jobs_heading: string
-      jobs: {
-        company: string
-        role: string
-        start_date: string
-        end_date: string
-        activities: {
-          text: string
-        }[]
-      }[]
-      projects_heading: string
-      projects: {
-        thumbnail: {
-          url: string
-          alt: string
-        }
-        name: string
-        description: {
-          text: string
-        }[]
-        platform: string
-        is_responsive: boolean
-        main_technologies: string
-        good_habits: string
-        link: {
-          url: string
-        }
-      }[]
-      contact_heading: {
-        text: string
-      }[]
-      contact_text: {
-        text: string
-      }[]
-    }
-  }[]
-}
-
 export const getServerSideProps: GetServerSideProps = async () => {
   const prismic = getPrismicClient()
 
-  const response: PrismicResponse = await prismic.query([
+  const response: PrismicContentDocumentResponse = await prismic.query([
     Prismic.Predicates.at('document.type', 'content_language')
   ])
 
-  const contentLangs: Content[] = response.results.map(prismicContent => ({
+  const contentLangs: ContentType[] = response.results.map(prismicContent => ({
     lang: prismicContent.uid,
     socials: prismicContent.data.socials,
     resumeButtonLabel: prismicContent.data.resume_button_label,
@@ -239,8 +135,6 @@ export const getServerSideProps: GetServerSideProps = async () => {
 
   contentLangs.forEach(content => {
     const { lang } = content
-
-    delete content.lang
 
     contentLangsFormatted[lang] = content
   })
