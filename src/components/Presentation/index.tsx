@@ -1,4 +1,4 @@
-import { PresentationContent } from '@types/content'
+import { PresentationContent } from '@type/content'
 
 import {
   Container,

@@ -26,7 +26,7 @@
     "paths": {
       "@assets/*": ["assets/*"],
       "@routes/*": ["routes/*"],
-      "@types/*": ["types/*"],
+      "@type/*": ["type/*"],
       "@services/*": ["services/*"],
       "@contexts/*": ["contexts/*"],
       "@hooks/*": ["hooks/*"],

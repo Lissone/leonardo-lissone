@@ -1,4 +1,4 @@
-import { ContactContent, SocialContent } from '@types/content'
+import { ContactContent, SocialContent } from '@type/content'
 
 import { SocialIcon } from '@components/SocialIcon'
 

@@ -1,6 +1,6 @@
 import { FiGithub, FiGlobe } from 'react-icons/fi'
 
-import { ProjectContent } from '@types/content'
+import { ProjectContent } from '@type/content'
 
 import {
   Container,

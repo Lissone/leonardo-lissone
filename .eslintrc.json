@@ -83,7 +83,7 @@
           "module",
           "/^@assets/",
           "/^@routes/",
-          "/^@types/",
+          "/^@type/",
           "/^@services/",
           "/^@contexts/",
           "/^@hooks/",

@@ -1,6 +1,6 @@
 import { FiHelpCircle } from 'react-icons/fi'
 
-import { ProjectsContent } from '@types/content'
+import { ProjectsContent } from '@type/content'
 
 import { ProjectCard } from './ProjectCard'
 import { Container, Heading, Content } from './styles'

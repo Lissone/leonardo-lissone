@@ -1,4 +1,4 @@
-import { JobsContent } from '@types/content'
+import { JobsContent } from '@type/content'
 
 import { Container, Content, Heading, ImageContainer } from './styles'
 import { Tabs } from './Tabs'
