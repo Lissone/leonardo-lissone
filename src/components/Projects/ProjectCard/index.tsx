@@ -1,5 +1,7 @@
 import { FiGithub, FiGlobe } from 'react-icons/fi'
 
+import { ProjectContent } from '@types/content'
+
 import {
   Container,
   Content,
@@ -11,47 +13,70 @@ import {
   FeaturedInformation
 } from './styles'
 
-export function ProjectCard() {
+interface ProjectCardProps {
+  projectContent: ProjectContent
+}
+
+export function ProjectCard({ projectContent }: ProjectCardProps) {
   return (
     <Container data-aos="fade-up" data-aos-duration="1100">
       <Content>
         <Cover>
-          <img src="/portfolio-image.png" alt="Imagem de um projeto" />
+          <img src={projectContent.thumbnail.url} alt={projectContent.thumbnail.alt} />
 
           <CoverActions className="project-card-actions">
-            <a href="#">
-              <FiGithub size={24} />
-            </a>
-            <a href="#">
-              <FiGlobe size={24} />
-            </a>
+            {projectContent.repositoryLink && (
+              <a href={projectContent.repositoryLink} target="_blank" rel="noreferrer">
+                <FiGithub size={24} />
+              </a>
+            )}
+
+            {projectContent.productionLink && projectContent.name !== 'Portfolio' ? (
+              <a href={projectContent.productionLink} target="_blank" rel="noreferrer">
+                <FiGlobe size={24} />
+              </a>
+            ) : null}
           </CoverActions>
         </Cover>
 
-        <Heading>Portfolio</Heading>
+        <Heading>{projectContent.name}</Heading>
 
         <Divider />
 
-        <p>
-          An incredible pokedex, for you to delve into the pokemon universe and even
-          choose your favorite pokemons and add them to your profile!
-        </p>
+        {projectContent.description.map((text, index) => (
+          <p key={index}>{text}</p>
+        ))}
 
         <TechnologiesRow>
-          <span>React, Next.js, StyledComponents, NodeJs, Firebase</span>
+          <span>{projectContent.mainTechnologies}</span>
         </TechnologiesRow>
 
         <FeaturedInformation>
           <div>
-            <img src="/icons/eslint.svg" alt="Ícone do eslint" />
-
-            <img src="/icons/prettier.svg" alt="Ícone do prettier" />
+            {projectContent.goodHabits.map(technology => {
+              if (technology === 'eslint')
+                return <img key={technology} src="/icons/eslint.svg" alt="Eslint icon" />
+              else if (technology === 'prettier')
+                return (
+                  <img key={technology} src="/icons/prettier.svg" alt="Prettier icon" />
+                )
+              else if (technology === 'test')
+                return <img key={technology} src="/icons/test.svg" alt="Test icon" />
+            })}
           </div>
 
           <div>
-            <img src="/icons/mobile.svg" alt="Ícone de celular" />
+            {projectContent.isResponsive || projectContent.platform === 'mobile' ? (
+              <img src="/icons/mobile.svg" alt="Cellphone icon" />
+            ) : null}
 
-            <img src="/icons/web.svg" alt="Ícone de rede" />
+            {projectContent.platform === 'web' && (
+              <img src="/icons/web.svg" alt="Web icon" />
+            )}
+
+            {projectContent.platform === 'desktop' && (
+              <img src="/icons/desktop.svg" alt="Desktop icon" />
+            )}
           </div>
         </FeaturedInformation>
       </Content>

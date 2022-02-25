@@ -11,6 +11,7 @@ import { getPrismicClient } from '@services/prismic'
 
 import { About } from '@components/About'
 import { Contact } from '@components/Contact'
+import { FixedSocials } from '@components/FixedSocials'
 import { Header } from '@components/Header'
 import { Presentation } from '@components/Presentation'
 import { Projects } from '@components/Projects'
@@ -48,22 +49,33 @@ export default function Home({ contentLangs }: HomeProps) {
         <title>Leonardo Lissone</title>
       </Head>
 
+      <FixedSocials socials={contentLanguage.socials} />
+
       <Header
         language={contentLanguage.lang}
         resumeButtonLabel={contentLanguage.resumeButtonLabel}
+        resumeCv={contentLanguage.resumeCv}
         toggleContentLanguage={toggleContentLanguage}
       />
 
       <Container>
-        <Presentation />
+        <Presentation
+          presentationContent={contentLanguage.presentationSection}
+          contactButtonLabel={contentLanguage.contactButtonLabel}
+        />
 
-        <About />
+        <About aboutContent={contentLanguage.aboutSection} />
 
-        <WorkExperiences />
+        <WorkExperiences workExperiencesContent={contentLanguage.jobsSection} />
 
-        <Projects />
+        <Projects projectsContent={contentLanguage.projectsSection} />
 
-        <Contact />
+        <Contact
+          contactContent={contentLanguage.contactSection}
+          contactButtonLabel={contentLanguage.contactButtonLabel}
+          socials={contentLanguage.socials}
+          email={contentLanguage.email}
+        />
       </Container>
     </>
   )
@@ -78,6 +90,7 @@ export const getServerSideProps: GetServerSideProps = async () => {
 
   const contentLangs: ContentType[] = response.results.map(prismicContent => ({
     lang: prismicContent.uid,
+    email: prismicContent.data.email,
     socials: prismicContent.data.socials,
     resumeButtonLabel: prismicContent.data.resume_button_label,
     contactButtonLabel: prismicContent.data.contact_button_label,
@@ -101,6 +114,7 @@ export const getServerSideProps: GetServerSideProps = async () => {
       heading: prismicContent.data.jobs_heading,
       jobs: prismicContent.data.jobs.map(jobData => ({
         company: jobData.company,
+        siteLink: jobData.site_link.url,
         role: jobData.role,
         startDate: jobData.start_date,
         endDate: jobData.end_date,
@@ -118,11 +132,10 @@ export const getServerSideProps: GetServerSideProps = async () => {
         description: projectData.description.map(tagData => tagData.text),
         platform: projectData.platform,
         isResponsive: projectData.is_responsive,
-        mainTechnologies: projectData.main_technologies.split(' '),
+        mainTechnologies: projectData.main_technologies.split(' ').join(',  '),
         goodHabits: projectData.good_habits.split(' '),
-        link: {
-          url: projectData.link.url
-        }
+        repositoryLink: projectData.repository_link.url ?? null,
+        productionLink: projectData.production_link.url ?? null
       }))
     },
     contactSection: {

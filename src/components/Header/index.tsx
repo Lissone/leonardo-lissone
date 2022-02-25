@@ -21,12 +21,14 @@ import {
 interface HeaderProps {
   language: string
   resumeButtonLabel: string
+  resumeCv: string
   toggleContentLanguage: () => void
 }
 
 export function Header({
   language,
   resumeButtonLabel,
+  resumeCv,
   toggleContentLanguage
 }: HeaderProps) {
   const [hamburguerIsOpen, setHamburguerIsOpen] = useState(false)
@@ -104,7 +106,7 @@ export function Header({
               }
             />
 
-            <ResumeButton href="/resume.pdf" target="_blank" rel="noopener noreferrer">
+            <ResumeButton href={resumeCv} target="_blank" rel="noopener noreferrer">
               {resumeButtonLabel}
             </ResumeButton>
           </Buttons>

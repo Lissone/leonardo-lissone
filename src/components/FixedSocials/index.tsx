@@ -1,25 +1,23 @@
-import { BsInstagram } from 'react-icons/bs'
-import { FiGithub, FiLinkedin } from 'react-icons/fi'
+import { SocialContent } from '@types/content'
 
+import { SocialIcon } from '../SocialIcon'
 import { Container, Content } from './styles'
 
-export function FixedSocials() {
+interface FixedSocialsProps {
+  socials: SocialContent[]
+}
+
+export function FixedSocials({ socials }: FixedSocialsProps) {
   return (
     <Container>
       <Content>
-        <a href="https://github.com/Lissone" target="_blank" rel="noreferrer">
-          <FiGithub size={30} />
-        </a>
+        {socials.map(social => (
+          <a key={social.name} href={social.link} target="_blank" rel="noreferrer">
+            <SocialIcon name={social.name} />
+          </a>
+        ))}
 
-        <a href="https://www.linkedin.com/in/lissone/" target="_blank" rel="noreferrer">
-          <FiLinkedin size={30} />
-        </a>
-
-        <a href="https://www.instagram.com/Lissonez/" target="_blank" rel="noreferrer">
-          <BsInstagram size={29} />
-        </a>
-
-        <img src="/images/cable-fixed-socials.svg" alt="Cabo de led" />
+        <img src="/images/cable-fixed-socials.svg" alt="Led cable" />
       </Content>
     </Container>
   )

@@ -1,57 +1,72 @@
+export interface SocialContent {
+  name: string
+  link: string
+}
+
+export interface PresentationContent {
+  heading: string[]
+  text: string[]
+}
+
+export interface AboutContent {
+  heading: string
+  text: string[]
+  profilePhoto: {
+    url: string
+    alt: string
+  }
+  recentTechnologies: string[]
+}
+
+export interface JobsContent {
+  heading: string
+  jobs: {
+    company: string
+    siteLink: string
+    role: string
+    startDate: string
+    endDate: string
+    activities: string[]
+  }[]
+}
+
+export interface ProjectContent {
+  thumbnail: {
+    url: string
+    alt: string
+  }
+  name: string
+  description: string[]
+  platform: string
+  isResponsive: boolean
+  mainTechnologies: string
+  goodHabits: string[]
+  repositoryLink: string | null
+  productionLink: string | null
+}
+
+export interface ProjectsContent {
+  heading: string
+  projects: ProjectContent[]
+}
+
+export interface ContactContent {
+  heading: string[]
+  text: string[]
+}
+
 export interface ContentType {
   lang: string
-  socials: {
-    name: string
-    link: string
-  }[]
+  email: string
+  socials: SocialContent[]
   resumeButtonLabel: string
   contactButtonLabel: string
   resumeCv: string
-  presentationSection: {
-    heading: string[]
-    text: string[]
-  }
-  aboutSection: {
-    heading: string
-    text: string[]
-    profilePhoto: {
-      url: string
-      alt: string
-    }
-    recentTechnologies: string[]
-  }
-  jobsSection: {
-    heading: string
-    jobs: {
-      company: string
-      role: string
-      startDate: string
-      endDate: string
-      activities: string[]
-    }[]
-  }
-  projectsSection: {
-    heading: string
-    projects: {
-      thumbnail: {
-        url: string
-        alt: string
-      }
-      name: string
-      description: string[]
-      platform: string
-      isResponsive: boolean
-      mainTechnologies: string[]
-      goodHabits: string[]
-      link: {
-        url: string
-      }
-    }[]
-  }
-  contactSection: {
-    heading: string[]
-    text: string[]
-  }
+  presentationSection: PresentationContent
+  aboutSection: AboutContent
+  jobsSection: JobsContent
+  projectsSection: ProjectsContent
+  contactSection: ContactContent
 }
 
 /* eslint-disable camelcase */
@@ -60,6 +75,7 @@ export interface PrismicContentDocumentResponse {
   results: {
     uid?: string // lang
     data: {
+      email: string
       socials: {
         name: string
         link: string
@@ -89,6 +105,9 @@ export interface PrismicContentDocumentResponse {
       jobs_heading: string
       jobs: {
         company: string
+        site_link: {
+          url: string
+        }
         role: string
         start_date: string
         end_date: string
@@ -110,8 +129,11 @@ export interface PrismicContentDocumentResponse {
         is_responsive: boolean
         main_technologies: string
         good_habits: string
-        link: {
-          url: string
+        repository_link: {
+          url?: string
+        }
+        production_link: {
+          url?: string
         }
       }[]
       contact_heading: {

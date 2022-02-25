@@ -48,6 +48,7 @@
     "import/no-unresolved": "off",
     "import/prefer-default-export": "off",
     "react/jsx-filename-extension": ["warn", { "extensions": [".tsx"] }],
+    "react/no-array-index-key": "off",
     "react/require-default-props": 0,
     "react/jsx-props-no-spreading": "off",
     "react/react-in-jsx-scope": "off",
