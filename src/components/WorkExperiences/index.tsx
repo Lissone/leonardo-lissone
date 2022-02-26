@@ -2,7 +2,7 @@ import { JobsContent } from '@type/content'
 
 import { Container, Content, Heading, ImageContainer } from './styles'
 import { Tabs } from './Tabs'
-import { HeadingContentTab, Highlight } from './Tabs/styles'
+import { HeadingContentTab, ContentTab, Highlight } from './Tabs/styles'
 
 interface WorkExperiencesProps {
   workExperiencesContent: JobsContent
@@ -21,28 +21,36 @@ export function WorkExperiences({ workExperiencesContent }: WorkExperiencesProps
         <Tabs>
           {workExperiencesContent.jobs.map(job => (
             <div key={job.company} id={job.company}>
-              <HeadingContentTab>
-                <h1>
-                  {job.role}{' '}
-                  <Highlight href={job.siteLink} target="_blank" rel="noreferrer">
-                    {job.company}
-                  </Highlight>
-                </h1>
+              {job.experiences.map(experience => (
+                <ContentTab key={experience.role}>
+                  <HeadingContentTab>
+                    <h1>
+                      {experience.role}{' '}
+                      <Highlight
+                        href={experience.siteLink}
+                        target="_blank"
+                        rel="noreferrer"
+                      >
+                        @{job.company}
+                      </Highlight>
+                    </h1>
 
-                <span>
-                  {job.startDate} - {job.endDate}
-                </span>
-              </HeadingContentTab>
+                    <span>
+                      {experience.startDate} - {experience.endDate}
+                    </span>
+                  </HeadingContentTab>
 
-              <ul>
-                {job.activities.map(activity => (
-                  <li key={activity}>
-                    <img src="/icons/arrow.svg" alt="Red arrow with led" />
+                  <ul>
+                    {experience.activities.map(activity => (
+                      <li key={activity}>
+                        <img src="/icons/arrow.svg" alt="Red arrow with led" />
 
-                    <p>{activity}</p>
-                  </li>
-                ))}
-              </ul>
+                        <p>{activity}</p>
+                      </li>
+                    ))}
+                  </ul>
+                </ContentTab>
+              ))}
             </div>
           ))}
         </Tabs>

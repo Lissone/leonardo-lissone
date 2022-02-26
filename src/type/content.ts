@@ -22,11 +22,14 @@ export interface JobsContent {
   heading: string
   jobs: {
     company: string
-    siteLink: string
-    role: string
-    startDate: string
-    endDate: string
-    activities: string[]
+    experiences: {
+      company: string
+      siteLink: string
+      role: string
+      startDate: string
+      endDate: string
+      activities: string[]
+    }[]
   }[]
 }
 

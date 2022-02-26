@@ -86,6 +86,10 @@ export const Content = styled.div`
   }
 `
 
+export const ContentTab = styled.div`
+  margin-bottom: 2rem;
+`
+
 export const HeadingContentTab = styled.div`
   display: flex;
   flex-direction: column;

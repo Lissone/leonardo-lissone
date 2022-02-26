@@ -3,7 +3,7 @@ import Prismic from '@prismicio/client'
 import Aos from 'aos'
 import { GetServerSideProps } from 'next'
 import Head from 'next/head'
-import { useEffect } from 'react'
+import { useEffect, useState } from 'react'
 
 import { ContentType, PrismicContentDocumentResponse } from '@type/content'
 
@@ -17,8 +17,6 @@ import { Presentation } from '@components/Presentation'
 import { Projects } from '@components/Projects'
 import { WorkExperiences } from '@components/WorkExperiences'
 
-import usePersistedState from '@utils/usePersistedState'
-
 import { Container } from '@styles/home'
 
 interface HomeProps {
@@ -28,10 +26,7 @@ interface HomeProps {
 }
 
 export default function Home({ contentLangs }: HomeProps) {
-  const [contentLanguage, setContentLanguage] = usePersistedState(
-    'content_language',
-    contentLangs['pt-br']
-  )
+  const [contentLanguage, setContentLanguage] = useState(contentLangs['pt-br'])
 
   useEffect(() => {
     Aos.init({ duration: 1500 })
@@ -112,13 +107,18 @@ export const getServerSideProps: GetServerSideProps = async () => {
     },
     jobsSection: {
       heading: prismicContent.data.jobs_heading,
-      jobs: prismicContent.data.jobs.map(jobData => ({
-        company: jobData.company,
-        siteLink: jobData.site_link.url,
-        role: jobData.role,
-        startDate: jobData.start_date,
-        endDate: jobData.end_date,
-        activities: jobData.activities.map(tagData => tagData.text)
+      jobs: [...new Set(prismicContent.data.jobs.map(job => job.company))].map(x => ({
+        company: x,
+        experiences: prismicContent.data.jobs
+          .filter(d => d.company === x)
+          .map(job => ({
+            company: job.company,
+            siteLink: job.site_link.url,
+            role: job.role,
+            startDate: job.start_date,
+            endDate: job.end_date,
+            activities: job.activities.map(tagData => tagData.text)
+          }))
       }))
     },
     projectsSection: {
