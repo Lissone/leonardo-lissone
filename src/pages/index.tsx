@@ -3,6 +3,7 @@ import Prismic from '@prismicio/client'
 import Aos from 'aos'
 import { GetServerSideProps } from 'next'
 import Head from 'next/head'
+import { RichText } from 'prismic-dom'
 import { useEffect, useState } from 'react'
 
 import { ContentType, PrismicContentDocumentResponse } from '@type/content'
@@ -92,11 +93,11 @@ export const getServerSideProps: GetServerSideProps = async () => {
     resumeCv: prismicContent.data.resume_pdf.url,
     presentationSection: {
       heading: prismicContent.data.presentation_heading.map(tagData => tagData.text),
-      text: prismicContent.data.presentation_text.map(tagData => tagData.text)
+      text: RichText.asHtml(prismicContent.data.presentation_text)
     },
     aboutSection: {
       heading: prismicContent.data.about_heading,
-      text: prismicContent.data.about_text.map(tagData => tagData.text),
+      text: RichText.asHtml(prismicContent.data.about_text),
       profilePhoto: {
         url: prismicContent.data.profile_photo.url,
         alt: prismicContent.data.profile_photo.alt

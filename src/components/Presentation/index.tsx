@@ -6,7 +6,6 @@ import {
   Content,
   Heading,
   ResumeText,
-  HighlightText,
   ContactButton
 } from './styles'
 
@@ -28,11 +27,11 @@ export function Presentation({
           <h1>{presentationContent.heading[2]}</h1>
         </Heading>
 
-        <ResumeText>
-          {presentationContent.text.map((text, index) => (
-            <p key={index}>{text}</p>
-          ))}
-        </ResumeText>
+        <ResumeText
+          dangerouslySetInnerHTML={{
+            __html: presentationContent.text
+          }}
+        />
 
         <ContactButton to="contact" smooth duration={1000} spy exact="true" offset={-80}>
           {contactButtonLabel}

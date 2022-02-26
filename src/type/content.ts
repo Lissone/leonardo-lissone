@@ -5,12 +5,12 @@ export interface SocialContent {
 
 export interface PresentationContent {
   heading: string[]
-  text: string[]
+  text: string
 }
 
 export interface AboutContent {
   heading: string
-  text: string[]
+  text: string
   profilePhoto: {
     url: string
     alt: string
@@ -73,7 +73,6 @@ export interface ContentType {
 }
 
 /* eslint-disable camelcase */
-
 export interface PrismicContentDocumentResponse {
   results: {
     uid?: string // lang

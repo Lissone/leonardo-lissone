@@ -6,7 +6,6 @@ import {
   Column,
   Heading,
   Text,
-  HighlightText,
   SkillsList,
   PhotoContainer
 } from './styles'
@@ -26,11 +25,11 @@ export function About({ aboutContent }: AboutProps) {
             <h1>{aboutContent.heading}</h1>
           </Heading>
 
-          <Text>
-            {aboutContent.text.map((text, index) => (
-              <p key={index}>{text}</p>
-            ))}
-          </Text>
+          <Text
+            dangerouslySetInnerHTML={{
+              __html: aboutContent.text
+            }}
+          />
 
           <SkillsList>
             {aboutContent.recentTechnologies.map(technology => (
