@@ -90,6 +90,12 @@ export const Text = styled.div`
 
   p {
     font-size: 1.2rem;
+
+    em {
+      font-style: normal;
+
+      color: var(--red-200);
+    }
   }
 
   @media (max-width: 920px) {

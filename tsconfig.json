@@ -14,6 +14,7 @@
     // "strictPropertyInitialization": true,
     // "strictFunctionTypes": false,
 
+    "downlevelIteration": true,
     "forceConsistentCasingInFileNames": true,
     "noEmit": true,
     "esModuleInterop": true,
@@ -26,13 +27,13 @@
     "paths": {
       "@assets/*": ["assets/*"],
       "@routes/*": ["routes/*"],
-      "@utils/*": ["utils/*"],
-      "@types/*": ["types/*"],
+      "@type/*": ["type/*"],
       "@services/*": ["services/*"],
       "@contexts/*": ["contexts/*"],
       "@hooks/*": ["hooks/*"],
       "@components/*": ["components/*"],
       "@pages/*": ["pages/*"],
+      "@utils/*": ["utils/*"],
       "@styles/*": ["styles/*"]
     }
   },

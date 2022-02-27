@@ -1,5 +1,6 @@
-import { BsInstagram } from 'react-icons/bs'
-import { FiGithub, FiLinkedin } from 'react-icons/fi'
+import { ContactContent, SocialContent } from '@type/content'
+
+import { SocialIcon } from '@components/SocialIcon'
 
 import {
   Container,
@@ -11,51 +12,48 @@ import {
   Socials
 } from './styles'
 
-export function Contact() {
+interface ContactProps {
+  contactContent: ContactContent
+  contactButtonLabel: string
+  socials: SocialContent[]
+  email: string
+}
+
+export function Contact({
+  contactContent,
+  contactButtonLabel,
+  socials,
+  email
+}: ContactProps) {
   return (
     <Container id="contact">
       <Content data-aos="fade-up">
         <Subtitle>
-          <img src="/icons/arrow-heading.svg" alt="Seta grande com led" />
+          <img src="/icons/arrow-heading.svg" alt="Big arrow with led" />
 
-          <h2>O que fazer agora?</h2>
+          <h2>{contactContent.heading[0]}</h2>
         </Subtitle>
 
-        <Title>Faça contato comigo</Title>
+        <Title>{contactContent.heading[1]}</Title>
 
-        <Text>
-          Platform that allows you to create quiz rooms, for people to ask questions and
-          the owner of the room to answer, like or highlight specific questions.
-        </Text>
+        {contactContent.text.map((text, index) => (
+          <Text key={index}>{text}</Text>
+        ))}
 
-        <ContactButton
-          href="mailto:leonardo.lissonez@gmail.com"
-          target="_blank"
-          rel="noreferrer"
-        >
-          Contactar agora
+        <ContactButton href={`mailto:${email}`} target="_blank" rel="noreferrer">
+          {contactButtonLabel}
         </ContactButton>
 
         <Socials>
-          <a href="https://github.com/Lissone" target="_blank" rel="noreferrer">
-            <FiGithub size={30} />
-          </a>
-
-          <a href="https://www.linkedin.com/in/lissone/" target="_blank" rel="noreferrer">
-            <FiLinkedin size={30} />
-          </a>
-
-          <a href="https://www.instagram.com/Lissonez/" target="_blank" rel="noreferrer">
-            <BsInstagram size={29} />
-          </a>
+          {socials.map(social => (
+            <a key={social.name} href={social.link} target="_blank" rel="noreferrer">
+              <SocialIcon name={social.name} />
+            </a>
+          ))}
         </Socials>
       </Content>
 
-      <img
-        src="/images/bearing-led.svg"
-        alt="Rolamento com led"
-        className="bearing-led"
-      />
+      <img src="/images/bearing-led.svg" alt="Bearing with led" className="bearing-led" />
     </Container>
   )
 }

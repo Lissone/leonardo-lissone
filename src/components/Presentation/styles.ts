@@ -123,6 +123,12 @@ export const ResumeText = styled.div`
 
   p {
     font-size: 1.2rem;
+
+    em {
+      font-style: normal;
+
+      color: var(--red-200);
+    }
   }
 `
 

@@ -1,58 +1,40 @@
+import { AboutContent } from '@type/content'
+
 import {
   Container,
   Content,
   Column,
   Heading,
   Text,
-  HighlightText,
   SkillsList,
   PhotoContainer
 } from './styles'
 
-export function About() {
-  const technologies = [
-    'Javascript (ES6++)',
-    'Typescript',
-    'Node.js',
-    'React',
-    'Vue',
-    'Asp.net'
-  ]
+interface AboutProps {
+  aboutContent: AboutContent
+}
 
+export function About({ aboutContent }: AboutProps) {
   return (
     <Container id="about" data-aos="fade-up">
       <Content>
         <Column>
           <Heading>
-            <img src="/icons/arrow-heading.svg" alt="Seta grande com led" />
+            <img src="/icons/arrow-heading.svg" alt="Big arrow with led" />
 
-            <h1>Sobre mim</h1>
+            <h1>{aboutContent.heading}</h1>
           </Heading>
 
-          <Text>
-            <p>
-              Atualmente fazendo estágio na área de <strong>desenvolvimento</strong> na{' '}
-              <HighlightText>Serget Mobilidade Viária</HighlightText>, atuando
-              principalmente na manutenção e desenvolvimento de novas ferramentas, e
-              funcionalidades para usuários dos sistemas públicos e privados da empresa.
-            </p>
-
-            <p>
-              Além de estar muito <strong>determinado</strong> para meu{' '}
-              <strong>crescimento pessoal</strong> de conhecimento na área da tecnologia,
-              criando projetos sempre inovadores para mim com muito <strong>amor</strong>{' '}
-              e <strong>dedicação</strong>.
-            </p>
-
-            <p>
-              Algumas tecnologias que tenho trabalhado <strong>recentemente</strong>:
-            </p>
-          </Text>
+          <Text
+            dangerouslySetInnerHTML={{
+              __html: aboutContent.text
+            }}
+          />
 
           <SkillsList>
-            {technologies.map(technology => (
+            {aboutContent.recentTechnologies.map(technology => (
               <li key={technology}>
-                <img src="/icons/arrow.svg" alt="Seta vermelha com led" />
+                <img src="/icons/arrow.svg" alt="Red arrow with led" />
                 {technology}
               </li>
             ))}
@@ -61,8 +43,11 @@ export function About() {
 
         <Column>
           <PhotoContainer>
-            <img src="/images/avatar-border.svg" alt="Borda do avatar" />
-            <img src="/photo.png" alt="Foto do Leonardo Lissone" />
+            <img src="/images/avatar-border.svg" alt="Avatar border" />
+            <img
+              src={aboutContent.profilePhoto.url}
+              alt={aboutContent.profilePhoto.alt}
+            />
           </PhotoContainer>
         </Column>
       </Content>
