@@ -141,7 +141,14 @@ export const PhotoContainer = styled.div`
   }
 
   img:nth-child(2) {
+    width: 24rem;
+    height: 24rem;
+
     top: 6rem;
+
+    object-fit: cover;
+
+    border-radius: 100%;
   }
 
   @media (max-width: 1500px) {

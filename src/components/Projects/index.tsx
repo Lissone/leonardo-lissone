@@ -1,4 +1,4 @@
-import { FiHelpCircle } from 'react-icons/fi'
+// import { FiHelpCircle } from 'react-icons/fi'
 
 import { ProjectsContent } from '@type/content'
 
@@ -16,9 +16,9 @@ export function Projects({ projectsContent }: ProjectsProps) {
         <Heading>
           <h1>{projectsContent.heading}</h1>
 
-          <button type="button">
+          {/* <button type="button">
             <FiHelpCircle size={24} />
-          </button>
+          </button> */}
         </Heading>
       </header>
 
