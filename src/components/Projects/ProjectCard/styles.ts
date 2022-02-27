@@ -2,6 +2,7 @@ import styled from 'styled-components'
 
 export const Container = styled.div`
   max-width: 20rem;
+  min-height: 26.85rem;
 
   border: 2px solid var(--gray-800);
   border-radius: 0.625rem;
@@ -23,6 +24,7 @@ export const Container = styled.div`
 `
 
 export const Content = styled.div`
+  height: 100%;
   padding: 0.875rem;
 
   display: flex;
@@ -38,6 +40,8 @@ export const Cover = styled.div`
   img {
     max-width: 18rem;
     max-height: 10rem;
+
+    border-radius: 0.625rem;
   }
 `
 
@@ -86,6 +90,14 @@ export const CoverActions = styled.div`
   }
 `
 
+export const Information = styled.div`
+  height: 100%;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+`
+
 export const Heading = styled.h2`
   margin-top: 0.5rem;
 `
@@ -102,7 +114,6 @@ export const Divider = styled.div`
 
 export const TechnologiesRow = styled.div`
   width: 100%;
-  height: 100%;
   margin-top: 0.5rem;
 
   display: flex;
@@ -117,7 +128,9 @@ export const TechnologiesRow = styled.div`
   }
 `
 
-export const FeaturedInformation = styled.div`
+export const FeaturedInformation = styled.div``
+
+export const SeparateRow = styled.div`
   margin-top: 0.875rem;
 
   display: flex;

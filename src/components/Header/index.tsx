@@ -18,9 +18,20 @@ import {
   ResumeButton
 } from './styles'
 
-export function Header() {
+interface HeaderProps {
+  language: string
+  resumeButtonLabel: string
+  resumeCv: string
+  toggleContentLanguage: () => void
+}
+
+export function Header({
+  language,
+  resumeButtonLabel,
+  resumeCv,
+  toggleContentLanguage
+}: HeaderProps) {
   const [hamburguerIsOpen, setHamburguerIsOpen] = useState(false)
-  const [switchChecked, setSwitchChecked] = useState(false)
 
   return (
     <Container>
@@ -49,8 +60,8 @@ export function Header() {
 
           <Buttons>
             <LanguageSwitch
-              checked={switchChecked}
-              onChange={setSwitchChecked}
+              checked={language === 'en-us'}
+              onChange={toggleContentLanguage}
               handleDiameter={26}
               width={100}
               height={40}
@@ -95,8 +106,8 @@ export function Header() {
               }
             />
 
-            <ResumeButton href="/photo.png" download>
-              Resumo
+            <ResumeButton href={resumeCv} target="_blank" rel="noopener noreferrer">
+              {resumeButtonLabel}
             </ResumeButton>
           </Buttons>
         </Menu>

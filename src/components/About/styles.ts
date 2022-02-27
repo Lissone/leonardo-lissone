@@ -15,7 +15,7 @@ export const Container = styled.section`
   }
 
   @media (max-width: 1350px) {
-    height: 120vh;
+    height: 900px;
   }
 
   @media (max-width: 920px) {
@@ -28,6 +28,10 @@ export const Container = styled.section`
   @media (max-width: 770px) {
     padding-left: 6rem;
     padding-right: 4rem;
+  }
+
+  @media (max-height: 630px) {
+    padding-top: 3rem;
   }
 
   @media (max-width: 650px) {
@@ -86,6 +90,12 @@ export const Text = styled.div`
 
   p {
     font-size: 1.2rem;
+
+    em {
+      font-style: normal;
+
+      color: var(--red-200);
+    }
   }
 
   @media (max-width: 920px) {
@@ -131,7 +141,14 @@ export const PhotoContainer = styled.div`
   }
 
   img:nth-child(2) {
+    width: 24rem;
+    height: 24rem;
+
     top: 6rem;
+
+    object-fit: cover;
+
+    border-radius: 100%;
   }
 
   @media (max-width: 1500px) {

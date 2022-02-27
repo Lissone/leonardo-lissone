@@ -52,6 +52,10 @@ export const Content = styled.div`
   @media (max-width: 770px) {
     padding-left: 0;
   }
+
+  @media (max-height: 630px) {
+    padding-top: 2rem;
+  }
 `
 
 export const Heading = styled.div`
@@ -119,6 +123,12 @@ export const ResumeText = styled.div`
 
   p {
     font-size: 1.2rem;
+
+    em {
+      font-style: normal;
+
+      color: var(--red-200);
+    }
   }
 `
 
@@ -143,6 +153,10 @@ export const ContactButton = styled(Scroll)`
 
   &:hover {
     transform: scale(1.03);
+  }
+
+  @media (max-height: 630px) {
+    margin-top: 2rem;
   }
 `
 

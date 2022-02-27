@@ -1,59 +1,98 @@
-import { FiGithub, FiGlobe } from 'react-icons/fi'
+import { FiFigma, FiGithub, FiGlobe } from 'react-icons/fi'
+
+import { ProjectContent } from '@type/content'
 
 import {
   Container,
   Content,
   Cover,
   CoverActions,
+  Information,
   Heading,
   Divider,
   TechnologiesRow,
-  FeaturedInformation
+  FeaturedInformation,
+  SeparateRow
 } from './styles'
 
-export function ProjectCard() {
+interface ProjectCardProps {
+  projectContent: ProjectContent
+}
+
+export function ProjectCard({ projectContent }: ProjectCardProps) {
   return (
     <Container data-aos="fade-up" data-aos-duration="1100">
       <Content>
         <Cover>
-          <img src="/portfolio-image.png" alt="Imagem de um projeto" />
+          <img src={projectContent.thumbnail.url} alt={projectContent.thumbnail.alt} />
 
           <CoverActions className="project-card-actions">
-            <a href="#">
-              <FiGithub size={24} />
-            </a>
-            <a href="#">
-              <FiGlobe size={24} />
-            </a>
+            {projectContent.figmaLink && (
+              <a href={projectContent.figmaLink} target="_blank" rel="noreferrer">
+                <FiFigma size={24} />
+              </a>
+            )}
+
+            {projectContent.repositoryLink && (
+              <a href={projectContent.repositoryLink} target="_blank" rel="noreferrer">
+                <FiGithub size={24} />
+              </a>
+            )}
+
+            {projectContent.productionLink && (
+              <a href={projectContent.productionLink} target="_blank" rel="noreferrer">
+                <FiGlobe size={24} />
+              </a>
+            )}
           </CoverActions>
         </Cover>
 
-        <Heading>Portfolio</Heading>
+        <Information>
+          <FeaturedInformation>
+            <Heading>{projectContent.name}</Heading>
 
-        <Divider />
+            <Divider />
 
-        <p>
-          An incredible pokedex, for you to delve into the pokemon universe and even
-          choose your favorite pokemons and add them to your profile!
-        </p>
+            {projectContent.description.map((text, index) => (
+              <p key={index}>{text}</p>
+            ))}
 
-        <TechnologiesRow>
-          <span>React, Next.js, StyledComponents, NodeJs, Firebase</span>
-        </TechnologiesRow>
+            <TechnologiesRow>
+              <span>{projectContent.mainTechnologies}</span>
+            </TechnologiesRow>
+          </FeaturedInformation>
 
-        <FeaturedInformation>
-          <div>
-            <img src="/icons/eslint.svg" alt="Ícone do eslint" />
+          <SeparateRow>
+            <div>
+              {projectContent.goodHabits.map(technology => {
+                if (technology === 'eslint')
+                  return (
+                    <img key={technology} src="/icons/eslint.svg" alt="Eslint icon" />
+                  )
+                else if (technology === 'prettier')
+                  return (
+                    <img key={technology} src="/icons/prettier.svg" alt="Prettier icon" />
+                  )
+                else if (technology === 'test')
+                  return <img key={technology} src="/icons/test.svg" alt="Test icon" />
+              })}
+            </div>
 
-            <img src="/icons/prettier.svg" alt="Ícone do prettier" />
-          </div>
+            <div>
+              {projectContent.isResponsive || projectContent.platform === 'mobile' ? (
+                <img src="/icons/mobile.svg" alt="Cellphone icon" />
+              ) : null}
 
-          <div>
-            <img src="/icons/mobile.svg" alt="Ícone de celular" />
+              {projectContent.platform === 'web' && (
+                <img src="/icons/web.svg" alt="Web icon" />
+              )}
 
-            <img src="/icons/web.svg" alt="Ícone de rede" />
-          </div>
-        </FeaturedInformation>
+              {projectContent.platform === 'desktop' && (
+                <img src="/icons/desktop.svg" alt="Desktop icon" />
+              )}
+            </div>
+          </SeparateRow>
+        </Information>
       </Content>
     </Container>
   )
