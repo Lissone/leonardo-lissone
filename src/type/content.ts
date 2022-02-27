@@ -44,6 +44,7 @@ export interface ProjectContent {
   isResponsive: boolean
   mainTechnologies: string
   goodHabits: string[]
+  figmaLink: string | null
   repositoryLink: string | null
   productionLink: string | null
 }
@@ -131,6 +132,9 @@ export interface PrismicContentDocumentResponse {
         is_responsive: boolean
         main_technologies: string
         good_habits: string
+        figma_link: {
+          url?: string
+        }
         repository_link: {
           url?: string
         }

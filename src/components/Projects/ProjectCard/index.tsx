@@ -1,4 +1,4 @@
-import { FiGithub, FiGlobe } from 'react-icons/fi'
+import { FiFigma, FiGithub, FiGlobe } from 'react-icons/fi'
 
 import { ProjectContent } from '@type/content'
 
@@ -27,6 +27,12 @@ export function ProjectCard({ projectContent }: ProjectCardProps) {
           <img src={projectContent.thumbnail.url} alt={projectContent.thumbnail.alt} />
 
           <CoverActions className="project-card-actions">
+            {projectContent.figmaLink && (
+              <a href={projectContent.figmaLink} target="_blank" rel="noreferrer">
+                <FiFigma size={24} />
+              </a>
+            )}
+
             {projectContent.repositoryLink && (
               <a href={projectContent.repositoryLink} target="_blank" rel="noreferrer">
                 <FiGithub size={24} />

@@ -135,6 +135,7 @@ export const getServerSideProps: GetServerSideProps = async () => {
         isResponsive: projectData.is_responsive,
         mainTechnologies: projectData.main_technologies.split(' ').join(',  '),
         goodHabits: projectData.good_habits?.split(' ') ?? [],
+        figmaLink: projectData.figma_link.url ?? null,
         repositoryLink: projectData.repository_link.url ?? null,
         productionLink: projectData.production_link.url ?? null
       }))
