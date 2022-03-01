@@ -131,7 +131,7 @@ export const TechnologiesRow = styled.div`
 export const FeaturedInformation = styled.div``
 
 export const SeparateRow = styled.div`
-  margin-top: 0.875rem;
+  margin-top: 1.25rem;
 
   display: flex;
   align-items: center;

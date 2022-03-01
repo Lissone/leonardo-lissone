@@ -2,8 +2,9 @@ import styled from 'styled-components'
 
 export const Container = styled.section`
   width: 100%;
-  height: 100vh;
+  height: 100%;
   padding-left: 12rem;
+  padding-bottom: 6rem;
 
   position: relative;
 

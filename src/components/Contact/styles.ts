@@ -41,10 +41,10 @@ export const Container = styled.footer`
 
       bottom: -7.5rem;
     }
-  }
 
-  @media (max-height: 630px) {
-    padding-top: 2rem;
+    @media (max-height: 630px) {
+      display: none;
+    }
   }
 `
 

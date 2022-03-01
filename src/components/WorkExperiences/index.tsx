@@ -56,7 +56,7 @@ export function WorkExperiences({ workExperiencesContent }: WorkExperiencesProps
         </Tabs>
       </Content>
 
-      <ImageContainer data-aos="fade-left">
+      <ImageContainer>
         <img src="/images/prism-cut.svg" alt="Cut prisma with led" />
       </ImageContainer>
     </Container>
