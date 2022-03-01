@@ -50,6 +50,7 @@ export const CoverActions = styled.div`
 
   width: 100%;
   height: 100%;
+  max-width: 18rem;
   max-height: 10rem;
 
   position: absolute;
@@ -87,6 +88,11 @@ export const CoverActions = styled.div`
     svg {
       color: var(--red-400);
     }
+  }
+
+  @media (max-width: 450px) {
+    width: 18.5rem;
+    height: 10rem;
   }
 `
 
