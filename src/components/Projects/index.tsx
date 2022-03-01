@@ -42,7 +42,12 @@ export function Projects({ projectsContent }: ProjectsProps) {
       </Content>
 
       {projects.length !== projectsContent.projects.length && (
-        <ShowMoreButton type="button" onClick={handleShowMoreProjects}>
+        <ShowMoreButton
+          type="button"
+          onClick={handleShowMoreProjects}
+          data-aos="fade-up"
+          data-aos-duration="1100"
+        >
           {projectsContent.showMoreButtonLabel}
         </ShowMoreButton>
       )}
