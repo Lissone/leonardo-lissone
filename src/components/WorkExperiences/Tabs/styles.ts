@@ -8,6 +8,8 @@ export const Container = styled.div`
   display: flex;
 
   @media (max-width: 750px) {
+    padding-top: 3rem;
+
     flex-direction: column;
   }
 `
@@ -87,7 +89,7 @@ export const Content = styled.div`
 `
 
 export const ContentTab = styled.div`
-  margin-bottom: 2rem;
+  margin-bottom: 3.5rem;
 `
 
 export const HeadingContentTab = styled.div`

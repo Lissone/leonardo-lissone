@@ -52,6 +52,7 @@ export interface ProjectContent {
 export interface ProjectsContent {
   heading: string
   projects: ProjectContent[]
+  showMoreButtonLabel: string
 }
 
 export interface ContactContent {
@@ -142,6 +143,7 @@ export interface PrismicContentDocumentResponse {
           url?: string
         }
       }[]
+      show_more_button_label: string
       contact_heading: {
         text: string
       }[]

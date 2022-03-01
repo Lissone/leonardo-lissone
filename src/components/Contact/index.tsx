@@ -53,7 +53,7 @@ export function Contact({
         </Socials>
       </Content>
 
-      <img src="/images/bearing-led.svg" alt="Bearing with led" className="bearing-led" />
+      <img className="bearing-led" src="/images/bearing-led.svg" alt="Bearing with led" />
     </Container>
   )
 }

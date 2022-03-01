@@ -54,7 +54,7 @@ export const Content = styled.div`
   }
 
   @media (max-height: 630px) {
-    padding-top: 2rem;
+    padding-top: 4rem;
   }
 `
 

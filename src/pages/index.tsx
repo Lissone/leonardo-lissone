@@ -138,7 +138,8 @@ export const getServerSideProps: GetServerSideProps = async () => {
         figmaLink: projectData.figma_link.url ?? null,
         repositoryLink: projectData.repository_link.url ?? null,
         productionLink: projectData.production_link.url ?? null
-      }))
+      })),
+      showMoreButtonLabel: prismicContent.data.show_more_button_label
     },
     contactSection: {
       heading: prismicContent.data.contact_heading.map(tagData => tagData.text),
