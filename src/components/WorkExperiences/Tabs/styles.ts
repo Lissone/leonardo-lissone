@@ -31,6 +31,7 @@ export const Tab = styled.li`
   list-style: none;
 
   button {
+    width: 12rem;
     padding: 1rem 2rem;
 
     font-size: 1.2rem;
@@ -48,6 +49,10 @@ export const Tab = styled.li`
     @media (max-width: 750px) {
       border-left: 0;
       border-top: 0.25rem solid var(--gray-800);
+    }
+
+    @media (max-width: 600px) {
+      width: 10rem;
     }
   }
 
