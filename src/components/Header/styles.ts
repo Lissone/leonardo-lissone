@@ -52,14 +52,13 @@ export const Menu = styled.div<MenuProps>`
   @media (max-width: 770px) {
     width: 18rem;
     height: 100vh;
-    max-height: ${({ isOpen }) => (isOpen ? '900px' : '0')};
-    padding-top: ${({ isOpen }) => (isOpen ? '3rem' : '0')};
+    padding-top: ${({ isOpen }) => (isOpen ? '2.5rem' : '0')};
 
     position: fixed;
     z-index: 15;
 
     top: 0rem;
-    left: 0.65rem;
+    left: ${({ isOpen }) => (isOpen ? '0' : '0.65rem')};
 
     overflow: hidden;
 
@@ -69,7 +68,11 @@ export const Menu = styled.div<MenuProps>`
 
     background: var(--gray-800);
 
-    transition: all 0.4s ease;
+    -webkit-font-smoothing: antialiased;
+    transform-origin: 0% 0%;
+    transform: ${({ isOpen }) => (isOpen ? 'none' : 'translate(-110%, 0)')};
+
+    transition: all 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
   }
 `
 
