@@ -1,4 +1,4 @@
-import { SocialContent } from '@type/content'
+import { SocialContent } from '@interfaces/content'
 
 import { SocialIcon } from '../SocialIcon'
 import { Container, Content } from './styles'

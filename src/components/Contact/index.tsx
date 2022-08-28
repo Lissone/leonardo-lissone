@@ -1,4 +1,4 @@
-import { ContactContent, SocialContent } from '@type/content'
+import { ContactContent, SocialContent } from '@interfaces/content'
 
 import { SocialIcon } from '@components/SocialIcon'
 
@@ -13,30 +13,25 @@ import {
 } from './styles'
 
 interface ContactProps {
-  contactContent: ContactContent
-  contactButtonLabel: string
+  content: ContactContent
   socials: SocialContent[]
   email: string
+  contactButtonLabel: string
 }
 
-export function Contact({
-  contactContent,
-  contactButtonLabel,
-  socials,
-  email
-}: ContactProps) {
+export function Contact({ content, socials, email, contactButtonLabel }: ContactProps) {
   return (
     <Container id="contact">
       <Content data-aos="fade-up">
         <Subtitle>
           <img src="/icons/arrow-heading.svg" alt="Big arrow with led" />
 
-          <h2>{contactContent.heading[0]}</h2>
+          <h2>{content.heading[0]}</h2>
         </Subtitle>
 
-        <Title>{contactContent.heading[1]}</Title>
+        <Title>{content.heading[1]}</Title>
 
-        {contactContent.text.map((text, index) => (
+        {content.text.map((text, index) => (
           <Text key={index}>{text}</Text>
         ))}
 

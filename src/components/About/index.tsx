@@ -1,4 +1,4 @@
-import { AboutContent } from '@type/content'
+import { AboutContent } from '@interfaces/content'
 
 import {
   Container,
@@ -11,10 +11,10 @@ import {
 } from './styles'
 
 interface AboutProps {
-  aboutContent: AboutContent
+  content: AboutContent
 }
 
-export function About({ aboutContent }: AboutProps) {
+export function About({ content }: AboutProps) {
   return (
     <Container id="about" data-aos="fade-up">
       <Content>
@@ -22,17 +22,17 @@ export function About({ aboutContent }: AboutProps) {
           <Heading>
             <img src="/icons/arrow-heading.svg" alt="Big arrow with led" />
 
-            <h1>{aboutContent.heading}</h1>
+            <h1>{content.heading}</h1>
           </Heading>
 
           <Text
             dangerouslySetInnerHTML={{
-              __html: aboutContent.text
+              __html: content.text
             }}
           />
 
           <SkillsList>
-            {aboutContent.recentTechnologies.map(technology => (
+            {content.recentTechnologies.map(technology => (
               <li key={technology}>
                 <img src="/icons/arrow.svg" alt="Red arrow with led" />
                 {technology}
@@ -44,10 +44,7 @@ export function About({ aboutContent }: AboutProps) {
         <Column>
           <PhotoContainer>
             <img src="/images/avatar-border.svg" alt="Avatar border" />
-            <img
-              src={aboutContent.profilePhoto.url}
-              alt={aboutContent.profilePhoto.alt}
-            />
+            <img src={content.profilePhoto.url} alt={content.profilePhoto.alt} />
           </PhotoContainer>
         </Column>
       </Content>

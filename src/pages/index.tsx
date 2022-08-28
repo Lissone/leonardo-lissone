@@ -6,7 +6,7 @@ import Head from 'next/head'
 import { RichText } from 'prismic-dom'
 import { useEffect, useState } from 'react'
 
-import { ContentType, PrismicContentDocumentResponse } from '@type/content'
+import { ContentType, PrismicContentDocumentResponse } from '@interfaces/content'
 
 import { getPrismicClient } from '@services/prismic'
 
@@ -27,16 +27,14 @@ interface HomeProps {
 }
 
 export default function Home({ contentLangs }: HomeProps) {
-  const [contentLanguage, setContentLanguage] = useState(contentLangs['pt-br'])
+  const [content, setContent] = useState(contentLangs['pt-br'])
 
   useEffect(() => {
     Aos.init({ duration: 1500 })
   }, [])
 
   function toggleContentLanguage() {
-    setContentLanguage(
-      contentLanguage.lang === 'pt-br' ? contentLangs['en-us'] : contentLangs['pt-br']
-    )
+    setContent(content.lang === 'pt-br' ? contentLangs['en-us'] : contentLangs['pt-br'])
   }
 
   return (
@@ -45,32 +43,32 @@ export default function Home({ contentLangs }: HomeProps) {
         <title>Leonardo Lissone</title>
       </Head>
 
-      <FixedSocials socials={contentLanguage.socials} />
+      <FixedSocials socials={content.socials} />
 
       <Header
-        language={contentLanguage.lang}
-        resumeButtonLabel={contentLanguage.resumeButtonLabel}
-        resumeCv={contentLanguage.resumeCv}
+        language={content.lang}
+        resumeCv={content.resumeCv}
+        resumeButtonLabel={content.resumeButtonLabel}
         toggleContentLanguage={toggleContentLanguage}
       />
 
       <Container>
         <Presentation
-          presentationContent={contentLanguage.presentationSection}
-          contactButtonLabel={contentLanguage.contactButtonLabel}
+          content={content.presentationSection}
+          contactButtonLabel={content.contactButtonLabel}
         />
 
-        <About aboutContent={contentLanguage.aboutSection} />
+        <About content={content.aboutSection} />
 
-        <WorkExperiences workExperiencesContent={contentLanguage.jobsSection} />
+        <WorkExperiences content={content.jobsSection} />
 
-        <Projects projectsContent={contentLanguage.projectsSection} />
+        <Projects content={content.projectsSection} />
 
         <Contact
-          contactContent={contentLanguage.contactSection}
-          contactButtonLabel={contentLanguage.contactButtonLabel}
-          socials={contentLanguage.socials}
-          email={contentLanguage.email}
+          content={content.contactSection}
+          socials={content.socials}
+          email={content.email}
+          contactButtonLabel={content.contactButtonLabel}
         />
       </Container>
     </>

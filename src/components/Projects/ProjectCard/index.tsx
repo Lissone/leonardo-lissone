@@ -1,6 +1,6 @@
 import { FiFigma, FiGithub, FiGlobe } from 'react-icons/fi'
 
-import { ProjectContent } from '@type/content'
+import { ProjectContent } from '@interfaces/content'
 
 import {
   Container,
@@ -16,31 +16,31 @@ import {
 } from './styles'
 
 interface ProjectCardProps {
-  projectContent: ProjectContent
+  content: ProjectContent
 }
 
-export function ProjectCard({ projectContent }: ProjectCardProps) {
+export function ProjectCard({ content }: ProjectCardProps) {
   return (
     <Container data-aos="fade-up" data-aos-duration="1100">
       <Content>
         <Cover>
-          <img src={projectContent.thumbnail.url} alt={projectContent.thumbnail.alt} />
+          <img src={content.thumbnail.url} alt={content.thumbnail.alt} />
 
           <CoverActions className="project-card-actions">
-            {projectContent.figmaLink && (
-              <a href={projectContent.figmaLink} target="_blank" rel="noreferrer">
+            {content.figmaLink && (
+              <a href={content.figmaLink} target="_blank" rel="noreferrer">
                 <FiFigma size={24} />
               </a>
             )}
 
-            {projectContent.repositoryLink && (
-              <a href={projectContent.repositoryLink} target="_blank" rel="noreferrer">
+            {content.repositoryLink && (
+              <a href={content.repositoryLink} target="_blank" rel="noreferrer">
                 <FiGithub size={24} />
               </a>
             )}
 
-            {projectContent.productionLink && (
-              <a href={projectContent.productionLink} target="_blank" rel="noreferrer">
+            {content.productionLink && (
+              <a href={content.productionLink} target="_blank" rel="noreferrer">
                 <FiGlobe size={24} />
               </a>
             )}
@@ -49,22 +49,22 @@ export function ProjectCard({ projectContent }: ProjectCardProps) {
 
         <Information>
           <FeaturedInformation>
-            <Heading>{projectContent.name}</Heading>
+            <Heading>{content.name}</Heading>
 
             <Divider />
 
-            {projectContent.description.map((text, index) => (
+            {content.description.map((text, index) => (
               <p key={index}>{text}</p>
             ))}
 
             <TechnologiesRow>
-              <span>{projectContent.mainTechnologies}</span>
+              <span>{content.mainTechnologies}</span>
             </TechnologiesRow>
           </FeaturedInformation>
 
           <SeparateRow>
             <div>
-              {projectContent.goodHabits.map(technology => {
+              {content.goodHabits.map(technology => {
                 if (technology === 'eslint')
                   return (
                     <img key={technology} src="/icons/eslint.svg" alt="Eslint icon" />
@@ -79,15 +79,13 @@ export function ProjectCard({ projectContent }: ProjectCardProps) {
             </div>
 
             <div>
-              {projectContent.isResponsive || projectContent.platform === 'mobile' ? (
+              {content.isResponsive || content.platform === 'mobile' ? (
                 <img src="/icons/mobile.svg" alt="Cellphone icon" />
               ) : null}
 
-              {projectContent.platform === 'web' && (
-                <img src="/icons/web.svg" alt="Web icon" />
-              )}
+              {content.platform === 'web' && <img src="/icons/web.svg" alt="Web icon" />}
 
-              {projectContent.platform === 'desktop' && (
+              {content.platform === 'desktop' && (
                 <img src="/icons/desktop.svg" alt="Desktop icon" />
               )}
             </div>
