@@ -1,6 +1,4 @@
-// import { FiHelpCircle } from 'react-icons/fi'
-
-import { useEffect, useState } from 'react'
+import { useState } from 'react'
 
 import { ProjectsContent } from '@interfaces/content'
 
@@ -12,27 +10,17 @@ interface ProjectsProps {
 }
 
 export function Projects({ content }: ProjectsProps) {
-  const [gridLimit, setGridLimit] = useState(6)
-  let projects = content.projects.slice(0, gridLimit)
-
-  useEffect(() => {
-    projects = content.projects.slice(0, gridLimit)
-  }, [gridLimit])
+  const limitProjectsShow = 6
+  const [projects, setProjects] = useState(content.projects.slice(0, limitProjectsShow))
 
   function handleShowMoreProjects() {
-    setGridLimit(state => state + 6)
+    setProjects(content.projects.slice(0, limitProjectsShow + 6))
   }
 
   return (
     <Container id="projects">
       <header>
-        <Heading>
-          <h1>{content.heading}</h1>
-
-          {/* <button type="button">
-            <FiHelpCircle size={24} />
-          </button> */}
-        </Heading>
+        <Heading>{content.heading}</Heading>
       </header>
 
       <Content>
