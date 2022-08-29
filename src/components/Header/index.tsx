@@ -20,15 +20,15 @@ import {
 
 interface HeaderProps {
   language: string
-  resumeButtonLabel: string
   resumeCv: string
+  resumeButtonLabel: string
   toggleContentLanguage: () => void
 }
 
 export function Header({
   language,
-  resumeButtonLabel,
   resumeCv,
+  resumeButtonLabel,
   toggleContentLanguage
 }: HeaderProps) {
   const [hamburguerIsOpen, setHamburguerIsOpen] = useState(false)

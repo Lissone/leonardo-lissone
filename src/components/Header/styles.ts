@@ -35,7 +35,7 @@ export const Hamburguer = styled.div`
   cursor: pointer;
 
   @media (max-width: 770px) {
-    padding-right: 2rem;
+    margin-right: 2rem;
 
     display: flex;
   }
@@ -52,7 +52,7 @@ export const Menu = styled.div<MenuProps>`
   @media (max-width: 770px) {
     width: 18rem;
     height: 100vh;
-    padding-top: ${({ isOpen }) => (isOpen ? '2.5rem' : '0')};
+    padding-top: 2.5rem;
 
     position: fixed;
     z-index: 15;
@@ -60,6 +60,7 @@ export const Menu = styled.div<MenuProps>`
     top: 0rem;
     left: ${({ isOpen }) => (isOpen ? '0' : '0.65rem')};
 
+    opacity: ${({ isOpen }) => (isOpen ? '100%' : '0%')};
     overflow: hidden;
 
     flex-direction: column;

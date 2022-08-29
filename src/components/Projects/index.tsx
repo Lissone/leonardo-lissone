@@ -1,22 +1,21 @@
-// import { FiHelpCircle } from 'react-icons/fi'
-
 import { useEffect, useState } from 'react'
 
-import { ProjectsContent } from '@type/content'
+import { ProjectsContent } from '@interfaces/content'
 
 import { ProjectCard } from './ProjectCard'
 import { Container, Heading, Content, ShowMoreButton } from './styles'
 
 interface ProjectsProps {
-  projectsContent: ProjectsContent
+  content: ProjectsContent
 }
 
-export function Projects({ projectsContent }: ProjectsProps) {
+export function Projects({ content }: ProjectsProps) {
   const [gridLimit, setGridLimit] = useState(6)
-  let projects = projectsContent.projects.slice(0, gridLimit)
+  let projects = content.projects.slice(0, gridLimit)
 
   useEffect(() => {
-    projects = projectsContent.projects.slice(0, gridLimit)
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+    projects = content.projects.slice(0, gridLimit)
   }, [gridLimit])
 
   function handleShowMoreProjects() {
@@ -26,29 +25,23 @@ export function Projects({ projectsContent }: ProjectsProps) {
   return (
     <Container id="projects">
       <header>
-        <Heading>
-          <h1>{projectsContent.heading}</h1>
-
-          {/* <button type="button">
-            <FiHelpCircle size={24} />
-          </button> */}
-        </Heading>
+        <Heading>{content.heading}</Heading>
       </header>
 
       <Content>
         {projects.map(project => (
-          <ProjectCard key={project.name} projectContent={project} />
+          <ProjectCard key={project.name} content={project} />
         ))}
       </Content>
 
-      {projects.length !== projectsContent.projects.length && (
+      {projects.length !== content.projects.length && (
         <ShowMoreButton
           type="button"
           onClick={handleShowMoreProjects}
           data-aos="fade-up"
           data-aos-duration="1100"
         >
-          {projectsContent.showMoreButtonLabel}
+          {content.showMoreButtonLabel}
         </ShowMoreButton>
       )}
     </Container>

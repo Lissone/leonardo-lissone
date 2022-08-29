@@ -1,4 +1,4 @@
-import { PresentationContent } from '@type/content'
+import { PresentationContent } from '@interfaces/content'
 
 import {
   Container,
@@ -10,26 +10,23 @@ import {
 } from './styles'
 
 interface PresentationProps {
-  presentationContent: PresentationContent
+  content: PresentationContent
   contactButtonLabel: string
 }
 
-export function Presentation({
-  presentationContent,
-  contactButtonLabel
-}: PresentationProps) {
+export function Presentation({ content, contactButtonLabel }: PresentationProps) {
   return (
     <Container id="presentation">
       <Content data-aos="fade-right">
         <Heading>
-          <h3>{presentationContent.heading[0]}</h3>
-          <h2>{presentationContent.heading[1]}</h2>
-          <h1>{presentationContent.heading[2]}</h1>
+          <h3>{content.heading[0]}</h3>
+          <h2>{content.heading[1]}</h2>
+          <h1>{content.heading[2]}</h1>
         </Heading>
 
         <ResumeText
           dangerouslySetInnerHTML={{
-            __html: presentationContent.text
+            __html: content.text
           }}
         />
 

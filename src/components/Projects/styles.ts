@@ -25,39 +25,18 @@ export const Container = styled.section`
   }
 `
 
-export const Heading = styled.div`
-  display: flex;
-  align-items: start;
-  gap: 1rem;
+export const Heading = styled.h1`
+  font-size: 2.5rem;
+  font-weight: 700;
 
-  h1 {
-    font-size: 2.5rem;
-    font-weight: 700;
+  text-align: center;
+  line-height: 3rem;
+  text-shadow: 0rem 0.25rem 2.5rem rgba(202, 62, 71, 0.5);
 
-    text-align: center;
-    line-height: 3rem;
-    text-shadow: 0rem 0.25rem 2.5rem rgba(202, 62, 71, 0.5);
+  color: var(--red-400);
 
-    color: var(--red-400);
-
-    @media (max-width: 840px) {
-      font-size: 2rem;
-    }
-  }
-
-  button {
-    background: none;
-
-    transition: 0.3s all;
-
-    &:hover {
-      transform: scale(1.1);
-      filter: brightness(0.85);
-    }
-
-    svg {
-      color: var(--gray-600);
-    }
+  @media (max-width: 840px) {
+    font-size: 2rem;
   }
 `
 

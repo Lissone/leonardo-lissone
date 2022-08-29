@@ -1,25 +1,25 @@
-import { JobsContent } from '@type/content'
+import { JobsContent } from '@interfaces/content'
 
 import { Container, Content, Heading, ImageContainer } from './styles'
 import { Tabs } from './Tabs'
 import { HeadingContentTab, ContentTab, Highlight } from './Tabs/styles'
 
 interface WorkExperiencesProps {
-  workExperiencesContent: JobsContent
+  content: JobsContent
 }
 
-export function WorkExperiences({ workExperiencesContent }: WorkExperiencesProps) {
+export function WorkExperiences({ content }: WorkExperiencesProps) {
   return (
     <Container id="work-experiences">
       <Content data-aos="fade-up">
         <Heading>
           <img src="/icons/arrow-heading.svg" alt="Big arrow with led" />
 
-          <h1>{workExperiencesContent.heading}</h1>
+          <h1>{content.heading}</h1>
         </Heading>
 
         <Tabs>
-          {workExperiencesContent.jobs.map(job => (
+          {content.jobs.map(job => (
             <div key={job.company} id={job.company}>
               {job.experiences.map(experience => (
                 <ContentTab key={experience.role}>

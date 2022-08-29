@@ -1,6 +1,8 @@
 import { FiFigma, FiGithub, FiGlobe } from 'react-icons/fi'
 
-import { ProjectContent } from '@type/content'
+import { ProjectContent } from '@interfaces/content'
+
+import { Tooltip } from '@components/Tooltip'
 
 import {
   Container,
@@ -16,79 +18,95 @@ import {
 } from './styles'
 
 interface ProjectCardProps {
-  projectContent: ProjectContent
+  content: ProjectContent
 }
 
-export function ProjectCard({ projectContent }: ProjectCardProps) {
+export function ProjectCard({ content }: ProjectCardProps) {
   return (
     <Container data-aos="fade-up" data-aos-duration="1100">
       <Content>
         <Cover>
-          <img src={projectContent.thumbnail.url} alt={projectContent.thumbnail.alt} />
+          <img src={content.thumbnail.url} alt={content.thumbnail.alt} />
 
           <CoverActions className="project-card-actions">
-            {projectContent.figmaLink && (
-              <a href={projectContent.figmaLink} target="_blank" rel="noreferrer">
-                <FiFigma size={24} />
-              </a>
+            {content.prototype && (
+              <Tooltip title={content.prototype.label}>
+                <a href={content.prototype.link} target="_blank" rel="noreferrer">
+                  <FiFigma size={24} />
+                </a>
+              </Tooltip>
             )}
 
-            {projectContent.repositoryLink && (
-              <a href={projectContent.repositoryLink} target="_blank" rel="noreferrer">
-                <FiGithub size={24} />
-              </a>
+            {content.repository && (
+              <Tooltip title={content.repository.label}>
+                <a href={content.repository.link} target="_blank" rel="noreferrer">
+                  <FiGithub size={24} />
+                </a>
+              </Tooltip>
             )}
 
-            {projectContent.productionLink && (
-              <a href={projectContent.productionLink} target="_blank" rel="noreferrer">
-                <FiGlobe size={24} />
-              </a>
+            {content.productionLink && (
+              <Tooltip title="Link">
+                <a href={content.productionLink} target="_blank" rel="noreferrer">
+                  <FiGlobe size={24} />
+                </a>
+              </Tooltip>
             )}
           </CoverActions>
         </Cover>
 
         <Information>
           <FeaturedInformation>
-            <Heading>{projectContent.name}</Heading>
+            <Heading>
+              <h2>{content.name}</h2>
+
+              {content.isCollaboration && (
+                <Tooltip title={content.collaborationLabel}>
+                  <img
+                    src="/icons/collaboration.svg"
+                    alt="icon for collaborative projects"
+                  />
+                </Tooltip>
+              )}
+            </Heading>
 
             <Divider />
 
-            {projectContent.description.map((text, index) => (
+            {content.description.map((text, index) => (
               <p key={index}>{text}</p>
             ))}
 
             <TechnologiesRow>
-              <span>{projectContent.mainTechnologies}</span>
+              <span>{content.mainTechnologies}</span>
             </TechnologiesRow>
           </FeaturedInformation>
 
           <SeparateRow>
             <div>
-              {projectContent.goodHabits.map(technology => {
-                if (technology === 'eslint')
-                  return (
-                    <img key={technology} src="/icons/eslint.svg" alt="Eslint icon" />
-                  )
-                else if (technology === 'prettier')
-                  return (
-                    <img key={technology} src="/icons/prettier.svg" alt="Prettier icon" />
-                  )
-                else if (technology === 'test')
-                  return <img key={technology} src="/icons/test.svg" alt="Test icon" />
-              })}
+              {content.goodHabits.map(({ key, label }) => (
+                <Tooltip key={key} title={label}>
+                  <img src={`/icons/${key}.svg`} alt={`${label} icon`} />
+                </Tooltip>
+              ))}
             </div>
 
             <div>
-              {projectContent.isResponsive || projectContent.platform === 'mobile' ? (
-                <img src="/icons/mobile.svg" alt="Cellphone icon" />
-              ) : null}
-
-              {projectContent.platform === 'web' && (
-                <img src="/icons/web.svg" alt="Web icon" />
+              {(content.isResponsive || content.platform === 'mobile') && (
+                <Tooltip title={content.isResponsive ? 'Responsive' : 'Mobile'}>
+                  <img src="/icons/mobile.svg" alt="Cellphone icon" />
+                </Tooltip>
               )}
 
-              {projectContent.platform === 'desktop' && (
-                <img src="/icons/desktop.svg" alt="Desktop icon" />
+              {content.platform === 'web' && (
+                <Tooltip title="Web">
+                  <img src="/icons/web.svg" alt="Web icon" />
+                </Tooltip>
+              )}
+
+              {content.platform === 'desktop' && (
+                <Tooltip title="Desktop">
+                  <img src="/icons/desktop.svg" alt="Desktop icon" />
+                </Tooltip>
               )}
             </div>
           </SeparateRow>
