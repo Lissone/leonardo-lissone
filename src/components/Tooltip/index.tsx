@@ -1,4 +1,3 @@
-import { Fade } from '@material-ui/core'
 import MaterialUITooltip from '@material-ui/core/Tooltip'
 
 interface TooltipProps {
@@ -8,7 +7,7 @@ interface TooltipProps {
 
 export function Tooltip({ title, children }: TooltipProps) {
   return (
-    <MaterialUITooltip title={title} placement="top" arrow TransitionComponent={Fade}>
+    <MaterialUITooltip title={title} placement="top" arrow>
       {children}
     </MaterialUITooltip>
   )

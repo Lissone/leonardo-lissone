@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 
 import { ProjectsContent } from '@interfaces/content'
 
@@ -10,11 +10,16 @@ interface ProjectsProps {
 }
 
 export function Projects({ content }: ProjectsProps) {
-  const limitProjectsShow = 6
-  const [projects, setProjects] = useState(content.projects.slice(0, limitProjectsShow))
+  const [gridLimit, setGridLimit] = useState(6)
+  let projects = content.projects.slice(0, gridLimit)
+
+  useEffect(() => {
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+    projects = content.projects.slice(0, gridLimit)
+  }, [gridLimit])
 
   function handleShowMoreProjects() {
-    setProjects(content.projects.slice(0, limitProjectsShow + 6))
+    setGridLimit(state => state + 6)
   }
 
   return (

@@ -82,6 +82,7 @@ export const getServerSideProps: GetServerSideProps = async () => {
     Prismic.Predicates.at('document.type', 'content_language')
   ])
 
+  /* eslint-disable camelcase */
   const contentLangs: ContentType[] = response.results.map(prismicContent => ({
     lang: prismicContent.uid,
     email: prismicContent.data.email,
@@ -122,22 +123,47 @@ export const getServerSideProps: GetServerSideProps = async () => {
     },
     projectsSection: {
       heading: prismicContent.data.projects_heading,
-      projects: prismicContent.data.projects.map(projectData => ({
-        thumbnail: {
-          url: projectData.thumbnail.url,
-          alt: projectData.thumbnail.alt
-        },
-        isCollaboration: projectData.is_collaboration,
-        name: projectData.name,
-        description: projectData.description.map(tagData => tagData.text),
-        platform: projectData.platform,
-        isResponsive: projectData.is_responsive,
-        mainTechnologies: projectData.main_technologies.split(' ').join(',  '),
-        goodHabits: projectData.good_habits?.split(' ') ?? [],
-        figmaLink: projectData.figma_link.url ?? null,
-        repositoryLink: projectData.repository_link.url ?? null,
-        productionLink: projectData.production_link.url ?? null
-      })),
+      projects: prismicContent.data.projects.map(projectData => {
+        const { good_habits, prototype, repository } = projectData
+        const goodHabits = good_habits ? good_habits.split(',') : []
+        const goodHabitsSplitted = goodHabits.map(goodHabit => {
+          const data = goodHabit.split(';')
+          return {
+            key: data[0],
+            label: data[1]
+          }
+        })
+        const prototypeSplitted = prototype ? prototype.split(';') : null
+        const repositorySplitted = repository ? repository.split(';') : null
+
+        return {
+          thumbnail: {
+            url: projectData.thumbnail.url,
+            alt: projectData.thumbnail.alt
+          },
+          isCollaboration: projectData.is_collaboration,
+          collaborationLabel: projectData.collaboration_label,
+          name: projectData.name,
+          description: projectData.description.map(tagData => tagData.text),
+          platform: projectData.platform,
+          isResponsive: projectData.is_responsive,
+          mainTechnologies: projectData.main_technologies.split(' ').join(',  '),
+          goodHabits: goodHabitsSplitted,
+          prototype: prototypeSplitted
+            ? {
+                label: prototypeSplitted[0],
+                link: prototypeSplitted[1]
+              }
+            : null,
+          repository: repositorySplitted
+            ? {
+                label: repositorySplitted[0],
+                link: repositorySplitted[1]
+              }
+            : null,
+          productionLink: projectData.production_link.url ?? null
+        }
+      }),
       showMoreButtonLabel: prismicContent.data.show_more_button_label
     },
     contactSection: {

@@ -22,10 +22,6 @@ interface ProjectCardProps {
 }
 
 export function ProjectCard({ content }: ProjectCardProps) {
-  function capitalizeString(string: string) {
-    return string.charAt(0).toUpperCase() + string.slice(1)
-  }
-
   return (
     <Container data-aos="fade-up" data-aos-duration="1100">
       <Content>
@@ -33,17 +29,17 @@ export function ProjectCard({ content }: ProjectCardProps) {
           <img src={content.thumbnail.url} alt={content.thumbnail.alt} />
 
           <CoverActions className="project-card-actions">
-            {content.figmaLink && (
-              <Tooltip title="Protótipo Figma">
-                <a href={content.figmaLink} target="_blank" rel="noreferrer">
+            {content.prototype && (
+              <Tooltip title={content.prototype.label}>
+                <a href={content.prototype.link} target="_blank" rel="noreferrer">
                   <FiFigma size={24} />
                 </a>
               </Tooltip>
             )}
 
-            {content.repositoryLink && (
-              <Tooltip title="Repositório Github">
-                <a href={content.repositoryLink} target="_blank" rel="noreferrer">
+            {content.repository && (
+              <Tooltip title={content.repository.label}>
+                <a href={content.repository.link} target="_blank" rel="noreferrer">
                   <FiGithub size={24} />
                 </a>
               </Tooltip>
@@ -65,7 +61,7 @@ export function ProjectCard({ content }: ProjectCardProps) {
               <h2>{content.name}</h2>
 
               {content.isCollaboration && (
-                <Tooltip title="Participação Colaborativa">
+                <Tooltip title={content.collaborationLabel}>
                   <img
                     src="/icons/collaboration.svg"
                     alt="icon for collaborative projects"
@@ -87,19 +83,16 @@ export function ProjectCard({ content }: ProjectCardProps) {
 
           <SeparateRow>
             <div>
-              {content.goodHabits.map(technology => (
-                <Tooltip key={technology} title={capitalizeString(technology)}>
-                  <img
-                    src={`/icons/${technology}.svg`}
-                    alt={`${capitalizeString(technology)} icon`}
-                  />
+              {content.goodHabits.map(({ key, label }) => (
+                <Tooltip key={key} title={label}>
+                  <img src={`/icons/${key}.svg`} alt={`${label} icon`} />
                 </Tooltip>
               ))}
             </div>
 
             <div>
               {(content.isResponsive || content.platform === 'mobile') && (
-                <Tooltip title={content.isResponsive ? 'Responsivo' : 'Mobile'}>
+                <Tooltip title={content.isResponsive ? 'Responsive' : 'Mobile'}>
                   <img src="/icons/mobile.svg" alt="Cellphone icon" />
                 </Tooltip>
               )}

@@ -39,14 +39,24 @@ export interface ProjectContent {
     alt: string
   }
   isCollaboration: boolean
+  collaborationLabel: string
   name: string
   description: string[]
   platform: string
   isResponsive: boolean
   mainTechnologies: string
-  goodHabits: string[]
-  figmaLink: string | null
-  repositoryLink: string | null
+  goodHabits: {
+    key: string
+    label: string
+  }[]
+  prototype: {
+    label: string
+    link: string
+  } | null
+  repository: {
+    label: string
+    link: string
+  } | null
   productionLink: string | null
 }
 
@@ -127,6 +137,7 @@ export interface PrismicContentDocumentResponse {
           alt: string
         }
         is_collaboration: boolean
+        collaboration_label: string
         name: string
         description: {
           text: string
@@ -135,12 +146,8 @@ export interface PrismicContentDocumentResponse {
         is_responsive: boolean
         main_technologies: string
         good_habits: string
-        figma_link: {
-          url?: string
-        }
-        repository_link: {
-          url?: string
-        }
+        prototype: string | null
+        repository: string | null
         production_link: {
           url?: string
         }
