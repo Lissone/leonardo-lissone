@@ -1,7 +1,8 @@
 import { FiFigma, FiGithub, FiGlobe } from 'react-icons/fi'
-import Tooltip from 'react-tooltip'
 
 import { ProjectContent } from '@interfaces/content'
+
+import { Tooltip } from '@components/Tooltip'
 
 import {
   Container,
@@ -33,61 +34,45 @@ export function ProjectCard({ content }: ProjectCardProps) {
 
           <CoverActions className="project-card-actions">
             {content.figmaLink && (
-              <>
-                <a
-                  data-tip
-                  data-for="tooltip-figma"
-                  href={content.figmaLink}
-                  target="_blank"
-                  rel="noreferrer"
-                >
+              <Tooltip title="Protótipo Figma">
+                <a href={content.figmaLink} target="_blank" rel="noreferrer">
                   <FiFigma size={24} />
                 </a>
-                <Tooltip id="tooltip-figma" effect="solid">
-                  Protótipo
-                </Tooltip>
-              </>
+              </Tooltip>
             )}
 
             {content.repositoryLink && (
-              <>
-                <a
-                  data-tip
-                  data-for="tooltip-github"
-                  href={content.repositoryLink}
-                  target="_blank"
-                  rel="noreferrer"
-                >
+              <Tooltip title="Repositório Github">
+                <a href={content.repositoryLink} target="_blank" rel="noreferrer">
                   <FiGithub size={24} />
                 </a>
-                <Tooltip id="tooltip-github" effect="solid">
-                  Repositório
-                </Tooltip>
-              </>
+              </Tooltip>
             )}
 
             {content.productionLink && (
-              <>
-                <a
-                  data-tip
-                  data-for="tooltip-production"
-                  href={content.productionLink}
-                  target="_blank"
-                  rel="noreferrer"
-                >
+              <Tooltip title="Link">
+                <a href={content.productionLink} target="_blank" rel="noreferrer">
                   <FiGlobe size={24} />
                 </a>
-                <Tooltip id="tooltip-production" effect="solid">
-                  Link
-                </Tooltip>
-              </>
+              </Tooltip>
             )}
           </CoverActions>
         </Cover>
 
         <Information>
           <FeaturedInformation>
-            <Heading>{content.name}</Heading>
+            <Heading>
+              <h2>{content.name}</h2>
+
+              {content.isCollaboration && (
+                <Tooltip title="Participação Colaborativa">
+                  <img
+                    src="/icons/collaboration.svg"
+                    alt="icon for collaborative projects"
+                  />
+                </Tooltip>
+              )}
+            </Heading>
 
             <Divider />
 
@@ -103,52 +88,32 @@ export function ProjectCard({ content }: ProjectCardProps) {
           <SeparateRow>
             <div>
               {content.goodHabits.map(technology => (
-                <div key={technology}>
-                  <a data-tip data-for={`tooltip-${technology}`}>
-                    <img
-                      src={`/icons/${technology}.svg`}
-                      alt={`${capitalizeString(technology)} icon`}
-                    />
-                  </a>
-                  <Tooltip id={`tooltip-${technology}`} effect="solid">
-                    {capitalizeString(technology)}
-                  </Tooltip>
-                </div>
+                <Tooltip key={technology} title={capitalizeString(technology)}>
+                  <img
+                    src={`/icons/${technology}.svg`}
+                    alt={`${capitalizeString(technology)} icon`}
+                  />
+                </Tooltip>
               ))}
             </div>
 
             <div>
               {(content.isResponsive || content.platform === 'mobile') && (
-                <>
-                  <a data-tip data-for="tooltip-mobile">
-                    <img src="/icons/mobile.svg" alt="Cellphone icon" />
-                  </a>
-                  <Tooltip id="tooltip-mobile" effect="solid">
-                    {content.isResponsive ? 'Responsivo' : 'Mobile'}
-                  </Tooltip>
-                </>
+                <Tooltip title={content.isResponsive ? 'Responsivo' : 'Mobile'}>
+                  <img src="/icons/mobile.svg" alt="Cellphone icon" />
+                </Tooltip>
               )}
 
               {content.platform === 'web' && (
-                <>
-                  <a data-tip data-for="tooltip-web">
-                    <img src="/icons/web.svg" alt="Web icon" />
-                  </a>
-                  <Tooltip id="tooltip-web" effect="solid">
-                    Web
-                  </Tooltip>
-                </>
+                <Tooltip title="Web">
+                  <img src="/icons/web.svg" alt="Web icon" />
+                </Tooltip>
               )}
 
               {content.platform === 'desktop' && (
-                <>
-                  <a data-tip data-for="tooltip-desktop">
-                    <img src="/icons/desktop.svg" alt="Desktop icon" />
-                  </a>
-                  <Tooltip id="tooltip-desktop" effect="solid">
-                    Desktop
-                  </Tooltip>
-                </>
+                <Tooltip title="Desktop">
+                  <img src="/icons/desktop.svg" alt="Desktop icon" />
+                </Tooltip>
               )}
             </div>
           </SeparateRow>

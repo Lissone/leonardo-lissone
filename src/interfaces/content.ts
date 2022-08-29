@@ -38,6 +38,7 @@ export interface ProjectContent {
     url: string
     alt: string
   }
+  isCollaboration: boolean
   name: string
   description: string[]
   platform: string
@@ -125,6 +126,7 @@ export interface PrismicContentDocumentResponse {
           url: string
           alt: string
         }
+        is_collaboration: boolean
         name: string
         description: {
           text: string

@@ -127,6 +127,7 @@ export const getServerSideProps: GetServerSideProps = async () => {
           url: projectData.thumbnail.url,
           alt: projectData.thumbnail.alt
         },
+        isCollaboration: projectData.is_collaboration,
         name: projectData.name,
         description: projectData.description.map(tagData => tagData.text),
         platform: projectData.platform,
