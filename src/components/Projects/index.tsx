@@ -24,7 +24,7 @@ export function Projects({ content }: ProjectsProps) {
 
   return (
     <Container id="projects">
-      <header>
+      <header data-aos="fade-up">
         <Heading>{content.heading}</Heading>
       </header>
 

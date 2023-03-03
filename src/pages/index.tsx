@@ -24,9 +24,10 @@ interface HomeProps {
   contentLangs: {
     [key: string]: ContentType
   }
+  setIsOverlayActive: (value: boolean) => void
 }
 
-export default function Home({ contentLangs }: HomeProps) {
+export default function Home({ contentLangs, setIsOverlayActive }: HomeProps) {
   const [content, setContent] = useState(contentLangs['pt-br'])
 
   useEffect(() => {
@@ -50,6 +51,7 @@ export default function Home({ contentLangs }: HomeProps) {
         resumeCv={content.resumeCv}
         resumeButtonLabel={content.resumeButtonLabel}
         toggleContentLanguage={toggleContentLanguage}
+        setIsOverlayActive={setIsOverlayActive}
       />
 
       <Container>

@@ -1,4 +1,4 @@
-import { createGlobalStyle } from 'styled-components'
+import styled, { createGlobalStyle } from 'styled-components'
 
 export const GlobalStyle = createGlobalStyle`
   * {
@@ -98,4 +98,21 @@ export const GlobalStyle = createGlobalStyle`
   ::-webkit-scrollbar-thumb:horizontal{
     background-color: var(--gray-600);
   }
+`
+
+interface GlobalOverlayProps {
+  isActive: boolean
+}
+
+export const GlobalOverlay = styled.div<GlobalOverlayProps>`
+  position: fixed;
+  display: ${({ isActive }) => (isActive ? 'block' : 'none')}; /* Hidden by default */
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 2; /* Specify a stack order in case you're using a different order for other elements */
 `
