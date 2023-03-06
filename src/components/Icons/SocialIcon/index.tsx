@@ -1,5 +1,6 @@
-import { BsInstagram } from 'react-icons/bs'
-import { FiGithub, FiLinkedin } from 'react-icons/fi'
+import { BsGithub, BsInstagram } from 'react-icons/bs'
+import { FaLinkedinIn } from 'react-icons/fa'
+import { IoLogoFigma } from 'react-icons/io5'
 
 interface SocialIconProps {
   readonly name: string
@@ -8,9 +9,11 @@ interface SocialIconProps {
 export function SocialIcon({ name }: SocialIconProps) {
   switch (name) {
     case 'Github':
-      return <FiGithub size={30} />
+      return <BsGithub size={30} />
+    case 'Figma':
+      return <IoLogoFigma size={30} />
     case 'Linkedin':
-      return <FiLinkedin size={30} />
+      return <FaLinkedinIn size={30} />
     case 'Instagram':
       return <BsInstagram size={29} />
     default:
