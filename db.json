@@ -114,6 +114,10 @@
             ],
             "details": [
               {
+                "key": "fullstack",
+                "label": "Projeto Fullstack"
+              },
+              {
                 "key": "responsive",
                 "label": "Responsivo"
               },
@@ -204,6 +208,10 @@
             ],
             "details": [
               {
+                "key": "fullstack",
+                "label": "Projeto Fullstack"
+              },
+              {
                 "key": "web",
                 "label": "Web"
               }
@@ -229,6 +237,10 @@
               }
             ],
             "details": [
+              {
+                "key": "fullstack",
+                "label": "Projeto Fullstack"
+              },
               {
                 "key": "responsive",
                 "label": "Responsivo"
@@ -435,6 +447,10 @@
             ],
             "details": [
               {
+                "key": "fullstack",
+                "label": "Fullstack Project"
+              },
+              {
                 "key": "responsive",
                 "label": "Responsive"
               },
@@ -525,6 +541,10 @@
             ],
             "details": [
               {
+                "key": "fullstack",
+                "label": "Fullstack Project"
+              },
+              {
                 "key": "web",
                 "label": "Web"
               }
@@ -550,6 +570,10 @@
               }
             ],
             "details": [
+              {
+                "key": "fullstack",
+                "label": "Fullstack Project"
+              },
               {
                 "key": "responsive",
                 "label": "Responsive"
