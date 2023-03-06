@@ -144,6 +144,10 @@
               {
                 "key": "prettier",
                 "label": "Prettier"
+              },
+              {
+                "key": "commit-lint",
+                "label": "CommitLint"
               }
             ],
             "details": [
@@ -477,6 +481,10 @@
               {
                 "key": "prettier",
                 "label": "Prettier"
+              },
+              {
+                "key": "commit-lint",
+                "label": "CommitLint"
               }
             ],
             "details": [
