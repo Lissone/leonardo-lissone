@@ -230,12 +230,12 @@
             ],
             "details": [
               {
-                "key": "web",
-                "label": "Web"
-              },
-              {
                 "key": "responsive",
                 "label": "Responsivo"
+              },
+              {
+                "key": "web",
+                "label": "Web"
               }
             ],
             "prototypeLink": "https://www.figma.com/file/tjSrlP5Y0x6rK4rrA5Lqx6/Pokedex?node-id=0%3A1",
@@ -268,12 +268,12 @@
             "goodHabits": [],
             "details": [
               {
-                "key": "web",
-                "label": "Web"
-              },
-              {
                 "key": "responsive",
                 "label": "Responsivo"
+              },
+              {
+                "key": "web",
+                "label": "Web"
               }
             ],
             "prototypeLink": null,
@@ -289,12 +289,12 @@
             "goodHabits": [],
             "details": [
               {
-                "key": "web",
-                "label": "Web"
-              },
-              {
                 "key": "responsive",
                 "label": "Responsivo"
+              },
+              {
+                "key": "web",
+                "label": "Web"
               }
             ],
             "prototypeLink": null,
@@ -551,12 +551,12 @@
             ],
             "details": [
               {
-                "key": "web",
-                "label": "Web"
-              },
-              {
                 "key": "responsive",
                 "label": "Responsive"
+              },
+              {
+                "key": "web",
+                "label": "Web"
               }
             ],
             "prototypeLink": "https://www.figma.com/file/tjSrlP5Y0x6rK4rrA5Lqx6/Pokedex?node-id=0%3A1",
@@ -589,12 +589,12 @@
             "goodHabits": [],
             "details": [
               {
-                "key": "web",
-                "label": "Web"
-              },
-              {
                 "key": "responsive",
                 "label": "Responsive"
+              },
+              {
+                "key": "web",
+                "label": "Web"
               }
             ],
             "prototypeLink": null,
@@ -610,12 +610,12 @@
             "goodHabits": [],
             "details": [
               {
-                "key": "web",
-                "label": "Web"
-              },
-              {
                 "key": "responsive",
                 "label": "Responsivo"
+              },
+              {
+                "key": "web",
+                "label": "Web"
               }
             ],
             "prototypeLink": null,
