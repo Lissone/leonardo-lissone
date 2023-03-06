@@ -2,7 +2,7 @@ import { BsInstagram } from 'react-icons/bs'
 import { FiGithub, FiLinkedin } from 'react-icons/fi'
 
 interface SocialIconProps {
-  name: string
+  readonly name: string
 }
 
 export function SocialIcon({ name }: SocialIconProps) {

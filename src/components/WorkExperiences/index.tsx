@@ -1,11 +1,11 @@
-import { JobsContent } from '@interfaces/content'
+import { JobsSectionContent } from '@interfaces/content'
 
 import { Container, Content, Heading, ImageContainer } from './styles'
 import { Tabs } from './Tabs'
 import { HeadingContentTab, ContentTab, Highlight } from './Tabs/styles'
 
 interface WorkExperiencesProps {
-  content: JobsContent
+  readonly content: JobsSectionContent
 }
 
 export function WorkExperiences({ content }: WorkExperiencesProps) {

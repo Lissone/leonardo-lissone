@@ -1,10 +1,10 @@
-import { SocialContent } from '@interfaces/content'
+import { SocialsContent } from '@interfaces/content'
 
 import { SocialIcon } from '../Icons/SocialIcon'
 import { Container, Content } from './styles'
 
 interface FixedSocialsProps {
-  socials: SocialContent[]
+  readonly socials: SocialsContent[]
 }
 
 export function FixedSocials({ socials }: FixedSocialsProps) {

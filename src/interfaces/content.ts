@@ -1,164 +1,83 @@
-export interface SocialContent {
-  name: string
-  link: string
-}
-
-export interface PresentationContent {
-  heading: string[]
-  text: string
-}
-
-export interface AboutContent {
-  heading: string
-  text: string
-  profilePhoto: {
-    url: string
-    alt: string
+export interface ContentLanguage {
+  readonly lang: string
+  readonly email: string
+  readonly socials: SocialsContent[]
+  readonly presentationSection: PresentationSectionContent
+  readonly aboutSection: AboutSectionContent
+  readonly jobsSection: JobsSectionContent
+  readonly projectsSection: ProjectsSectionContent
+  readonly contactSection: ContactSectionContent
+  readonly sharedButtons: {
+    readonly resumeCv: string
+    readonly resumeButtonLabel: string
+    readonly contactButtonLabel: string
   }
-  recentTechnologies: string[]
 }
 
-export interface JobsContent {
-  heading: string
-  jobs: {
-    company: string
-    experiences: {
-      company: string
-      siteLink: string
-      role: string
-      startDate: string
-      endDate: string
-      activities: string[]
+export interface SocialsContent {
+  readonly name: string
+  readonly link: string
+}
+
+export interface PresentationSectionContent {
+  readonly heading: string[]
+  readonly text: string
+}
+
+export interface AboutSectionContent {
+  readonly heading: string
+  readonly text: string
+  readonly profilePhoto: {
+    readonly url: string
+    readonly alt: string
+  }
+  readonly recentTechnologies: string[]
+}
+
+export interface JobsSectionContent {
+  readonly heading: string
+  readonly jobs: {
+    readonly company: string
+    readonly experiences: {
+      readonly siteLink: string
+      readonly role: string
+      readonly startDate: string
+      readonly endDate: string
+      readonly activities: string[]
     }[]
   }[]
 }
 
+export interface ProjectsSectionContent {
+  readonly heading: string
+  readonly projects: ProjectContent[]
+  readonly thumbnailAltLabel: string
+  readonly collaborationLabel: string
+  readonly prototypeLabel: string
+  readonly repositoryLabel: string
+  readonly showMoreButtonLabel: string
+}
+
 export interface ProjectContent {
-  thumbnail: {
-    url: string
-    alt: string
-  }
-  isCollaboration: boolean
-  collaborationLabel: string
-  name: string
-  description: string[]
-  platform: string
-  isResponsive: boolean
-  mainTechnologies: string
-  goodHabits: {
-    key: string
-    label: string
+  readonly name: string
+  readonly description: string
+  readonly mainTechnologies: string[]
+  readonly isCollaboration: boolean
+  readonly thumbnailUrl: string
+  readonly goodHabits: {
+    readonly key: 'eslint' | 'prettier' | 'test'
+    readonly label: string
   }[]
-  prototype: {
-    label: string
-    link: string
-  } | null
-  repository: {
-    label: string
-    link: string
-  } | null
-  productionLink: string | null
-}
-
-export interface ProjectsContent {
-  heading: string
-  projects: ProjectContent[]
-  showMoreButtonLabel: string
-}
-
-export interface ContactContent {
-  heading: string[]
-  text: string[]
-}
-
-export interface ContentType {
-  lang: string
-  email: string
-  socials: SocialContent[]
-  resumeButtonLabel: string
-  contactButtonLabel: string
-  resumeCv: string
-  presentationSection: PresentationContent
-  aboutSection: AboutContent
-  jobsSection: JobsContent
-  projectsSection: ProjectsContent
-  contactSection: ContactContent
-}
-
-/* eslint-disable camelcase */
-export interface PrismicContentDocumentResponse {
-  results: {
-    uid?: string // lang
-    data: {
-      email: string
-      socials: {
-        name: string
-        link: string
-      }[]
-      resume_button_label: string
-      resume_pdf: {
-        url: string
-      }
-      presentation_heading: {
-        text: string
-      }[]
-      presentation_text: {
-        text: string
-      }[]
-      contact_button_label: string
-      about_heading: string
-      about_text: {
-        text: string
-      }[]
-      profile_photo: {
-        url: string
-        alt: string
-      }
-      recent_technologies: {
-        technology: string
-      }[]
-      jobs_heading: string
-      jobs: {
-        company: string
-        site_link: {
-          url: string
-        }
-        role: string
-        start_date: string
-        end_date: string
-        activities: {
-          text: string
-        }[]
-      }[]
-      projects_heading: string
-      projects: {
-        thumbnail: {
-          url: string
-          alt: string
-        }
-        is_collaboration: boolean
-        collaboration_label: string
-        name: string
-        description: {
-          text: string
-        }[]
-        platform: string
-        is_responsive: boolean
-        main_technologies: string
-        good_habits: string
-        prototype: string | null
-        repository: string | null
-        production_link: {
-          url?: string
-        }
-      }[]
-      show_more_button_label: string
-      contact_heading: {
-        text: string
-      }[]
-      contact_text: {
-        text: string
-      }[]
-    }
+  readonly details: {
+    readonly key: 'web' | 'mobile' | 'desktop' | 'responsive' | 'design'
+    readonly label: string
   }[]
+  readonly prototypeLink: string | null
+  readonly repositoryLink: string | null
+  readonly productionLink: string | null
+}
+
+export interface ContactSectionContent {
+  readonly heading: string[]
+  readonly text: string
 }

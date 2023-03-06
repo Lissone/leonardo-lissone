@@ -18,40 +18,50 @@ import {
 } from './styles'
 
 interface ProjectCardProps {
-  content: ProjectContent
+  readonly content: ProjectContent
+  readonly thumbnailAltLabel: string
+  readonly collaborationLabel: string
+  readonly prototypeLabel: string
+  readonly repositoryLabel: string
 }
 
-export function ProjectCard({ content }: ProjectCardProps) {
+export function ProjectCard({
+  content,
+  thumbnailAltLabel,
+  collaborationLabel,
+  prototypeLabel,
+  repositoryLabel
+}: ProjectCardProps) {
   return (
     <Container data-aos="fade-up" data-aos-duration="1100">
       <Content>
         <Cover>
-          <img src={content.thumbnail.url} alt={content.thumbnail.alt} />
+          <img src={content.thumbnailUrl} alt={`${thumbnailAltLabel} ${content.name}`} />
 
           <CoverActions className="project-card-actions">
-            {content.prototype && (
-              <Tooltip title={content.prototype.label}>
-                <a href={content.prototype.link} target="_blank" rel="noreferrer">
+            {content.prototypeLink ? (
+              <Tooltip title={prototypeLabel}>
+                <a href={content.prototypeLink} target="_blank" rel="noreferrer">
                   <FiFigma size={24} />
                 </a>
               </Tooltip>
-            )}
+            ) : null}
 
-            {content.repository && (
-              <Tooltip title={content.repository.label}>
-                <a href={content.repository.link} target="_blank" rel="noreferrer">
+            {content.repositoryLink ? (
+              <Tooltip title={repositoryLabel}>
+                <a href={content.repositoryLink} target="_blank" rel="noreferrer">
                   <FiGithub size={24} />
                 </a>
               </Tooltip>
-            )}
+            ) : null}
 
-            {content.productionLink && (
+            {content.productionLink ? (
               <Tooltip title="Link">
                 <a href={content.productionLink} target="_blank" rel="noreferrer">
                   <FiGlobe size={24} />
                 </a>
               </Tooltip>
-            )}
+            ) : null}
           </CoverActions>
         </Cover>
 
@@ -60,24 +70,22 @@ export function ProjectCard({ content }: ProjectCardProps) {
             <Heading>
               <h2>{content.name}</h2>
 
-              {content.isCollaboration && (
-                <Tooltip title={content.collaborationLabel}>
+              {content.isCollaboration ? (
+                <Tooltip title={collaborationLabel}>
                   <img
                     src="/icons/collaboration.svg"
                     alt="icon for collaborative projects"
                   />
                 </Tooltip>
-              )}
+              ) : null}
             </Heading>
 
             <Divider />
 
-            {content.description.map((text, index) => (
-              <p key={index}>{text}</p>
-            ))}
+            <p>{content.description}</p>
 
             <TechnologiesRow>
-              <span>{content.mainTechnologies}</span>
+              <span>{content.mainTechnologies.join(' ')}</span>
             </TechnologiesRow>
           </FeaturedInformation>
 
@@ -91,23 +99,11 @@ export function ProjectCard({ content }: ProjectCardProps) {
             </div>
 
             <div>
-              {(content.isResponsive || content.platform === 'mobile') && (
-                <Tooltip title={content.isResponsive ? 'Responsive' : 'Mobile'}>
-                  <img src="/icons/mobile.svg" alt="Cellphone icon" />
+              {content.details.map(({ key, label }) => (
+                <Tooltip key={key} title={label}>
+                  <img src={`/icons/${key}.svg`} alt={`${label} icon`} />
                 </Tooltip>
-              )}
-
-              {content.platform === 'web' && (
-                <Tooltip title="Web">
-                  <img src="/icons/web.svg" alt="Web icon" />
-                </Tooltip>
-              )}
-
-              {content.platform === 'desktop' && (
-                <Tooltip title="Desktop">
-                  <img src="/icons/desktop.svg" alt="Desktop icon" />
-                </Tooltip>
-              )}
+              ))}
             </div>
           </SeparateRow>
         </Information>

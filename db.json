@@ -1,0 +1,646 @@
+{
+  "content-languages": [
+    {
+      "lang": "pt-br",
+      "email": "leonardo.lissonez@gmail.com",
+      "socials": [
+        {
+          "name": "Github",
+          "link": "https://github.com/Lissone"
+        },
+        {
+          "name": "Linkedin",
+          "link": "https://www.linkedin.com/in/lissone/"
+        },
+        {
+          "name": "Instagram",
+          "link": "https://www.instagram.com/lissonez/"
+        }
+      ],
+      "presentationSection": {
+        "heading": [
+          "Olá,",
+          "eu sou",
+          "Leonardo Lissone"
+        ],
+        "text": "Sou um desenvolvedor Fullstack Javascript, com mais de 2 anos de experiência em desenvolvimento web, design de interfaces e experiência do usuário. Tive duas experiências incríveis de trabalho, onde fiquei responsável por planejar, prototipar e desenvolver projetos de alto valor para ambos setores onde atuei. <br> Além de estar muito determinado para meu crescimento pessoal de conhecimento na área da tecnologia, criando projetos sempre inovadores para mim com muito amor e dedicação."
+      },
+      "aboutSection": {
+        "heading": "Sobre mim",
+        "text": "Estudante e amante da área de tecnologia, com foco em desenvolvimento front-end/back-end, interface de usuário e engenharia de software. Objetivo de me tornar um profissional cada vez mais completo, sempre buscando aprender e desenvolver projetos para aplicar e compartilhar conhecimentos e experiências. Bacharelando Sistemas de Informação, criando aplicações de forma autônoma, em busca de desafios, trabalhando com carisma, vontade e paixão. Profissionalismo é meu foco.",
+        "profilePhoto": {
+          "url": "https://images.prismic.io/leonardo-lissone/f0ec48f1-86b2-4a45-bf0f-f643398ba1e5_Foto+com+fundo+s%C3%B3lido+%281%29.png?auto=compress,format",
+          "alt": "Leonardo Dias Lissone Santomero"
+        },
+        "recentTechnologies": ["Javascript (ES6++)", "Typescript", "NodeJs", "NestJs", "ReactJs", "GraphQL", "Python"]
+      },
+      "jobsSection": {
+        "heading": "Experiências de trabalho",
+        "jobs": [
+          {
+            "company": "G5 Partners",
+            "experiences": [
+              {
+                "siteLink": "https://g5partners.com/",
+                "role": "Analista de Desenvolvimento Júnior",
+                "startDate": "Março 2022",
+                "endDate": "Presente",
+                "activities": [
+                  "Desenvolvimento de novas ferramentas e funcionalidades para os usuários dos sistemas públicos e privados da empresa.",
+                  "Atuação na manutenção preventiva, preditiva e corretiva de softwares desenvolvidos.",
+                  "Migração de sistemas legados para tecnologias atuais utilizadas na empresa.",
+                  "Planejamento de design visual e experiência do usuário de aplicações web e mobile.",
+                  "Criação de scripts de automação de processos de rotina para área operacional.",
+                  "Elaboração de documentações técnicas para planejamento de novas implementações de sistema e manual para possíveis necessidades."
+                ]
+              }
+            ]
+          },
+          {
+            "company": "Santander",
+            "experiences": [
+              {
+                "siteLink": "https://www.santander.com.br/sustentabilidade/gestao-de-atividades/risco-gestao-integrada",
+                "role": "Estagiário de inovação",
+                "startDate": "Setembro 2021",
+                "endDate": "Março 2022",
+                "activities": [
+                  "Planejamento, prototipagem e desenvolvimento de projeto interno com objetivo de trazer produtividade e integração de sistemas para analistas que avaliam propostas de crédito.",
+                  "Reestruturação de planilhas Excel para relatórios interativo, aplicando princípios de UX e análise de dados para a produtividade do cliente colaborador.",
+                  "Desenvolvimento front-end de projetos internos utilizando Angular.",
+                  "Geração de relatórios de rotina utilizando dados de big data."
+                ]
+              }
+            ]
+          },
+          {
+            "company": "Serget",
+            "experiences": [
+              {
+                "siteLink": "http://www.serget.com.br/",
+                "role": "Estagiário de desenvolvimento",
+                "startDate": "Janeiro 2020",
+                "endDate": "Setembro 2021",
+                "activities": [
+                  "Desenvolvimento e implantação de um novo sistema, destinado a cadastro e controle de cartões especiais para pessoas deficientes, idosas ou gestantes, que dispõem da necessidade de estacionar em vagas exclusivas.",
+                  "Implementação de técnicas de desenvolvimento para a elaboração de sistemas (Documentação técnica de aplicações, utilizando flowcharts e wireframes).",
+                  "Redesign e prototipagem de software web interno utilizando Figma.",
+                  "Colaboração no planejamento de novos sistemas.",
+                  "Reestruturação e refatoração de projetos já existentes."
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "projectsSection": {
+        "heading": "Projetos que já desenvolvi",
+        "projects": [
+          {
+            "name": "Point Control",
+            "description": "Um projeto completo de controle interno de gestão de pessoas, direcionado para o setor de recursos humanos de qualquer tipo de empresa.",
+            "thumbnailUrl": "https://images.prismic.io/leonardo-lissone/6adccd0c-5d0c-497c-a47d-d6b89069e2b4_Frame+1.png?auto=compress,format",
+            "mainTechnologies": ["Typescript", "NodeJs", "ReactJs", "NextJs", "AngularJs", "ChakraUI", "Redis", "SqlServer"],
+            "isCollaboration": true,
+            "goodHabits": [
+              {
+                "key": "eslint",
+                "label": "Eslint"
+              },
+              {
+                "key": "prettier",
+                "label": "Prettier"
+              }
+            ],
+            "details": [
+              {
+                "key": "responsive",
+                "label": "Responsivo"
+              },
+              {
+                "key": "web",
+                "label": "Web"
+              }
+            ],
+            "prototypeLink": "https://www.figma.com/file/L4N9BizFngAiGGjTCH058S/Point-Control?node-id=0%3A1&t=CSCocT0hI5Ubxn4z-1",
+            "repositoryLink": "https://github.com/Lissone/point-control-api",
+            "productionLink": null
+          },
+          {
+            "name": "Portfólio",
+            "description": "Website portfolio / bio criado para ser um ponto focal para todas as minhas experiências, projetos, histórias e principalmente aumentar e facilitar a rede de contatos.",
+            "thumbnailUrl": "https://images.prismic.io/leonardo-lissone/011fbaaa-3d12-43bf-b208-3e56d3097623_portfolio-thumbnail.png?auto=compress,format",
+            "mainTechnologies": ["Typescript", "ReactJs", "NextJs", "StyledComponents", "JsonServer"],
+            "isCollaboration": false,
+            "goodHabits": [
+              {
+                "key": "eslint",
+                "label": "Eslint"
+              },
+              {
+                "key": "prettier",
+                "label": "Prettier"
+              }
+            ],
+            "details": [
+              {
+                "key": "responsive",
+                "label": "Responsivo"
+              },
+              {
+                "key": "web",
+                "label": "Web"
+              }
+            ],
+            "prototypeLink": "https://www.figma.com/file/VufrifzcSAEctTBgUFjzPT/Portif%C3%B3lio?node-id=0%3A1",
+            "repositoryLink": "https://github.com/Lissone/leonardo-lissone",
+            "productionLink": null
+          },
+          {
+            "name": "WorldTrip",
+            "description": "Um site com informações e curiosidades sobre continentes, países e cidades, com o objetivo de incentivar e informar as pessoas sobre o turismo na região.",
+            "thumbnailUrl": "https://images.prismic.io/leonardo-lissone/a89dd0b0-4641-44a2-acfc-3e6c099d5fff_worldtrip-thumbnail.png?auto=compress,format",
+            "mainTechnologies": ["Typescript", "ReactJs", "NextJs", "ChakraUI ", "PirsmicCMS"],
+            "isCollaboration": false,
+            "goodHabits": [
+              {
+                "key": "eslint",
+                "label": "Eslint"
+              },
+              {
+                "key": "test",
+                "label": "Teste"
+              }
+            ],
+            "details": [
+              {
+                "key": "responsive",
+                "label": "Responsivo"
+              },
+              {
+                "key": "web",
+                "label": "Web"
+              }
+            ],
+            "prototypeLink": "https://www.figma.com/file/opj6i3Zw5fxVjVwDeyNSAg/World-Trip?node-id=0%3A1",
+            "repositoryLink": "https://github.com/Lissone/world-trip",
+            "productionLink": "https://world-trip-rouge.vercel.app/"
+          },
+          {
+            "name": "LixAttendance",
+            "description": "Um site de bate-papo de suporte entre o cliente com pergunta e o administrador respondente, onde o administrador pode escolher o cliente que deseja responder de acordo com a prioridade e fechar sua conexão assim que as consultas forem respondidas.",
+            "thumbnailUrl": "https://images.prismic.io/leonardo-lissone/28739747-2f23-4888-9d76-413a7ef34c6e_lixattendance-thumbnail.png?auto=compress,format",
+            "mainTechnologies": ["Typescript", "ReactJs", "NextJs", "NodeJs ", "SocketIO", "SqlServer"],
+            "isCollaboration": false,
+            "goodHabits": [
+              {
+                "key": "eslint",
+                "label": "Eslint"
+              },
+              {
+                "key": "prettier",
+                "label": "Prettier"
+              }
+            ],
+            "details": [
+              {
+                "key": "web",
+                "label": "Web"
+              }
+            ],
+            "prototypeLink": null,
+            "repositoryLink": "https://github.com/Lissone/lix-attendance",
+            "productionLink": null
+          },
+          {
+            "name": "Pokedex",
+            "description": "Uma pokedex incrível, para você mergulhar no universo pokémon e ainda escolher seus pokémons favoritos e adicioná-los ao seu perfil!",
+            "thumbnailUrl": "https://images.prismic.io/leonardo-lissone/96dea68a-2fe5-455a-8460-6a923ce2f6c9_pokedex-thumbnail.png?auto=compress,format",
+            "mainTechnologies": ["Typescript", "ReactJs", "NextJs", "StyledComponents", "NodeJs ", "Firebase"],
+            "isCollaboration": false,
+            "goodHabits": [
+              {
+                "key": "eslint",
+                "label": "Eslint"
+              },
+              {
+                "key": "prettier",
+                "label": "Prettier"
+              }
+            ],
+            "details": [
+              {
+                "key": "web",
+                "label": "Web"
+              },
+              {
+                "key": "responsive",
+                "label": "Responsivo"
+              }
+            ],
+            "prototypeLink": "https://www.figma.com/file/tjSrlP5Y0x6rK4rrA5Lqx6/Pokedex?node-id=0%3A1",
+            "repositoryLink": "https://github.com/Lissone/pokedex",
+            "productionLink": "https://pokedex-lissone.vercel.app/"
+          },
+          {
+            "name": "Letmeask",
+            "description": "Plataforma que permite criar salas de quiz, para as pessoas fazerem perguntas e o dono da sala responder, curtir ou destacar perguntas específicas.",
+            "thumbnailUrl": "https://images.prismic.io/leonardo-lissone/4521c59e-8598-47b8-9be9-80573b63bd5f_letmeask-thumbnail.png?auto=compress,format",
+            "mainTechnologies": ["Typescript", "ReactJs", "Sass", "Firebase"],
+            "isCollaboration": true,
+            "goodHabits": [],
+            "details": [
+              {
+                "key": "web",
+                "label": "Web"
+              }
+            ],
+            "prototypeLink": null,
+            "repositoryLink": "https://github.com/Lissone/let-me-ask",
+            "productionLink": "https://letmeask-8aa0f.web.app/"
+          },
+          {
+            "name": "Podcastr",
+            "description": "Site de reprodução de podcasts, com player completo para ouvir seu episódio, avulso ou em playlists.",
+            "thumbnailUrl": "https://images.prismic.io/leonardo-lissone/1cee8699-e9c8-4ac2-afa9-a3548f517601_podcastr-thumbnail.png?auto=compress,format",
+            "mainTechnologies": ["Typescript", "ReactJs", "NextJs", "StyledComponents", "JsonServer"],
+            "isCollaboration": true,
+            "goodHabits": [],
+            "details": [
+              {
+                "key": "web",
+                "label": "Web"
+              },
+              {
+                "key": "responsive",
+                "label": "Responsivo"
+              }
+            ],
+            "prototypeLink": null,
+            "repositoryLink": "https://github.com/Lissone/podcastr",
+            "productionLink": "https://podcastr-lissone.vercel.app/"
+          },
+          {
+            "name": "SaganSat EA",
+            "description": "Site para arrecadação de valores, campanha e contato para um grupo de pesquisa independente, com o objetivo de lançar um cubesat no espaço para monitorar algumas rotas de aeronaves, onde podem acontecer possíveis acidentes por causa da pluma vulcânica.",
+            "thumbnailUrl": "https://images.prismic.io/leonardo-lissone/71bd71a7-eec0-4ce5-b563-ed66d2749fa5_sagansat-thumbnail.png?auto=compress,format",
+            "mainTechnologies": ["Typescript", "ReactJs", "NextJs", "StyledComponents"],
+            "isCollaboration": false,
+            "goodHabits": [],
+            "details": [
+              {
+                "key": "web",
+                "label": "Web"
+              },
+              {
+                "key": "responsive",
+                "label": "Responsivo"
+              }
+            ],
+            "prototypeLink": null,
+            "repositoryLink": "https://github.com/Lissone/SaganSat-website",
+            "productionLink": "https://sagansat.vercel.app/"
+          }
+        ],
+        "thumbnailAltLabel": "Capa do projeto",
+        "collaborationLabel": "Participação Colaborativa",
+        "prototypeLabel": "Protótipo Figma",
+        "repositoryLabel": "Repositório Github",
+        "showMoreButtonLabel": "Mostrar mais projetos"
+      },
+      "contactSection": {
+        "heading": [
+          "O que fazer agora?",
+          "Entre em contato comigo"
+        ],
+        "text": "Embora não esteja procurando novas oportunidades no momento, minha caixa de entrada está sempre aberta. Se você tem uma pergunta ou apenas quer dizer oi, vou tentar o meu melhor para responder a você!"
+      },
+      "sharedButtons": {
+        "resumeCv": "https://leonardo-lissone.cdn.prismic.io/leonardo-lissone/741a83b8-2ab2-457f-8c5b-f63bfb5287db_CV+-+Leonardo+Dias+Lissone+-+PT-BR.pdf",
+        "resumeButtonLabel": "Resumo",
+        "contactButtonLabel": "Contactar agora"
+      } 
+    },
+    {
+      "lang": "en-us",
+      "email": "leonardo.lissonez@gmail.com",
+      "socials": [
+        {
+          "name": "Github",
+          "link": "https://github.com/Lissone"
+        },
+        {
+          "name": "Linkedin",
+          "link": "https://www.linkedin.com/in/lissone/"
+        },
+        {
+          "name": "Instagram",
+          "link": "https://www.instagram.com/lissonez/"
+        }
+      ],
+      "presentationSection": {
+        "heading": [
+          "Hi,",
+          "I am",
+          "Leonardo Lissone"
+        ],
+        "text": "I'm a Fullstack Javascript developer, with over 2 years of experience in web development, interface design and user experience. I had two incredible work experiences, where I was responsible for planning, prototyping and developing high-value projects for both sectors where I worked.<br>In addition to being very determined for my personal growth of knowledge in the area of ​​technology, creating always innovative projects for me with a lot of love and dedication."
+      },
+      "aboutSection": {
+        "heading": "About me",
+        "text": "Student and lover of the technology area, focusing on front-end/back-end development, user interface and software engineering. Aim to become an increasingly complete professional, always seeking to learn and develop projects to apply and share knowledge and experiences. Bachelor of Information Systems, creating applications autonomously, looking for challenges, working with charisma, will and passion. Professionalism is my focus.",
+        "profilePhoto": {
+          "url": "https://images.prismic.io/leonardo-lissone/f0ec48f1-86b2-4a45-bf0f-f643398ba1e5_Foto+com+fundo+s%C3%B3lido+%281%29.png?auto=compress,format",
+          "alt": "Leonardo Dias Lissone Santomero"
+        },
+        "recentTechnologies": ["Javascript (ES6++)", "Typescript", "NodeJs", "NestJs", "ReactJs", "GraphQL", "Python"]
+      },
+      "jobsSection": {
+        "heading": "Where I’ve Worked",
+        "jobs": [
+          {
+            "company": "G5 Partners",
+            "experiences": [
+              {
+                "siteLink": "https://g5partners.com/",
+                "role": "Junior Development Analyst",
+                "startDate": "March 2022",
+                "endDate": "Present",
+                "activities": [
+                  "Development of new tools and features for users of the company's public and private systems.",
+                  "Expertise in preventive, predictive and corrective maintenance of developed software.",
+                  "Migration of legacy systems to current technologies used in the company.",
+                  "Visual design planning and user experience of web and mobile applications.",
+                  "Creation of routine process automation scripts for the operational area.",
+                  "Elaboration of technical documentation for planning new system implementations and manual for possible needs."
+                ]
+              }
+            ]
+          },
+          {
+            "company": "Santander",
+            "experiences": [
+              {
+                "siteLink": "https://www.santander.com.br/sustentabilidade/gestao-de-atividades/risco-gestao-integrada",
+                "role": "Innovation Intern",
+                "startDate": "September 2021",
+                "endDate": "March 2022",
+                "activities": [
+                  "Planning, prototyping and development of an internal project with the objective of bringing productivity and systems integration to analysts who evaluate credit proposals.",
+                  "Restructuring of Excel spreadsheets for interactive reports, applying UX principles and data analysis for employee customer productivity.",
+                  "Front-end development of internal projects using Angular.",
+                  "Routine reporting using big data data."
+                ]
+              }
+            ]
+          },
+          {
+            "company": "Serget",
+            "experiences": [
+              {
+                "siteLink": "http://www.serget.com.br/",
+                "role": "Development Intern",
+                "startDate": "January 2020",
+                "endDate": "September 2021",
+                "activities": [
+                  "Development and implementation of a new system, aimed at registering and controlling special cards for disabled, elderly or pregnant people, who have the need to park in exclusive spaces.",
+                  "Implementation of development techniques for the elaboration of systems (technical documentation of applications, using flowcharts and wireframes).",
+                  "Redesign and prototyping of internal web software using Figma.",
+                  "Collaboration in the planning of new systems.",
+                  "Restructuring and refactoring of existing projects."
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "projectsSection": {
+        "heading": "Projects I've Developed",
+        "projects": [
+          {
+            "name": "Point Control",
+            "description": "A complete project of internal people management control, aimed at the human resources sector of any type of company.",
+            "thumbnailUrl": "https://images.prismic.io/leonardo-lissone/6adccd0c-5d0c-497c-a47d-d6b89069e2b4_Frame+1.png?auto=compress,format",
+            "mainTechnologies": ["Typescript", "NodeJs", "ReactJs", "NextJs", "AngularJs", "ChakraUI", "Redis", "SqlServer"],
+            "isCollaboration": true,
+            "goodHabits": [
+              {
+                "key": "eslint",
+                "label": "Eslint"
+              },
+              {
+                "key": "prettier",
+                "label": "Prettier"
+              }
+            ],
+            "details": [
+              {
+                "key": "responsive",
+                "label": "Responsive"
+              },
+              {
+                "key": "web",
+                "label": "Web"
+              }
+            ],
+            "prototypeLink": "https://www.figma.com/file/L4N9BizFngAiGGjTCH058S/Point-Control?node-id=0%3A1&t=CSCocT0hI5Ubxn4z-1",
+            "repositoryLink": "https://github.com/Lissone/point-control-api",
+            "productionLink": null
+          },
+          {
+            "name": "Portfólio",
+            "description": "Website portfolio / bio created to be a focal point for all my experiences, projects, stories and especially to increase and facilitate the network of contacts.",
+            "thumbnailUrl": "https://images.prismic.io/leonardo-lissone/011fbaaa-3d12-43bf-b208-3e56d3097623_portfolio-thumbnail.png?auto=compress,format",
+            "mainTechnologies": ["Typescript", "ReactJs", "NextJs", "StyledComponents", "JsonServer"],
+            "isCollaboration": false,
+            "goodHabits": [
+              {
+                "key": "eslint",
+                "label": "Eslint"
+              },
+              {
+                "key": "prettier",
+                "label": "Prettier"
+              }
+            ],
+            "details": [
+              {
+                "key": "responsive",
+                "label": "Responsive"
+              },
+              {
+                "key": "web",
+                "label": "Web"
+              }
+            ],
+            "prototypeLink": "https://www.figma.com/file/VufrifzcSAEctTBgUFjzPT/Portif%C3%B3lio?node-id=0%3A1",
+            "repositoryLink": "https://github.com/Lissone/leonardo-lissone",
+            "productionLink": null
+          },
+          {
+            "name": "WorldTrip",
+            "description": "A website with information and curiosities about continents, countries and cities, with the aim of encouraging and informing people about tourism in the region.",
+            "thumbnailUrl": "https://images.prismic.io/leonardo-lissone/a89dd0b0-4641-44a2-acfc-3e6c099d5fff_worldtrip-thumbnail.png?auto=compress,format",
+            "mainTechnologies": ["Typescript", "ReactJs", "NextJs", "ChakraUI ", "PirsmicCMS"],
+            "isCollaboration": false,
+            "goodHabits": [
+              {
+                "key": "eslint",
+                "label": "Eslint"
+              },
+              {
+                "key": "test",
+                "label": "Teste"
+              }
+            ],
+            "details": [
+              {
+                "key": "responsive",
+                "label": "Responsive"
+              },
+              {
+                "key": "web",
+                "label": "Web"
+              }
+            ],
+            "prototypeLink": "https://www.figma.com/file/opj6i3Zw5fxVjVwDeyNSAg/World-Trip?node-id=0%3A1",
+            "repositoryLink": "https://github.com/Lissone/world-trip",
+            "productionLink": "https://world-trip-rouge.vercel.app/"
+          },
+          {
+            "name": "LixAttendance",
+            "description": "A support chat site between customer with question and answering admin, where admin can choose the customer they want to answer according to priority and close their connection once queries are answered.",
+            "thumbnailUrl": "https://images.prismic.io/leonardo-lissone/28739747-2f23-4888-9d76-413a7ef34c6e_lixattendance-thumbnail.png?auto=compress,format",
+            "mainTechnologies": ["Typescript", "ReactJs", "NextJs", "NodeJs ", "SocketIO", "SqlServer"],
+            "isCollaboration": false,
+            "goodHabits": [
+              {
+                "key": "eslint",
+                "label": "Eslint"
+              },
+              {
+                "key": "prettier",
+                "label": "Prettier"
+              }
+            ],
+            "details": [
+              {
+                "key": "web",
+                "label": "Web"
+              }
+            ],
+            "prototypeLink": null,
+            "repositoryLink": "https://github.com/Lissone/lix-attendance",
+            "productionLink": null
+          },
+          {
+            "name": "Pokedex",
+            "description": "An incredible pokedex, for you to delve into the pokemon universe and even choose your favorite pokemons and add them to your profile!",
+            "thumbnailUrl": "https://images.prismic.io/leonardo-lissone/96dea68a-2fe5-455a-8460-6a923ce2f6c9_pokedex-thumbnail.png?auto=compress,format",
+            "mainTechnologies": ["Typescript", "ReactJs", "NextJs", "StyledComponents", "NodeJs ", "Firebase"],
+            "isCollaboration": false,
+            "goodHabits": [
+              {
+                "key": "eslint",
+                "label": "Eslint"
+              },
+              {
+                "key": "prettier",
+                "label": "Prettier"
+              }
+            ],
+            "details": [
+              {
+                "key": "web",
+                "label": "Web"
+              },
+              {
+                "key": "responsive",
+                "label": "Responsive"
+              }
+            ],
+            "prototypeLink": "https://www.figma.com/file/tjSrlP5Y0x6rK4rrA5Lqx6/Pokedex?node-id=0%3A1",
+            "repositoryLink": "https://github.com/Lissone/pokedex",
+            "productionLink": "https://pokedex-lissone.vercel.app/"
+          },
+          {
+            "name": "Letmeask",
+            "description": "Platform that allows you to create quiz rooms, for people to ask questions and the owner of the room to answer, like or highlight specific questions.",
+            "thumbnailUrl": "https://images.prismic.io/leonardo-lissone/4521c59e-8598-47b8-9be9-80573b63bd5f_letmeask-thumbnail.png?auto=compress,format",
+            "mainTechnologies": ["Typescript", "ReactJs", "Sass", "Firebase"],
+            "isCollaboration": true,
+            "goodHabits": [],
+            "details": [
+              {
+                "key": "web",
+                "label": "Web"
+              }
+            ],
+            "prototypeLink": null,
+            "repositoryLink": "https://github.com/Lissone/let-me-ask",
+            "productionLink": "https://letmeask-8aa0f.web.app/"
+          },
+          {
+            "name": "Podcastr",
+            "description": "Podcast playback site, with a complete player to listen to your episode, single or in playlists.",
+            "thumbnailUrl": "https://images.prismic.io/leonardo-lissone/1cee8699-e9c8-4ac2-afa9-a3548f517601_podcastr-thumbnail.png?auto=compress,format",
+            "mainTechnologies": ["Typescript", "ReactJs", "NextJs", "StyledComponents", "JsonServer"],
+            "isCollaboration": true,
+            "goodHabits": [],
+            "details": [
+              {
+                "key": "web",
+                "label": "Web"
+              },
+              {
+                "key": "responsive",
+                "label": "Responsive"
+              }
+            ],
+            "prototypeLink": null,
+            "repositoryLink": "https://github.com/Lissone/podcastr",
+            "productionLink": "https://podcastr-lissone.vercel.app/"
+          },
+          {
+            "name": "SaganSat EA",
+            "description": "Website for fundraising, campaign and contact for an independent research group, with the objective of launching a cubesat in space to monitor some aircraft routes, where possible accidents can happen because of the volcanic plume.",
+            "thumbnailUrl": "https://images.prismic.io/leonardo-lissone/71bd71a7-eec0-4ce5-b563-ed66d2749fa5_sagansat-thumbnail.png?auto=compress,format",
+            "mainTechnologies": ["Typescript", "ReactJs", "NextJs", "StyledComponents"],
+            "isCollaboration": false,
+            "goodHabits": [],
+            "details": [
+              {
+                "key": "web",
+                "label": "Web"
+              },
+              {
+                "key": "responsive",
+                "label": "Responsivo"
+              }
+            ],
+            "prototypeLink": null,
+            "repositoryLink": "https://github.com/Lissone/SaganSat-website",
+            "productionLink": "https://sagansat.vercel.app/"
+          }
+        ],
+        "thumbnailAltLabel": "Project cover",
+        "collaborationLabel": "Collaborative Participation",
+        "prototypeLabel": "Figma Prototype",
+        "repositoryLabel": "Github Repository",
+        "showMoreButtonLabel": "Show more projects"
+      },
+      "contactSection": {
+        "heading": [
+          "What’s Next?",
+          "Contact me"
+        ],
+        "text": "Although I’m not currently looking for any new opportunities, my inbox is always open. Whether you have a question or just want to say hi, I’ll try my best to get back to you!"
+      },
+      "sharedButtons": {
+        "resumeCv": "https://prismic-io.s3.amazonaws.com/leonardo-lissone/c0b1542e-9003-42f1-b138-07c6801bf04f_CV+-+Leonardo+Dias+Lissone+-+EN-US.pdf",
+        "resumeButtonLabel": "Resume",
+        "contactButtonLabel": "Contact now"
+      } 
+    }
+  ]
+}

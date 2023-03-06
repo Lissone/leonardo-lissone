@@ -35,7 +35,7 @@ Since the beginning of my journey with web application development, I had a lot 
 
 Everything in this project was developed with a lot of love, dedication and will, following all the development steps that I created with me until this moment. From creating a simple requirements documentation, prototyping an interactive interface in Figma to creating a universal template for my Next.js applications to increase productivity when developing new React projects.
 
-The idea of ​​creating a portfolio / bio site is very interesting, but considering that our evolution is constant, updating this application would be very repetitive and ineffective. Therefore, I integrated my project with Prismic CMS, where I control all texts and project posts in as many languages ​​as I want to add, making the application as dynamic as possible.
+The idea of ​​creating a portfolio / bio site is very interesting, but considering that our evolution is constant, updating this application would be very repetitive and ineffective. Therefore, I created a fake api using a json file using JsonServer, where I control all texts and project posts in as many languages ​​as I want to add, making the application as dynamic as possible.
 
 ## Requirements
 
@@ -49,7 +49,7 @@ The idea of ​​creating a portfolio / bio site is very interesting, but consi
 - NextJs
 - Typescript
 - StyledComponents
-- Prismic CMS
+- JsonServer (Fake api)
 - Eslint
   - Airbnb-config with another pessoal rules
   - Import helpers plugin
@@ -91,9 +91,16 @@ Need to add environment variables:
 ```bash
 # .\.env.local
 
-# Primisc CMS
-PRISMIC_API_ENDPOINT=
-PRISMIC_ACCESS_TOKEN=
+# DEFAULT
+API_URL=http://localhost:5000/
+```
+
+Run fake api:
+
+```bash
+yarn server
+#or
+npm run server
 ```
 
 Run application:

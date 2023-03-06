@@ -19,11 +19,11 @@ import {
 } from './styles'
 
 interface HeaderProps {
-  language: string
-  resumeCv: string
-  resumeButtonLabel: string
-  toggleContentLanguage: () => void
-  setIsOverlayActive: (value: boolean) => void
+  readonly language: string
+  readonly resumeCv: string
+  readonly resumeButtonLabel: string
+  readonly toggleContentLanguage: () => void
+  readonly setIsOverlayActive: (value: boolean) => void
 }
 
 export function Header({
@@ -35,7 +35,7 @@ export function Header({
 }: HeaderProps) {
   const [hamburguerIsOpen, setHamburguerIsOpen] = useState(false)
 
-  function handleHamburguerClick() {
+  const handleHamburguerClick = () => {
     setHamburguerIsOpen(!hamburguerIsOpen)
     setIsOverlayActive(!hamburguerIsOpen)
   }
@@ -83,6 +83,7 @@ export function Header({
                 <div
                   style={{
                     ...languageSwitchDefaultStyle,
+                    paddingRight: 14,
                     color: 'var(--gray-300)'
                   }}
                 >
@@ -93,6 +94,7 @@ export function Header({
                 <div
                   style={{
                     ...languageSwitchDefaultStyle,
+                    paddingLeft: 14,
                     color: 'var(--gray-500)'
                   }}
                 >
@@ -115,7 +117,6 @@ const languageSwitchDefaultStyle = {
   height: '100%',
   fontSize: 18,
   fontWeight: 700,
-  paddingRight: 14,
   display: 'flex',
   justifyContent: 'center',
   alignItems: 'center'
