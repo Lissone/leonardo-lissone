@@ -323,7 +323,7 @@
           }
         ],
         "thumbnailAltLabel": "Capa do projeto",
-        "collaborationLabel": "Participação Colaborativa",
+        "collaborationLabel": "Projeto Colaborativo",
         "prototypeLabel": "Protótipo Figma",
         "repositoryLabel": "Repositório Github",
         "showMoreButtonLabel": "Mostrar mais projetos"
@@ -664,7 +664,7 @@
           }
         ],
         "thumbnailAltLabel": "Project cover",
-        "collaborationLabel": "Collaborative Participation",
+        "collaborationLabel": "Collaborative Project",
         "prototypeLabel": "Figma Prototype",
         "repositoryLabel": "Github Repository",
         "showMoreButtonLabel": "Show more projects"
