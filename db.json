@@ -103,7 +103,7 @@
           {
             "name": "Point Control",
             "description": "Um projeto completo de controle interno de gestão de pessoas, direcionado para o setor de recursos humanos de qualquer tipo de empresa.",
-            "thumbnailUrl": "https://images.prismic.io/leonardo-lissone/6adccd0c-5d0c-497c-a47d-d6b89069e2b4_Frame+1.png?auto=compress,format",
+            "thumbnailUrl": "https://images.prismic.io/leonardo-lissone/27e05a20-23c6-4c3a-bd17-b27d68ad9d44_pointcontrol-thumbnail.png?auto=compress,format",
             "mainTechnologies": ["Typescript", "NodeJs", "ReactJs", "NextJs", "AngularJs", "ChakraUI", "Redis", "SqlServer"],
             "isCollaboration": true,
             "goodHabits": [
@@ -137,7 +137,7 @@
           {
             "name": "Dan Doceria",
             "description": "Design de ecommerce para uma loja de doces variados.",
-            "thumbnailUrl": "https://images.prismic.io/leonardo-lissone/011fbaaa-3d12-43bf-b208-3e56d3097623_portfolio-thumbnail.png?auto=compress,format",
+            "thumbnailUrl": "https://images.prismic.io/leonardo-lissone/d7e25922-6443-4d7e-97f4-baaa1d31760f_dandoceria-thumbnail.png?auto=compress,format",
             "mainTechnologies": [],
             "isCollaboration": false,
             "goodHabits": [],
@@ -465,7 +465,7 @@
           {
             "name": "Point Control",
             "description": "A complete project of internal people management control, aimed at the human resources sector of any type of company.",
-            "thumbnailUrl": "https://images.prismic.io/leonardo-lissone/6adccd0c-5d0c-497c-a47d-d6b89069e2b4_Frame+1.png?auto=compress,format",
+            "thumbnailUrl": "https://images.prismic.io/leonardo-lissone/27e05a20-23c6-4c3a-bd17-b27d68ad9d44_pointcontrol-thumbnail.png?auto=compress,format",
             "mainTechnologies": ["Typescript", "NodeJs", "ReactJs", "NextJs", "AngularJs", "ChakraUI", "Redis", "SqlServer"],
             "isCollaboration": true,
             "goodHabits": [
