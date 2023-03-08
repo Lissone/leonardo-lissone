@@ -8,12 +8,14 @@ export const Container = styled.section`
   align-items: center;
 
   header {
+    width: 100%;
+
     position: relative;
 
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 2rem;
+    gap: 2.25rem;
   }
 
   @media (max-width: 650px) {
@@ -40,8 +42,43 @@ export const Heading = styled.h1`
   }
 `
 
+export const FilterContainer = styled.div`
+  width: 100%;
+  max-width: 1056px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+
+  @media (max-width: 1350px) {
+    max-width: 688px;
+  }
+
+  @media (max-width: 1080px) {
+    max-width: 645px;
+  }
+
+  @media (max-width: 850px) {
+    max-width: 300px;
+  }
+
+  @media (max-width: 720px) {
+    max-width: 280px;
+  }
+
+  @media (max-width: 450px) {
+    max-width: 260px;
+  }
+
+  span {
+    font-size: 1.25rem;
+
+    color: var(--gray-300);
+  }
+`
+
 export const Content = styled.div`
-  padding-top: 3rem;
+  padding-top: 2rem;
 
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
@@ -75,5 +112,17 @@ export const ShowMoreButton = styled.button`
 
     box-shadow: 0rem 0rem 1rem var(--red-400);
     border-color: var(--red-400);
+  }
+`
+
+export const NotFoundText = styled.span`
+  font-size: 1.25rem;
+
+  text-align: center;
+
+  color: var(--red-400);
+
+  @media (max-width: 850px) {
+    max-width: 280px;
   }
 `

@@ -1,9 +1,17 @@
-import { useEffect, useState } from 'react'
+import { useState } from 'react'
 
 import { ProjectsSectionContent } from '@interfaces/content'
 
+import { CategoryFilter } from './CategoryFilter'
 import { ProjectCard } from './ProjectCard'
-import { Container, Heading, Content, ShowMoreButton } from './styles'
+import {
+  Container,
+  Heading,
+  FilterContainer,
+  Content,
+  ShowMoreButton,
+  NotFoundText
+} from './styles'
 
 const GRID_LIMIT = 6
 
@@ -12,26 +20,31 @@ interface ProjectsProps {
 }
 
 export function Projects({ content }: ProjectsProps) {
-  const [gridLimit, setGridLimit] = useState(GRID_LIMIT)
-  let projects = content.projects.slice(0, gridLimit)
-
-  useEffect(() => {
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-    projects = content.projects.slice(0, gridLimit)
-  }, [gridLimit])
+  const [currentGrid, setCurrentGrid] = useState(GRID_LIMIT)
+  const [currentProjects, setCurrentProjects] = useState(content.projects)
+  const projectsSliced = currentProjects.slice(0, currentGrid)
 
   const handleShowMoreProjects = () => {
-    setGridLimit(state => state + GRID_LIMIT)
+    setCurrentGrid(grid => grid + GRID_LIMIT)
   }
 
   return (
     <Container id="projects">
       <header data-aos="fade-up">
         <Heading>{content.heading}</Heading>
+
+        <FilterContainer>
+          <span>{content.filterTitleLabel}:</span>
+          <CategoryFilter
+            projects={content.projects}
+            filtersLabels={content.filtersLabels}
+            setCurrentProjects={setCurrentProjects}
+          />
+        </FilterContainer>
       </header>
 
       <Content>
-        {projects.map(project => (
+        {projectsSliced.map(project => (
           <ProjectCard
             key={project.name}
             content={project}
@@ -43,12 +56,18 @@ export function Projects({ content }: ProjectsProps) {
         ))}
       </Content>
 
-      {projects.length !== content.projects.length ? (
+      {currentProjects.length === 0 ? (
+        <NotFoundText data-aos="fade-up" data-aos-duration="1100">
+          {content.projectsNotfoundLabel}
+        </NotFoundText>
+      ) : null}
+
+      {currentProjects.length !== 0 && currentGrid < currentProjects.length ? (
         <ShowMoreButton
           type="button"
-          onClick={handleShowMoreProjects}
           data-aos="fade-up"
           data-aos-duration="1100"
+          onClick={handleShowMoreProjects}
         >
           {content.showMoreButtonLabel}
         </ShowMoreButton>

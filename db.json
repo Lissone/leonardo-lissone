@@ -347,7 +347,39 @@
         "collaborationLabel": "Projeto Colaborativo",
         "prototypeLabel": "Protótipo Figma",
         "repositoryLabel": "Repositório Github",
-        "showMoreButtonLabel": "Mostrar mais projetos"
+        "showMoreButtonLabel": "Mostrar mais projetos",
+        "projectsNotfoundLabel": "Nenhum projeto com esses filtros foi encontrado!",
+        "filterTitleLabel": "Pesquise por categorias",
+        "filtersLabels": [
+          {
+            "key": "all",
+            "label": "Todos"
+          },
+          {
+            "key": "repositories",
+            "label": "Repositórios"
+          },
+          {
+            "key": "production",
+            "label": "Disponíveis na internet"
+          },
+          {
+            "key": "designs",
+            "label": "Designs"
+          },
+          {
+            "key": "fullstack",
+            "label": "Fullstack"
+          },
+          {
+            "key": "web",
+            "label": "Sites"
+          },
+          {
+            "key": "responsive",
+            "label": "Responsivos"
+          }
+        ]
       },
       "contactSection": {
         "heading": [
@@ -688,7 +720,39 @@
         "collaborationLabel": "Collaborative Project",
         "prototypeLabel": "Figma Prototype",
         "repositoryLabel": "Github Repository",
-        "showMoreButtonLabel": "Show more projects"
+        "showMoreButtonLabel": "Show more projects",
+        "projectsNotfoundLabel": "No projects with these filters were found",
+        "filterTitleLabel": "Search by categories",
+        "filtersLabels": [
+          {
+            "key": "all",
+            "label": "All"
+          },
+          {
+            "key": "repositories",
+            "label": "Repositories"
+          },
+          {
+            "key": "production",
+            "label": "Available on internet"
+          },
+          {
+            "key": "designs",
+            "label": "Designs"
+          },
+          {
+            "key": "fullstack",
+            "label": "Fullstack"
+          },
+          {
+            "key": "web",
+            "label": "Websites"
+          },
+          {
+            "key": "responsive",
+            "label": "Responsive"
+          }
+        ]
       },
       "contactSection": {
         "heading": [

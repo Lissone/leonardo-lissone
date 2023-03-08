@@ -19,10 +19,14 @@ export interface SocialsContent {
   readonly link: string
 }
 
+// -----------------------------------------------------------//
+
 export interface PresentationSectionContent {
   readonly heading: string[]
   readonly text: string
 }
+
+// -----------------------------------------------------------//
 
 export interface AboutSectionContent {
   readonly heading: string
@@ -33,6 +37,8 @@ export interface AboutSectionContent {
   }
   readonly recentTechnologies: string[]
 }
+
+// -----------------------------------------------------------//
 
 export interface JobsSectionContent {
   readonly heading: string
@@ -48,6 +54,8 @@ export interface JobsSectionContent {
   }[]
 }
 
+// -----------------------------------------------------------//
+
 export interface ProjectsSectionContent {
   readonly heading: string
   readonly projects: ProjectContent[]
@@ -56,7 +64,28 @@ export interface ProjectsSectionContent {
   readonly prototypeLabel: string
   readonly repositoryLabel: string
   readonly showMoreButtonLabel: string
+  readonly projectsNotfoundLabel: string
+  readonly filterTitleLabel: string
+  readonly filtersLabels: ProjectsFiltersLabels[]
 }
+
+export type ProjectsFiltersLabelsKeys =
+  | 'all'
+  | 'repositories'
+  | 'production'
+  | 'designs'
+  | 'fullstack'
+  | 'web'
+  | 'responsive'
+export interface ProjectsFiltersLabels {
+  readonly key: ProjectsFiltersLabelsKeys
+  readonly label: string
+}
+
+// -------------
+
+type GoodHabitsKeys = 'eslint' | 'prettier' | 'test'
+type DetailsKeys = 'web' | 'mobile' | 'desktop' | 'responsive' | 'design' | 'fullstack'
 
 export interface ProjectContent {
   readonly name: string
@@ -65,17 +94,19 @@ export interface ProjectContent {
   readonly isCollaboration: boolean
   readonly thumbnailUrl: string
   readonly goodHabits: {
-    readonly key: 'eslint' | 'prettier' | 'test'
+    readonly key: GoodHabitsKeys
     readonly label: string
   }[]
   readonly details: {
-    readonly key: 'web' | 'mobile' | 'desktop' | 'responsive' | 'design' | 'fullstack'
+    readonly key: DetailsKeys
     readonly label: string
   }[]
   readonly prototypeLink: string | null
   readonly repositoryLink: string | null
   readonly productionLink: string | null
 }
+
+// -----------------------------------------------------------//
 
 export interface ContactSectionContent {
   readonly heading: string[]
