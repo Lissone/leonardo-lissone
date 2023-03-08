@@ -69,7 +69,7 @@ export interface ProjectContent {
     readonly label: string
   }[]
   readonly details: {
-    readonly key: 'web' | 'mobile' | 'desktop' | 'responsive' | 'design'
+    readonly key: 'web' | 'mobile' | 'desktop' | 'responsive' | 'design' | 'fullstack'
     readonly label: string
   }[]
   readonly prototypeLink: string | null
