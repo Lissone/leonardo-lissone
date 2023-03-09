@@ -27,11 +27,11 @@
           "eu sou",
           "Leonardo Lissone"
         ],
-        "text": "Sou um desenvolvedor Fullstack Javascript, com mais de 2 anos de experiência em desenvolvimento web, design de interfaces e experiência do usuário. Tive duas experiências incríveis de trabalho, onde fiquei responsável por planejar, prototipar e desenvolver projetos de alto valor para ambos setores onde atuei. <br> Além de estar muito determinado para meu crescimento pessoal de conhecimento na área da tecnologia, criando projetos sempre inovadores para mim com muito amor e dedicação."
+        "text": "<p>Sou um desenvolvedor <em>Fullstack Javascript</em>, com mais de 3 anos de experiência em <strong>desenvolvimento de software, design de interfaces (UI) e experiência de usuário (UX).</strong> Tive diversas experiências profissionais, desde colaborador de empresas á trabalhos freelance, onde desenvolvi diversas técnicas de desenvolvimento de software e interfaces. <br> Além de estar muito <strong>determinado</strong> para meu <strong>crescimento pessoal</strong> de conhecimento na área da tecnologia, sempre buscando criar projetos inovadores com muito <strong>amor</strong> e <strong>dedicação</strong>.</p>"
       },
       "aboutSection": {
         "heading": "Sobre mim",
-        "text": "Estudante e amante da área de tecnologia, com foco em desenvolvimento front-end/back-end, interface de usuário e engenharia de software. Objetivo de me tornar um profissional cada vez mais completo, sempre buscando aprender e desenvolver projetos para aplicar e compartilhar conhecimentos e experiências. Bacharelando Sistemas de Informação, criando aplicações de forma autônoma, em busca de desafios, trabalhando com carisma, vontade e paixão. Profissionalismo é meu foco.",
+        "text": "<p>Amante da área de tecnologia, com foco em desenvolvimento <em>front-end/back-end</em>, <strong>interface de usuário</strong> e <strong>engenharia de software</strong>. Objetivo de me tornar um profissional cada vez mais <strong>completo</strong>, sempre buscando aprender e desenvolver projetos para aplicar e <strong>compartilhar conhecimentos</strong> e <strong>experiências</strong>. <strong>Formado</strong> no curso bacharel de <strong>Sistemas de Informação</strong>, criando aplicações de forma autônoma, em busca de desafios, trabalhando com carisma, vontade e paixão. <strong>Profissionalismo é meu foco</strong>.</p>",
         "profilePhoto": {
           "url": "https://images.prismic.io/leonardo-lissone/f0ec48f1-86b2-4a45-bf0f-f643398ba1e5_Foto+com+fundo+s%C3%B3lido+%281%29.png?auto=compress,format",
           "alt": "Leonardo Dias Lissone Santomero"
@@ -496,7 +496,7 @@
           "O que fazer agora?",
           "Entre em contato comigo"
         ],
-        "text": "Embora não esteja procurando novas oportunidades no momento, minha caixa de entrada está sempre aberta. Se você tem uma pergunta ou apenas quer dizer oi, vou tentar o meu melhor para responder a você!"
+        "text": "Embora eu não esteja procurando novas oportunidades de trabalho no momento, minha caixa de entrada estará sempre aberta para qualquer discussão!"
       },
       "sharedButtons": {
         "resumeCv": "https://leonardo-lissone.cdn.prismic.io/leonardo-lissone/741a83b8-2ab2-457f-8c5b-f63bfb5287db_CV+-+Leonardo+Dias+Lissone+-+PT-BR.pdf",
@@ -531,11 +531,11 @@
           "I am",
           "Leonardo Lissone"
         ],
-        "text": "I'm a Fullstack Javascript developer, with over 2 years of experience in web development, interface design and user experience. I had two incredible work experiences, where I was responsible for planning, prototyping and developing high-value projects for both sectors where I worked.<br>In addition to being very determined for my personal growth of knowledge in the area of ​​technology, creating always innovative projects for me with a lot of love and dedication."
+        "text": "<p>I'm a <em>Fullstack Javascript</em> developer, with more than 3 years of experience in <strong>software development, interface (UI) and user experience (UX) design.</strong> I've had diverse experiences professionals, from corporate collaborators to freelance work, where I developed different software development techniques and interfaces.<br> In addition to being very <strong>determined</strong> for my <strong>personal growth</strong> of knowledge in area of ​​technology, always seeking to create innovative projects with a lot of <strong>love</strong> and <strong>dedication</strong>.</p>"
       },
       "aboutSection": {
         "heading": "About me",
-        "text": "Student and lover of the technology area, focusing on front-end/back-end development, user interface and software engineering. Aim to become an increasingly complete professional, always seeking to learn and develop projects to apply and share knowledge and experiences. Bachelor of Information Systems, creating applications autonomously, looking for challenges, working with charisma, will and passion. Professionalism is my focus.",
+        "text": "<p>A technology lover, with a focus on <em>front-end/back-end</em> development, <strong>user interface</strong> and <strong>software engineering</strong>. Aim to become an increasingly <strong>complete</strong> professional, always looking to learn and develop projects to apply and <strong>share knowledge</strong> and <strong>experiences</strong>. <strong>Graduated</strong> in the bachelor's degree in <strong>Information Systems</strong>, creating applications autonomously, looking for challenges, working with charisma, will and passion. <strong>Professionalism is my focus</strong>.</p>",
         "profilePhoto": {
           "url": "https://images.prismic.io/leonardo-lissone/f0ec48f1-86b2-4a45-bf0f-f643398ba1e5_Foto+com+fundo+s%C3%B3lido+%281%29.png?auto=compress,format",
           "alt": "Leonardo Dias Lissone Santomero"
@@ -963,7 +963,7 @@
           "What’s Next?",
           "Contact me"
         ],
-        "text": "Although I’m not currently looking for any new opportunities, my inbox is always open. Whether you have a question or just want to say hi, I’ll try my best to get back to you!"
+        "text": "While I am not currently looking for new job opportunities, my inbox will always be open for any discussions!"
       },
       "sharedButtons": {
         "resumeCv": "https://prismic-io.s3.amazonaws.com/leonardo-lissone/c0b1542e-9003-42f1-b138-07c6801bf04f_CV+-+Leonardo+Dias+Lissone+-+EN-US.pdf",

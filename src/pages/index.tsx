@@ -78,14 +78,7 @@ export default function Home({ contentLangs, setIsOverlayActive }: HomeProps) {
 }
 
 export const getServerSideProps: GetServerSideProps = async () => {
-  const { data } = await api.get<ContentLanguage[]>(
-    'content-languages'
-    // , {
-    //   params: {
-    //     _order: 'desc'
-    //   }
-    // }
-  )
+  const { data } = await api.get<ContentLanguage[]>('content-languages')
 
   const contentLangsFormatted = {} as ContentLangsFormatted
   data.forEach(content => {
