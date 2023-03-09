@@ -181,19 +181,80 @@
             "productionLink": null
           },
           {
-            "name": "Dan Doceria",
-            "description": "Design de ecommerce para uma loja de doces variados.",
-            "thumbnailUrl": "https://images.prismic.io/leonardo-lissone/d7e25922-6443-4d7e-97f4-baaa1d31760f_dandoceria-thumbnail.png?auto=compress,format",
-            "mainTechnologies": [],
-            "goodHabits": [],
+            "name": "Qatar 2022 - Stikers",
+            "description": "Design de aplicativo de gerenciamento de figurinhas do álbum da copa de 2022 no Qatar. Com estatísticas, backup e sistema de trocas.",
+            "thumbnailUrl": "https://images.prismic.io/leonardo-lissone/cf76b662-8752-4537-b39d-4d67babce964_qtar2022-stikers-thumbnail.png?auto=compress,format",
+            "mainTechnologies": ["Figma"],
+            "goodHabits": [
+              {
+                "key": "componentized",
+                "label": "Design Componentizado"
+              }
+            ],
             "details": [
+              {
+                "key": "figma",
+                "label": "Figma"
+              },
+              {
+                "key": "mobile",
+                "label": "Aplicativo"
+              }
+            ],
+            "collaborators": null,
+            "prototypeLink": "https://www.figma.com/file/zK89GdfV68BMmZnSokaMoY/Gerenciador-de-Figurinhas---Catar-2022?node-id=0%3A1&t=YduVDyHnvpvq9FBB-1",
+            "repositoryLink": null,
+            "productionLink": null
+          },
+          {
+            "name": "Eficient",
+            "description": "Design de landing page para venda de páginas de captura e sites customizados e personalizados de acordo com a marca no cliente.",
+            "thumbnailUrl": "https://images.prismic.io/leonardo-lissone/750ca26a-27a4-468f-ac81-59ec33793a24_eficient-thumbnail.png?auto=compress,format",
+            "mainTechnologies": ["Figma"],
+            "goodHabits": [
+              {
+                "key": "componentized",
+                "label": "Design Componentizado"
+              }
+            ],
+            "details": [
+              {
+                "key": "figma",
+                "label": "Figma"
+              },
+              {
+                "key": "web",
+                "label": "Web"
+              }
+            ],
+            "collaborators": null,
+            "prototypeLink": "https://www.figma.com/file/EI8bLWi6mIW3PsbmkiSqHV/Eficient?node-id=30%3A552&t=IuvYOfO7GU3qOtjl-1",
+            "repositoryLink": null,
+            "productionLink": null
+          },
+          {
+            "name": "Dan Doceria",
+            "description": "Design de site ecommerce de doces variados, com recompensas para cada pedido feito e mercado de cupons como diferencial. Foco na responsividade de aparelhos de móveis.",
+            "thumbnailUrl": "https://images.prismic.io/leonardo-lissone/d7e25922-6443-4d7e-97f4-baaa1d31760f_dandoceria-thumbnail.png?auto=compress,format",
+            "mainTechnologies": ["Figma"],
+            "goodHabits": [
+              {
+                "key": "componentized",
+                "label": "Design Componentizado"
+              }
+            ],
+            "details": [
+              {
+                "key": "figma",
+                "label": "Figma"
+              },
               {
                 "key": "responsive",
                 "label": "Responsivo"
               },
               {
-                "key": "figma",
-                "label": "Figma"
+                "key": "web",
+                "label": "Web"
               }
             ],
             "collaborators": null,
@@ -486,6 +547,10 @@
             "label": "Sites"
           },
           {
+            "key": "mobile",
+            "label": "Aplicativos"
+          },
+          {
             "key": "responsive",
             "label": "Responsivos"
           }
@@ -682,6 +747,88 @@
             ],
             "prototypeLink": "https://www.figma.com/file/L4N9BizFngAiGGjTCH058S/Point-Control?node-id=0%3A1&t=CSCocT0hI5Ubxn4z-1",
             "repositoryLink": "https://github.com/Lissone/point-control-api",
+            "productionLink": null
+          },
+          {
+            "name": "Qatar 2022 - Stikers",
+            "description": "Qatar 2022 World Cup album sticker management application design. With statistics, backup and exchange system.",
+            "thumbnailUrl": "https://images.prismic.io/leonardo-lissone/cf76b662-8752-4537-b39d-4d67babce964_qtar2022-stikers-thumbnail.png?auto=compress,format",
+            "mainTechnologies": ["Figma"],
+            "goodHabits": [
+              {
+                "key": "componentized",
+                "label": "Componentized Design"
+              }
+            ],
+            "details": [
+              {
+                "key": "figma",
+                "label": "Figma"
+              },
+              {
+                "key": "mobile",
+                "label": "Mobile Application"
+              }
+            ],
+            "collaborators": null,
+            "prototypeLink": "https://www.figma.com/file/zK89GdfV68BMmZnSokaMoY/Gerenciador-de-Figurinhas---Catar-2022?node-id=0%3A1&t=YduVDyHnvpvq9FBB-1",
+            "repositoryLink": null,
+            "productionLink": null
+          },
+          {
+            "name": "Eficient",
+            "description": "Landing page design for selling capture pages and customized and personalized websites according to the client's brand.",
+            "thumbnailUrl": "https://images.prismic.io/leonardo-lissone/750ca26a-27a4-468f-ac81-59ec33793a24_eficient-thumbnail.png?auto=compress,format",
+            "mainTechnologies": ["Figma"],
+            "goodHabits": [
+              {
+                "key": "componentized",
+                "label": "Componentized Design"
+              }
+            ],
+            "details": [
+              {
+                "key": "figma",
+                "label": "Figma"
+              },
+              {
+                "key": "web",
+                "label": "Web"
+              }
+            ],
+            "collaborators": null,
+            "prototypeLink": "https://www.figma.com/file/EI8bLWi6mIW3PsbmkiSqHV/Eficient?node-id=30%3A552&t=IuvYOfO7GU3qOtjl-1",
+            "repositoryLink": null,
+            "productionLink": null
+          },
+          {
+            "name": "Dan Doceria",
+            "description": "Ecommerce website design for varied sweets, with rewards for each order placed and coupon market as a differential. Focus on responsiveness of mobile devices.",
+            "thumbnailUrl": "https://images.prismic.io/leonardo-lissone/d7e25922-6443-4d7e-97f4-baaa1d31760f_dandoceria-thumbnail.png?auto=compress,format",
+            "mainTechnologies": ["Figma"],
+            "goodHabits": [
+              {
+                "key": "componentized",
+                "label": "Componentized Design"
+              }
+            ],
+            "details": [
+              {
+                "key": "figma",
+                "label": "Figma"
+              },
+              {
+                "key": "responsive",
+                "label": "Responsive"
+              },
+              {
+                "key": "web",
+                "label": "Web"
+              }
+            ],
+            "collaborators": null,
+            "prototypeLink": "https://www.figma.com/file/zhnt25s3ITbbFREguqjm9J/Dan-Doceria?node-id=0%3A1&t=vdsNpjVdiPRmGV56-1",
+            "repositoryLink": null,
             "productionLink": null
           },
           {
@@ -951,6 +1098,10 @@
           {
             "key": "web",
             "label": "Websites"
+          },
+          {
+            "key": "mobile",
+            "label": "Mobile Applications"
           },
           {
             "key": "responsive",

@@ -78,6 +78,7 @@ export type ProjectsFiltersLabelsKeys =
   | 'designs'
   | 'fullstack'
   | 'web'
+  | 'mobile'
   | 'responsive'
 export interface ProjectsFiltersLabels {
   readonly key: ProjectsFiltersLabelsKeys
@@ -86,7 +87,7 @@ export interface ProjectsFiltersLabels {
 
 // -------------
 
-type GoodHabitsKeys = 'eslint' | 'prettier' | 'test'
+type GoodHabitsKeys = 'eslint' | 'prettier' | 'test' | 'componentized'
 type DetailsKeys = 'web' | 'mobile' | 'desktop' | 'responsive' | 'design' | 'fullstack'
 
 interface Collaborator {

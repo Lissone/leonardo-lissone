@@ -131,6 +131,10 @@ const allFiltersFuncs: Filter[] = [
     func: project => !!project.details.find(detail => detail.key === 'web')
   },
   {
+    key: 'mobile',
+    func: project => !!project.details.find(detail => detail.key === 'mobile')
+  },
+  {
     key: 'responsive',
     func: project => !!project.details.find(detail => detail.key === 'responsive')
   }
