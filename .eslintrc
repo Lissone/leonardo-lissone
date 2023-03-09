@@ -94,6 +94,7 @@
           "/^@components/",
           "/^@pages/",
           "/^@utils/",
+          "/^@shared/",
           ["parent", "sibling", "index"],
           "/^@styles/",
           "/^~/"

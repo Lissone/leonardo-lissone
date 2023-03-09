@@ -87,8 +87,15 @@ export interface ProjectsFiltersLabels {
 
 // -------------
 
-type GoodHabitsKeys = 'eslint' | 'prettier' | 'test' | 'componentized'
-type DetailsKeys = 'web' | 'mobile' | 'desktop' | 'responsive' | 'design' | 'fullstack'
+type GoodHabitsKeys = 'eslint' | 'prettier' | 'test' | 'commit-lint' | 'componentized'
+type DetailsKeys =
+  | 'web'
+  | 'mobile'
+  | 'desktop'
+  | 'responsive'
+  | 'design'
+  | 'fullstack'
+  | 'figma'
 
 interface Collaborator {
   readonly name: string

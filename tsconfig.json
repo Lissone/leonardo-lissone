@@ -30,6 +30,7 @@
       "@components/*": ["components/*"],
       "@pages/*": ["pages/*"],
       "@utils/*": ["utils/*"],
+      "@shared/*": ["shared/*"],
       "@styles/*": ["styles/*"]
     }
   },

@@ -35,8 +35,6 @@ Since the beginning of my journey with web application development, I had a lot 
 
 Everything in this project was developed with a lot of love, dedication and will, following all the development steps that I created with me until this moment. From creating a simple requirements documentation, prototyping an interactive interface in Figma to creating a universal template for my Next.js applications to increase productivity when developing new React projects.
 
-The idea of ​​creating a portfolio / bio site is very interesting, but considering that our evolution is constant, updating this application would be very repetitive and ineffective. Therefore, I created a fake api using a json file using JsonServer, where I control all texts and project posts in as many languages ​​as I want to add, making the application as dynamic as possible.
-
 ## Requirements
 
 - [Nodejs](https://nodejs.org/en/)
@@ -49,7 +47,6 @@ The idea of ​​creating a portfolio / bio site is very interesting, but consi
 - NextJs
 - Typescript
 - StyledComponents
-- JsonServer (Fake api)
 - Eslint
   - Airbnb-config with another pessoal rules
   - Import helpers plugin
@@ -84,23 +81,6 @@ Enable husky git hooks:
 yarn husky install
 #or
 npx husky install
-```
-
-Need to add environment variables:
-
-```bash
-# .\.env.local
-
-# DEFAULT
-API_URL=http://localhost:5000/
-```
-
-Run fake api:
-
-```bash
-yarn server
-#or
-npm run server
 ```
 
 Run application:

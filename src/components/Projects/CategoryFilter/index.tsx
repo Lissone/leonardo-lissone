@@ -127,15 +127,15 @@ const allFiltersFuncs: Filter[] = [
     func: project => !!project.details.find(detail => detail.key === 'fullstack')
   },
   {
+    key: 'responsive',
+    func: project => !!project.details.find(detail => detail.key === 'responsive')
+  },
+  {
     key: 'web',
     func: project => !!project.details.find(detail => detail.key === 'web')
   },
   {
     key: 'mobile',
     func: project => !!project.details.find(detail => detail.key === 'mobile')
-  },
-  {
-    key: 'responsive',
-    func: project => !!project.details.find(detail => detail.key === 'responsive')
   }
 ]
