@@ -23,6 +23,7 @@ interface ProjectCardProps {
   readonly collaborationLabel: string
   readonly prototypeLabel: string
   readonly repositoryLabel: string
+  readonly handleOpenCollaborationModal: () => void
 }
 
 export function ProjectCard({
@@ -30,7 +31,8 @@ export function ProjectCard({
   thumbnailAltLabel,
   collaborationLabel,
   prototypeLabel,
-  repositoryLabel
+  repositoryLabel,
+  handleOpenCollaborationModal
 }: ProjectCardProps) {
   return (
     <Container data-aos="fade-up" data-aos-duration="1100">
@@ -70,11 +72,12 @@ export function ProjectCard({
             <Heading>
               <h2>{content.name}</h2>
 
-              {content.isCollaboration ? (
+              {content.collaborators ? (
                 <Tooltip title={collaborationLabel}>
                   <img
                     src="/icons/collaboration.svg"
                     alt="icon for collaborative projects"
+                    onClick={handleOpenCollaborationModal}
                   />
                 </Tooltip>
               ) : null}

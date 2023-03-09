@@ -110,6 +110,10 @@ export const Heading = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
+
+  img {
+    cursor: pointer;
+  }
 `
 
 export const Divider = styled.div`

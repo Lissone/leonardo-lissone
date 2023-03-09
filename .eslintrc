@@ -49,6 +49,7 @@
     "array-callback-return": "off",
     "import/no-unresolved": "off",
     "import/prefer-default-export": "off",
+    "import/no-extraneous-dependencies": "off",
     "react/jsx-filename-extension": ["warn", { "extensions": [".tsx"] }],
     "react/no-array-index-key": "off",
     "react/require-default-props": 0,

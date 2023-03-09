@@ -1,8 +1,9 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 
-import { ProjectsSectionContent } from '@interfaces/content'
+import { ProjectContent, ProjectsSectionContent } from '@interfaces/content'
 
 import { CategoryFilter } from './CategoryFilter'
+import { CollaborationModal } from './CollaborationModal'
 import { ProjectCard } from './ProjectCard'
 import {
   Container,
@@ -22,7 +23,13 @@ interface ProjectsProps {
 export function Projects({ content }: ProjectsProps) {
   const [currentGrid, setCurrentGrid] = useState(GRID_LIMIT)
   const [currentProjects, setCurrentProjects] = useState(content.projects)
+  const [projectCollaboratorsSelected, setProjectCollaboratorsSelected] =
+    useState<ProjectContent | null>(null)
   const projectsSliced = currentProjects.slice(0, currentGrid)
+
+  useEffect(() => {
+    setProjectCollaboratorsSelected(null)
+  }, [content])
 
   const handleShowMoreProjects = () => {
     setCurrentGrid(grid => grid + GRID_LIMIT)
@@ -52,6 +59,7 @@ export function Projects({ content }: ProjectsProps) {
             collaborationLabel={content.collaborationLabel}
             prototypeLabel={content.prototypeLabel}
             repositoryLabel={content.repositoryLabel}
+            handleOpenCollaborationModal={() => setProjectCollaboratorsSelected(project)}
           />
         ))}
       </Content>
@@ -72,6 +80,14 @@ export function Projects({ content }: ProjectsProps) {
           {content.showMoreButtonLabel}
         </ShowMoreButton>
       ) : null}
+
+      <CollaborationModal
+        project={projectCollaboratorsSelected}
+        title={content.collaborationModalTitle}
+        text={content.collaborationModalText}
+        isOpen={!!projectCollaboratorsSelected}
+        handleClose={() => setProjectCollaboratorsSelected(null)}
+      />
     </Container>
   )
 }

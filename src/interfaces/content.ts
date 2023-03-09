@@ -60,11 +60,13 @@ export interface ProjectsSectionContent {
   readonly heading: string
   readonly projects: ProjectContent[]
   readonly thumbnailAltLabel: string
-  readonly collaborationLabel: string
   readonly prototypeLabel: string
   readonly repositoryLabel: string
   readonly showMoreButtonLabel: string
   readonly projectsNotfoundLabel: string
+  readonly collaborationLabel: string
+  readonly collaborationModalTitle: string
+  readonly collaborationModalText: string
   readonly filterTitleLabel: string
   readonly filtersLabels: ProjectsFiltersLabels[]
 }
@@ -87,11 +89,17 @@ export interface ProjectsFiltersLabels {
 type GoodHabitsKeys = 'eslint' | 'prettier' | 'test'
 type DetailsKeys = 'web' | 'mobile' | 'desktop' | 'responsive' | 'design' | 'fullstack'
 
+interface Collaborator {
+  readonly name: string
+  readonly role: string
+  readonly photoUrl: string | null
+  readonly socials: SocialsContent[]
+}
+
 export interface ProjectContent {
   readonly name: string
   readonly description: string
   readonly mainTechnologies: string[]
-  readonly isCollaboration: boolean
   readonly thumbnailUrl: string
   readonly goodHabits: {
     readonly key: GoodHabitsKeys
@@ -101,6 +109,7 @@ export interface ProjectContent {
     readonly key: DetailsKeys
     readonly label: string
   }[]
+  readonly collaborators: Collaborator[] | null
   readonly prototypeLink: string | null
   readonly repositoryLink: string | null
   readonly productionLink: string | null
