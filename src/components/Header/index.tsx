@@ -19,26 +19,33 @@ import {
 } from './styles'
 
 interface HeaderProps {
-  language: string
-  resumeCv: string
-  resumeButtonLabel: string
-  toggleContentLanguage: () => void
+  readonly language: string
+  readonly resumeCv: string
+  readonly resumeButtonLabel: string
+  readonly toggleContentLanguage: () => void
+  readonly setIsOverlayActive: (value: boolean) => void
 }
 
 export function Header({
   language,
   resumeCv,
   resumeButtonLabel,
-  toggleContentLanguage
+  toggleContentLanguage,
+  setIsOverlayActive
 }: HeaderProps) {
   const [hamburguerIsOpen, setHamburguerIsOpen] = useState(false)
+
+  const handleHamburguerClick = () => {
+    setHamburguerIsOpen(!hamburguerIsOpen)
+    setIsOverlayActive(!hamburguerIsOpen)
+  }
 
   return (
     <Container>
       <Content>
         <img src="/logo.svg" alt="Logo" />
 
-        <Hamburguer onClick={() => setHamburguerIsOpen(!hamburguerIsOpen)}>
+        <Hamburguer onClick={handleHamburguerClick}>
           <FiMenu size={30} />
         </Hamburguer>
 
@@ -75,13 +82,8 @@ export function Header({
               uncheckedIcon={
                 <div
                   style={{
-                    height: '100%',
-                    fontSize: 18,
-                    fontWeight: 700,
+                    ...languageSwitchDefaultStyle,
                     paddingRight: 14,
-                    display: 'flex',
-                    justifyContent: 'center',
-                    alignItems: 'center',
                     color: 'var(--gray-300)'
                   }}
                 >
@@ -91,13 +93,8 @@ export function Header({
               checkedIcon={
                 <div
                   style={{
-                    height: '100%',
-                    fontSize: 18,
-                    fontWeight: 700,
+                    ...languageSwitchDefaultStyle,
                     paddingLeft: 14,
-                    display: 'flex',
-                    justifyContent: 'center',
-                    alignItems: 'center',
                     color: 'var(--gray-500)'
                   }}
                 >
@@ -114,4 +111,13 @@ export function Header({
       </Content>
     </Container>
   )
+}
+
+const languageSwitchDefaultStyle = {
+  height: '100%',
+  fontSize: 18,
+  fontWeight: 700,
+  display: 'flex',
+  justifyContent: 'center',
+  alignItems: 'center'
 }

@@ -18,6 +18,7 @@ export const Container = styled.footer`
 
   .bearing-led {
     height: 44rem;
+    z-index: -1;
 
     position: absolute;
     bottom: -13.6rem;

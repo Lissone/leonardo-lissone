@@ -1,4 +1,4 @@
-import { PresentationContent } from '@interfaces/content'
+import { PresentationSectionContent } from '@interfaces/content'
 
 import {
   Container,
@@ -10,8 +10,8 @@ import {
 } from './styles'
 
 interface PresentationProps {
-  content: PresentationContent
-  contactButtonLabel: string
+  readonly content: PresentationSectionContent
+  readonly contactButtonLabel: string
 }
 
 export function Presentation({ content, contactButtonLabel }: PresentationProps) {
@@ -30,7 +30,7 @@ export function Presentation({ content, contactButtonLabel }: PresentationProps)
           }}
         />
 
-        <ContactButton to="contact" smooth duration={1000} spy exact="true" offset={-80}>
+        <ContactButton to="contact" smooth duration={1000} spy offset={-80}>
           {contactButtonLabel}
         </ContactButton>
       </Content>

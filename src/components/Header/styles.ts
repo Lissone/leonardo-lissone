@@ -34,6 +34,12 @@ export const Hamburguer = styled.div`
 
   cursor: pointer;
 
+  transition: filter 0.3s;
+
+  &:hover {
+    filter: brightness(0.85);
+  }
+
   @media (max-width: 770px) {
     margin-right: 2rem;
 
@@ -68,6 +74,7 @@ export const Menu = styled.div<MenuProps>`
     gap: 6rem;
 
     background: var(--gray-800);
+    box-shadow: 0rem 0rem 1.875rem rgba(0, 0, 0, 0.25);
 
     -webkit-font-smoothing: antialiased;
     transform-origin: 0% 0%;

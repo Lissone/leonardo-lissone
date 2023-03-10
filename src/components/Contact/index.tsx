@@ -1,6 +1,7 @@
-import { ContactContent, SocialContent } from '@interfaces/content'
+import { ContactSectionContent, SocialsContent } from '@interfaces/content'
 
 import { SocialIcon } from '@components/Icons/SocialIcon'
+import { Tooltip } from '@components/Tooltip'
 
 import {
   Container,
@@ -13,10 +14,10 @@ import {
 } from './styles'
 
 interface ContactProps {
-  content: ContactContent
-  socials: SocialContent[]
-  email: string
-  contactButtonLabel: string
+  readonly content: ContactSectionContent
+  readonly socials: SocialsContent[]
+  readonly email: string
+  readonly contactButtonLabel: string
 }
 
 export function Contact({ content, socials, email, contactButtonLabel }: ContactProps) {
@@ -31,9 +32,7 @@ export function Contact({ content, socials, email, contactButtonLabel }: Contact
 
         <Title>{content.heading[1]}</Title>
 
-        {content.text.map((text, index) => (
-          <Text key={index}>{text}</Text>
-        ))}
+        <Text>{content.text}</Text>
 
         <ContactButton href={`mailto:${email}`} target="_blank" rel="noreferrer">
           {contactButtonLabel}
@@ -41,9 +40,11 @@ export function Contact({ content, socials, email, contactButtonLabel }: Contact
 
         <Socials>
           {socials.map(social => (
-            <a key={social.name} href={social.link} target="_blank" rel="noreferrer">
-              <SocialIcon name={social.name} />
-            </a>
+            <Tooltip key={social.name} title={social.name}>
+              <a href={social.link} target="_blank" rel="noreferrer">
+                <SocialIcon name={social.name} />
+              </a>
+            </Tooltip>
           ))}
         </Socials>
       </Content>

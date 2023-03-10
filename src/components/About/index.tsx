@@ -1,4 +1,4 @@
-import { AboutContent } from '@interfaces/content'
+import { AboutSectionContent } from '@interfaces/content'
 
 import {
   Container,
@@ -11,7 +11,7 @@ import {
 } from './styles'
 
 interface AboutProps {
-  content: AboutContent
+  readonly content: AboutSectionContent
 }
 
 export function About({ content }: AboutProps) {
