@@ -636,6 +636,12 @@ export const contentLanguages: ContentLang = {
       heading: ['O que fazer agora?', 'Entre em contato comigo'],
       text: 'Embora eu não esteja procurando novas oportunidades de trabalho no momento, minha caixa de entrada estará sempre aberta para qualquer discussão!'
     },
+    headerButtons: {
+      presentationButtonTooltip: 'Apresentação',
+      aboutButtonTooltip: 'Sobre mim',
+      workExperiencesButtonTooltip: 'Trabalhos',
+      projectsButtonTooltip: 'Projetos'
+    },
     sharedButtons: {
       resumeCv:
         'https://leonardo-lissone.cdn.prismic.io/leonardo-lissone/741a83b8-2ab2-457f-8c5b-f63bfb5287db_CV+-+Leonardo+Dias+Lissone+-+PT-BR.pdf',
@@ -1256,6 +1262,12 @@ export const contentLanguages: ContentLang = {
     contactSection: {
       heading: ['What’s Next?', 'Contact me'],
       text: 'While I am not currently looking for new job opportunities, my inbox will always be open for any discussions!'
+    },
+    headerButtons: {
+      presentationButtonTooltip: 'Presentation',
+      aboutButtonTooltip: 'About',
+      workExperiencesButtonTooltip: 'Work experiences',
+      projectsButtonTooltip: 'Projects'
     },
     sharedButtons: {
       resumeCv:

@@ -1,6 +1,8 @@
 import { useState } from 'react'
 import { FiMenu } from 'react-icons/fi'
 
+import { HeaderButtons } from '@interfaces/content'
+
 import { Books } from '@components/shared/Icons/Books'
 import { Home } from '@components/shared/Icons/Home'
 import { Skills } from '@components/shared/Icons/Skills'
@@ -22,6 +24,7 @@ interface HeaderProps {
   readonly language: string
   readonly resumeCv: string
   readonly resumeButtonLabel: string
+  readonly headerButtons: HeaderButtons
   readonly toggleContentLanguage: () => void
   readonly setIsOverlayActive: (value: boolean) => void
 }
@@ -30,6 +33,7 @@ export function Header({
   language,
   resumeCv,
   resumeButtonLabel,
+  headerButtons,
   toggleContentLanguage,
   setIsOverlayActive
 }: HeaderProps) {
@@ -51,16 +55,19 @@ export function Header({
 
         <Menu isOpen={hamburguerIsOpen}>
           <Navigation>
-            <NavLink to="presentation">
+            <NavLink to="presentation" tooltip={headerButtons.presentationButtonTooltip}>
               <Home />
             </NavLink>
-            <NavLink to="about">
+            <NavLink to="about" tooltip={headerButtons.aboutButtonTooltip}>
               <Skills />
             </NavLink>
-            <NavLink to="work-experiences">
+            <NavLink
+              to="work-experiences"
+              tooltip={headerButtons.workExperiencesButtonTooltip}
+            >
               <Suitcase />
             </NavLink>
-            <NavLink to="projects">
+            <NavLink to="projects" tooltip={headerButtons.projectsButtonTooltip}>
               <Books />
             </NavLink>
           </Navigation>

@@ -44,6 +44,7 @@ export default function Home({ setIsOverlayActive }: HomeProps) {
         language={content.lang}
         resumeCv={content.sharedButtons.resumeCv}
         resumeButtonLabel={content.sharedButtons.resumeButtonLabel}
+        headerButtons={content.headerButtons}
         toggleContentLanguage={toggleContentLanguage}
         setIsOverlayActive={setIsOverlayActive}
       />

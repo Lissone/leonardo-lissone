@@ -7,6 +7,7 @@ export interface ContentLanguage {
   readonly jobsSection: JobsSectionContent
   readonly projectsSection: ProjectsSectionContent
   readonly contactSection: ContactSectionContent
+  readonly headerButtons: HeaderButtons
   readonly sharedButtons: {
     readonly resumeCv: string
     readonly resumeButtonLabel: string
@@ -17,6 +18,13 @@ export interface ContentLanguage {
 export interface SocialsContent {
   readonly name: string
   readonly link: string
+}
+
+export interface HeaderButtons {
+  readonly presentationButtonTooltip: string
+  readonly aboutButtonTooltip: string
+  readonly workExperiencesButtonTooltip: string
+  readonly projectsButtonTooltip: string
 }
 
 // -----------------------------------------------------------//
