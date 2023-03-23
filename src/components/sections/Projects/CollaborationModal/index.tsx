@@ -1,8 +1,8 @@
 import { ProjectContent } from '@interfaces/content'
 
-import { SocialIcon } from '@components/Icons/SocialIcon'
-import { Modal } from '@components/Modal'
-import { Tooltip } from '@components/Tooltip'
+import { SocialIcon } from '@components/shared/Icons/SocialIcon'
+import { Modal } from '@components/shared/Modal'
+import { Tooltip } from '@components/shared/Tooltip'
 
 import {
   Content,

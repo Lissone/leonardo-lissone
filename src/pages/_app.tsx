@@ -2,7 +2,7 @@ import { AppProps } from 'next/app'
 import { useState } from 'react'
 import Modal from 'react-modal'
 
-import { FixedBorderLed } from '@components/FixedBorderLed'
+import { FixedBorderLed } from '@components/layouts/FixedBorderLed'
 
 import { Container, Content } from '@styles/app'
 import { GlobalOverlay, GlobalStyle } from '@styles/global'

@@ -2,7 +2,7 @@ import { FiFigma, FiGithub, FiGlobe } from 'react-icons/fi'
 
 import { ProjectContent } from '@interfaces/content'
 
-import { Tooltip } from '@components/Tooltip'
+import { Tooltip } from '@components/shared/Tooltip'
 
 import {
   Container,

@@ -1,10 +1,10 @@
 import { useState } from 'react'
 import { FiMenu } from 'react-icons/fi'
 
-import { Books } from '@components/Icons/Books'
-import { Home } from '@components/Icons/Home'
-import { Skills } from '@components/Icons/Skills'
-import { Suitcase } from '@components/Icons/Suitcase'
+import { Books } from '@components/shared/Icons/Books'
+import { Home } from '@components/shared/Icons/Home'
+import { Skills } from '@components/shared/Icons/Skills'
+import { Suitcase } from '@components/shared/Icons/Suitcase'
 
 import { NavLink } from './NavLink'
 import {

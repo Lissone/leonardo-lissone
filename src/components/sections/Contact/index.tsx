@@ -1,7 +1,7 @@
 import { ContactSectionContent, SocialsContent } from '@interfaces/content'
 
-import { SocialIcon } from '@components/Icons/SocialIcon'
-import { Tooltip } from '@components/Tooltip'
+import { SocialIcon } from '@components/shared/Icons/SocialIcon'
+import { Tooltip } from '@components/shared/Tooltip'
 
 import {
   Container,

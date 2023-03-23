@@ -1,8 +1,8 @@
 import { SocialsContent } from '@interfaces/content'
 
-import { Tooltip } from '@components/Tooltip'
+import { SocialIcon } from '@components/shared/Icons/SocialIcon'
+import { Tooltip } from '@components/shared/Tooltip'
 
-import { SocialIcon } from '../Icons/SocialIcon'
 import { Container, Content } from './styles'
 
 interface FixedSocialsProps {
