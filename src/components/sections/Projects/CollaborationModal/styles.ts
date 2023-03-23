@@ -6,6 +6,10 @@ export const Content = styled.div`
 
   span {
     color: var(--gray-100);
+
+    @media (max-width: 370px) {
+      text-align: center;
+    }
   }
 
   ul {

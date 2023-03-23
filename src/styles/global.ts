@@ -77,7 +77,7 @@ export const GlobalStyle = createGlobalStyle`
   /* ===== Modal ===== */
   .react-modal-overlay {
     position: fixed;
-    top: 6rem;
+    top: 5.625rem; // tamanho do header
     bottom: 0;
     right: 0;
     left: 0;

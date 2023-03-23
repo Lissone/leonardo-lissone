@@ -21,6 +21,11 @@ export const HeaderContent = styled.div`
   align-items: center;
   justify-content: space-between;
 
+  @media (max-width: 370px) {
+    justify-content: center;
+    text-align: center;
+  }
+
   button {
     border: 0;
     background: transparent;
@@ -29,6 +34,10 @@ export const HeaderContent = styled.div`
 
     &:hover {
       filter: brightness(0.8);
+    }
+
+    @media (max-width: 370px) {
+      display: none;
     }
   }
 `
@@ -56,8 +65,8 @@ export const Heading = styled.div`
 export const Content = styled.div`
   padding: 1.8rem 2.25rem;
 
-  @media (max-width: 470px) {
-    max-height: 450px;
+  @media (max-height: 680px) {
+    max-height: 320px;
 
     overflow-y: scroll;
   }
