@@ -1,15 +1,11 @@
 import styled from 'styled-components'
 
 export const Container = styled.div`
-  overflow: hidden;
-
   padding-top: 4rem;
 
   display: flex;
 
   @media (max-width: 750px) {
-    padding-top: 3rem;
-
     flex-direction: column;
   }
 `

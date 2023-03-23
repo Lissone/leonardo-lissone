@@ -7,4 +7,8 @@ export const Container = styled.div`
   box-shadow: 0rem 0rem 0.625rem var(--red-400);
 
   background: var(--red-400);
+
+  @media (max-width: 520px) {
+    display: none;
+  }
 `

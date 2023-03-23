@@ -19,7 +19,7 @@ export const Content = styled.div`
   align-items: center;
   grid-template-columns: 1fr 4fr;
 
-  @media (max-width: 770px) {
+  @media (max-width: 920px) {
     display: flex;
     justify-content: space-between;
   }
@@ -40,7 +40,7 @@ export const Hamburguer = styled.div`
     filter: brightness(0.85);
   }
 
-  @media (max-width: 770px) {
+  @media (max-width: 920px) {
     margin-right: 2rem;
 
     display: flex;
@@ -55,7 +55,7 @@ export const Menu = styled.div<MenuProps>`
   display: flex;
   justify-content: space-between;
 
-  @media (max-width: 770px) {
+  @media (max-width: 920px) {
     width: 18rem;
     height: 100vh;
     padding-top: 2.5rem;
@@ -91,7 +91,7 @@ export const Navigation = styled.nav`
   align-items: center;
   gap: 3rem;
 
-  @media (max-width: 770px) {
+  @media (max-width: 920px) {
     flex-direction: column;
   }
 `
@@ -102,7 +102,7 @@ export const Buttons = styled.div`
   justify-content: flex-end;
   gap: 2rem;
 
-  @media (max-width: 770px) {
+  @media (max-width: 920px) {
     flex-direction: column;
   }
 `
@@ -130,7 +130,7 @@ export const ResumeButton = styled.a`
     transform: scale(1.03);
   }
 
-  @media (max-width: 770px) {
+  @media (max-width: 920px) {
     font-size: 1.3rem;
   }
 `

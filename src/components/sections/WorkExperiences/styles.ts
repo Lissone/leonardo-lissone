@@ -2,40 +2,45 @@ import styled from 'styled-components'
 
 export const Container = styled.section`
   width: 100%;
-  height: 100%;
-  padding-left: 12rem;
-  padding-bottom: 6rem;
-
-  position: relative;
+  height: 100vh;
 
   display: flex;
   justify-content: space-between;
 
-  @media (max-width: 1090px) {
-    padding-left: 9rem;
-    padding-right: 4rem;
-  }
-
-  @media (max-width: 770px) {
-    padding-left: 6rem;
-  }
-
-  @media (max-width: 650px) {
-    padding-left: 3rem;
-    padding-right: 3rem;
+  @media (max-width: 560px) or (max-height: 850px) {
+    height: 100%;
+    margin-bottom: 3rem;
   }
 `
 
 export const Content = styled.div`
-  max-width: 62rem;
-
+  width: 100%;
+  max-width: 1150px;
   margin: 0 auto;
-  padding-top: 4rem;
-
-  overflow: hidden;
+  padding-top: 6rem;
+  padding-left: 9rem;
 
   display: flex;
   flex-direction: column;
+
+  @media (max-width: 1090px) {
+    padding-right: 4rem;
+  }
+
+  @media (max-width: 920px) {
+    margin: 0;
+    padding-left: 4rem;
+    padding-right: 4rem;
+  }
+
+  @media (max-width: 540px) {
+    padding-top: 3rem;
+  }
+
+  @media (max-width: 450px) {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
 `
 
 export const Heading = styled.div`

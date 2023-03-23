@@ -12,7 +12,7 @@ export const Container = styled.div`
 
   z-index: 100;
 
-  @media (max-width: 770px) {
+  @media (max-width: 920px) {
     display: none;
   }
 `

@@ -1,7 +1,8 @@
 import styled from 'styled-components'
 
 export const Container = styled.section`
-  padding: 4rem 0;
+  width: 100%;
+  margin-bottom: 3rem;
 
   display: flex;
   flex-direction: column;
@@ -16,14 +17,6 @@ export const Container = styled.section`
     flex-direction: column;
     align-items: center;
     gap: 2.25rem;
-  }
-
-  @media (max-width: 650px) {
-    padding: 2rem 3rem;
-  }
-
-  @media (max-width: 360px) {
-    padding: 2rem 1.5rem;
   }
 `
 
@@ -59,15 +52,12 @@ export const FilterContainer = styled.div`
   }
 
   @media (max-width: 850px) {
-    max-width: 300px;
-  }
-
-  @media (max-width: 720px) {
-    max-width: 280px;
+    max-width: 100%;
+    padding: 0 4rem;
   }
 
   @media (max-width: 450px) {
-    max-width: 260px;
+    padding: 0 2rem;
   }
 
   span {

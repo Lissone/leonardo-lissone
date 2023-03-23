@@ -3,54 +3,35 @@ import styled from 'styled-components'
 export const Container = styled.section`
   width: 100%;
   height: 100vh;
-  padding-top: 5rem;
-
-  position: relative;
 
   display: flex;
-  justify-content: center;
 
-  @media (min-width: 1550px) {
-    padding-top: 8rem;
-  }
-
-  @media (max-width: 1350px) {
-    height: 900px;
-  }
-
-  @media (max-width: 920px) {
-    padding-left: 9rem;
-    padding-right: 4rem;
-
-    justify-content: flex-start;
-  }
-
-  @media (max-width: 770px) {
-    padding-left: 6rem;
-    padding-right: 4rem;
-  }
-
-  @media (max-height: 630px) {
-    padding-top: 3rem;
-  }
-
-  @media (max-width: 650px) {
-    padding-left: 3rem;
-    padding-right: 3rem;
+  @media (max-width: 1430px) or (max-height: 640px) {
+    height: 100%;
+    margin: 3rem 0;
   }
 `
 
 export const Content = styled.div`
-  display: flex;
-  gap: 20rem;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
 
-  @media (max-width: 1500px) {
-    gap: 13rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+
+  @media (max-width: 1430px) {
+    padding: 0 4rem;
+
+    flex-direction: column;
+    justify-content: center;
+    gap: 3rem;
   }
 
-  @media (max-width: 1350px) {
-    flex-direction: column;
-    gap: 0;
+  @media (max-width: 450px) {
+    padding: 0 2rem;
   }
 `
 
@@ -97,10 +78,6 @@ export const Text = styled.div`
       color: var(--red-200);
     }
   }
-
-  @media (max-width: 920px) {
-    max-width: 100%;
-  }
 `
 
 export const HighlightText = styled.span`
@@ -134,17 +111,12 @@ export const PhotoContainer = styled.div`
   display: flex;
   justify-content: center;
 
-  img {
-    position: absolute;
-
-    top: 3rem;
-  }
-
   img:nth-child(2) {
     width: 24rem;
     height: 24rem;
 
-    top: 6rem;
+    position: absolute;
+    top: 3rem;
 
     object-fit: cover;
 
@@ -160,22 +132,6 @@ export const PhotoContainer = styled.div`
     img:nth-child(2) {
       width: 22rem;
       height: 22rem;
-
-      top: 6rem;
-    }
-  }
-
-  @media (max-width: 1300px) {
-    img {
-      width: 28rem;
-      height: 28rem;
-    }
-
-    img:nth-child(2) {
-      width: 22rem;
-      height: 22rem;
-
-      top: 6rem;
     }
   }
 
@@ -189,7 +145,7 @@ export const PhotoContainer = styled.div`
       width: 16.5rem;
       height: 16.5rem;
 
-      top: 5.25rem;
+      top: 2rem;
     }
   }
 `

@@ -39,7 +39,7 @@ export const contentLanguages: ContentLang = {
         alt: 'Leonardo Dias Lissone Santomero'
       },
       recentTechnologies: [
-        'Javascript (ES6++)',
+        'Javascript (ES6+)',
         'Typescript',
         'NodeJs',
         'NestJs',
@@ -682,7 +682,7 @@ export const contentLanguages: ContentLang = {
         alt: 'Leonardo Dias Lissone Santomero'
       },
       recentTechnologies: [
-        'Javascript (ES6++)',
+        'Javascript (ES6+)',
         'Typescript',
         'NodeJs',
         'NestJs',

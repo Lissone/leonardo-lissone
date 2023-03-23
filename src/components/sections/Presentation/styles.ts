@@ -5,40 +5,44 @@ export const Container = styled.section`
   width: 100%;
   height: 100vh;
   padding-top: 5.625rem; // header height
-  padding-left: 4rem;
 
   display: flex;
-  justify-content: space-between;
 
-  @media (max-width: 965px) {
-    padding-right: 6rem;
-  }
-
-  @media (max-width: 770px) {
-    padding-left: 6rem;
-  }
-
-  @media (max-width: 650px) {
-    padding-left: 3rem;
-    padding-right: 3rem;
-  }
-
-  @media (max-width: 500px) {
+  @media (max-width: 560px) or (max-height: 640px) {
     height: 100%;
-    padding-bottom: 5.625rem;
+    margin-bottom: 3rem;
   }
 `
 
 export const Content = styled.div`
-  max-width: 60rem;
-
+  width: 100%;
+  max-width: 1260px;
   margin: 0 auto;
   padding-top: 6rem;
-  padding-left: 7.5rem;
+  padding-left: 9rem;
 
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+
+  @media (max-width: 965px) {
+    padding-right: 4rem;
+  }
+
+  @media (max-width: 920px) {
+    margin: 0;
+    padding-left: 4rem;
+    padding-right: 4rem;
+  }
+
+  @media (max-width: 540px) {
+    padding-top: 3rem;
+  }
+
+  @media (max-width: 450px) {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
 
   img {
     margin-top: 6.2rem;
@@ -47,14 +51,6 @@ export const Content = styled.div`
     @media (max-width: 770px) {
       display: none;
     }
-  }
-
-  @media (max-width: 770px) {
-    padding-left: 0;
-  }
-
-  @media (max-height: 630px) {
-    padding-top: 4rem;
   }
 `
 
@@ -137,7 +133,7 @@ export const HighlightText = styled.span`
 `
 
 export const ContactButton = styled(Scroll)`
-  margin-top: 4rem;
+  margin-top: 3rem;
   padding: 0.8rem 4.2rem;
 
   font-size: 1.2rem;
@@ -158,28 +154,19 @@ export const ContactButton = styled(Scroll)`
   @media (max-height: 630px) {
     margin-top: 2rem;
   }
+
+  @media (max-width: 300px) {
+    padding: 0.8rem 2.5rem;
+  }
 `
 
 export const ImageContainer = styled.div`
-  margin-left: 13.5rem;
-
   display: flex;
   align-items: center;
+  justify-content: center;
 
   img {
     height: 38rem;
-  }
-
-  @media (min-width: 1550px) {
-    margin-left: 11rem;
-
-    img {
-      height: 44rem;
-    }
-  }
-
-  @media (max-width: 1335px) {
-    margin-left: 1rem;
   }
 
   @media (max-width: 965px) {
