@@ -643,7 +643,7 @@ export const contentLanguages: ContentLang = {
           'Erro ao enviar email. Já estou trabalhando para resolver o problema!',
         buttonSendMessage: 'Enviar mensagem',
         input: {
-          name: { label: 'Nome', placeholder: 'João' },
+          name: { label: 'Nome completo', placeholder: 'Leonardo Dias Lissone' },
           email: { label: 'Email', placeholder: 'exemplo@hotmail.com' },
           message: {
             label: 'Mensagem',
@@ -652,7 +652,7 @@ export const contentLanguages: ContentLang = {
           }
         },
         validationInput: {
-          nameRequiredLabel: 'Nome obrigatório',
+          nameRequiredLabel: 'Nome completo obrigatório',
           emailRequiredLabel: 'Email obrigatório',
           emailInvalidLabel: 'Email inválido',
           messageRequiredLabel: 'Mensagem obrigatória',
@@ -1293,7 +1293,7 @@ export const contentLanguages: ContentLang = {
         emailMessageError: `Error sending email. I'm already working to solve the problem!`,
         buttonSendMessage: 'Send message',
         input: {
-          name: { label: 'Name', placeholder: 'John Doe' },
+          name: { label: 'Full name', placeholder: 'John Doe' },
           email: { label: 'Email', placeholder: 'example@hotmail.com' },
           message: {
             label: 'Message',
@@ -1301,7 +1301,7 @@ export const contentLanguages: ContentLang = {
           }
         },
         validationInput: {
-          nameRequiredLabel: 'Required name',
+          nameRequiredLabel: 'Required full name',
           emailRequiredLabel: 'Required email',
           emailInvalidLabel: 'Invalid email',
           messageRequiredLabel: 'Required message',
