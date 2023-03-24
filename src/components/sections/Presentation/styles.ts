@@ -8,7 +8,7 @@ export const Container = styled.section`
 
   display: flex;
 
-  @media (max-width: 340px) or (min-height: 700px) or (max-height: 500px) {
+  @media (max-width: 340px) or (min-height: 750px) or (max-height: 500px) {
     height: 100%;
     margin-bottom: 3rem;
   }
