@@ -24,6 +24,8 @@ export const Content = styled.div`
   gap: 1rem;
 
   a {
+    opacity: 0.75;
+
     transition: 0.3s all;
 
     &:hover {
