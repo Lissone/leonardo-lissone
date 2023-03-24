@@ -100,7 +100,7 @@ export const ContactButton = styled.a`
   font-size: 1.2rem;
 
   border: 1px solid var(--red-400);
-  border-radius: 0.5rem;
+  border-radius: 0.25rem;
   box-shadow: 0rem 0rem 1.875rem rgba(202, 62, 71, 0.7);
 
   color: var(--gray-300);

@@ -5,7 +5,7 @@ export const Container = styled.div`
   min-height: 26.85rem;
 
   border: 2px solid var(--gray-800);
-  border-radius: 0.625rem;
+  border-radius: 0.35rem;
 
   background: var(--gray-900-opacity-80);
 

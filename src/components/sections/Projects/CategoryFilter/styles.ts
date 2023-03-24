@@ -25,7 +25,7 @@ export const Container = styled.div`
     white-space: nowrap;
 
     border: 1px solid var(--gray-700);
-    border-radius: 0.35rem;
+    border-radius: 0.25rem;
 
     background: none;
     color: var(--gray-600);
