@@ -2,7 +2,7 @@ import styled from 'styled-components'
 
 export const Container = styled.section`
   width: 100%;
-  margin-bottom: 3rem;
+  padding: 3rem 0;
 
   display: flex;
   flex-direction: column;
@@ -10,55 +10,61 @@ export const Container = styled.section`
 
   header {
     width: 100%;
-
-    position: relative;
+    max-width: 1056px;
 
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 2.25rem;
+
+    @media (max-width: 1350px) {
+      max-width: 688px;
+    }
+
+    @media (max-width: 1080px) {
+      max-width: 645px;
+    }
+
+    @media (max-width: 850px) {
+      max-width: 100%;
+      padding: 0 4rem;
+    }
+
+    @media (max-width: 450px) {
+      padding: 0 2rem;
+    }
   }
 `
 
 export const Heading = styled.h1`
-  font-size: 2.5rem;
+  text-align: center;
+  font-size: 3rem;
   font-weight: 700;
 
-  text-align: center;
-  line-height: 3rem;
+  line-height: 3.5rem;
   text-shadow: 0rem 0.25rem 2.5rem rgba(202, 62, 71, 0.5);
 
   color: var(--red-400);
 
-  @media (max-width: 840px) {
-    font-size: 2rem;
+  @media (max-width: 680px) {
+    font-size: 2.5rem;
+  }
+
+  @media (max-width: 580px) {
+    font-size: 2.1rem;
+  }
+
+  @media (max-width: 480px) {
+    font-size: 1.9rem;
   }
 `
 
 export const FilterContainer = styled.div`
   width: 100%;
-  max-width: 1056px;
 
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-
-  @media (max-width: 1350px) {
-    max-width: 688px;
-  }
-
-  @media (max-width: 1080px) {
-    max-width: 645px;
-  }
-
-  @media (max-width: 850px) {
-    max-width: 100%;
-    padding: 0 4rem;
-  }
-
-  @media (max-width: 450px) {
-    padding: 0 2rem;
-  }
 
   span {
     font-size: 1.25rem;

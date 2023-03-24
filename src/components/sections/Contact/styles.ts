@@ -2,8 +2,8 @@ import styled from 'styled-components'
 
 export const Container = styled.footer`
   width: 100%;
-  height: calc(100vh - 5rem);
-  padding-top: 4rem;
+  height: calc(100vh - 5.625rem); // 100vh - header height
+  padding: 4rem 0;
 
   display: flex;
   flex-direction: column;
@@ -16,9 +16,13 @@ export const Container = styled.footer`
     rgba(202, 62, 71, 0.5) 99.97%
   );
 
+  @media (max-height: 590px) {
+    height: 100%;
+  }
+
   .bearing-led {
     height: 44rem;
-    z-index: -1;
+    z-index: 0;
 
     position: absolute;
     bottom: -13.6rem;
@@ -43,7 +47,7 @@ export const Container = styled.footer`
       bottom: -7.5rem;
     }
 
-    @media (max-height: 630px) {
+    @media (max-height: 730px) {
       display: none;
     }
   }
@@ -53,6 +57,10 @@ export const Content = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+
+  @media (max-width: 350px) {
+    padding: 0 2rem;
+  }
 `
 
 export const Subtitle = styled.div`
@@ -74,6 +82,8 @@ export const Subtitle = styled.div`
 
 export const Title = styled.h1`
   font-size: 2.5rem;
+
+  text-align: center;
 
   @media (max-width: 440px) {
     font-size: 2rem;
@@ -138,7 +148,7 @@ export const Socials = styled.div`
     }
   }
 
-  @media (max-width: 770px) {
+  @media (max-width: 920px) {
     display: flex;
   }
 `

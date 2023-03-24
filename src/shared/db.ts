@@ -29,7 +29,7 @@ export const contentLanguages: ContentLang = {
     ],
     presentationSection: {
       heading: ['Olá,', 'eu sou', 'Leonardo Lissone'],
-      text: '<p>Sou um desenvolvedor <em>Fullstack Javascript</em>, com mais de 3 anos de experiência em <strong>desenvolvimento de software, design de interfaces (UI) e experiência de usuário (UX).</strong> Tive diversas experiências profissionais, desde colaborador de empresas á trabalhos freelance, onde desenvolvi diversas técnicas de desenvolvimento de software e interfaces. <br> Além de estar muito <strong>determinado</strong> para meu <strong>crescimento pessoal</strong> de conhecimento na área da tecnologia, sempre buscando criar projetos inovadores com muito <strong>amor</strong> e <strong>dedicação</strong>.</p>'
+      text: '<p>Sou um desenvolvedor <em>Fullstack Javascript</em>, com mais de 3 anos de experiência em <strong>desenvolvimento de software, design de interfaces (UI) e experiência de usuário (UX).</strong> Tive diversas experiências profissionais, desde colaborador de empresas á trabalhos freelance, onde desenvolvi diversas técnicas de desenvolvimento de software e interfaces.</p>'
     },
     aboutSection: {
       heading: 'Sobre mim',
@@ -672,7 +672,7 @@ export const contentLanguages: ContentLang = {
     ],
     presentationSection: {
       heading: ['Hi,', 'I am', 'Leonardo Lissone'],
-      text: "<p>I'm a <em>Fullstack Javascript</em> developer, with more than 3 years of experience in <strong>software development, interface (UI) and user experience (UX) design.</strong> I've had diverse experiences professionals, from corporate collaborators to freelance work, where I developed different software development techniques and interfaces.<br> In addition to being very <strong>determined</strong> for my <strong>personal growth</strong> of knowledge in area of ​​technology, always seeking to create innovative projects with a lot of <strong>love</strong> and <strong>dedication</strong>.</p>"
+      text: "<p>I'm a <em>Fullstack Javascript</em> developer, with more than 3 years of experience in <strong>software development, interface (UI) and user experience (UX) design.</strong> I've had diverse experiences professionals, from corporate collaborators to freelance work, where I developed different software development techniques and interfaces.</p>"
     },
     aboutSection: {
       heading: 'About me',

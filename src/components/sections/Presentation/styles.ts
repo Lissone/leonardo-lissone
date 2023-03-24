@@ -8,7 +8,7 @@ export const Container = styled.section`
 
   display: flex;
 
-  @media (max-width: 560px) or (max-height: 640px) {
+  @media (max-width: 340px) or (min-height: 700px) or (max-height: 500px) {
     height: 100%;
     margin-bottom: 3rem;
   }
@@ -16,16 +16,18 @@ export const Container = styled.section`
 
 export const Content = styled.div`
   width: 100%;
+  height: 100%;
   max-width: 1260px;
   margin: 0 auto;
   padding-top: 6rem;
   padding-left: 9rem;
+  padding-right: 9rem;
 
   display: flex;
   flex-direction: column;
   align-items: flex-start;
 
-  @media (max-width: 965px) {
+  @media (max-width: 1240px) or (max-height: 630px) {
     padding-right: 4rem;
   }
 
@@ -34,8 +36,7 @@ export const Content = styled.div`
     padding-left: 4rem;
     padding-right: 4rem;
   }
-
-  @media (max-width: 540px) {
+  @media (max-width: 540px) or (max-height: 520px) {
     padding-top: 3rem;
   }
 
@@ -169,7 +170,7 @@ export const ImageContainer = styled.div`
     height: 38rem;
   }
 
-  @media (max-width: 965px) {
+  @media (max-width: 965px) or (max-height: 500px) {
     display: none;
   }
 `

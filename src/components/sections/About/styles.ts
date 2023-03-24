@@ -8,7 +8,7 @@ export const Container = styled.section`
 
   @media (max-width: 1430px) or (max-height: 640px) {
     height: 100%;
-    margin: 3rem 0;
+    padding: 3rem 0;
   }
 `
 
