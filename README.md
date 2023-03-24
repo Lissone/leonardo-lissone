@@ -47,6 +47,9 @@ Everything in this project was developed with a lot of love, dedication and will
 - NextJs
 - Typescript
 - StyledComponents
+- React Hook Form
+- Yup
+- EmailJs
 - Eslint
   - Airbnb-config with another pessoal rules
   - Import helpers plugin
@@ -81,6 +84,17 @@ Enable husky git hooks:
 yarn husky install
 #or
 npx husky install
+```
+
+Need to add environment variables:
+
+```bash
+# .\.env.local
+
+# EMAILJS
+NEXT_PUBLIC_EMAILJS_SERVICE_ID=
+NEXT_PUBLIC_EMAILJS_TEMPLATE_ID=
+NEXT_PUBLIC_EMAILJS_PUBLIC_KEY=
 ```
 
 Run application:

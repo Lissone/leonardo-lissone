@@ -103,7 +103,7 @@ export const Text = styled.p`
   }
 `
 
-export const ContactButton = styled.a`
+export const ContactButton = styled.button`
   margin-top: 4rem;
   padding: 0.8rem 4.2rem;
 

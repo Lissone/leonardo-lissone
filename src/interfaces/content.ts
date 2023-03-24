@@ -133,7 +133,35 @@ export interface ProjectContent {
 
 // -----------------------------------------------------------//
 
+interface InputContent {
+  readonly label: string
+  readonly placeholder: string
+}
+
+export interface SendMessageModalContent {
+  readonly title: string
+  readonly text: string
+  readonly emailMessageSuccess: string
+  readonly emailMessageError: string
+  readonly buttonSendMessage: string
+  readonly input: {
+    readonly name: InputContent
+    readonly email: InputContent
+    readonly message: InputContent
+  }
+  readonly validationInput: {
+    readonly nameRequiredLabel: string
+    //-------
+    readonly emailRequiredLabel: string
+    readonly emailInvalidLabel: string
+    //-------
+    readonly messageRequiredLabel: string
+    readonly messageMinLabel: string
+  }
+}
+
 export interface ContactSectionContent {
   readonly heading: string[]
   readonly text: string
+  readonly sendMessageModalContent: SendMessageModalContent
 }

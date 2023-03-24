@@ -1,8 +1,16 @@
 import styled from 'styled-components'
 
 export const Content = styled.div`
+  padding: 1.8rem 2.25rem;
+
   display: flex;
   flex-direction: column;
+
+  @media (max-height: 680px) {
+    max-height: 320px;
+
+    overflow-y: scroll;
+  }
 
   span {
     color: var(--gray-100);

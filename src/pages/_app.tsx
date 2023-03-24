@@ -1,6 +1,7 @@
 import { AppProps } from 'next/app'
 import { useState } from 'react'
 import Modal from 'react-modal'
+import { ToastContainer, Slide } from 'react-toastify'
 
 import { FixedBorderLed } from '@components/layouts/FixedBorderLed'
 
@@ -21,6 +22,17 @@ export default function MyApp({ Component, pageProps }: AppProps) {
         <FixedBorderLed />
 
         <Content>
+          <ToastContainer
+            position="bottom-center"
+            autoClose={3000}
+            hideProgressBar={false}
+            transition={Slide}
+            pauseOnHover={false}
+            closeOnClick
+            rtl={false}
+            theme="dark"
+          />
+
           <Component {...pageProps} setIsOverlayActive={setIsOverlayActive} />
         </Content>
       </Container>

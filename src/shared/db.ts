@@ -634,7 +634,31 @@ export const contentLanguages: ContentLang = {
     },
     contactSection: {
       heading: ['O que fazer agora?', 'Entre em contato comigo'],
-      text: 'Embora eu não esteja procurando novas oportunidades de trabalho no momento, minha caixa de entrada estará sempre aberta para qualquer discussão!'
+      text: 'Embora eu não esteja procurando novas oportunidades de trabalho no momento, minha caixa de entrada estará sempre aberta para qualquer discussão!',
+      sendMessageModalContent: {
+        title: 'Envie uma mensagem para mim',
+        text: 'Preencha os campos para me enviar uma mensagem. Devo responder em menos de um dia, e desde já agradeço pelo seu contato!',
+        emailMessageSuccess: 'Sua mensagem foi enviada!',
+        emailMessageError:
+          'Erro ao enviar email. Já estou trabalhando para resolver o problema!',
+        buttonSendMessage: 'Enviar mensagem',
+        input: {
+          name: { label: 'Nome', placeholder: 'João' },
+          email: { label: 'Email', placeholder: 'exemplo@hotmail.com' },
+          message: {
+            label: 'Mensagem',
+            placeholder:
+              'Gostaria de enviar uma mensagem para entrar em contato direto com você!'
+          }
+        },
+        validationInput: {
+          nameRequiredLabel: 'Nome obrigatório',
+          emailRequiredLabel: 'Email obrigatório',
+          emailInvalidLabel: 'Email inválido',
+          messageRequiredLabel: 'Mensagem obrigatória',
+          messageMinLabel: 'Mensagem deve conter no mínimo de 20 caracteres'
+        }
+      }
     },
     headerButtons: {
       presentationButtonTooltip: 'Apresentação',
@@ -1261,7 +1285,29 @@ export const contentLanguages: ContentLang = {
     },
     contactSection: {
       heading: ['What’s Next?', 'Contact me'],
-      text: 'While I am not currently looking for new job opportunities, my inbox will always be open for any discussions!'
+      text: 'While I am not currently looking for new job opportunities, my inbox will always be open for any discussions!',
+      sendMessageModalContent: {
+        title: 'Send a message to me',
+        text: 'Fill in the fields to send me a message. I should respond in less than a day, and thanks in advance for your contact!',
+        emailMessageSuccess: 'Your message was sent!',
+        emailMessageError: `Error sending email. I'm already working to solve the problem!`,
+        buttonSendMessage: 'Send message',
+        input: {
+          name: { label: 'Name', placeholder: 'John Doe' },
+          email: { label: 'Email', placeholder: 'example@hotmail.com' },
+          message: {
+            label: 'Message',
+            placeholder: 'I would like to send a message to contact you directly!'
+          }
+        },
+        validationInput: {
+          nameRequiredLabel: 'Required name',
+          emailRequiredLabel: 'Required email',
+          emailInvalidLabel: 'Invalid email',
+          messageRequiredLabel: 'Required message',
+          messageMinLabel: 'Message must contain at least 20 characters'
+        }
+      }
     },
     headerButtons: {
       presentationButtonTooltip: 'Presentation',

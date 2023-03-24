@@ -1,7 +1,7 @@
 import { IoMdClose } from 'react-icons/io'
 import ReactModal from 'react-modal'
 
-import { HeaderContainer, HeaderContent, Heading, Content } from './styles'
+import { HeaderContainer, HeaderContent, Heading } from './styles'
 
 interface ModalProps {
   readonly isOpen: boolean
@@ -33,7 +33,7 @@ export function Modal({ isOpen, title, headerIcon, children, handleClose }: Moda
         <div className="header-divider" />
       </HeaderContainer>
 
-      <Content>{children}</Content>
+      {children}
     </ReactModal>
   )
 }
