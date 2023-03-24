@@ -46,6 +46,7 @@ Everything in this project was developed with a lot of love, dedication and will
 - ReactJs
 - NextJs
 - Typescript
+- React GA (Google Analytics)
 - StyledComponents
 - React Hook Form
 - Yup
@@ -90,6 +91,9 @@ Need to add environment variables:
 
 ```bash
 # .\.env.local
+
+# GOOGLE ANALYTICS
+NEXT_PUBLIC_GA_TRACKING_ID=
 
 # EMAILJS
 NEXT_PUBLIC_EMAILJS_SERVICE_ID=
