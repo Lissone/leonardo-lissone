@@ -47,7 +47,7 @@ export const Container = styled.footer`
       bottom: -7.5rem;
     }
 
-    @media (max-height: 730px) {
+    @media (max-height: 630px) {
       display: none;
     }
   }
