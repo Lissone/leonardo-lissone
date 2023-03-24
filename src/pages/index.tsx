@@ -3,13 +3,13 @@ import Aos from 'aos'
 import Head from 'next/head'
 import { useEffect, useState } from 'react'
 
-import { About } from '@components/About'
-import { Contact } from '@components/Contact'
-import { FixedSocials } from '@components/FixedSocials'
-import { Header } from '@components/Header'
-import { Presentation } from '@components/Presentation'
-import { Projects } from '@components/Projects'
-import { WorkExperiences } from '@components/WorkExperiences'
+import { FixedSocials } from '@components/layouts/FixedSocials'
+import { Header } from '@components/layouts/Header'
+import { About } from '@components/sections/About'
+import { Contact } from '@components/sections/Contact'
+import { Presentation } from '@components/sections/Presentation'
+import { Projects } from '@components/sections/Projects'
+import { WorkExperiences } from '@components/sections/WorkExperiences'
 
 import { contentLanguages } from '@shared/db'
 
@@ -44,6 +44,7 @@ export default function Home({ setIsOverlayActive }: HomeProps) {
         language={content.lang}
         resumeCv={content.sharedButtons.resumeCv}
         resumeButtonLabel={content.sharedButtons.resumeButtonLabel}
+        headerButtons={content.headerButtons}
         toggleContentLanguage={toggleContentLanguage}
         setIsOverlayActive={setIsOverlayActive}
       />

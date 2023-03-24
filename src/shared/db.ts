@@ -29,7 +29,7 @@ export const contentLanguages: ContentLang = {
     ],
     presentationSection: {
       heading: ['Olá,', 'eu sou', 'Leonardo Lissone'],
-      text: '<p>Sou um desenvolvedor <em>Fullstack Javascript</em>, com mais de 3 anos de experiência em <strong>desenvolvimento de software, design de interfaces (UI) e experiência de usuário (UX).</strong> Tive diversas experiências profissionais, desde colaborador de empresas á trabalhos freelance, onde desenvolvi diversas técnicas de desenvolvimento de software e interfaces. <br> Além de estar muito <strong>determinado</strong> para meu <strong>crescimento pessoal</strong> de conhecimento na área da tecnologia, sempre buscando criar projetos inovadores com muito <strong>amor</strong> e <strong>dedicação</strong>.</p>'
+      text: '<p>Sou um desenvolvedor <em>Fullstack Javascript</em>, com mais de 3 anos de experiência em <strong>desenvolvimento de software, design de interfaces (UI) e experiência de usuário (UX).</strong> Tive diversas experiências profissionais, desde colaborador de empresas á trabalhos freelance, onde desenvolvi diversas técnicas de desenvolvimento de software e interfaces.</p>'
     },
     aboutSection: {
       heading: 'Sobre mim',
@@ -39,7 +39,7 @@ export const contentLanguages: ContentLang = {
         alt: 'Leonardo Dias Lissone Santomero'
       },
       recentTechnologies: [
-        'Javascript (ES6++)',
+        'Javascript (ES6+)',
         'Typescript',
         'NodeJs',
         'NestJs',
@@ -634,11 +634,41 @@ export const contentLanguages: ContentLang = {
     },
     contactSection: {
       heading: ['O que fazer agora?', 'Entre em contato comigo'],
-      text: 'Embora eu não esteja procurando novas oportunidades de trabalho no momento, minha caixa de entrada estará sempre aberta para qualquer discussão!'
+      text: 'Embora eu não esteja procurando novas oportunidades de trabalho no momento, minha caixa de entrada estará sempre aberta para qualquer discussão!',
+      sendMessageModalContent: {
+        title: 'Envie uma mensagem para mim',
+        text: 'Preencha os campos para me enviar uma mensagem. Devo responder em menos de um dia, e desde já agradeço pelo seu contato!',
+        emailMessageSuccess: 'Sua mensagem foi enviada!',
+        emailMessageError:
+          'Erro ao enviar email. Já estou trabalhando para resolver o problema!',
+        buttonSendMessage: 'Enviar mensagem',
+        input: {
+          name: { label: 'Nome completo', placeholder: 'Leonardo Dias Lissone' },
+          email: { label: 'Email', placeholder: 'exemplo@hotmail.com' },
+          message: {
+            label: 'Mensagem',
+            placeholder:
+              'Gostaria de enviar uma mensagem para entrar em contato direto com você!'
+          }
+        },
+        validationInput: {
+          nameRequiredLabel: 'Nome completo obrigatório',
+          emailRequiredLabel: 'Email obrigatório',
+          emailInvalidLabel: 'Email inválido',
+          messageRequiredLabel: 'Mensagem obrigatória',
+          messageMinLabel: 'Mensagem deve conter no mínimo de 20 caracteres'
+        }
+      }
+    },
+    headerButtons: {
+      presentationButtonTooltip: 'Apresentação',
+      aboutButtonTooltip: 'Sobre mim',
+      workExperiencesButtonTooltip: 'Trabalhos',
+      projectsButtonTooltip: 'Projetos'
     },
     sharedButtons: {
       resumeCv:
-        'https://leonardo-lissone.cdn.prismic.io/leonardo-lissone/741a83b8-2ab2-457f-8c5b-f63bfb5287db_CV+-+Leonardo+Dias+Lissone+-+PT-BR.pdf',
+        'https://prismic-io.s3.amazonaws.com/leonardo-lissone/2ca34b52-4612-4989-bedc-9fb6c2e6c1c9_CV+-+Leonardo+Dias+Lissone+-+PT-BR.pdf',
       resumeButtonLabel: 'Resumo',
       contactButtonLabel: 'Contactar agora'
     }
@@ -666,7 +696,7 @@ export const contentLanguages: ContentLang = {
     ],
     presentationSection: {
       heading: ['Hi,', 'I am', 'Leonardo Lissone'],
-      text: "<p>I'm a <em>Fullstack Javascript</em> developer, with more than 3 years of experience in <strong>software development, interface (UI) and user experience (UX) design.</strong> I've had diverse experiences professionals, from corporate collaborators to freelance work, where I developed different software development techniques and interfaces.<br> In addition to being very <strong>determined</strong> for my <strong>personal growth</strong> of knowledge in area of ​​technology, always seeking to create innovative projects with a lot of <strong>love</strong> and <strong>dedication</strong>.</p>"
+      text: "<p>I'm a <em>Fullstack Javascript</em> developer, with more than 3 years of experience in <strong>software development, interface (UI) and user experience (UX) design.</strong> I've had diverse experiences professionals, from corporate collaborators to freelance work, where I developed different software development techniques and interfaces.</p>"
     },
     aboutSection: {
       heading: 'About me',
@@ -676,7 +706,7 @@ export const contentLanguages: ContentLang = {
         alt: 'Leonardo Dias Lissone Santomero'
       },
       recentTechnologies: [
-        'Javascript (ES6++)',
+        'Javascript (ES6+)',
         'Typescript',
         'NodeJs',
         'NestJs',
@@ -1255,11 +1285,39 @@ export const contentLanguages: ContentLang = {
     },
     contactSection: {
       heading: ['What’s Next?', 'Contact me'],
-      text: 'While I am not currently looking for new job opportunities, my inbox will always be open for any discussions!'
+      text: 'While I am not currently looking for new job opportunities, my inbox will always be open for any discussions!',
+      sendMessageModalContent: {
+        title: 'Send a message to me',
+        text: 'Fill in the fields to send me a message. I should respond in less than a day, and thanks in advance for your contact!',
+        emailMessageSuccess: 'Your message was sent!',
+        emailMessageError: `Error sending email. I'm already working to solve the problem!`,
+        buttonSendMessage: 'Send message',
+        input: {
+          name: { label: 'Full name', placeholder: 'John Doe' },
+          email: { label: 'Email', placeholder: 'example@hotmail.com' },
+          message: {
+            label: 'Message',
+            placeholder: 'I would like to send a message to contact you directly!'
+          }
+        },
+        validationInput: {
+          nameRequiredLabel: 'Required full name',
+          emailRequiredLabel: 'Required email',
+          emailInvalidLabel: 'Invalid email',
+          messageRequiredLabel: 'Required message',
+          messageMinLabel: 'Message must contain at least 20 characters'
+        }
+      }
+    },
+    headerButtons: {
+      presentationButtonTooltip: 'Presentation',
+      aboutButtonTooltip: 'About',
+      workExperiencesButtonTooltip: 'Work experiences',
+      projectsButtonTooltip: 'Projects'
     },
     sharedButtons: {
       resumeCv:
-        'https://prismic-io.s3.amazonaws.com/leonardo-lissone/c0b1542e-9003-42f1-b138-07c6801bf04f_CV+-+Leonardo+Dias+Lissone+-+EN-US.pdf',
+        'https://prismic-io.s3.amazonaws.com/leonardo-lissone/54d65ebb-f4a0-44d9-896d-73efa19d6ef9_CV+-+Leonardo+Dias+Lissone+-+EN-US.pdf',
       resumeButtonLabel: 'Resume',
       contactButtonLabel: 'Contact now'
     }

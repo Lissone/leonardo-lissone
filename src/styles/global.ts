@@ -1,4 +1,5 @@
 import styled, { createGlobalStyle } from 'styled-components'
+import 'react-toastify/dist/ReactToastify.css'
 
 export const GlobalStyle = createGlobalStyle`
   * {
@@ -77,7 +78,7 @@ export const GlobalStyle = createGlobalStyle`
   /* ===== Modal ===== */
   .react-modal-overlay {
     position: fixed;
-    top: 6rem;
+    top: 5.625rem; // tamanho do header
     bottom: 0;
     right: 0;
     left: 0;
@@ -92,7 +93,7 @@ export const GlobalStyle = createGlobalStyle`
   .react-modal-container {
     width: 100%;
     max-width: 576px;
-    max-height: 650px;
+    max-height: 820px;
 
     position: relative;
 

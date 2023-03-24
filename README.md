@@ -4,11 +4,11 @@
 
 <p align="center">
   <a href="#description">Description</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#demonstration">Demonstration</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#requirements">Requirements</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#technologies">Technologies</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#layout">Layout</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-  <a href="#usage">Usage</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-  <a href="#demonstration">Demonstration</a>
+  <a href="#usage">Usage</a>
 </p>
 <br />
 <p align="center">
@@ -35,6 +35,10 @@ Since the beginning of my journey with web application development, I had a lot 
 
 Everything in this project was developed with a lot of love, dedication and will, following all the development steps that I created with me until this moment. From creating a simple requirements documentation, prototyping an interactive interface in Figma to creating a universal template for my Next.js applications to increase productivity when developing new React projects.
 
+## Demonstration
+
+https://user-images.githubusercontent.com/57052110/227630290-5e0c5cd1-87ca-41de-a694-4d59280db573.mp4
+
 ## Requirements
 
 - [Nodejs](https://nodejs.org/en/)
@@ -46,7 +50,11 @@ Everything in this project was developed with a lot of love, dedication and will
 - ReactJs
 - NextJs
 - Typescript
+- React GA (Google Analytics)
 - StyledComponents
+- React Hook Form
+- Yup
+- EmailJs
 - Eslint
   - Airbnb-config with another pessoal rules
   - Import helpers plugin
@@ -83,6 +91,20 @@ yarn husky install
 npx husky install
 ```
 
+Need to add environment variables:
+
+```bash
+# .\.env.local
+
+# GOOGLE ANALYTICS
+NEXT_PUBLIC_GA_TRACKING_ID=
+
+# EMAILJS
+NEXT_PUBLIC_EMAILJS_SERVICE_ID=
+NEXT_PUBLIC_EMAILJS_TEMPLATE_ID=
+NEXT_PUBLIC_EMAILJS_PUBLIC_KEY=
+```
+
 Run application:
 
 ```bash
@@ -90,10 +112,6 @@ yarn dev
 #or
 npm run dev
 ```
-
-## Demonstration
-
-<img src="./.github/leonardo-lissone-demo.gif" alt="Demo Leonardo Lissone Website" width="100%" height="100%"/>
 
 ## License
 
