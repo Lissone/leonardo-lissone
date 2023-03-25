@@ -6,7 +6,7 @@ export const Content = styled.div`
   display: flex;
   flex-direction: column;
 
-  @media (max-height: 920px) {
+  @media (max-height: 820px) {
     max-height: 540px;
 
     overflow-y: scroll;
