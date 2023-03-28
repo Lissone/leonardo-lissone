@@ -124,7 +124,11 @@ export function SendMessageModal({
           <ButtonSubmit type="submit" disabled={isSubmitting} isSubmitting={isSubmitting}>
             <div />
             {content.buttonSendMessage}
-            {isSubmitting ? <CircularProgress size={18} /> : <BiSend size={18} />}
+            {isSubmitting ? (
+              <CircularProgress size={18} className="circularProgress" />
+            ) : (
+              <BiSend size={18} />
+            )}
           </ButtonSubmit>
         </Form>
       </Content>
