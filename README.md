@@ -31,9 +31,11 @@
 
 ## Description
 
-Since the beginning of my journey with web application development, I had a lot of desire to create my own website, to have a focal point for all my experiences, projects, stories and mainly to increase and facilitate the contact network. I've waited until the moment where I feel comfortable and safe enough to do exactly as I would like.
+Everything in this project was developed with a lot of love, dedication and will.
 
-Everything in this project was developed with a lot of love, dedication and will, following all the development steps that I created with me until this moment. From creating a simple requirements documentation, prototyping an interactive interface in Figma to creating a universal template for my Next.js applications to increase productivity when developing new React projects.
+Since the beginning of my journey with web application development, I desire to create my own portfolio website, to have a focal point for all my experiences, projects, stories and mainly to further increase the networking. I've waited until the moment where I felt more comfortable and skilled enough to do exactly as I wanted.
+
+This portfolio is intended to show my development path, steps and skills that I achieved to this moment, since creating a simple requirements documentation, prototyping an interactive interface in Figma to creating a universal template for my Next.js applications to increase productivity when developing new React projects.
 
 ## Demonstration
 
