@@ -668,7 +668,7 @@ export const contentLanguages: ContentLang = {
     },
     sharedButtons: {
       resumeCv:
-        'https://prismic-io.s3.amazonaws.com/leonardo-lissone/c59143d3-dc53-4697-a4a9-e008ed3257d6_CV+-+Leonardo+Dias+Lissone+-+PT-BR.pdf',
+        'https://prismic-io.s3.amazonaws.com/leonardo-lissone/a0ba25c4-fc14-40f7-a4aa-90c8f366bbe1_CV+-+PT-BR+-+Leonardo+Dias+Lissone.pdf',
       resumeButtonLabel: 'Resumo',
       contactButtonLabel: 'Contactar agora'
     }
@@ -1317,7 +1317,7 @@ export const contentLanguages: ContentLang = {
     },
     sharedButtons: {
       resumeCv:
-        'https://prismic-io.s3.amazonaws.com/leonardo-lissone/8706af5f-0133-4fca-8a73-0808fb571eb8_CV+-+Leonardo+Dias+Lissone+-+EN-US.pdf',
+        'https://prismic-io.s3.amazonaws.com/leonardo-lissone/6fb9563f-3d90-4153-b990-cddd594dd585_CV+-+EN-US+-+Leonardo+Dias+Lissone.pdf',
       resumeButtonLabel: 'Resume',
       contactButtonLabel: 'Contact now'
     }
