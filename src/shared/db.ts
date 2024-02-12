@@ -56,9 +56,21 @@ export const contentLanguages: ContentLang = {
           experiences: [
             {
               siteLink: 'https://g5partners.com/',
+              role: 'Analista de Desenvolvimento Pleno',
+              startDate: 'Fevereiro 2024',
+              endDate: 'Presente',
+              activities: [
+                'Planejamento e desenvolvimento de arquiteturas de software.',
+                'Colaboração com equipes operacionais para implantação de soluções com software.',
+                'Desenvolvimento de novas ferramentas e funcionalidades para os usuários dos sistemas públicos e privados da empresa.',
+                'Atuação na manutenção preventiva, preditiva e corretiva de softwares desenvolvidos.',
+              ]
+            },
+            {
+              siteLink: 'https://g5partners.com/',
               role: 'Analista de Desenvolvimento Júnior',
               startDate: 'Março 2022',
-              endDate: 'Presente',
+              endDate: 'Fevereiro 2024',
               activities: [
                 'Desenvolvimento de novas ferramentas e funcionalidades para os usuários dos sistemas públicos e privados da empresa.',
                 'Atuação na manutenção preventiva, preditiva e corretiva de softwares desenvolvidos.',
@@ -723,9 +735,21 @@ export const contentLanguages: ContentLang = {
           experiences: [
             {
               siteLink: 'https://g5partners.com/',
+              role: 'Development Analyst',
+              startDate: 'February 2024',
+              endDate: 'Present',
+              activities: [
+                'Planning and development of software architectures.',
+                'Collaboration with operational teams to implement software solutions.',
+                "Development of new tools and features for users of the company's public and private systems.",
+                'Expertise in preventive, predictive and corrective maintenance of developed software.',
+              ]
+            },
+            {
+              siteLink: 'https://g5partners.com/',
               role: 'Junior Development Analyst',
               startDate: 'March 2022',
-              endDate: 'Present',
+              endDate: 'February 2024',
               activities: [
                 "Development of new tools and features for users of the company's public and private systems.",
                 'Expertise in preventive, predictive and corrective maintenance of developed software.',
