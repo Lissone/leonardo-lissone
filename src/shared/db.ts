@@ -63,7 +63,7 @@ export const contentLanguages: ContentLang = {
                 'Planejamento e desenvolvimento de arquiteturas de software.',
                 'Colaboração com equipes operacionais para implantação de soluções com software.',
                 'Desenvolvimento de novas ferramentas e funcionalidades para os usuários dos sistemas públicos e privados da empresa.',
-                'Atuação na manutenção preventiva, preditiva e corretiva de softwares desenvolvidos.',
+                'Atuação na manutenção preventiva, preditiva e corretiva de softwares desenvolvidos.'
               ]
             },
             {
@@ -742,7 +742,7 @@ export const contentLanguages: ContentLang = {
                 'Planning and development of software architectures.',
                 'Collaboration with operational teams to implement software solutions.',
                 "Development of new tools and features for users of the company's public and private systems.",
-                'Expertise in preventive, predictive and corrective maintenance of developed software.',
+                'Expertise in preventive, predictive and corrective maintenance of developed software.'
               ]
             },
             {
