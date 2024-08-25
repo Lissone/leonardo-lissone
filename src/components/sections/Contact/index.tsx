@@ -46,7 +46,12 @@ export function Contact({ content, socials, email, contactButtonLabel }: Contact
         <Socials>
           {socials.map(social => (
             <Tooltip key={social.name} title={social.name}>
-              <a href={social.link} target="_blank" rel="noreferrer">
+              <a
+                href={social.link}
+                target="_blank"
+                rel="noreferrer"
+                aria-label={`Visit ${social.name} website (in a new tab)`}
+              >
                 <SocialIcon name={social.name} />
               </a>
             </Tooltip>

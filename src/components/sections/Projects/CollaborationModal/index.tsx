@@ -65,7 +65,12 @@ export function CollaborationModal({
               <CollaboratorSocials>
                 {collaborator.socials.map(social => (
                   <Tooltip key={social.name} title={social.name}>
-                    <a href={social.link} target="_blank" rel="noreferrer">
+                    <a
+                      href={social.link}
+                      target="_blank"
+                      rel="noreferrer"
+                      aria-label={`Visit a collaborator ${social.name} website (in a new tab)`}
+                    >
                       <SocialIcon name={social.name} />
                     </a>
                   </Tooltip>

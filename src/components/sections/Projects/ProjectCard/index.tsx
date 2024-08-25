@@ -43,7 +43,12 @@ export function ProjectCard({
           <CoverActions className="project-card-actions">
             {content.prototypeLink ? (
               <Tooltip title={prototypeLabel}>
-                <a href={content.prototypeLink} target="_blank" rel="noreferrer">
+                <a
+                  href={content.prototypeLink}
+                  target="_blank"
+                  rel="noreferrer"
+                  aria-label="Visit project Figma repository (in a new tab)"
+                >
                   <FiFigma size={24} />
                 </a>
               </Tooltip>
@@ -51,7 +56,12 @@ export function ProjectCard({
 
             {content.repositoryLink ? (
               <Tooltip title={repositoryLabel}>
-                <a href={content.repositoryLink} target="_blank" rel="noreferrer">
+                <a
+                  href={content.repositoryLink}
+                  target="_blank"
+                  rel="noreferrer"
+                  aria-label="Visit project Github repository (in a new tab)"
+                >
                   <FiGithub size={24} />
                 </a>
               </Tooltip>
@@ -59,7 +69,12 @@ export function ProjectCard({
 
             {content.productionLink ? (
               <Tooltip title="Link">
-                <a href={content.productionLink} target="_blank" rel="noreferrer">
+                <a
+                  href={content.productionLink}
+                  target="_blank"
+                  rel="noreferrer"
+                  aria-label={`Visit ${content.name} website (in a new tab)`}
+                >
                   <FiGlobe size={24} />
                 </a>
               </Tooltip>

@@ -26,7 +26,7 @@ export function Modal({ isOpen, title, headerIcon, children, handleClose }: Moda
             <h1>{title}</h1>
           </Heading>
 
-          <button type="button" onClick={handleClose}>
+          <button type="button" onClick={handleClose} aria-label="Close modal">
             <IoMdClose size={30} />
           </button>
         </HeaderContent>
