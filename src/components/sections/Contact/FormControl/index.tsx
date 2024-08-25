@@ -12,7 +12,7 @@ interface FormControlProps extends React.InputHTMLAttributes<HTMLInputElement> {
 export function FormControl({ name, children, label, error = null }: FormControlProps) {
   const isInvalid = !!error
   return (
-    <Container isInvalid={isInvalid}>
+    <Container $isInvalid={isInvalid}>
       {label ? <FormLabel htmlFor={name}>{label}</FormLabel> : null}
 
       {children}

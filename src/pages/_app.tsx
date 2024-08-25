@@ -18,7 +18,7 @@ export default function MyApp({ Component, pageProps }: AppProps) {
       <GlobalStyle />
 
       <Container>
-        <GlobalOverlay isActive={isOverlayActive} />
+        <GlobalOverlay $isActive={isOverlayActive} />
         <FixedBorderLed />
 
         <Content>

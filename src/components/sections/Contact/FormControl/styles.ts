@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 
 interface ContainerProps {
-  readonly isInvalid: boolean
+  readonly $isInvalid: boolean
 }
 
 export const Container = styled.div<ContainerProps>`
@@ -9,14 +9,14 @@ export const Container = styled.div<ContainerProps>`
   flex-direction: column;
 
   label {
-    color: ${({ isInvalid }) => (isInvalid ? 'var(--red-400)' : 'var(--gray-100)')};
+    color: ${({ $isInvalid }) => ($isInvalid ? 'var(--red-400)' : 'var(--gray-100)')};
   }
 
   // declaração de estilo estática
   input,
   textarea {
     border: 1px solid
-      ${({ isInvalid }) => (isInvalid ? 'var(--red-400)' : 'var(--gray-600)')};
+      ${({ $isInvalid }) => ($isInvalid ? 'var(--red-400)' : 'var(--gray-600)')};
   }
 `
 

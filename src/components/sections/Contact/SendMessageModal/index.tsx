@@ -121,7 +121,7 @@ export function SendMessageModal({
             />
           </FormControl>
 
-          <ButtonSubmit type="submit" disabled={isSubmitting} isSubmitting={isSubmitting}>
+          <ButtonSubmit type="submit" disabled={isSubmitting}>
             <div />
             {content.buttonSendMessage}
             {isSubmitting ? (

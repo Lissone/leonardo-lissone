@@ -48,7 +48,7 @@ export const Hamburguer = styled.div`
 `
 
 interface MenuProps {
-  isOpen: boolean
+  readonly $isOpen: boolean
 }
 
 export const Menu = styled.div<MenuProps>`
@@ -64,9 +64,9 @@ export const Menu = styled.div<MenuProps>`
     z-index: 15;
 
     top: 0rem;
-    left: ${({ isOpen }) => (isOpen ? '0' : '0.65rem')};
+    left: ${({ $isOpen }) => ($isOpen ? '0' : '0.65rem')};
 
-    opacity: ${({ isOpen }) => (isOpen ? '100%' : '0%')};
+    opacity: ${({ $isOpen }) => ($isOpen ? '100%' : '0%')};
     overflow: hidden;
 
     flex-direction: column;
@@ -78,7 +78,7 @@ export const Menu = styled.div<MenuProps>`
 
     -webkit-font-smoothing: antialiased;
     transform-origin: 0% 0%;
-    transform: ${({ isOpen }) => (isOpen ? 'none' : 'translate(-110%, 0)')};
+    transform: ${({ $isOpen }) => ($isOpen ? 'none' : 'translate(-110%, 0)')};
 
     transition: all 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
   }

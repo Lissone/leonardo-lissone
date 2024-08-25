@@ -53,7 +53,7 @@ export function Header({
           <FiMenu size={30} />
         </Hamburguer>
 
-        <Menu isOpen={hamburguerIsOpen}>
+        <Menu $isOpen={hamburguerIsOpen}>
           <Navigation>
             <NavLink to="presentation" tooltip={headerButtons.presentationButtonTooltip}>
               <Home />

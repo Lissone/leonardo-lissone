@@ -67,11 +67,7 @@ export const Form = styled.form`
   }
 `
 
-interface ButtonSubmitProps {
-  readonly isSubmitting: boolean
-}
-
-export const ButtonSubmit = styled.button<ButtonSubmitProps>`
+export const ButtonSubmit = styled.button`
   margin-top: 1rem;
   padding: 1rem 2.25rem;
 
