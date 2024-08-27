@@ -1,5 +1,4 @@
 import { yupResolver } from '@hookform/resolvers/yup'
-import { CircularProgress } from '@material-ui/core'
 import emailjs from 'emailjs-com'
 import { useState } from 'react'
 import { SubmitHandler, useForm } from 'react-hook-form'
@@ -9,6 +8,7 @@ import * as yup from 'yup'
 
 import { SendMessageModalContent } from '@interfaces/content'
 
+import { Loader } from '@components/shared/Loader'
 import { Modal } from '@components/shared/Modal'
 
 import { FormControl } from '../FormControl'
@@ -124,11 +124,7 @@ export function SendMessageModal({
           <ButtonSubmit type="submit" disabled={isSubmitting}>
             <div />
             {content.buttonSendMessage}
-            {isSubmitting ? (
-              <CircularProgress size={18} className="circularProgress" />
-            ) : (
-              <BiSend size={18} />
-            )}
+            {isSubmitting ? <Loader /> : <BiSend size={18} />}
           </ButtonSubmit>
         </Form>
       </Content>

@@ -89,8 +89,4 @@ export const ButtonSubmit = styled.button`
   &:hover {
     transform: scale(1.015);
   }
-
-  .circularProgress {
-    color: var(--red-400);
-  }
 `
