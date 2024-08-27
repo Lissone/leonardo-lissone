@@ -1,4 +1,5 @@
 import * as RadixTooltip from '@radix-ui/react-tooltip'
+import { useState } from 'react'
 
 import { TooltipContent } from './styles'
 
@@ -8,10 +9,20 @@ interface TooltipProps {
 }
 
 export function Tooltip({ title, children }: TooltipProps) {
+  const [open, setOpen] = useState(false)
+
   return (
     <RadixTooltip.Provider delayDuration={300}>
-      <RadixTooltip.Root>
-        <RadixTooltip.Trigger asChild>{children}</RadixTooltip.Trigger>
+      <RadixTooltip.Root open={open}>
+        <RadixTooltip.Trigger
+          asChild
+          onMouseEnter={() => setOpen(true)}
+          onMouseLeave={() => setOpen(false)}
+          onFocus={() => setOpen(true)}
+          onBlur={() => setOpen(false)}
+        >
+          {children}
+        </RadixTooltip.Trigger>
 
         <TooltipContent sideOffset={6} side="top" align="center">
           {title}

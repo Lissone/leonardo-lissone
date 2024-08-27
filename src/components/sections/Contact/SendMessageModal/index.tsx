@@ -68,7 +68,7 @@ export function SendMessageModal({
       reset()
       handleClose()
       toast.success(content.emailMessageSuccess)
-    } catch (err) {
+    } catch {
       toast.error(content.emailMessageError)
     } finally {
       setIsSubmitting(false)
