@@ -51,6 +51,7 @@ https://user-images.githubusercontent.com/57052110/227630290-5e0c5cd1-87ca-41de-
 - NextJs
 - Typescript
 - React GA (Google Analytics)
+- Radix UI
 - StyledComponents
 - React Hook Form
 - Yup
