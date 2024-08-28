@@ -1,5 +1,7 @@
 import { PresentationSectionContent } from '@interfaces/content'
 
+import { replaceVariable } from '@shared/utils'
+
 import {
   Container,
   ImageContainer,
@@ -15,18 +17,24 @@ interface PresentationProps {
 }
 
 export function Presentation({ content, contactButtonLabel }: PresentationProps) {
+  const { heading, text, yearFirstWorkExperience } = content
+
+  const currentYear = new Date().getFullYear()
+  const carrerTime = (currentYear - yearFirstWorkExperience).toString()
+  const contentText = replaceVariable(text, 'carrerTime', carrerTime)
+
   return (
     <Container id="presentation">
       <Content data-aos="fade-right">
         <Heading>
-          <h3>{content.heading[0]}</h3>
-          <h2>{content.heading[1]}</h2>
-          <h1>{content.heading[2]}</h1>
+          <h3>{heading[0]}</h3>
+          <h2>{heading[1]}</h2>
+          <h1>{heading[2]}</h1>
         </Heading>
 
         <ResumeText
           dangerouslySetInnerHTML={{
-            __html: content.text
+            __html: contentText
           }}
         />
 

@@ -32,6 +32,7 @@ export interface HeaderButtons {
 export interface PresentationSectionContent {
   readonly heading: string[]
   readonly text: string
+  readonly yearFirstWorkExperience: number
 }
 
 // -----------------------------------------------------------//
