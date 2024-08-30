@@ -1,13 +1,13 @@
 {
   "name": "leonardo-lissone",
-  "version": "1.2.8",
+  "version": "1.2.9",
   "description": "Leonardo Lissone's bio portfolio.",
   "repository": "https://github.com/Lissone/leonardo-lissone.git",
   "author": "Leonardo Dias Lissone <leonardo.lissonez@gmail.com>",
   "license": "MIT",
   "private": true,
   "scripts": {
-    "commit": "git-cz",
+    "prepare": "husky",
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
@@ -46,10 +46,5 @@
     "husky": "^9.1.5",
     "tsconfig-paths": "^4.2.0",
     "typescript": "5.5.4"
-  },
-  "husky": {
-    "hooks": {
-      "commit-msg": "yarn commitlint -E HUSKY_GIT_PARAMS"
-    }
   }
 }
