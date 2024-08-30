@@ -1,4 +1,4 @@
-import styled from 'styled-components'
+import styled from 'styled-components';
 
 export const Container = styled.section`
   width: 100%;
@@ -10,7 +10,7 @@ export const Container = styled.section`
   @media (max-width: 560px) or (max-height: 850px) {
     height: 100%;
   }
-`
+`;
 
 export const Content = styled.div`
   width: 100%;
@@ -40,7 +40,7 @@ export const Content = styled.div`
     padding-left: 2rem;
     padding-right: 2rem;
   }
-`
+`;
 
 export const Heading = styled.div`
   display: flex;
@@ -67,7 +67,7 @@ export const Heading = styled.div`
       font-size: 1.9rem;
     }
   }
-`
+`;
 
 export const ImageContainer = styled.div`
   display: flex;
@@ -84,4 +84,4 @@ export const ImageContainer = styled.div`
       display: none;
     }
   }
-`
+`;

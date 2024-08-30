@@ -1,5 +1,5 @@
-import { Link as Scroll } from 'react-scroll'
-import styled from 'styled-components'
+import { Link as Scroll } from 'react-scroll';
+import styled from 'styled-components';
 
 export const Container = styled.section`
   width: 100%;
@@ -12,7 +12,7 @@ export const Container = styled.section`
     height: 100%;
     margin-bottom: 3rem;
   }
-`
+`;
 
 export const Content = styled.div`
   width: 100%;
@@ -53,7 +53,7 @@ export const Content = styled.div`
       display: none;
     }
   }
-`
+`;
 
 export const Heading = styled.div`
   display: flex;
@@ -109,7 +109,7 @@ export const Heading = styled.div`
       font-size: 2.15rem;
     }
   }
-`
+`;
 
 export const ResumeText = styled.div`
   padding-top: 1rem;
@@ -127,11 +127,11 @@ export const ResumeText = styled.div`
       color: var(--red-200);
     }
   }
-`
+`;
 
 export const HighlightText = styled.span`
   color: var(--red-200);
-`
+`;
 
 export const ContactButton = styled(Scroll)`
   margin-top: 3rem;
@@ -159,7 +159,7 @@ export const ContactButton = styled(Scroll)`
   @media (max-width: 300px) {
     padding: 0.8rem 2.5rem;
   }
-`
+`;
 
 export const ImageContainer = styled.div`
   display: flex;
@@ -173,4 +173,4 @@ export const ImageContainer = styled.div`
   @media (max-width: 965px) or (max-height: 500px) {
     display: none;
   }
-`
+`;

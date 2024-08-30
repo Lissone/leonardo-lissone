@@ -1,32 +1,32 @@
-import { useState } from 'react'
-import { FiMenu } from 'react-icons/fi'
+import { useState } from 'react';
+import { FiMenu } from 'react-icons/fi';
 
-import { HeaderButtons } from '@interfaces/content'
+import { HeaderButtons } from '@interfaces/content';
 
-import { Books } from '@components/shared/Icons/Books'
-import { Home } from '@components/shared/Icons/Home'
-import { Skills } from '@components/shared/Icons/Skills'
-import { Suitcase } from '@components/shared/Icons/Suitcase'
+import { Books } from '@components/shared/Icons/Books';
+import { Home } from '@components/shared/Icons/Home';
+import { Skills } from '@components/shared/Icons/Skills';
+import { Suitcase } from '@components/shared/Icons/Suitcase';
 
-import { NavLink } from './NavLink'
+import { NavLink } from './NavLink';
 import {
+  Buttons,
   Container,
   Content,
   Hamburguer,
+  LanguageSwitch,
   Menu,
   Navigation,
-  Buttons,
-  LanguageSwitch,
-  ResumeButton
-} from './styles'
+  ResumeButton,
+} from './styles';
 
 interface HeaderProps {
-  readonly language: string
-  readonly resumeCv: string
-  readonly resumeButtonLabel: string
-  readonly headerButtons: HeaderButtons
-  readonly toggleContentLanguage: () => void
-  readonly setIsOverlayActive: (value: boolean) => void
+  readonly language: string;
+  readonly resumeCv: string;
+  readonly resumeButtonLabel: string;
+  readonly headerButtons: HeaderButtons;
+  readonly toggleContentLanguage: () => void;
+  readonly setIsOverlayActive: (value: boolean) => void;
 }
 
 export function Header({
@@ -35,14 +35,14 @@ export function Header({
   resumeButtonLabel,
   headerButtons,
   toggleContentLanguage,
-  setIsOverlayActive
+  setIsOverlayActive,
 }: HeaderProps) {
-  const [hamburguerIsOpen, setHamburguerIsOpen] = useState(false)
+  const [hamburguerIsOpen, setHamburguerIsOpen] = useState(false);
 
   const handleHamburguerClick = () => {
-    setHamburguerIsOpen(!hamburguerIsOpen)
-    setIsOverlayActive(!hamburguerIsOpen)
-  }
+    setHamburguerIsOpen(!hamburguerIsOpen);
+    setIsOverlayActive(!hamburguerIsOpen);
+  };
 
   return (
     <Container>
@@ -91,7 +91,7 @@ export function Header({
                   style={{
                     ...languageSwitchDefaultStyle,
                     paddingRight: 14,
-                    color: 'var(--gray-300)'
+                    color: 'var(--gray-300)',
                   }}
                 >
                   BR
@@ -102,7 +102,7 @@ export function Header({
                   style={{
                     ...languageSwitchDefaultStyle,
                     paddingLeft: 14,
-                    color: 'var(--gray-500)'
+                    color: 'var(--gray-500)',
                   }}
                 >
                   EN
@@ -117,7 +117,7 @@ export function Header({
         </Menu>
       </Content>
     </Container>
-  )
+  );
 }
 
 const languageSwitchDefaultStyle = {
@@ -126,5 +126,5 @@ const languageSwitchDefaultStyle = {
   fontWeight: 700,
   display: 'flex',
   justifyContent: 'center',
-  alignItems: 'center'
-}
+  alignItems: 'center',
+};

@@ -1,86 +1,84 @@
-/* eslint-disable jsx-a11y/label-has-associated-control */
-import { useEffect, useState } from 'react'
+import { useEffect, useState } from 'react';
 
 import {
   ProjectContent,
   ProjectsFiltersLabels,
-  ProjectsFiltersLabelsKeys
-} from '@interfaces/content'
+  ProjectsFiltersLabelsKeys,
+} from '@interfaces/content';
 
-import { Container } from './styles'
+import { Container } from './styles';
 
 interface CategoryFilterProps {
-  readonly projects: ProjectContent[]
-  readonly filtersLabels: ProjectsFiltersLabels[]
-  readonly setCurrentProjects: (projects: ProjectContent[]) => void
+  readonly projects: ProjectContent[];
+  readonly filtersLabels: ProjectsFiltersLabels[];
+  readonly setCurrentProjects: (projects: ProjectContent[]) => void;
 }
 
 interface Filter {
-  readonly func: (project: ProjectContent) => boolean
-  readonly key?: ProjectsFiltersLabelsKeys
-  readonly name?: string
+  readonly func: (project: ProjectContent) => boolean;
+  readonly key?: ProjectsFiltersLabelsKeys;
+  readonly name?: string;
 }
 
 export function CategoryFilter({
   projects,
   filtersLabels,
-  setCurrentProjects
+  setCurrentProjects,
 }: CategoryFilterProps) {
-  const allFilters: Filter[] = []
-  populateFilterLabelByLanguage(allFilters, filtersLabels)
+  const allFilters: Filter[] = [];
+  populateFilterLabelByLanguage(allFilters, filtersLabels);
 
-  const [currentFilters, setCurrentFilters] = useState<Filter[]>([allFilters[0]])
-
-  useEffect(() => {
-    applyFilters()
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [currentFilters])
+  const [currentFilters, setCurrentFilters] = useState<Filter[]>([allFilters[0]]);
 
   useEffect(() => {
-    populateFilterLabelByLanguage(allFilters, filtersLabels)
-    setCurrentFilters([allFilters[0]])
+    applyFilters();
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [filtersLabels])
+  }, [currentFilters]);
 
-  const filterExists = (name: string) =>
-    currentFilters.find(f => f.name === name) !== undefined
+  useEffect(() => {
+    populateFilterLabelByLanguage(allFilters, filtersLabels);
+    setCurrentFilters([allFilters[0]]);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [filtersLabels]);
+
+  const filterExists = (name: string) => currentFilters.some((f) => f.name === name);
 
   const addFilter = (name: string, fnc: (project: ProjectContent) => boolean) => {
-    setCurrentFilters(filters => [...filters, { name, func: fnc }])
-  }
+    setCurrentFilters((filters) => [...filters, { name, func: fnc }]);
+  };
 
   const removeFilter = (name: string) => {
-    setCurrentFilters(filters => filters.filter(f => !(f.name === name)))
-  }
+    setCurrentFilters((filters) => filters.filter((f) => !(f.name === name)));
+  };
 
   const toggleFilter = (name: string, fnc: (project: ProjectContent) => boolean) => {
     if (filterExists(name)) {
-      removeFilter(name)
+      removeFilter(name);
     } else {
-      addFilter(name, fnc)
+      addFilter(name, fnc);
     }
-  }
+  };
 
   const applyFilters = () => {
-    let filteredProjects = projects
-    if (currentFilters.length !== 0) {
-      currentFilters.forEach(currentFilter => {
-        filteredProjects = filteredProjects.filter(project => currentFilter.func(project))
-      })
+    let filteredProjects = projects;
+    if (currentFilters.length > 0) {
+      for (const currentFilter of currentFilters) {
+        filteredProjects = filteredProjects.filter((project) => currentFilter.func(project));
+      }
     } else {
-      filteredProjects = []
+      filteredProjects = [];
     }
-    setCurrentProjects(filteredProjects)
-  }
+    setCurrentProjects(filteredProjects);
+  };
 
   return (
     <Container>
       <ul>
-        {allFilters.map(filter => {
-          const { name, func } = filter
-          if (!name) return null
+        {allFilters.map((filter) => {
+          const { name, func } = filter;
+          if (!name) return null;
 
-          const id = `checkbox-${filter.name}`
+          const id = `checkbox-${filter.name}`;
           return (
             <li key={id}>
               <input
@@ -92,50 +90,50 @@ export function CategoryFilter({
               />
               <label htmlFor={id}>{filter.name}</label>
             </li>
-          )
+          );
         })}
       </ul>
     </Container>
-  )
+  );
 }
 
 const populateFilterLabelByLanguage = (
   allFilters: Filter[],
-  filtersLabels: ProjectsFiltersLabels[]
+  filtersLabels: ProjectsFiltersLabels[],
 ) => {
-  allFiltersFuncs.forEach(filterFunc => {
-    const filterLabel = filtersLabels.find(v => v.key === filterFunc.key)
+  for (const filterFunc of allFiltersFuncs) {
+    const filterLabel = filtersLabels.find((v) => v.key === filterFunc.key);
     if (filterLabel) {
       allFilters.push({
         name: filterLabel.label,
-        func: filterFunc.func
-      })
+        func: filterFunc.func,
+      });
     }
-  })
-}
+  }
+};
 
 const allFiltersFuncs: Filter[] = [
-  { key: 'all', func: project => !!project },
-  { key: 'repositories', func: project => !!project.repositoryLink },
-  { key: 'production', func: project => !!project.productionLink },
+  { key: 'all', func: (project) => !!project },
+  { key: 'repositories', func: (project) => !!project.repositoryLink },
+  { key: 'production', func: (project) => !!project.productionLink },
   {
     key: 'designs',
-    func: project => !project.repositoryLink && !!project.prototypeLink
+    func: (project) => !project.repositoryLink && !!project.prototypeLink,
   },
   {
     key: 'fullstack',
-    func: project => !!project.details.find(detail => detail.key === 'fullstack')
+    func: (project) => project.details.some((detail) => detail.key === 'fullstack'),
   },
   {
     key: 'responsive',
-    func: project => !!project.details.find(detail => detail.key === 'responsive')
+    func: (project) => project.details.some((detail) => detail.key === 'responsive'),
   },
   {
     key: 'web',
-    func: project => !!project.details.find(detail => detail.key === 'web')
+    func: (project) => project.details.some((detail) => detail.key === 'web'),
   },
   {
     key: 'mobile',
-    func: project => !!project.details.find(detail => detail.key === 'mobile')
-  }
-]
+    func: (project) => project.details.some((detail) => detail.key === 'mobile'),
+  },
+];

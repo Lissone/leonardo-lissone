@@ -1,8 +1,8 @@
-import { ContentLanguage } from '@interfaces/content'
+import { ContentLanguage } from '@interfaces/content';
 
 interface ContentLang {
-  'pt-br': ContentLanguage
-  'en-us': ContentLanguage
+  'pt-br': ContentLanguage;
+  'en-us': ContentLanguage;
 }
 
 export const contentLanguages: ContentLang = {
@@ -12,32 +12,32 @@ export const contentLanguages: ContentLang = {
     socials: [
       {
         name: 'Github',
-        link: 'https://github.com/Lissone'
+        link: 'https://github.com/Lissone',
       },
       {
         name: 'Figma',
-        link: 'https://www.figma.com/@lissone'
+        link: 'https://www.figma.com/@lissone',
       },
       {
         name: 'Linkedin',
-        link: 'https://www.linkedin.com/in/lissone/'
+        link: 'https://www.linkedin.com/in/lissone/',
       },
       {
         name: 'Instagram',
-        link: 'https://www.instagram.com/lissonez/'
-      }
+        link: 'https://www.instagram.com/lissonez/',
+      },
     ],
     presentationSection: {
       heading: ['Olá,', 'eu sou', 'Leonardo Lissone'],
       text: '<p>Sou um desenvolvedor <em>Fullstack Javascript</em>, com mais de {{ carrerTime }} anos de experiência em <strong>desenvolvimento de software, design de interfaces (UI) e experiência de usuário (UX).</strong> Tive diversas experiências profissionais, desde colaborador de empresas á trabalhos freelance, onde desenvolvi diversas técnicas de desenvolvimento de software e interfaces.</p>',
-      yearFirstWorkExperience: 2020
+      yearFirstWorkExperience: 2020,
     },
     aboutSection: {
       heading: 'Sobre mim',
       text: '<p>Amante da área de tecnologia, com foco em desenvolvimento <em>front-end/back-end</em>, <strong>interface de usuário</strong> e <strong>engenharia de software</strong>. Objetivo de me tornar um profissional cada vez mais <strong>completo</strong>, sempre buscando aprender e desenvolver projetos para aplicar e <strong>compartilhar conhecimentos</strong> e <strong>experiências</strong>. <strong>Formado</strong> no curso bacharel de <strong>Sistemas de Informação</strong>, criando aplicações de forma autônoma, em busca de desafios, trabalhando com carisma, vontade e paixão. <strong>Profissionalismo é meu foco</strong>.</p>',
       profilePhoto: {
         url: 'https://images.prismic.io/leonardo-lissone/f0ec48f1-86b2-4a45-bf0f-f643398ba1e5_Foto+com+fundo+s%C3%B3lido+%281%29.png?auto=compress,format',
-        alt: 'Leonardo Dias Lissone Santomero'
+        alt: 'Leonardo Dias Lissone Santomero',
       },
       recentTechnologies: [
         'Javascript (ES6+)',
@@ -46,8 +46,8 @@ export const contentLanguages: ContentLang = {
         'NestJs',
         'ReactJs',
         'GraphQL',
-        'Python'
-      ]
+        'Python',
+      ],
     },
     jobsSection: {
       heading: 'Experiências de trabalho',
@@ -64,8 +64,8 @@ export const contentLanguages: ContentLang = {
                 'Planejamento e desenvolvimento de arquiteturas de software.',
                 'Colaboração com equipes operacionais para implantação de soluções com software.',
                 'Desenvolvimento de novas ferramentas e funcionalidades para os usuários dos sistemas públicos e privados da empresa.',
-                'Atuação na manutenção preventiva, preditiva e corretiva de softwares desenvolvidos.'
-              ]
+                'Atuação na manutenção preventiva, preditiva e corretiva de softwares desenvolvidos.',
+              ],
             },
             {
               siteLink: 'https://g5partners.com/',
@@ -78,10 +78,10 @@ export const contentLanguages: ContentLang = {
                 'Migração de sistemas legados para tecnologias atuais utilizadas na empresa.',
                 'Planejamento de design visual e experiência do usuário de aplicações web e mobile.',
                 'Criação de scripts de automação de processos de rotina para área operacional.',
-                'Elaboração de documentações técnicas para planejamento de novas implementações de sistema e manual para possíveis necessidades.'
-              ]
-            }
-          ]
+                'Elaboração de documentações técnicas para planejamento de novas implementações de sistema e manual para possíveis necessidades.',
+              ],
+            },
+          ],
         },
         {
           company: 'Santander',
@@ -96,10 +96,10 @@ export const contentLanguages: ContentLang = {
                 'Planejamento, prototipagem e desenvolvimento de projeto interno com objetivo de trazer produtividade e integração de sistemas para analistas que avaliam propostas de crédito.',
                 'Reestruturação de planilhas Excel para relatórios interativo, aplicando princípios de UX e análise de dados para a produtividade do cliente colaborador.',
                 'Desenvolvimento front-end de projetos internos utilizando Angular.',
-                'Geração de relatórios de rotina utilizando dados de big data.'
-              ]
-            }
-          ]
+                'Geração de relatórios de rotina utilizando dados de big data.',
+              ],
+            },
+          ],
         },
         {
           company: 'Serget',
@@ -114,12 +114,12 @@ export const contentLanguages: ContentLang = {
                 'Implementação de técnicas de desenvolvimento para a elaboração de sistemas (Documentação técnica de aplicações, utilizando flowcharts e wireframes).',
                 'Redesign e prototipagem de software web interno utilizando Figma.',
                 'Colaboração no planejamento de novos sistemas.',
-                'Reestruturação e refatoração de projetos já existentes.'
-              ]
-            }
-          ]
-        }
-      ]
+                'Reestruturação e refatoração de projetos já existentes.',
+              ],
+            },
+          ],
+        },
+      ],
     },
     projectsSection: {
       heading: 'Projetos que já desenvolvi',
@@ -138,31 +138,31 @@ export const contentLanguages: ContentLang = {
             'AngularJs',
             'ChakraUI',
             'Redis',
-            'SqlServer'
+            'SqlServer',
           ],
           goodHabits: [
             {
               key: 'eslint',
-              label: 'Eslint'
+              label: 'Eslint',
             },
             {
               key: 'prettier',
-              label: 'Prettier'
-            }
+              label: 'Prettier',
+            },
           ],
           details: [
             {
               key: 'fullstack',
-              label: 'Projeto Fullstack'
+              label: 'Projeto Fullstack',
             },
             {
               key: 'responsive',
-              label: 'Responsivo'
+              label: 'Responsivo',
             },
             {
               key: 'web',
-              label: 'Web'
-            }
+              label: 'Web',
+            },
           ],
           collaborators: [
             {
@@ -172,13 +172,13 @@ export const contentLanguages: ContentLang = {
               socials: [
                 {
                   name: 'Github',
-                  link: 'https://github.com/MikaMorais'
+                  link: 'https://github.com/MikaMorais',
                 },
                 {
                   name: 'Linkedin',
-                  link: 'https://www.linkedin.com/in/moises-silva-de-morais/'
-                }
-              ]
+                  link: 'https://www.linkedin.com/in/moises-silva-de-morais/',
+                },
+              ],
             },
             {
               name: 'Stenio Rapchan',
@@ -187,13 +187,13 @@ export const contentLanguages: ContentLang = {
               socials: [
                 {
                   name: 'Github',
-                  link: 'https://github.com/steniodr'
+                  link: 'https://github.com/steniodr',
                 },
                 {
                   name: 'Linkedin',
-                  link: 'https://www.linkedin.com/in/stenio-dias-rapchan/'
-                }
-              ]
+                  link: 'https://www.linkedin.com/in/stenio-dias-rapchan/',
+                },
+              ],
             },
             {
               name: 'Vinicius Almeida',
@@ -202,19 +202,19 @@ export const contentLanguages: ContentLang = {
               socials: [
                 {
                   name: 'Github',
-                  link: 'https://github.com/almeidavini'
+                  link: 'https://github.com/almeidavini',
                 },
                 {
                   name: 'Linkedin',
-                  link: 'https://www.linkedin.com/in/vinicius-silva-de-almeida/'
-                }
-              ]
-            }
+                  link: 'https://www.linkedin.com/in/vinicius-silva-de-almeida/',
+                },
+              ],
+            },
           ],
           prototypeLink:
             'https://www.figma.com/file/L4N9BizFngAiGGjTCH058S/Point-Control?node-id=0%3A1&t=CSCocT0hI5Ubxn4z-1',
           repositoryLink: 'https://github.com/Lissone/point-control-api',
-          productionLink: null
+          productionLink: null,
         },
         {
           name: 'Qatar 2022 - Stikers',
@@ -226,24 +226,24 @@ export const contentLanguages: ContentLang = {
           goodHabits: [
             {
               key: 'componentized',
-              label: 'Design Componentizado'
-            }
+              label: 'Design Componentizado',
+            },
           ],
           details: [
             {
               key: 'figma',
-              label: 'Figma'
+              label: 'Figma',
             },
             {
               key: 'mobile',
-              label: 'Aplicativo'
-            }
+              label: 'Aplicativo',
+            },
           ],
           collaborators: null,
           prototypeLink:
             'https://www.figma.com/file/zK89GdfV68BMmZnSokaMoY/Gerenciador-de-Figurinhas---Catar-2022?node-id=0%3A1&t=YduVDyHnvpvq9FBB-1',
           repositoryLink: null,
-          productionLink: null
+          productionLink: null,
         },
         {
           name: 'Eficient',
@@ -255,24 +255,24 @@ export const contentLanguages: ContentLang = {
           goodHabits: [
             {
               key: 'componentized',
-              label: 'Design Componentizado'
-            }
+              label: 'Design Componentizado',
+            },
           ],
           details: [
             {
               key: 'figma',
-              label: 'Figma'
+              label: 'Figma',
             },
             {
               key: 'web',
-              label: 'Web'
-            }
+              label: 'Web',
+            },
           ],
           collaborators: null,
           prototypeLink:
             'https://www.figma.com/file/EI8bLWi6mIW3PsbmkiSqHV/Eficient?node-id=30%3A552&t=IuvYOfO7GU3qOtjl-1',
           repositoryLink: null,
-          productionLink: null
+          productionLink: null,
         },
         {
           name: 'Dan Doceria',
@@ -284,28 +284,28 @@ export const contentLanguages: ContentLang = {
           goodHabits: [
             {
               key: 'componentized',
-              label: 'Design Componentizado'
-            }
+              label: 'Design Componentizado',
+            },
           ],
           details: [
             {
               key: 'figma',
-              label: 'Figma'
+              label: 'Figma',
             },
             {
               key: 'responsive',
-              label: 'Responsivo'
+              label: 'Responsivo',
             },
             {
               key: 'web',
-              label: 'Web'
-            }
+              label: 'Web',
+            },
           ],
           collaborators: null,
           prototypeLink:
             'https://www.figma.com/file/zhnt25s3ITbbFREguqjm9J/Dan-Doceria?node-id=0%3A1&t=vdsNpjVdiPRmGV56-1',
           repositoryLink: null,
-          productionLink: null
+          productionLink: null,
         },
         {
           name: 'Portfólio',
@@ -317,32 +317,32 @@ export const contentLanguages: ContentLang = {
           goodHabits: [
             {
               key: 'eslint',
-              label: 'Eslint'
+              label: 'Eslint',
             },
             {
               key: 'prettier',
-              label: 'Prettier'
+              label: 'Prettier',
             },
             {
               key: 'commit-lint',
-              label: 'CommitLint'
-            }
+              label: 'CommitLint',
+            },
           ],
           details: [
             {
               key: 'responsive',
-              label: 'Responsivo'
+              label: 'Responsivo',
             },
             {
               key: 'web',
-              label: 'Web'
-            }
+              label: 'Web',
+            },
           ],
           collaborators: null,
           prototypeLink:
             'https://www.figma.com/file/VufrifzcSAEctTBgUFjzPT/Portif%C3%B3lio?node-id=0%3A1',
           repositoryLink: 'https://github.com/Lissone/leonardo-lissone',
-          productionLink: null
+          productionLink: null,
         },
         {
           name: 'WorldTrip',
@@ -355,33 +355,33 @@ export const contentLanguages: ContentLang = {
             'ReactJs',
             'NextJs',
             'ChakraUI ',
-            'PirsmicCMS'
+            'PirsmicCMS',
           ],
           goodHabits: [
             {
               key: 'eslint',
-              label: 'Eslint'
+              label: 'Eslint',
             },
             {
               key: 'test',
-              label: 'Teste'
-            }
+              label: 'Teste',
+            },
           ],
           details: [
             {
               key: 'responsive',
-              label: 'Responsivo'
+              label: 'Responsivo',
             },
             {
               key: 'web',
-              label: 'Web'
-            }
+              label: 'Web',
+            },
           ],
           collaborators: null,
           prototypeLink:
             'https://www.figma.com/file/opj6i3Zw5fxVjVwDeyNSAg/World-Trip?node-id=0%3A1',
           repositoryLink: 'https://github.com/Lissone/world-trip',
-          productionLink: 'https://world-trip-rouge.vercel.app/'
+          productionLink: 'https://world-trip-rouge.vercel.app/',
         },
         {
           name: 'LixAttendance',
@@ -395,32 +395,32 @@ export const contentLanguages: ContentLang = {
             'NextJs',
             'NodeJs ',
             'SocketIO',
-            'SqlServer'
+            'SqlServer',
           ],
           goodHabits: [
             {
               key: 'eslint',
-              label: 'Eslint'
+              label: 'Eslint',
             },
             {
               key: 'prettier',
-              label: 'Prettier'
-            }
+              label: 'Prettier',
+            },
           ],
           details: [
             {
               key: 'fullstack',
-              label: 'Projeto Fullstack'
+              label: 'Projeto Fullstack',
             },
             {
               key: 'web',
-              label: 'Web'
-            }
+              label: 'Web',
+            },
           ],
           collaborators: null,
           prototypeLink: null,
           repositoryLink: 'https://github.com/Lissone/lix-attendance',
-          productionLink: null
+          productionLink: null,
         },
         {
           name: 'Pokedex',
@@ -434,37 +434,37 @@ export const contentLanguages: ContentLang = {
             'NextJs',
             'StyledComponents',
             'NodeJs ',
-            'Firebase'
+            'Firebase',
           ],
           goodHabits: [
             {
               key: 'eslint',
-              label: 'Eslint'
+              label: 'Eslint',
             },
             {
               key: 'prettier',
-              label: 'Prettier'
-            }
+              label: 'Prettier',
+            },
           ],
           details: [
             {
               key: 'fullstack',
-              label: 'Projeto Fullstack'
+              label: 'Projeto Fullstack',
             },
             {
               key: 'responsive',
-              label: 'Responsivo'
+              label: 'Responsivo',
             },
             {
               key: 'web',
-              label: 'Web'
-            }
+              label: 'Web',
+            },
           ],
           collaborators: null,
           prototypeLink:
             'https://www.figma.com/file/tjSrlP5Y0x6rK4rrA5Lqx6/Pokedex?node-id=0%3A1',
           repositoryLink: 'https://github.com/Lissone/pokedex',
-          productionLink: 'https://pokedex-lissone.vercel.app/'
+          productionLink: 'https://pokedex-lissone.vercel.app/',
         },
         {
           name: 'Letmeask',
@@ -477,8 +477,8 @@ export const contentLanguages: ContentLang = {
           details: [
             {
               key: 'web',
-              label: 'Web'
-            }
+              label: 'Web',
+            },
           ],
           collaborators: [
             {
@@ -488,9 +488,9 @@ export const contentLanguages: ContentLang = {
               socials: [
                 {
                   name: 'Github',
-                  link: 'https://github.com/Rocketseat'
-                }
-              ]
+                  link: 'https://github.com/Rocketseat',
+                },
+              ],
             },
             {
               name: 'Diego Fernandes',
@@ -499,14 +499,14 @@ export const contentLanguages: ContentLang = {
               socials: [
                 {
                   name: 'Github',
-                  link: 'https://github.com/diego3g'
-                }
-              ]
-            }
+                  link: 'https://github.com/diego3g',
+                },
+              ],
+            },
           ],
           prototypeLink: null,
           repositoryLink: 'https://github.com/Lissone/let-me-ask',
-          productionLink: 'https://letmeask-8aa0f.web.app/'
+          productionLink: 'https://letmeask-8aa0f.web.app/',
         },
         {
           name: 'Podcastr',
@@ -519,18 +519,18 @@ export const contentLanguages: ContentLang = {
             'ReactJs',
             'NextJs',
             'StyledComponents',
-            'JsonServer'
+            'JsonServer',
           ],
           goodHabits: [],
           details: [
             {
               key: 'responsive',
-              label: 'Responsivo'
+              label: 'Responsivo',
             },
             {
               key: 'web',
-              label: 'Web'
-            }
+              label: 'Web',
+            },
           ],
           collaborators: [
             {
@@ -540,9 +540,9 @@ export const contentLanguages: ContentLang = {
               socials: [
                 {
                   name: 'Github',
-                  link: 'https://github.com/Rocketseat'
-                }
-              ]
+                  link: 'https://github.com/Rocketseat',
+                },
+              ],
             },
             {
               name: 'Diego Fernandes',
@@ -551,14 +551,14 @@ export const contentLanguages: ContentLang = {
               socials: [
                 {
                   name: 'Github',
-                  link: 'https://github.com/diego3g'
-                }
-              ]
-            }
+                  link: 'https://github.com/diego3g',
+                },
+              ],
+            },
           ],
           prototypeLink: null,
           repositoryLink: 'https://github.com/Lissone/podcastr',
-          productionLink: 'https://podcastr-lissone.vercel.app/'
+          productionLink: 'https://podcastr-lissone.vercel.app/',
         },
         {
           name: 'SaganSat EA',
@@ -571,12 +571,12 @@ export const contentLanguages: ContentLang = {
           details: [
             {
               key: 'responsive',
-              label: 'Responsivo'
+              label: 'Responsivo',
             },
             {
               key: 'web',
-              label: 'Web'
-            }
+              label: 'Web',
+            },
           ],
           collaborators: [
             {
@@ -586,19 +586,19 @@ export const contentLanguages: ContentLang = {
               socials: [
                 {
                   name: 'Github',
-                  link: 'https://github.com/ccr5'
+                  link: 'https://github.com/ccr5',
                 },
                 {
                   name: 'Linkedin',
-                  link: 'https://www.linkedin.com/in/mattnobre/'
-                }
-              ]
-            }
+                  link: 'https://www.linkedin.com/in/mattnobre/',
+                },
+              ],
+            },
           ],
           prototypeLink: null,
           repositoryLink: 'https://github.com/Lissone/SaganSat-website',
-          productionLink: 'https://sagansat.vercel.app/'
-        }
+          productionLink: 'https://sagansat.vercel.app/',
+        },
       ],
       thumbnailAltLabel: 'Capa do projeto',
       prototypeLabel: 'Protótipo Figma',
@@ -613,37 +613,37 @@ export const contentLanguages: ContentLang = {
       filtersLabels: [
         {
           key: 'all',
-          label: 'Todos'
+          label: 'Todos',
         },
         {
           key: 'repositories',
-          label: 'Repositórios'
+          label: 'Repositórios',
         },
         {
           key: 'production',
-          label: 'Disponíveis na internet'
+          label: 'Disponíveis na internet',
         },
         {
           key: 'designs',
-          label: 'Designs'
+          label: 'Designs',
         },
         {
           key: 'fullstack',
-          label: 'Fullstack'
+          label: 'Fullstack',
         },
         {
           key: 'responsive',
-          label: 'Responsivos'
+          label: 'Responsivos',
         },
         {
           key: 'web',
-          label: 'Sites'
+          label: 'Sites',
         },
         {
           key: 'mobile',
-          label: 'Aplicativos'
-        }
-      ]
+          label: 'Aplicativos',
+        },
+      ],
     },
     contactSection: {
       heading: ['O que fazer agora?', 'Entre em contato comigo'],
@@ -661,30 +661,30 @@ export const contentLanguages: ContentLang = {
           message: {
             label: 'Mensagem',
             placeholder:
-              'Gostaria de enviar uma mensagem para entrar em contato direto com você!'
-          }
+              'Gostaria de enviar uma mensagem para entrar em contato direto com você!',
+          },
         },
         validationInput: {
           nameRequiredLabel: 'Nome completo obrigatório',
           emailRequiredLabel: 'Email obrigatório',
           emailInvalidLabel: 'Email inválido',
           messageRequiredLabel: 'Mensagem obrigatória',
-          messageMinLabel: 'Mensagem deve conter no mínimo de 20 caracteres'
-        }
-      }
+          messageMinLabel: 'Mensagem deve conter no mínimo de 20 caracteres',
+        },
+      },
     },
     headerButtons: {
       presentationButtonTooltip: 'Apresentação',
       aboutButtonTooltip: 'Sobre mim',
       workExperiencesButtonTooltip: 'Trabalhos',
-      projectsButtonTooltip: 'Projetos'
+      projectsButtonTooltip: 'Projetos',
     },
     sharedButtons: {
       resumeCv:
         'https://prismic-io.s3.amazonaws.com/leonardo-lissone/c5481f89-5bc6-4892-ac99-4075a542abf1_CV+-+PT-BR+-+Leonardo+Dias+Lissone.pdf',
       resumeButtonLabel: 'Resumo',
-      contactButtonLabel: 'Contactar agora'
-    }
+      contactButtonLabel: 'Contactar agora',
+    },
   },
   'en-us': {
     lang: 'en-us',
@@ -692,32 +692,32 @@ export const contentLanguages: ContentLang = {
     socials: [
       {
         name: 'Github',
-        link: 'https://github.com/Lissone'
+        link: 'https://github.com/Lissone',
       },
       {
         name: 'Figma',
-        link: 'https://www.figma.com/@lissone'
+        link: 'https://www.figma.com/@lissone',
       },
       {
         name: 'Linkedin',
-        link: 'https://www.linkedin.com/in/lissone/'
+        link: 'https://www.linkedin.com/in/lissone/',
       },
       {
         name: 'Instagram',
-        link: 'https://www.instagram.com/lissonez/'
-      }
+        link: 'https://www.instagram.com/lissonez/',
+      },
     ],
     presentationSection: {
       heading: ['Hi,', 'I am', 'Leonardo Lissone'],
       text: "<p>I'm a <em>Fullstack Javascript</em> developer, with more than {{ carrerTime }} years of experience in <strong>software development, interface (UI) and user experience (UX) design.</strong> I've had diverse experiences professionals, from corporate collaborators to freelance work, where I developed different software development techniques and interfaces.</p>",
-      yearFirstWorkExperience: 2020
+      yearFirstWorkExperience: 2020,
     },
     aboutSection: {
       heading: 'About me',
       text: "<p>A technology lover, with a focus on <em>front-end/back-end</em> development, <strong>user interface</strong> and <strong>software engineering</strong>. Aim to become an increasingly <strong>complete</strong> professional, always looking to learn and develop projects to apply and <strong>share knowledge</strong> and <strong>experiences</strong>. <strong>Graduated</strong> in the bachelor's degree in <strong>Information Systems</strong>, creating applications autonomously, looking for challenges, working with charisma, will and passion. <strong>Professionalism is my focus</strong>.</p>",
       profilePhoto: {
         url: 'https://images.prismic.io/leonardo-lissone/f0ec48f1-86b2-4a45-bf0f-f643398ba1e5_Foto+com+fundo+s%C3%B3lido+%281%29.png?auto=compress,format',
-        alt: 'Leonardo Dias Lissone Santomero'
+        alt: 'Leonardo Dias Lissone Santomero',
       },
       recentTechnologies: [
         'Javascript (ES6+)',
@@ -726,8 +726,8 @@ export const contentLanguages: ContentLang = {
         'NestJs',
         'ReactJs',
         'GraphQL',
-        'Python'
-      ]
+        'Python',
+      ],
     },
     jobsSection: {
       heading: 'Where I’ve Worked',
@@ -744,8 +744,8 @@ export const contentLanguages: ContentLang = {
                 'Planning and development of software architectures.',
                 'Collaboration with operational teams to implement software solutions.',
                 "Development of new tools and features for users of the company's public and private systems.",
-                'Expertise in preventive, predictive and corrective maintenance of developed software.'
-              ]
+                'Expertise in preventive, predictive and corrective maintenance of developed software.',
+              ],
             },
             {
               siteLink: 'https://g5partners.com/',
@@ -758,10 +758,10 @@ export const contentLanguages: ContentLang = {
                 'Migration of legacy systems to current technologies used in the company.',
                 'Visual design planning and user experience of web and mobile applications.',
                 'Creation of routine process automation scripts for the operational area.',
-                'Elaboration of technical documentation for planning new system implementations and manual for possible needs.'
-              ]
-            }
-          ]
+                'Elaboration of technical documentation for planning new system implementations and manual for possible needs.',
+              ],
+            },
+          ],
         },
         {
           company: 'Santander',
@@ -776,10 +776,10 @@ export const contentLanguages: ContentLang = {
                 'Planning, prototyping and development of an internal project with the objective of bringing productivity and systems integration to analysts who evaluate credit proposals.',
                 'Restructuring of Excel spreadsheets for interactive reports, applying UX principles and data analysis for employee customer productivity.',
                 'Front-end development of internal projects using Angular.',
-                'Routine reporting using big data data.'
-              ]
-            }
-          ]
+                'Routine reporting using big data data.',
+              ],
+            },
+          ],
         },
         {
           company: 'Serget',
@@ -794,12 +794,12 @@ export const contentLanguages: ContentLang = {
                 'Implementation of development techniques for the elaboration of systems (technical documentation of applications, using flowcharts and wireframes).',
                 'Redesign and prototyping of internal web software using Figma.',
                 'Collaboration in the planning of new systems.',
-                'Restructuring and refactoring of existing projects.'
-              ]
-            }
-          ]
-        }
-      ]
+                'Restructuring and refactoring of existing projects.',
+              ],
+            },
+          ],
+        },
+      ],
     },
     projectsSection: {
       heading: "Projects I've Developed",
@@ -818,31 +818,31 @@ export const contentLanguages: ContentLang = {
             'AngularJs',
             'ChakraUI',
             'Redis',
-            'SqlServer'
+            'SqlServer',
           ],
           goodHabits: [
             {
               key: 'eslint',
-              label: 'Eslint'
+              label: 'Eslint',
             },
             {
               key: 'prettier',
-              label: 'Prettier'
-            }
+              label: 'Prettier',
+            },
           ],
           details: [
             {
               key: 'fullstack',
-              label: 'Fullstack Project'
+              label: 'Fullstack Project',
             },
             {
               key: 'responsive',
-              label: 'Responsive'
+              label: 'Responsive',
             },
             {
               key: 'web',
-              label: 'Web'
-            }
+              label: 'Web',
+            },
           ],
           collaborators: [
             {
@@ -852,13 +852,13 @@ export const contentLanguages: ContentLang = {
               socials: [
                 {
                   name: 'Github',
-                  link: 'https://github.com/MikaMorais'
+                  link: 'https://github.com/MikaMorais',
                 },
                 {
                   name: 'Linkedin',
-                  link: 'https://www.linkedin.com/in/moises-silva-de-morais/'
-                }
-              ]
+                  link: 'https://www.linkedin.com/in/moises-silva-de-morais/',
+                },
+              ],
             },
             {
               name: 'Stenio Rapchan',
@@ -867,13 +867,13 @@ export const contentLanguages: ContentLang = {
               socials: [
                 {
                   name: 'Github',
-                  link: 'https://github.com/steniodr'
+                  link: 'https://github.com/steniodr',
                 },
                 {
                   name: 'Linkedin',
-                  link: 'https://www.linkedin.com/in/stenio-dias-rapchan/'
-                }
-              ]
+                  link: 'https://www.linkedin.com/in/stenio-dias-rapchan/',
+                },
+              ],
             },
             {
               name: 'Vinicius Almeida',
@@ -882,19 +882,19 @@ export const contentLanguages: ContentLang = {
               socials: [
                 {
                   name: 'Github',
-                  link: 'https://github.com/almeidavini'
+                  link: 'https://github.com/almeidavini',
                 },
                 {
                   name: 'Linkedin',
-                  link: 'https://www.linkedin.com/in/vinicius-silva-de-almeida/'
-                }
-              ]
-            }
+                  link: 'https://www.linkedin.com/in/vinicius-silva-de-almeida/',
+                },
+              ],
+            },
           ],
           prototypeLink:
             'https://www.figma.com/file/L4N9BizFngAiGGjTCH058S/Point-Control?node-id=0%3A1&t=CSCocT0hI5Ubxn4z-1',
           repositoryLink: 'https://github.com/Lissone/point-control-api',
-          productionLink: null
+          productionLink: null,
         },
         {
           name: 'Qatar 2022 - Stikers',
@@ -906,24 +906,24 @@ export const contentLanguages: ContentLang = {
           goodHabits: [
             {
               key: 'componentized',
-              label: 'Componentized Design'
-            }
+              label: 'Componentized Design',
+            },
           ],
           details: [
             {
               key: 'figma',
-              label: 'Figma'
+              label: 'Figma',
             },
             {
               key: 'mobile',
-              label: 'Mobile Application'
-            }
+              label: 'Mobile Application',
+            },
           ],
           collaborators: null,
           prototypeLink:
             'https://www.figma.com/file/zK89GdfV68BMmZnSokaMoY/Gerenciador-de-Figurinhas---Catar-2022?node-id=0%3A1&t=YduVDyHnvpvq9FBB-1',
           repositoryLink: null,
-          productionLink: null
+          productionLink: null,
         },
         {
           name: 'Eficient',
@@ -935,24 +935,24 @@ export const contentLanguages: ContentLang = {
           goodHabits: [
             {
               key: 'componentized',
-              label: 'Componentized Design'
-            }
+              label: 'Componentized Design',
+            },
           ],
           details: [
             {
               key: 'figma',
-              label: 'Figma'
+              label: 'Figma',
             },
             {
               key: 'web',
-              label: 'Web'
-            }
+              label: 'Web',
+            },
           ],
           collaborators: null,
           prototypeLink:
             'https://www.figma.com/file/EI8bLWi6mIW3PsbmkiSqHV/Eficient?node-id=30%3A552&t=IuvYOfO7GU3qOtjl-1',
           repositoryLink: null,
-          productionLink: null
+          productionLink: null,
         },
         {
           name: 'Dan Doceria',
@@ -964,28 +964,28 @@ export const contentLanguages: ContentLang = {
           goodHabits: [
             {
               key: 'componentized',
-              label: 'Componentized Design'
-            }
+              label: 'Componentized Design',
+            },
           ],
           details: [
             {
               key: 'figma',
-              label: 'Figma'
+              label: 'Figma',
             },
             {
               key: 'responsive',
-              label: 'Responsive'
+              label: 'Responsive',
             },
             {
               key: 'web',
-              label: 'Web'
-            }
+              label: 'Web',
+            },
           ],
           collaborators: null,
           prototypeLink:
             'https://www.figma.com/file/zhnt25s3ITbbFREguqjm9J/Dan-Doceria?node-id=0%3A1&t=vdsNpjVdiPRmGV56-1',
           repositoryLink: null,
-          productionLink: null
+          productionLink: null,
         },
         {
           name: 'Portfólio',
@@ -997,32 +997,32 @@ export const contentLanguages: ContentLang = {
           goodHabits: [
             {
               key: 'eslint',
-              label: 'Eslint'
+              label: 'Eslint',
             },
             {
               key: 'prettier',
-              label: 'Prettier'
+              label: 'Prettier',
             },
             {
               key: 'commit-lint',
-              label: 'CommitLint'
-            }
+              label: 'CommitLint',
+            },
           ],
           details: [
             {
               key: 'responsive',
-              label: 'Responsive'
+              label: 'Responsive',
             },
             {
               key: 'web',
-              label: 'Web'
-            }
+              label: 'Web',
+            },
           ],
           collaborators: null,
           prototypeLink:
             'https://www.figma.com/file/VufrifzcSAEctTBgUFjzPT/Portif%C3%B3lio?node-id=0%3A1',
           repositoryLink: 'https://github.com/Lissone/leonardo-lissone',
-          productionLink: null
+          productionLink: null,
         },
         {
           name: 'WorldTrip',
@@ -1035,33 +1035,33 @@ export const contentLanguages: ContentLang = {
             'ReactJs',
             'NextJs',
             'ChakraUI ',
-            'PirsmicCMS'
+            'PirsmicCMS',
           ],
           goodHabits: [
             {
               key: 'eslint',
-              label: 'Eslint'
+              label: 'Eslint',
             },
             {
               key: 'test',
-              label: 'Teste'
-            }
+              label: 'Teste',
+            },
           ],
           details: [
             {
               key: 'responsive',
-              label: 'Responsive'
+              label: 'Responsive',
             },
             {
               key: 'web',
-              label: 'Web'
-            }
+              label: 'Web',
+            },
           ],
           collaborators: null,
           prototypeLink:
             'https://www.figma.com/file/opj6i3Zw5fxVjVwDeyNSAg/World-Trip?node-id=0%3A1',
           repositoryLink: 'https://github.com/Lissone/world-trip',
-          productionLink: 'https://world-trip-rouge.vercel.app/'
+          productionLink: 'https://world-trip-rouge.vercel.app/',
         },
         {
           name: 'LixAttendance',
@@ -1075,32 +1075,32 @@ export const contentLanguages: ContentLang = {
             'NextJs',
             'NodeJs ',
             'SocketIO',
-            'SqlServer'
+            'SqlServer',
           ],
           goodHabits: [
             {
               key: 'eslint',
-              label: 'Eslint'
+              label: 'Eslint',
             },
             {
               key: 'prettier',
-              label: 'Prettier'
-            }
+              label: 'Prettier',
+            },
           ],
           details: [
             {
               key: 'fullstack',
-              label: 'Fullstack Project'
+              label: 'Fullstack Project',
             },
             {
               key: 'web',
-              label: 'Web'
-            }
+              label: 'Web',
+            },
           ],
           collaborators: null,
           prototypeLink: null,
           repositoryLink: 'https://github.com/Lissone/lix-attendance',
-          productionLink: null
+          productionLink: null,
         },
         {
           name: 'Pokedex',
@@ -1114,37 +1114,37 @@ export const contentLanguages: ContentLang = {
             'NextJs',
             'StyledComponents',
             'NodeJs ',
-            'Firebase'
+            'Firebase',
           ],
           goodHabits: [
             {
               key: 'eslint',
-              label: 'Eslint'
+              label: 'Eslint',
             },
             {
               key: 'prettier',
-              label: 'Prettier'
-            }
+              label: 'Prettier',
+            },
           ],
           details: [
             {
               key: 'fullstack',
-              label: 'Fullstack Project'
+              label: 'Fullstack Project',
             },
             {
               key: 'responsive',
-              label: 'Responsive'
+              label: 'Responsive',
             },
             {
               key: 'web',
-              label: 'Web'
-            }
+              label: 'Web',
+            },
           ],
           collaborators: null,
           prototypeLink:
             'https://www.figma.com/file/tjSrlP5Y0x6rK4rrA5Lqx6/Pokedex?node-id=0%3A1',
           repositoryLink: 'https://github.com/Lissone/pokedex',
-          productionLink: 'https://pokedex-lissone.vercel.app/'
+          productionLink: 'https://pokedex-lissone.vercel.app/',
         },
         {
           name: 'Letmeask',
@@ -1157,8 +1157,8 @@ export const contentLanguages: ContentLang = {
           details: [
             {
               key: 'web',
-              label: 'Web'
-            }
+              label: 'Web',
+            },
           ],
           collaborators: [
             {
@@ -1168,9 +1168,9 @@ export const contentLanguages: ContentLang = {
               socials: [
                 {
                   name: 'Github',
-                  link: 'https://github.com/Rocketseat'
-                }
-              ]
+                  link: 'https://github.com/Rocketseat',
+                },
+              ],
             },
             {
               name: 'Diego Fernandes',
@@ -1179,14 +1179,14 @@ export const contentLanguages: ContentLang = {
               socials: [
                 {
                   name: 'Github',
-                  link: 'https://github.com/diego3g'
-                }
-              ]
-            }
+                  link: 'https://github.com/diego3g',
+                },
+              ],
+            },
           ],
           prototypeLink: null,
           repositoryLink: 'https://github.com/Lissone/let-me-ask',
-          productionLink: 'https://letmeask-8aa0f.web.app/'
+          productionLink: 'https://letmeask-8aa0f.web.app/',
         },
         {
           name: 'Podcastr',
@@ -1199,18 +1199,18 @@ export const contentLanguages: ContentLang = {
             'ReactJs',
             'NextJs',
             'StyledComponents',
-            'JsonServer'
+            'JsonServer',
           ],
           goodHabits: [],
           details: [
             {
               key: 'responsive',
-              label: 'Responsive'
+              label: 'Responsive',
             },
             {
               key: 'web',
-              label: 'Web'
-            }
+              label: 'Web',
+            },
           ],
           collaborators: [
             {
@@ -1220,9 +1220,9 @@ export const contentLanguages: ContentLang = {
               socials: [
                 {
                   name: 'Github',
-                  link: 'https://github.com/Rocketseat'
-                }
-              ]
+                  link: 'https://github.com/Rocketseat',
+                },
+              ],
             },
             {
               name: 'Diego Fernandes',
@@ -1231,14 +1231,14 @@ export const contentLanguages: ContentLang = {
               socials: [
                 {
                   name: 'Github',
-                  link: 'https://github.com/diego3g'
-                }
-              ]
-            }
+                  link: 'https://github.com/diego3g',
+                },
+              ],
+            },
           ],
           prototypeLink: null,
           repositoryLink: 'https://github.com/Lissone/podcastr',
-          productionLink: 'https://podcastr-lissone.vercel.app/'
+          productionLink: 'https://podcastr-lissone.vercel.app/',
         },
         {
           name: 'SaganSat EA',
@@ -1251,18 +1251,18 @@ export const contentLanguages: ContentLang = {
           details: [
             {
               key: 'responsive',
-              label: 'Responsivo'
+              label: 'Responsivo',
             },
             {
               key: 'web',
-              label: 'Web'
-            }
+              label: 'Web',
+            },
           ],
           collaborators: null,
           prototypeLink: null,
           repositoryLink: 'https://github.com/Lissone/SaganSat-website',
-          productionLink: 'https://sagansat.vercel.app/'
-        }
+          productionLink: 'https://sagansat.vercel.app/',
+        },
       ],
       thumbnailAltLabel: 'Project cover',
       prototypeLabel: 'Figma Prototype',
@@ -1277,37 +1277,37 @@ export const contentLanguages: ContentLang = {
       filtersLabels: [
         {
           key: 'all',
-          label: 'All'
+          label: 'All',
         },
         {
           key: 'repositories',
-          label: 'Repositories'
+          label: 'Repositories',
         },
         {
           key: 'production',
-          label: 'Available on internet'
+          label: 'Available on internet',
         },
         {
           key: 'designs',
-          label: 'Designs'
+          label: 'Designs',
         },
         {
           key: 'fullstack',
-          label: 'Fullstack'
+          label: 'Fullstack',
         },
         {
           key: 'responsive',
-          label: 'Responsive'
+          label: 'Responsive',
         },
         {
           key: 'web',
-          label: 'Websites'
+          label: 'Websites',
         },
         {
           key: 'mobile',
-          label: 'Mobile Applications'
-        }
-      ]
+          label: 'Mobile Applications',
+        },
+      ],
     },
     contactSection: {
       heading: ['What’s Next?', 'Contact me'],
@@ -1323,29 +1323,29 @@ export const contentLanguages: ContentLang = {
           email: { label: 'Email', placeholder: 'example@hotmail.com' },
           message: {
             label: 'Message',
-            placeholder: 'I would like to send a message to contact you directly!'
-          }
+            placeholder: 'I would like to send a message to contact you directly!',
+          },
         },
         validationInput: {
           nameRequiredLabel: 'Required full name',
           emailRequiredLabel: 'Required email',
           emailInvalidLabel: 'Invalid email',
           messageRequiredLabel: 'Required message',
-          messageMinLabel: 'Message must contain at least 20 characters'
-        }
-      }
+          messageMinLabel: 'Message must contain at least 20 characters',
+        },
+      },
     },
     headerButtons: {
       presentationButtonTooltip: 'Presentation',
       aboutButtonTooltip: 'About',
       workExperiencesButtonTooltip: 'Work experiences',
-      projectsButtonTooltip: 'Projects'
+      projectsButtonTooltip: 'Projects',
     },
     sharedButtons: {
       resumeCv:
         'https://prismic-io.s3.amazonaws.com/leonardo-lissone/2db36942-f9ff-4534-bb9c-999c7dd38d93_CV+-+EN-US+-+Leonardo+Dias+Lissone.pdf',
       resumeButtonLabel: 'Resume',
-      contactButtonLabel: 'Contact now'
-    }
-  }
-}
+      contactButtonLabel: 'Contact now',
+    },
+  },
+};

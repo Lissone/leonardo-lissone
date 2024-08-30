@@ -24,5 +24,5 @@ export function Skills() {
         fill="#666666"
       />
     </svg>
-  )
+  );
 }

@@ -1,29 +1,29 @@
-import { FiFigma, FiGithub, FiGlobe } from 'react-icons/fi'
+import { FiFigma, FiGithub, FiGlobe } from 'react-icons/fi';
 
-import { ProjectContent } from '@interfaces/content'
+import { ProjectContent } from '@interfaces/content';
 
-import { Tooltip } from '@components/shared/Tooltip'
+import { Tooltip } from '@components/shared/Tooltip';
 
 import {
   Container,
   Content,
   Cover,
   CoverActions,
-  Information,
-  Heading,
   Divider,
-  TechnologiesRow,
   FeaturedInformation,
-  SeparateRow
-} from './styles'
+  Heading,
+  Information,
+  SeparateRow,
+  TechnologiesRow,
+} from './styles';
 
-interface ProjectCardProps {
-  readonly content: ProjectContent
-  readonly thumbnailAltLabel: string
-  readonly collaborationLabel: string
-  readonly prototypeLabel: string
-  readonly repositoryLabel: string
-  readonly handleOpenCollaborationModal: () => void
+interface ProjectCardProperties {
+  readonly content: ProjectContent;
+  readonly thumbnailAltLabel: string;
+  readonly collaborationLabel: string;
+  readonly prototypeLabel: string;
+  readonly repositoryLabel: string;
+  readonly handleOpenCollaborationModal: () => void;
 }
 
 export function ProjectCard({
@@ -32,8 +32,8 @@ export function ProjectCard({
   collaborationLabel,
   prototypeLabel,
   repositoryLabel,
-  handleOpenCollaborationModal
-}: ProjectCardProps) {
+  handleOpenCollaborationModal,
+}: ProjectCardProperties) {
   return (
     <Container data-aos="fade-up" data-aos-duration="1100">
       <Content>
@@ -89,11 +89,9 @@ export function ProjectCard({
 
               {content.collaborators ? (
                 <Tooltip title={collaborationLabel}>
-                  <img
-                    src="/icons/collaboration.svg"
-                    alt="icon for collaborative projects"
-                    onClick={handleOpenCollaborationModal}
-                  />
+                  <button type="button" onClick={handleOpenCollaborationModal}>
+                    <img src="/icons/collaboration.svg" alt="icon for collaborative projects" />
+                  </button>
                 </Tooltip>
               ) : null}
             </Heading>
@@ -127,5 +125,5 @@ export function ProjectCard({
         </Information>
       </Content>
     </Container>
-  )
+  );
 }

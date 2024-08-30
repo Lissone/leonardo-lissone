@@ -1,4 +1,4 @@
-import styled from 'styled-components'
+import styled from 'styled-components';
 
 // reference: https://css-loaders.com/spinner/ (The Spinner #3)
 export const LoaderDiv = styled.div`
@@ -21,4 +21,4 @@ export const LoaderDiv = styled.div`
       transform: rotate(1turn);
     }
   }
-`
+`;

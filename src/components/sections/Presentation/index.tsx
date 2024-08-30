@@ -1,27 +1,28 @@
-import { PresentationSectionContent } from '@interfaces/content'
+import { PresentationSectionContent } from '@interfaces/content';
 
-import { replaceVariable } from '@shared/utils'
+import { replaceVariable } from '@shared/utils';
 
 import {
+  ContactButton,
   Container,
-  ImageContainer,
   Content,
   Heading,
+  ImageContainer,
   ResumeText,
-  ContactButton
-} from './styles'
+} from './styles';
 
-interface PresentationProps {
-  readonly content: PresentationSectionContent
-  readonly contactButtonLabel: string
+interface PresentationProperties {
+  readonly content: PresentationSectionContent;
+
+  readonly contactButtonLabel: string;
 }
 
-export function Presentation({ content, contactButtonLabel }: PresentationProps) {
-  const { heading, text, yearFirstWorkExperience } = content
+export function Presentation({ content, contactButtonLabel }: PresentationProperties) {
+  const { heading, text, yearFirstWorkExperience } = content;
 
-  const currentYear = new Date().getFullYear()
-  const carrerTime = (currentYear - yearFirstWorkExperience).toString()
-  const contentText = replaceVariable(text, 'carrerTime', carrerTime)
+  const currentYear = new Date().getFullYear();
+  const carrerTime = (currentYear - yearFirstWorkExperience).toString();
+  const contentText = replaceVariable(text, 'carrerTime', carrerTime);
 
   return (
     <Container id="presentation">
@@ -34,7 +35,7 @@ export function Presentation({ content, contactButtonLabel }: PresentationProps)
 
         <ResumeText
           dangerouslySetInnerHTML={{
-            __html: contentText
+            __html: contentText,
           }}
         />
 
@@ -47,5 +48,5 @@ export function Presentation({ content, contactButtonLabel }: PresentationProps)
         <img src="/images/bearing-led.svg" alt="Bearing with led" />
       </ImageContainer>
     </Container>
-  )
+  );
 }

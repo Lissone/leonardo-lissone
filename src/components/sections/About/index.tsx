@@ -1,17 +1,17 @@
-import { AboutSectionContent } from '@interfaces/content'
+import { AboutSectionContent } from '@interfaces/content';
 
 import {
+  Column,
   Container,
   Content,
-  Column,
   Heading,
-  Text,
+  PhotoContainer,
   SkillsList,
-  PhotoContainer
-} from './styles'
+  Text,
+} from './styles';
 
 interface AboutProps {
-  readonly content: AboutSectionContent
+  readonly content: AboutSectionContent;
 }
 
 export function About({ content }: AboutProps) {
@@ -27,12 +27,12 @@ export function About({ content }: AboutProps) {
 
           <Text
             dangerouslySetInnerHTML={{
-              __html: content.text
+              __html: content.text,
             }}
           />
 
           <SkillsList>
-            {content.recentTechnologies.map(technology => (
+            {content.recentTechnologies.map((technology) => (
               <li key={technology}>
                 <img src="/icons/arrow.svg" alt="Red arrow with led" />
                 {technology}
@@ -49,5 +49,5 @@ export function About({ content }: AboutProps) {
         </Column>
       </Content>
     </Container>
-  )
+  );
 }

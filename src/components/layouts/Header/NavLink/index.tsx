@@ -1,13 +1,13 @@
-import { ReactNode } from 'react'
+import { ReactNode } from 'react';
 
-import { Tooltip } from '@components/shared/Tooltip'
+import { Tooltip } from '@components/shared/Tooltip';
 
-import { MenuLink } from './styles'
+import { MenuLink } from './styles';
 
 interface NavLinkProps {
-  readonly to: string
-  readonly tooltip: string
-  readonly children: ReactNode
+  readonly to: string;
+  readonly tooltip: string;
+  readonly children: ReactNode;
 }
 
 export function NavLink({ to, tooltip, children }: NavLinkProps) {
@@ -19,5 +19,5 @@ export function NavLink({ to, tooltip, children }: NavLinkProps) {
         </MenuLink>
       </div>
     </Tooltip>
-  )
+  );
 }

@@ -1,30 +1,29 @@
-import { useState } from 'react'
+import { useState } from 'react';
 
-import { ContactSectionContent, SocialsContent } from '@interfaces/content'
+import { ContactSectionContent, SocialsContent } from '@interfaces/content';
 
-import { SocialIcon } from '@components/shared/Icons/SocialIcon'
-import { Tooltip } from '@components/shared/Tooltip'
+import { SocialIcon } from '@components/shared/Icons/SocialIcon';
+import { Tooltip } from '@components/shared/Tooltip';
 
-import { SendMessageModal } from './SendMessageModal'
+import { SendMessageModal } from './SendMessageModal';
 import {
+  ContactButton,
   Container,
   Content,
+  Socials,
   Subtitle,
-  Title,
   Text,
-  ContactButton,
-  Socials
-} from './styles'
+  Title,
+} from './styles';
 
 interface ContactProps {
-  readonly content: ContactSectionContent
-  readonly socials: SocialsContent[]
-  readonly email: string
-  readonly contactButtonLabel: string
+  readonly content: ContactSectionContent;
+  readonly socials: SocialsContent[];
+  readonly contactButtonLabel: string;
 }
 
-export function Contact({ content, socials, email, contactButtonLabel }: ContactProps) {
-  const [isSendMessageModalOpen, setIsSendMessageModalOpen] = useState(false)
+export function Contact({ content, socials, contactButtonLabel }: ContactProps) {
+  const [isSendMessageModalOpen, setIsSendMessageModalOpen] = useState(false);
 
   return (
     <Container id="contact">
@@ -44,7 +43,7 @@ export function Contact({ content, socials, email, contactButtonLabel }: Contact
         </ContactButton>
 
         <Socials>
-          {socials.map(social => (
+          {socials.map((social) => (
             <Tooltip key={social.name} title={social.name}>
               <a
                 href={social.link}
@@ -67,5 +66,5 @@ export function Contact({ content, socials, email, contactButtonLabel }: Contact
         handleClose={() => setIsSendMessageModalOpen(false)}
       />
     </Container>
-  )
+  );
 }

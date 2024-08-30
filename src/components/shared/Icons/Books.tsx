@@ -60,5 +60,5 @@ export function Books() {
         fill="#666666"
       />
     </svg>
-  )
+  );
 }

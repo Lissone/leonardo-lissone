@@ -16,5 +16,5 @@ export function Suitcase() {
         fill="#666666"
       />
     </svg>
-  )
+  );
 }

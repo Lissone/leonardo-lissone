@@ -1,4 +1,4 @@
-import styled from 'styled-components'
+import styled from 'styled-components';
 
 export const Container = styled.div`
   padding-top: 4rem;
@@ -8,7 +8,7 @@ export const Container = styled.div`
   @media (max-width: 750px) {
     flex-direction: column;
   }
-`
+`;
 
 export const NavTabs = styled.ul`
   display: flex;
@@ -21,7 +21,7 @@ export const NavTabs = styled.ul`
 
     flex-direction: row;
   }
-`
+`;
 
 export const Tab = styled.li`
   list-style: none;
@@ -56,7 +56,7 @@ export const Tab = styled.li`
     border-color: var(--red-400);
     color: var(--gray-100);
   }
-`
+`;
 
 export const Content = styled.div`
   padding-left: 1.5rem;
@@ -87,11 +87,11 @@ export const Content = styled.div`
     padding-left: 0;
     padding-top: 1.5rem;
   }
-`
+`;
 
 export const ContentTab = styled.div`
   margin-bottom: 3.5rem;
-`
+`;
 
 export const HeadingContentTab = styled.div`
   display: flex;
@@ -116,7 +116,7 @@ export const HeadingContentTab = styled.div`
       font-size: 1.2rem;
     }
   }
-`
+`;
 
 export const Highlight = styled.a`
   font-size: 2rem;
@@ -134,4 +134,4 @@ export const Highlight = styled.a`
   @media (max-width: 480px) {
     font-size: 1.5rem;
   }
-`
+`;

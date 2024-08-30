@@ -1,43 +1,44 @@
-import { yupResolver } from '@hookform/resolvers/yup'
-import emailjs from 'emailjs-com'
-import { useState } from 'react'
-import { SubmitHandler, useForm } from 'react-hook-form'
-import { BiSend } from 'react-icons/bi'
-import { toast } from 'react-toastify'
-import * as yup from 'yup'
+import { yupResolver } from '@hookform/resolvers/yup';
+import { send as emailJsSend } from 'emailjs-com';
+import { useState } from 'react';
+import { SubmitHandler, useForm } from 'react-hook-form';
+import { BiSend } from 'react-icons/bi';
+import { toast } from 'react-toastify';
+import * as yup from 'yup';
 
-import { SendMessageModalContent } from '@interfaces/content'
+import { SendMessageModalContent } from '@interfaces/content';
 
-import { Loader } from '@components/shared/Loader'
-import { Modal } from '@components/shared/Modal'
+import { Loader } from '@components/shared/Loader';
+import { Modal } from '@components/shared/Modal';
 
-import { FormControl } from '../FormControl'
-import { Content, Form, ButtonSubmit } from './styles'
+import { ButtonSubmit, Content, Form } from './styles';
+import { FormControl } from '../FormControl';
 
-const EMAILJS_SERVICE_ID = process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID || ''
-const EMAILJS_TEMPLATE_ID = process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID || ''
-const EMAILJS_PUBLIC_KEY = process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY || ''
+
+const EMAILJS_SERVICE_ID = process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID || '';
+const EMAILJS_TEMPLATE_ID = process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID || '';
+const EMAILJS_PUBLIC_KEY = process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY || '';
 
 type FormValuesType = {
-  readonly name: string
-  readonly email: string
-  readonly message: string
-}
+  readonly name: string;
+  readonly email: string;
+  readonly message: string;
+};
 
 interface SendMessageModalProps {
-  readonly isOpen: boolean
-  readonly content: SendMessageModalContent
-  readonly handleClose: () => void
+  readonly isOpen: boolean;
+  readonly content: SendMessageModalContent;
+  readonly handleClose: () => void;
 }
 
 export function SendMessageModal({
   isOpen,
   content,
-  handleClose
+  handleClose,
 }: SendMessageModalProps) {
-  const { validationInput, input } = content
+  const { validationInput, input } = content;
 
-  const [isSubmitting, setIsSubmitting] = useState(false)
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
   const validationSchema = yup.object().shape({
     name: yup.string().required(validationInput.nameRequiredLabel),
@@ -48,32 +49,32 @@ export function SendMessageModal({
     message: yup
       .string()
       .required(validationInput.messageRequiredLabel)
-      .min(20, validationInput.messageMinLabel)
-  })
+      .min(20, validationInput.messageMinLabel),
+  });
 
   const { register, handleSubmit, reset, formState } = useForm<FormValuesType>({
-    resolver: yupResolver(validationSchema)
-  })
+    resolver: yupResolver(validationSchema),
+  });
 
-  const onSubmit: SubmitHandler<FormValuesType> = async formValues => {
-    setIsSubmitting(true)
+  const onSubmit: SubmitHandler<FormValuesType> = async (formValues) => {
+    setIsSubmitting(true);
     try {
-      await emailjs.send(
+      await emailJsSend(
         EMAILJS_SERVICE_ID,
         EMAILJS_TEMPLATE_ID,
         formValues,
-        EMAILJS_PUBLIC_KEY
-      )
+        EMAILJS_PUBLIC_KEY,
+      );
 
-      reset()
-      handleClose()
-      toast.success(content.emailMessageSuccess)
+      reset();
+      handleClose();
+      toast.success(content.emailMessageSuccess);
     } catch {
-      toast.error(content.emailMessageError)
+      toast.error(content.emailMessageError);
     } finally {
-      setIsSubmitting(false)
+      setIsSubmitting(false);
     }
-  }
+  };
 
   return (
     <Modal
@@ -129,5 +130,5 @@ export function SendMessageModal({
         </Form>
       </Content>
     </Modal>
-  )
+  );
 }

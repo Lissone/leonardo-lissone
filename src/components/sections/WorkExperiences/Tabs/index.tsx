@@ -1,31 +1,35 @@
-import { useState } from 'react'
+import React, { ReactElement, useState } from 'react';
 
-import { Container, NavTabs, Tab, Content } from './styles'
+import { Container, Content, NavTabs, Tab } from './styles';
 
+interface ChildrenType {
+  readonly id: string;
+  readonly children: ReactElement;
+}
 interface TabsProps {
-  readonly children: any
+  readonly children: ReactElement<ChildrenType>[];
 }
 
 export function Tabs({ children }: TabsProps) {
-  const [activeTab, setActiveTab] = useState(children[0].props.id)
+  const [activeTab, setActiveTab] = useState(children[0].props.id);
 
   return (
     <Container>
       <NavTabs>
-        {children.map((tab: any) => (
-          <Tab key={tab.props.id} className={activeTab === tab.props.id ? 'active' : ''}>
-            <button type="button" onClick={() => setActiveTab(tab.props.id)}>
-              {tab.props.id}
+        {React.Children.map(children, (child: React.ReactElement<ChildrenType>) => (
+          <Tab key={child.props.id} className={activeTab === child.props.id ? 'active' : ''}>
+            <button type="button" onClick={() => setActiveTab(child.props.id)}>
+              {child.props.id}
             </button>
           </Tab>
         ))}
       </NavTabs>
 
       <Content data-aos="fade-up">
-        {children.map((element: any) => {
-          if (element.props.id === activeTab) return element.props.children
-        })}
+        {React.Children.map(children, (child: React.ReactElement<ChildrenType>) => (
+          child.props.id === activeTab ? child.props.children : null
+        ))}
       </Content>
     </Container>
-  )
+  );
 }

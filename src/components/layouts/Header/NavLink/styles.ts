@@ -1,5 +1,5 @@
-import { Link as Scroll } from 'react-scroll'
-import styled from 'styled-components'
+import { Link as Scroll } from 'react-scroll';
+import styled from 'styled-components';
 
 export const MenuLink = styled(Scroll)`
   display: flex;
@@ -26,4 +26,4 @@ export const MenuLink = styled(Scroll)`
       }
     }
   }
-`
+`;

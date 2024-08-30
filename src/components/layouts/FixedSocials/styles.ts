@@ -1,4 +1,4 @@
-import styled from 'styled-components'
+import styled from 'styled-components';
 
 export const Container = styled.div`
   margin: 0 auto;
@@ -15,7 +15,7 @@ export const Container = styled.div`
   @media (max-width: 920px) or (max-height: 500px) {
     display: none;
   }
-`
+`;
 
 export const Content = styled.div`
   display: flex;
@@ -42,4 +42,4 @@ export const Content = styled.div`
     height: 8.8rem;
     margin-top: 0.5rem;
   }
-`
+`;

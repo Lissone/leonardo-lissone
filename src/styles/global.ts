@@ -1,5 +1,5 @@
-import styled, { createGlobalStyle } from 'styled-components'
-import 'react-toastify/dist/ReactToastify.css'
+import styled, { createGlobalStyle } from 'styled-components';
+import 'react-toastify/dist/ReactToastify.css';
 
 export const GlobalStyle = createGlobalStyle`
   * {
@@ -134,10 +134,10 @@ export const GlobalStyle = createGlobalStyle`
   ::-webkit-scrollbar-thumb:horizontal{
     background-color: var(--gray-600);
   }
-`
+`;
 
 interface GlobalOverlayProps {
-  readonly $isActive: boolean
+  readonly $isActive: boolean;
 }
 
 export const GlobalOverlay = styled.div<GlobalOverlayProps>`
@@ -154,4 +154,4 @@ export const GlobalOverlay = styled.div<GlobalOverlayProps>`
 
   z-index: 5; /* Specify a stack order in case you're using a different order for other elements */
   background-color: rgba(0, 0, 0, 0.5);
-`
+`;

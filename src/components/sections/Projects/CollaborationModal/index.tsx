@@ -1,22 +1,22 @@
-import { ProjectContent } from '@interfaces/content'
+import { ProjectContent } from '@interfaces/content';
 
-import { SocialIcon } from '@components/shared/Icons/SocialIcon'
-import { Modal } from '@components/shared/Modal'
-import { Tooltip } from '@components/shared/Tooltip'
+import { SocialIcon } from '@components/shared/Icons/SocialIcon';
+import { Modal } from '@components/shared/Modal';
+import { Tooltip } from '@components/shared/Tooltip';
 
 import {
-  Content,
   CollaboratorAvatar,
   CollaboratorInfos,
-  CollaboratorSocials
-} from './styles'
+  CollaboratorSocials,
+  Content,
+} from './styles';
 
 interface CollaborationModalProps {
-  readonly isOpen: boolean
-  readonly title: string
-  readonly text: string
-  readonly project: ProjectContent | null
-  readonly handleClose: () => void
+  readonly isOpen: boolean;
+  readonly title: string;
+  readonly text: string;
+  readonly project: ProjectContent | null;
+  readonly handleClose: () => void;
 }
 
 export function CollaborationModal({
@@ -24,9 +24,9 @@ export function CollaborationModal({
   title,
   text,
   project,
-  handleClose
+  handleClose,
 }: CollaborationModalProps) {
-  if (!project) return null
+  if (!project) return null;
 
   return (
     <Modal
@@ -39,8 +39,8 @@ export function CollaborationModal({
         <span>{text}</span>
 
         <ul>
-          {project.collaborators?.map(collaborator => (
-            <li>
+          {project.collaborators?.map((collaborator) => (
+            <li key={collaborator.name}>
               <div>
                 <CollaboratorAvatar>
                   <div className="collaborator-avatar-content">
@@ -63,7 +63,7 @@ export function CollaborationModal({
               </div>
 
               <CollaboratorSocials>
-                {collaborator.socials.map(social => (
+                {collaborator.socials.map((social) => (
                   <Tooltip key={social.name} title={social.name}>
                     <a
                       href={social.link}
@@ -81,5 +81,5 @@ export function CollaborationModal({
         </ul>
       </Content>
     </Modal>
-  )
+  );
 }

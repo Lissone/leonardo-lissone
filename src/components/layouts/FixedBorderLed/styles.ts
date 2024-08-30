@@ -1,4 +1,4 @@
-import styled from 'styled-components'
+import styled from 'styled-components';
 
 export const Container = styled.div`
   width: 0.625rem;
@@ -11,4 +11,4 @@ export const Container = styled.div`
   @media (max-width: 520px) {
     display: none;
   }
-`
+`;

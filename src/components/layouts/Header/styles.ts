@@ -1,5 +1,5 @@
-import Switch from 'react-switch'
-import styled from 'styled-components'
+import Switch from 'react-switch';
+import styled from 'styled-components';
 
 export const Container = styled.header`
   width: 100%;
@@ -10,7 +10,7 @@ export const Container = styled.header`
   box-shadow: 0rem 0rem 1.875rem rgba(0, 0, 0, 0.25);
 
   background: var(--gray-800);
-`
+`;
 
 export const Content = styled.div`
   padding: 0 3rem;
@@ -27,7 +27,7 @@ export const Content = styled.div`
   @media (max-width: 400px) {
     padding-right: 1rem;
   }
-`
+`;
 
 export const Hamburguer = styled.div`
   display: none;
@@ -45,10 +45,10 @@ export const Hamburguer = styled.div`
 
     display: flex;
   }
-`
+`;
 
 interface MenuProps {
-  readonly $isOpen: boolean
+  readonly $isOpen: boolean;
 }
 
 export const Menu = styled.div<MenuProps>`
@@ -82,7 +82,7 @@ export const Menu = styled.div<MenuProps>`
 
     transition: all 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
   }
-`
+`;
 
 export const Navigation = styled.nav`
   margin: 0 auto;
@@ -94,7 +94,7 @@ export const Navigation = styled.nav`
   @media (max-width: 920px) {
     flex-direction: column;
   }
-`
+`;
 
 export const Buttons = styled.div`
   display: flex;
@@ -105,12 +105,12 @@ export const Buttons = styled.div`
   @media (max-width: 920px) {
     flex-direction: column;
   }
-`
+`;
 
 export const LanguageSwitch = styled(Switch)`
   border: 2px solid var(--red-400);
   box-shadow: 0rem 0rem 1.25rem var(--red-400);
-`
+`;
 
 export const ResumeButton = styled.a`
   padding: 0.7rem 2.4rem;
@@ -133,4 +133,4 @@ export const ResumeButton = styled.a`
   @media (max-width: 920px) {
     font-size: 1.3rem;
   }
-`
+`;

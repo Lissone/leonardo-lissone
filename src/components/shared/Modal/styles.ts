@@ -1,4 +1,4 @@
-import styled from 'styled-components'
+import styled from 'styled-components';
 
 export const HeaderContainer = styled.header`
   display: flex;
@@ -12,7 +12,7 @@ export const HeaderContainer = styled.header`
 
     background: var(--red-400);
   }
-`
+`;
 
 export const HeaderContent = styled.div`
   padding: 1.5rem 2.25rem;
@@ -40,7 +40,7 @@ export const HeaderContent = styled.div`
       display: none;
     }
   }
-`
+`;
 
 export const Heading = styled.div`
   display: flex;
@@ -60,7 +60,7 @@ export const Heading = styled.div`
       display: none;
     }
   }
-`
+`;
 
 export const Content = styled.div`
   padding: 1.8rem 2.25rem;
@@ -70,4 +70,4 @@ export const Content = styled.div`
 
     overflow-y: scroll;
   }
-`
+`;

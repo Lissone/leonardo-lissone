@@ -12,5 +12,5 @@ export function Home() {
         fill="#666666"
       />
     </svg>
-  )
+  );
 }

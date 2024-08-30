@@ -1,4 +1,4 @@
-import styled from 'styled-components'
+import styled from 'styled-components';
 
 export const Container = styled.footer`
   width: 100%;
@@ -51,7 +51,7 @@ export const Container = styled.footer`
       display: none;
     }
   }
-`
+`;
 
 export const Content = styled.div`
   display: flex;
@@ -61,7 +61,7 @@ export const Content = styled.div`
   @media (max-width: 350px) {
     padding: 0 2rem;
   }
-`
+`;
 
 export const Subtitle = styled.div`
   display: flex;
@@ -78,7 +78,7 @@ export const Subtitle = styled.div`
       font-size: 1.4rem;
     }
   }
-`
+`;
 
 export const Title = styled.h1`
   font-size: 2.5rem;
@@ -88,7 +88,7 @@ export const Title = styled.h1`
   @media (max-width: 440px) {
     font-size: 2rem;
   }
-`
+`;
 
 export const Text = styled.p`
   max-width: 60%;
@@ -101,7 +101,7 @@ export const Text = styled.p`
   @media (max-width: 900px) {
     max-width: 80%;
   }
-`
+`;
 
 export const ContactButton = styled.button`
   margin-top: 4rem;
@@ -125,7 +125,7 @@ export const ContactButton = styled.button`
   @media (max-height: 630px) {
     margin-top: 2rem;
   }
-`
+`;
 
 export const Socials = styled.div`
   margin-top: 4rem;
@@ -151,4 +151,4 @@ export const Socials = styled.div`
   @media (max-width: 920px) {
     display: flex;
   }
-`
+`;

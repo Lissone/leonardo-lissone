@@ -1,4 +1,4 @@
-import styled from 'styled-components'
+import styled from 'styled-components';
 
 export const Content = styled.div`
   padding: 1.8rem 2.25rem;
@@ -49,7 +49,7 @@ export const Content = styled.div`
       }
     }
   }
-`
+`;
 
 export const CollaboratorAvatar = styled.div`
   width: 4rem;
@@ -91,7 +91,7 @@ export const CollaboratorAvatar = styled.div`
       height: 70%;
     }
   }
-`
+`;
 
 export const CollaboratorInfos = styled.div`
   display: flex;
@@ -108,7 +108,7 @@ export const CollaboratorInfos = styled.div`
   span {
     font-size: 1.25rem;
   }
-`
+`;
 
 export const CollaboratorSocials = styled.div`
   display: flex;
@@ -127,4 +127,4 @@ export const CollaboratorSocials = styled.div`
       color: var(--gray-500);
     }
   }
-`
+`;

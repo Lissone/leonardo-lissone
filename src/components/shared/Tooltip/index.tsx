@@ -1,15 +1,15 @@
-import * as RadixTooltip from '@radix-ui/react-tooltip'
-import { useState } from 'react'
+import * as RadixTooltip from '@radix-ui/react-tooltip';
+import { useState } from 'react';
 
-import { TooltipContent } from './styles'
+import { TooltipContent } from './styles';
 
 interface TooltipProps {
-  readonly title: string
-  readonly children: React.ReactElement<any, any>
+  readonly title: string;
+  readonly children: React.ReactElement<any, any>;
 }
 
 export function Tooltip({ title, children }: TooltipProps) {
-  const [open, setOpen] = useState(false)
+  const [open, setOpen] = useState(false);
 
   return (
     <RadixTooltip.Provider delayDuration={300}>
@@ -30,5 +30,5 @@ export function Tooltip({ title, children }: TooltipProps) {
         </TooltipContent>
       </RadixTooltip.Root>
     </RadixTooltip.Provider>
-  )
+  );
 }

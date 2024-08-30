@@ -1,4 +1,4 @@
-import styled from 'styled-components'
+import styled from 'styled-components';
 
 export const Container = styled.section`
   width: 100%;
@@ -10,7 +10,7 @@ export const Container = styled.section`
     height: 100%;
     padding: 3rem 0;
   }
-`
+`;
 
 export const Content = styled.div`
   width: 100%;
@@ -33,12 +33,12 @@ export const Content = styled.div`
   @media (max-width: 450px) {
     padding: 0 2rem;
   }
-`
+`;
 
 export const Column = styled.div`
   display: flex;
   flex-direction: column;
-`
+`;
 
 export const Heading = styled.div`
   display: flex;
@@ -58,7 +58,7 @@ export const Heading = styled.div`
       line-height: 3.2rem;
     }
   }
-`
+`;
 
 export const Text = styled.div`
   max-width: 43rem;
@@ -78,11 +78,11 @@ export const Text = styled.div`
       color: var(--red-200);
     }
   }
-`
+`;
 
 export const HighlightText = styled.span`
   color: var(--red-200);
-`
+`;
 
 export const SkillsList = styled.ul`
   max-width: 34rem;
@@ -101,7 +101,7 @@ export const SkillsList = styled.ul`
 
     color: var(--gray-500);
   }
-`
+`;
 
 export const PhotoContainer = styled.div`
   margin: 0 auto;
@@ -148,4 +148,4 @@ export const PhotoContainer = styled.div`
       top: 2rem;
     }
   }
-`
+`;

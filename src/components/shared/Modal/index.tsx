@@ -1,14 +1,14 @@
-import { IoMdClose } from 'react-icons/io'
-import ReactModal from 'react-modal'
+import { IoMdClose } from 'react-icons/io';
+import ReactModal from 'react-modal';
 
-import { HeaderContainer, HeaderContent, Heading } from './styles'
+import { HeaderContainer, HeaderContent, Heading } from './styles';
 
 interface ModalProps {
-  readonly isOpen: boolean
-  readonly title: string
-  readonly headerIcon: JSX.Element
-  readonly children: JSX.Element
-  readonly handleClose: () => void
+  readonly isOpen: boolean;
+  readonly title: string;
+  readonly headerIcon: JSX.Element;
+  readonly children: JSX.Element;
+  readonly handleClose: () => void;
 }
 
 export function Modal({ isOpen, title, headerIcon, children, handleClose }: ModalProps) {
@@ -35,5 +35,5 @@ export function Modal({ isOpen, title, headerIcon, children, handleClose }: Moda
 
       {children}
     </ReactModal>
-  )
+  );
 }

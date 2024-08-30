@@ -1,4 +1,4 @@
-import styled from 'styled-components'
+import styled from 'styled-components';
 
 export const Content = styled.div`
   padding: 1.8rem 2.25rem;
@@ -31,7 +31,7 @@ export const Content = styled.div`
       text-align: center;
     }
   }
-`
+`;
 
 export const Form = styled.form`
   margin-top: 1.5rem;
@@ -65,7 +65,7 @@ export const Form = styled.form`
       box-shadow: 0rem 0rem 0.5rem var(--red-400);
     }
   }
-`
+`;
 
 export const ButtonSubmit = styled.button`
   margin-top: 1rem;
@@ -89,4 +89,4 @@ export const ButtonSubmit = styled.button`
   &:hover {
     transform: scale(1.015);
   }
-`
+`;

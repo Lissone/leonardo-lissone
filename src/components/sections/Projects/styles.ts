@@ -1,4 +1,4 @@
-import styled from 'styled-components'
+import styled from 'styled-components';
 
 export const Container = styled.section`
   width: 100%;
@@ -34,7 +34,7 @@ export const Container = styled.section`
       padding: 0 2rem;
     }
   }
-`
+`;
 
 export const Heading = styled.h1`
   text-align: center;
@@ -57,7 +57,7 @@ export const Heading = styled.h1`
   @media (max-width: 480px) {
     font-size: 1.9rem;
   }
-`
+`;
 
 export const FilterContainer = styled.div`
   width: 100%;
@@ -71,7 +71,7 @@ export const FilterContainer = styled.div`
 
     color: var(--gray-300);
   }
-`
+`;
 
 export const Content = styled.div`
   padding-top: 2rem;
@@ -87,7 +87,7 @@ export const Content = styled.div`
   @media (max-width: 850px) {
     grid-template-columns: 1fr;
   }
-`
+`;
 
 export const ShowMoreButton = styled.button`
   margin-top: 4rem;
@@ -109,7 +109,7 @@ export const ShowMoreButton = styled.button`
     box-shadow: 0rem 0rem 1rem var(--red-400);
     border-color: var(--red-400);
   }
-`
+`;
 
 export const NotFoundText = styled.span`
   font-size: 1.25rem;
@@ -121,4 +121,4 @@ export const NotFoundText = styled.span`
   @media (max-width: 850px) {
     max-width: 280px;
   }
-`
+`;

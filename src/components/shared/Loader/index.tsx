@@ -1,5 +1,5 @@
-import { LoaderDiv } from './styles'
+import { LoaderDiv } from './styles';
 
 export function Loader() {
-  return <LoaderDiv />
+  return <LoaderDiv />;
 }

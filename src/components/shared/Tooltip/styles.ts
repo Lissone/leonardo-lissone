@@ -1,5 +1,5 @@
-import { Content } from '@radix-ui/react-tooltip'
-import styled from 'styled-components'
+import { Content } from '@radix-ui/react-tooltip';
+import styled from 'styled-components';
 
 // ---------------------------------------------------
 
@@ -74,4 +74,4 @@ export const TooltipContent = styled(Content)`
       transform: translateX(0);
     }
   }
-`
+`;

@@ -1,4 +1,3 @@
-/* eslint-disable react/no-danger */
 export function Analytics() {
   return (
     <>
@@ -7,6 +6,7 @@ export function Analytics() {
         src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GA_TRACKING_ID}`}
       />
       <script
+        // eslint-disable-next-line react/no-danger
         dangerouslySetInnerHTML={{
           __html: `
             window.dataLayer = window.dataLayer || [];
@@ -15,9 +15,9 @@ export function Analytics() {
             gtag('config', '${process.env.NEXT_PUBLIC_GA_TRACKING_ID}', {
               page_path: window.location.pathname,
             });
-          `
+          `,
         }}
       />
     </>
-  )
+  );
 }

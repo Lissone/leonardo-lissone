@@ -1,19 +1,19 @@
-import { SocialsContent } from '@interfaces/content'
+import { SocialsContent } from '@interfaces/content';
 
-import { SocialIcon } from '@components/shared/Icons/SocialIcon'
-import { Tooltip } from '@components/shared/Tooltip'
+import { SocialIcon } from '@components/shared/Icons/SocialIcon';
+import { Tooltip } from '@components/shared/Tooltip';
 
-import { Container, Content } from './styles'
+import { Container, Content } from './styles';
 
 interface FixedSocialsProps {
-  readonly socials: SocialsContent[]
+  readonly socials: SocialsContent[];
 }
 
 export function FixedSocials({ socials }: FixedSocialsProps) {
   return (
     <Container>
       <Content>
-        {socials.map(social => (
+        {socials.map((social) => (
           <Tooltip key={social.name} title={social.name}>
             <a
               href={social.link}
@@ -29,5 +29,5 @@ export function FixedSocials({ socials }: FixedSocialsProps) {
         <img src="/images/cable-fixed-socials.svg" alt="Led cable" />
       </Content>
     </Container>
-  )
+  );
 }

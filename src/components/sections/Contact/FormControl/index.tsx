@@ -1,16 +1,16 @@
-import { FieldError } from 'react-hook-form'
+import { FieldError } from 'react-hook-form';
 
-import { Container, FormLabel, ErrorMessage } from './styles'
+import { Container, ErrorMessage, FormLabel } from './styles';
 
 interface FormControlProps extends React.InputHTMLAttributes<HTMLInputElement> {
-  readonly name: string
-  readonly children: JSX.Element
-  readonly label?: string
-  readonly error?: FieldError | null
+  readonly name: string;
+  readonly children: JSX.Element;
+  readonly label?: string;
+  readonly error?: FieldError | null;
 }
 
 export function FormControl({ name, children, label, error = null }: FormControlProps) {
-  const isInvalid = !!error
+  const isInvalid = !!error;
   return (
     <Container $isInvalid={isInvalid}>
       {label ? <FormLabel htmlFor={name}>{label}</FormLabel> : null}
@@ -19,5 +19,5 @@ export function FormControl({ name, children, label, error = null }: FormControl
 
       {isInvalid ? <ErrorMessage>{error.message}</ErrorMessage> : null}
     </Container>
-  )
+  );
 }

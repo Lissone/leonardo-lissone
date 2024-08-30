@@ -1,4 +1,4 @@
-import styled from 'styled-components'
+import styled from 'styled-components';
 
 export const Container = styled.div`
   max-width: 20rem;
@@ -21,7 +21,7 @@ export const Container = styled.div`
   :hover .project-card-actions {
     opacity: 1;
   }
-`
+`;
 
 export const Content = styled.div`
   height: 100%;
@@ -30,7 +30,7 @@ export const Content = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-`
+`;
 
 export const Cover = styled.div`
   width: 100%;
@@ -43,7 +43,7 @@ export const Cover = styled.div`
 
     border-radius: 0.625rem;
   }
-`
+`;
 
 export const CoverActions = styled.div`
   opacity: 0;
@@ -94,7 +94,7 @@ export const CoverActions = styled.div`
     width: 18.5rem;
     height: 10rem;
   }
-`
+`;
 
 export const Information = styled.div`
   height: 100%;
@@ -102,7 +102,7 @@ export const Information = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-`
+`;
 
 export const Heading = styled.div`
   margin-top: 0.5rem;
@@ -114,7 +114,11 @@ export const Heading = styled.div`
   img {
     cursor: pointer;
   }
-`
+
+  button {
+    background: transparent;
+  }
+`;
 
 export const Divider = styled.div`
   width: 4.5rem;
@@ -124,7 +128,7 @@ export const Divider = styled.div`
   border-radius: 100%;
 
   background: var(--gray-800);
-`
+`;
 
 export const TechnologiesRow = styled.div`
   width: 100%;
@@ -140,9 +144,9 @@ export const TechnologiesRow = styled.div`
 
     color: var(--red-200);
   }
-`
+`;
 
-export const FeaturedInformation = styled.div``
+export const FeaturedInformation = styled.div``;
 
 export const SeparateRow = styled.div`
   margin-top: 1.25rem;
@@ -155,4 +159,4 @@ export const SeparateRow = styled.div`
     display: flex;
     gap: 0.8rem;
   }
-`
+`;
