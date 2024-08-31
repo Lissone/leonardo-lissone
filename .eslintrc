@@ -1,8 +1,6 @@
 {
   "extends": ["@lissone/eslint-config/next"],
   "rules": {
-    "@next/next/no-img-element": "off", // not necessary to optimize images with next/image
-
     "import/no-unresolved": ["off", { "ignore": ["react-scroll"] }] // import reference bug with react-scroll
   },
   "settings": {
