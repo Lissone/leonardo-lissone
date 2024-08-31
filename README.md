@@ -43,7 +43,6 @@ https://user-images.githubusercontent.com/57052110/227630290-5e0c5cd1-87ca-41de-
 
 - [Nodejs](https://nodejs.org/en/)
 - [Npm](https://www.npmjs.com/)
-- [Yarn](https://yarnpkg.com/)
 
 ## Technologies
 
@@ -57,11 +56,8 @@ https://user-images.githubusercontent.com/57052110/227630290-5e0c5cd1-87ca-41de-
 - Yup
 - EmailJs
 - Eslint
-  - Airbnb-config with another pessoal rules
-  - Import helpers plugin
-- Prettier
+  - @lissone/eslint-config
 - Commitlint
-  - Commitizen
 
 ## Layout
 
@@ -79,17 +75,7 @@ cd leonardo-lissone
 Install dependencies using:
 
 ```bash
-yarn
-#or
 npm install
-```
-
-Enable husky git hooks:
-
-```bash
-yarn husky install
-#or
-npx husky install
 ```
 
 Need to add environment variables:
@@ -109,8 +95,6 @@ NEXT_PUBLIC_EMAILJS_PUBLIC_KEY=
 Run application:
 
 ```bash
-yarn dev
-#or
 npm run dev
 ```
 
