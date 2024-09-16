@@ -56,8 +56,10 @@ https://user-images.githubusercontent.com/57052110/227630290-5e0c5cd1-87ca-41de-
 - Yup
 - EmailJs
 - Eslint
-  - @lissone/eslint-config
+  - @lissone/eslint-config/next
 - Commitlint
+  - config-conventional
+- Husky
 
 ## Layout
 
