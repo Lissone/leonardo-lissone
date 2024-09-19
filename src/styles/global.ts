@@ -97,7 +97,7 @@ export const GlobalStyle = createGlobalStyle`
 
     position: relative;
 
-    border-radius: 0.5rem;
+    border-radius: 0.35rem;
 
     background: var(--gray-900);
 

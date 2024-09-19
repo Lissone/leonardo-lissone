@@ -41,7 +41,7 @@ export const Cover = styled.div`
     max-width: 18rem;
     max-height: 10rem;
 
-    border-radius: 0.625rem;
+    border-radius: 0.35rem;
   }
 `;
 
@@ -61,7 +61,7 @@ export const CoverActions = styled.div`
   align-items: center;
   justify-content: space-around;
 
-  border-radius: 0.625rem;
+  border-radius: 0.35rem;
 
   background-color: rgba(0, 0, 0, 0.6);
 

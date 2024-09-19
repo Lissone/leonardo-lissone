@@ -96,7 +96,7 @@ export const ShowMoreButton = styled.button`
   font-size: 1.2rem;
 
   border: 2px solid var(--gray-800);
-  border-radius: 0.5rem;
+  border-radius: 0.25rem;
 
   color: var(--gray-300);
   background: var(--gray-900-opacity-80);

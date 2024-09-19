@@ -118,7 +118,7 @@ export const ResumeButton = styled.a`
   font-weight: 600;
 
   border: 2px solid var(--red-400);
-  border-radius: 0.2rem;
+  border-radius: 0.25rem;
   box-shadow: 0rem 0rem 1.25rem var(--red-400);
 
   color: var(--red-400);
