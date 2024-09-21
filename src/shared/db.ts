@@ -1337,7 +1337,7 @@ export const contentLanguages: ContentLang = {
     },
     headerButtons: {
       presentationButtonTooltip: 'Presentation',
-      aboutButtonTooltip: 'About',
+      aboutButtonTooltip: 'About me',
       workExperiencesButtonTooltip: 'Work experiences',
       projectsButtonTooltip: 'Projects',
     },

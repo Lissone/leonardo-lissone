@@ -46,6 +46,7 @@ export default function Home({ setIsOverlayActive }: HomeProps) {
         resumeCv={content.sharedButtons.resumeCv}
         resumeButtonLabel={content.sharedButtons.resumeButtonLabel}
         headerButtons={content.headerButtons}
+        profilePhoto={content.aboutSection.profilePhoto}
         toggleContentLanguage={toggleContentLanguage}
         setIsOverlayActive={setIsOverlayActive}
       />

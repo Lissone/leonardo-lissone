@@ -8,13 +8,14 @@ interface NavLinkProps {
   readonly to: string;
   readonly tooltip: string;
   readonly children: ReactNode;
+  readonly showTooltip?: boolean;
 }
 
-export function NavLink({ to, tooltip, children }: NavLinkProps) {
+export function NavLink({ to, tooltip, children, showTooltip = true }: NavLinkProps) {
   return (
-    <Tooltip title={tooltip}>
+    <Tooltip title={tooltip} show={showTooltip}>
       <div>
-        <MenuLink to={to} smooth duration={1000} spy offset={-90}>
+        <MenuLink to={to} smooth duration={1000} spy offset={-90} className='menuLink'>
           {children}
         </MenuLink>
       </div>
