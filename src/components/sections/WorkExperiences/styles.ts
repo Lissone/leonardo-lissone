@@ -2,15 +2,11 @@ import styled from 'styled-components';
 
 export const Container = styled.section`
   width: 100%;
-  min-height: 100vh;
   height: 100%;
+  min-height: 100vh;
 
   display: flex;
   justify-content: space-between;
-
-  @media (max-width: 560px) or (max-height: 850px) {
-    height: 100%;
-  }
 `;
 
 export const Content = styled.div`

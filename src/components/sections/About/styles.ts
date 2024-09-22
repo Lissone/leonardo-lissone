@@ -2,14 +2,11 @@ import styled from 'styled-components';
 
 export const Container = styled.section`
   width: 100%;
-  height: 100vh;
+  height: 100%;
+  min-height: 100vh;
+  padding: 3rem 0;
 
   display: flex;
-
-  @media (max-width: 1430px) or (max-height: 640px) {
-    height: 100%;
-    padding: 3rem 0;
-  }
 `;
 
 export const Content = styled.div`
@@ -20,14 +17,13 @@ export const Content = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 1.5rem;
+  gap: 3rem;
 
   @media (max-width: 1430px) {
     padding: 0 4rem;
 
     flex-direction: column;
     justify-content: center;
-    gap: 3rem;
   }
 
   @media (max-width: 450px) {
