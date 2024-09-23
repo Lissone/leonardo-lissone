@@ -1,3 +1,5 @@
+import { ReactTyped } from 'react-typed';
+
 import { PresentationSectionContent } from '@interfaces/content';
 
 import { replaceVariable } from '@shared/utils';
@@ -30,7 +32,15 @@ export function Presentation({ content, contactButtonLabel }: PresentationProper
         <Heading>
           <h3>{heading[0]}</h3>
           <h2>{heading[1]}</h2>
-          <h1>{heading[2]}</h1>
+          <h1>
+            <ReactTyped
+              strings={[heading[2]]}
+              typeSpeed={100}
+              backSpeed={60}
+              showCursor
+              loop
+            />
+          </h1>
         </Heading>
 
         <ResumeText

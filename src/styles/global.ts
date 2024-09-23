@@ -134,6 +134,13 @@ export const GlobalStyle = createGlobalStyle`
   ::-webkit-scrollbar-thumb:horizontal{
     background-color: var(--gray-600);
   }
+
+  /* ===== React Type ===== */
+  .typed-cursor {
+    font-weight: 300;
+
+    color: var(--gray-300);
+  }
 `;
 
 interface GlobalOverlayProps {

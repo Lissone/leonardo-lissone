@@ -29,6 +29,7 @@
     "react-scroll": "^1.9.0",
     "react-switch": "^7.0.0",
     "react-toastify": "^10.0.5",
+    "react-typed": "^2.0.12",
     "styled-components": "^6.1.12",
     "yup": "^1.4.0"
   },
