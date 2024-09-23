@@ -776,7 +776,7 @@ export const contentLanguages: ContentLang = {
                 'Planning, prototyping and development of an internal project with the objective of bringing productivity and systems integration to analysts who evaluate credit proposals.',
                 'Restructuring of Excel spreadsheets for interactive reports, applying UX principles and data analysis for employee customer productivity.',
                 'Front-end development of internal projects using Angular.',
-                'Routine reporting using big data data.',
+                'Routine reporting using big data.',
               ],
             },
           ],
