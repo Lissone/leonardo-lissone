@@ -11,12 +11,11 @@ export const Container = styled.section`
 
 export const Content = styled.div`
   width: 100%;
-  max-width: 1200px;
+  max-width: 1260px;
   margin: 0 auto;
 
   display: flex;
   align-items: center;
-  justify-content: space-between;
   gap: 3rem;
 
   @media (max-width: 1430px) {
@@ -57,9 +56,9 @@ export const Heading = styled.div`
 `;
 
 export const Text = styled.div`
-  max-width: 43rem;
+  max-width: 46rem;
 
-  padding-top: 2.5rem;
+  padding-top: 2rem;
 
   display: flex;
   flex-direction: column;
