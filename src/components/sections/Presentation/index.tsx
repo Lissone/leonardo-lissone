@@ -37,6 +37,8 @@ export function Presentation({ content, contactButtonLabel }: PresentationProper
               strings={[heading[2]]}
               typeSpeed={100}
               backSpeed={60}
+              backDelay={1000}
+              fadeOutDelay={200}
               showCursor
               loop
             />
