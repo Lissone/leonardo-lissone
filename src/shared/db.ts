@@ -50,7 +50,7 @@ export const contentLanguages: ContentLang = {
       ],
     },
     jobsSection: {
-      heading: 'Experiências de trabalho',
+      heading: 'Experiências',
       jobs: [
         {
           company: 'G5 Partners',
