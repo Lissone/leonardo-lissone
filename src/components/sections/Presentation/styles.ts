@@ -1,4 +1,3 @@
-import { Link as Scroll } from 'react-scroll';
 import styled from 'styled-components';
 
 export const Container = styled.section`
@@ -138,7 +137,7 @@ export const SocialsContainer = styled.span`
 
   display: none;
   align-items: center;
-  gap: 1rem;
+  gap: 1.275rem;
 
   a {
     opacity: 0.75;
@@ -166,7 +165,7 @@ export const SocialsContainer = styled.span`
   }
 `;
 
-export const ContactButton = styled(Scroll)`
+export const ContactButton = styled.button`
   margin-top: 3rem;
   padding: 0.8rem 4.2rem;
 

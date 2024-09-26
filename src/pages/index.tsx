@@ -4,6 +4,8 @@ import Aos from 'aos';
 import Head from 'next/head';
 import { useEffect, useState } from 'react';
 
+import { SendMessageModalProvider } from '@contexts/SendMessageModalContext';
+
 import { FixedSocials } from '@components/layouts/FixedSocials';
 import { Header } from '@components/layouts/Header';
 import { About } from '@components/sections/About';
@@ -34,7 +36,7 @@ export default function Home({ setIsOverlayActive }: HomeProps) {
   };
 
   return (
-    <>
+    <SendMessageModalProvider content={content.contactSection.sendMessageModalContent}>
       <Head>
         <title>Leonardo Lissone</title>
       </Head>
@@ -70,6 +72,6 @@ export default function Home({ setIsOverlayActive }: HomeProps) {
           contactButtonLabel={content.sharedButtons.contactButtonLabel}
         />
       </Container>
-    </>
+    </SendMessageModalProvider>
   );
 }

@@ -1,11 +1,10 @@
-import { useState } from 'react';
-
 import { ContactSectionContent, SocialsContent } from '@interfaces/content';
+
+import { useSendMessageModal } from '@contexts/SendMessageModalContext';
 
 import { SocialIcon } from '@components/shared/Icons/SocialIcon';
 import { Tooltip } from '@components/shared/Tooltip';
 
-import { SendMessageModal } from './SendMessageModal';
 import {
   ContactButton,
   Container,
@@ -23,7 +22,7 @@ interface ContactProps {
 }
 
 export function Contact({ content, socials, contactButtonLabel }: ContactProps) {
-  const [isSendMessageModalOpen, setIsSendMessageModalOpen] = useState(false);
+  const { toggleSendMessageModalOpen } = useSendMessageModal();
 
   return (
     <Container id="contact">
@@ -38,7 +37,7 @@ export function Contact({ content, socials, contactButtonLabel }: ContactProps) 
 
         <Text>{content.text}</Text>
 
-        <ContactButton type="button" onClick={() => setIsSendMessageModalOpen(true)}>
+        <ContactButton type="button" onClick={() => toggleSendMessageModalOpen(true)}>
           {contactButtonLabel}
         </ContactButton>
 
@@ -59,12 +58,6 @@ export function Contact({ content, socials, contactButtonLabel }: ContactProps) 
       </Content>
 
       <img className="bearing-led" src="/images/bearing-led.svg" alt="Bearing with led" />
-
-      <SendMessageModal
-        isOpen={isSendMessageModalOpen}
-        content={content.sendMessageModalContent}
-        handleClose={() => setIsSendMessageModalOpen(false)}
-      />
     </Container>
   );
 }

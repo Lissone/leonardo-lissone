@@ -2,6 +2,8 @@ import { ReactTyped } from 'react-typed';
 
 import { PresentationSectionContent, SocialsContent } from '@interfaces/content';
 
+import { useSendMessageModal } from '@contexts/SendMessageModalContext';
+
 import { SocialIcon } from '@components/shared/Icons/SocialIcon';
 import { Tooltip } from '@components/shared/Tooltip';
 
@@ -26,6 +28,8 @@ interface PresentationProperties {
 export function Presentation({
   content, contactButtonLabel, socials,
 }: PresentationProperties) {
+  const { toggleSendMessageModalOpen } = useSendMessageModal();
+
   const { heading, text, yearFirstWorkExperience } = content;
 
   const currentYear = new Date().getFullYear();
@@ -56,6 +60,7 @@ export function Presentation({
             __html: contentText,
           }}
         />
+
         <SocialsContainer>
           {socials.map((social) => (
             <Tooltip key={social.name} title={social.name}>
@@ -71,7 +76,7 @@ export function Presentation({
           ))}
         </SocialsContainer>
 
-        <ContactButton to="contact" smooth duration={1000} spy offset={-80}>
+        <ContactButton type="button" onClick={() => toggleSendMessageModalOpen(true)}>
           {contactButtonLabel}
         </ContactButton>
       </Content>
