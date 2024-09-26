@@ -140,11 +140,17 @@ export const Socials = styled.div`
 
     &:hover {
       transform: scale(1.08);
-      filter: brightness(0.9);
+
+      svg {
+        color: var(--red-400);
+        filter: drop-shadow(0 0 .675rem rgba(202, 62, 71, 0.7));
+      }
     }
 
     svg {
       color: var(--gray-600);
+
+      transition: 0.3s all;
     }
   }
 
