@@ -15,12 +15,12 @@ export const contentLanguages: ContentLang = {
         link: 'https://github.com/Lissone',
       },
       {
-        name: 'Figma',
-        link: 'https://www.figma.com/@lissone',
+        name: 'LinkedIn',
+        link: 'https://www.linkedin.com/in/lissone/',
       },
       {
-        name: 'Linkedin',
-        link: 'https://www.linkedin.com/in/lissone/',
+        name: 'Figma',
+        link: 'https://www.figma.com/@lissone',
       },
       {
         name: 'Instagram',
@@ -175,7 +175,7 @@ export const contentLanguages: ContentLang = {
                   link: 'https://github.com/MikaMorais',
                 },
                 {
-                  name: 'Linkedin',
+                  name: 'LinkedIn',
                   link: 'https://www.linkedin.com/in/moises-silva-de-morais/',
                 },
               ],
@@ -190,7 +190,7 @@ export const contentLanguages: ContentLang = {
                   link: 'https://github.com/steniodr',
                 },
                 {
-                  name: 'Linkedin',
+                  name: 'LinkedIn',
                   link: 'https://www.linkedin.com/in/stenio-dias-rapchan/',
                 },
               ],
@@ -205,7 +205,7 @@ export const contentLanguages: ContentLang = {
                   link: 'https://github.com/almeidavini',
                 },
                 {
-                  name: 'Linkedin',
+                  name: 'LinkedIn',
                   link: 'https://www.linkedin.com/in/vinicius-silva-de-almeida/',
                 },
               ],
@@ -589,7 +589,7 @@ export const contentLanguages: ContentLang = {
                   link: 'https://github.com/ccr5',
                 },
                 {
-                  name: 'Linkedin',
+                  name: 'LinkedIn',
                   link: 'https://www.linkedin.com/in/mattnobre/',
                 },
               ],
@@ -695,12 +695,12 @@ export const contentLanguages: ContentLang = {
         link: 'https://github.com/Lissone',
       },
       {
-        name: 'Figma',
-        link: 'https://www.figma.com/@lissone',
+        name: 'LinkedIn',
+        link: 'https://www.linkedin.com/in/lissone/',
       },
       {
-        name: 'Linkedin',
-        link: 'https://www.linkedin.com/in/lissone/',
+        name: 'Figma',
+        link: 'https://www.figma.com/@lissone',
       },
       {
         name: 'Instagram',
@@ -855,7 +855,7 @@ export const contentLanguages: ContentLang = {
                   link: 'https://github.com/MikaMorais',
                 },
                 {
-                  name: 'Linkedin',
+                  name: 'LinkedIn',
                   link: 'https://www.linkedin.com/in/moises-silva-de-morais/',
                 },
               ],
@@ -870,7 +870,7 @@ export const contentLanguages: ContentLang = {
                   link: 'https://github.com/steniodr',
                 },
                 {
-                  name: 'Linkedin',
+                  name: 'LinkedIn',
                   link: 'https://www.linkedin.com/in/stenio-dias-rapchan/',
                 },
               ],
@@ -885,7 +885,7 @@ export const contentLanguages: ContentLang = {
                   link: 'https://github.com/almeidavini',
                 },
                 {
-                  name: 'Linkedin',
+                  name: 'LinkedIn',
                   link: 'https://www.linkedin.com/in/vinicius-silva-de-almeida/',
                 },
               ],
