@@ -55,6 +55,7 @@ export default function Home({ setIsOverlayActive }: HomeProps) {
         <Presentation
           content={content.presentationSection}
           contactButtonLabel={content.sharedButtons.contactButtonLabel}
+          socials={content.socials}
         />
 
         <About content={content.aboutSection} />

@@ -133,6 +133,39 @@ export const HighlightText = styled.span`
   color: var(--red-200);
 `;
 
+export const SocialsContainer = styled.span`
+  padding-top: 2rem;
+
+  display: none;
+  align-items: center;
+  gap: 1rem;
+
+  a {
+    opacity: 0.75;
+
+    transition: 0.3s all;
+
+    &:hover {
+      transform: scale(1.08);
+
+      svg {
+        color: var(--red-400);
+        filter: drop-shadow(0 0 .675rem rgba(202, 62, 71, 0.7));
+      }
+    }
+
+    svg {
+      color: var(--gray-600);
+
+      transition: 0.3s all;
+    }
+  }
+
+  @media (max-width: 920px) or (max-height: 500px) {
+    display: flex;
+  }
+`;
+
 export const ContactButton = styled(Scroll)`
   margin-top: 3rem;
   padding: 0.8rem 4.2rem;

@@ -1,6 +1,9 @@
 import { ReactTyped } from 'react-typed';
 
-import { PresentationSectionContent } from '@interfaces/content';
+import { PresentationSectionContent, SocialsContent } from '@interfaces/content';
+
+import { SocialIcon } from '@components/shared/Icons/SocialIcon';
+import { Tooltip } from '@components/shared/Tooltip';
 
 import { replaceVariable } from '@shared/utils';
 
@@ -11,15 +14,18 @@ import {
   Heading,
   ImageContainer,
   ResumeText,
+  SocialsContainer,
 } from './styles';
 
 interface PresentationProperties {
   readonly content: PresentationSectionContent;
-
   readonly contactButtonLabel: string;
+  readonly socials: SocialsContent[];
 }
 
-export function Presentation({ content, contactButtonLabel }: PresentationProperties) {
+export function Presentation({
+  content, contactButtonLabel, socials,
+}: PresentationProperties) {
   const { heading, text, yearFirstWorkExperience } = content;
 
   const currentYear = new Date().getFullYear();
@@ -50,6 +56,20 @@ export function Presentation({ content, contactButtonLabel }: PresentationProper
             __html: contentText,
           }}
         />
+        <SocialsContainer>
+          {socials.map((social) => (
+            <Tooltip key={social.name} title={social.name}>
+              <a
+                href={social.link}
+                target="_blank"
+                rel="noreferrer"
+                aria-label={`Visit ${social.name} website (in a new tab)`}
+              >
+                <SocialIcon name={social.name} />
+              </a>
+            </Tooltip>
+          ))}
+        </SocialsContainer>
 
         <ContactButton to="contact" smooth duration={1000} spy offset={-80}>
           {contactButtonLabel}
