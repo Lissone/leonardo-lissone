@@ -24,7 +24,8 @@ export const Content = styled.div`
     justify-content: space-between;
   }
 
-  @media (max-width: 400px) {
+  @media (max-width: 450px) {
+    padding-left: 0.75rem;
     padding-right: 1rem;
   }
 `;
