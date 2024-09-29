@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { FiMenu } from 'react-icons/fi';
+import { FiExternalLink, FiMenu } from 'react-icons/fi';
 
 import { HeaderButtons } from '@interfaces/content';
 
@@ -144,6 +144,7 @@ export function Header({
 
             <ResumeButton href={resumeCv} target="_blank" rel="noopener noreferrer">
               {resumeButtonLabel}
+              <FiExternalLink size={22} />
             </ResumeButton>
           </Buttons>
         </Menu>

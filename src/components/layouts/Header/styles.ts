@@ -163,19 +163,25 @@ export const LanguageSwitchContainer = styled(Switch)`
 export const ResumeButton = styled.a`
   padding: 0.7rem 2.4rem;
 
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+
   font-weight: 600;
 
   border: 2px solid var(--red-400);
   border-radius: 0.25rem;
   box-shadow: 0rem 0rem 1.25rem var(--red-400);
 
-  color: var(--red-400);
+  color: var(--gray-300);
   background: var(--gray-900-opacity-80);
 
-  transition: 0.3s transform;
+  transition: 0.3s all;
 
   &:hover {
     transform: scale(1.03);
+
+    color: var(--red-400);
   }
 
   @media (max-width: 920px) {
