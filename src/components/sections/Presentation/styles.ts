@@ -165,15 +165,36 @@ export const SocialsContainer = styled.span`
   }
 `;
 
-export const ContactButton = styled.button`
+export const ButtonsContainer = styled.div`
   margin-top: 3rem;
-  padding: 0.8rem 4.2rem;
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 1.275rem;
+
+  @media (max-height: 630px) {
+    margin-top: 2rem;
+  }
+
+  @media (max-width: 520px) {
+    flex-direction: column;
+    align-items: start;
+  }
+`;
+
+export const ResumeLinkButton = styled.a`
+  padding: 0.8rem 3rem;
+
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
 
   font-size: 1.2rem;
 
   border: 1px solid var(--red-400);
   border-radius: 0.25rem;
-  box-shadow: 0rem 0rem 1.875rem rgba(202, 62, 71, 0.7);
+  box-shadow: 0rem 0rem 1.25rem rgba(202, 62, 71, 0.7);
 
   color: var(--gray-300);
   background: var(--gray-900-opacity-80);
@@ -184,8 +205,30 @@ export const ContactButton = styled.button`
     transform: scale(1.03);
   }
 
-  @media (max-height: 630px) {
-    margin-top: 2rem;
+  @media (max-width: 300px) {
+    padding: 0.8rem 2.5rem;
+  }
+`;
+
+export const ContactButton = styled.button`
+  padding: 0.8rem 3rem;
+
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+
+  font-size: 1.2rem;
+
+  border: 1px solid var(--gray-800);
+  border-radius: 0.25rem;
+
+  color: var(--gray-300);
+  background: var(--gray-900-opacity-80);
+
+  transition: 0.3s transform;
+
+  &:hover {
+    transform: scale(1.03);
   }
 
   @media (max-width: 300px) {

@@ -56,6 +56,8 @@ export default function Home({ setIsOverlayActive }: HomeProps) {
       <Container>
         <Presentation
           content={content.presentationSection}
+          resumeCv={content.sharedButtons.resumeCv}
+          resumeButtonLabel={content.sharedButtons.resumeButtonLabel}
           contactButtonLabel={content.sharedButtons.contactButtonLabel}
           socials={content.socials}
         />

@@ -1,3 +1,5 @@
+import { FiExternalLink } from 'react-icons/fi';
+import { IoPaperPlaneOutline } from 'react-icons/io5';
 import { ReactTyped } from 'react-typed';
 
 import { PresentationSectionContent, SocialsContent } from '@interfaces/content';
@@ -10,23 +12,27 @@ import { Tooltip } from '@components/shared/Tooltip';
 import { replaceVariable } from '@shared/utils';
 
 import {
+  ButtonsContainer,
   ContactButton,
   Container,
   Content,
   Heading,
   ImageContainer,
+  ResumeLinkButton,
   ResumeText,
   SocialsContainer,
 } from './styles';
 
 interface PresentationProperties {
   readonly content: PresentationSectionContent;
+  readonly resumeCv: string;
+  readonly resumeButtonLabel: string;
   readonly contactButtonLabel: string;
   readonly socials: SocialsContent[];
 }
 
 export function Presentation({
-  content, contactButtonLabel, socials,
+  content, resumeCv, resumeButtonLabel, contactButtonLabel, socials,
 }: PresentationProperties) {
   const { toggleSendMessageModalOpen } = useSendMessageModal();
 
@@ -76,9 +82,17 @@ export function Presentation({
           ))}
         </SocialsContainer>
 
-        <ContactButton type="button" onClick={() => toggleSendMessageModalOpen(true)}>
-          {contactButtonLabel}
-        </ContactButton>
+        <ButtonsContainer>
+          <ResumeLinkButton href={resumeCv} target="_blank" rel="noopener noreferrer">
+            {resumeButtonLabel}
+            <FiExternalLink size={22} />
+          </ResumeLinkButton>
+
+          <ContactButton type="button" onClick={() => toggleSendMessageModalOpen(true)}>
+            {contactButtonLabel}
+            <IoPaperPlaneOutline size={22} />
+          </ContactButton>
+        </ButtonsContainer>
       </Content>
 
       <ImageContainer>
