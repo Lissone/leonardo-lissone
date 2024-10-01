@@ -23,7 +23,7 @@ interface HomeProps {
 }
 
 export default function Home({ setIsOverlayActive }: HomeProps) {
-  const [content, setContent] = useState(contentLanguages['pt-br']);
+  const [content, setContent] = useState(contentLanguages['en-us']);
 
   useEffect(() => {
     Aos.init({ duration: 1500 });
