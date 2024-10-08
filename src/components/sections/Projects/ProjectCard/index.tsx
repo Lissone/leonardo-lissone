@@ -109,7 +109,9 @@ export function ProjectCard({
             <div>
               {content.goodHabits.map(({ key, label }) => (
                 <Tooltip key={key} title={label}>
-                  <img src={`/icons/${key}.svg`} alt={`${label} icon`} />
+                  <div>
+                    <img src={`/icons/${key}.svg`} alt={`${label} icon`} />
+                  </div>
                 </Tooltip>
               ))}
             </div>
@@ -117,7 +119,9 @@ export function ProjectCard({
             <div>
               {content.details.map(({ key, label }) => (
                 <Tooltip key={key} title={label}>
-                  <img src={`/icons/${key}.svg`} alt={`${label} icon`} />
+                  <div>
+                    <img src={`/icons/${key}.svg`} alt={`${label} icon`} />
+                  </div>
                 </Tooltip>
               ))}
             </div>
