@@ -1,3 +1,5 @@
+import { IoPaperPlaneOutline } from 'react-icons/io5';
+
 import { ContactSectionContent, SocialsContent } from '@interfaces/content';
 
 import { useSendMessageModal } from '@contexts/SendMessageModalContext';
@@ -38,10 +40,6 @@ export function Contact({ content, socials, contactButtonLabel }: ContactProps) 
 
         <Text>{content.text}</Text>
 
-        <ContactButton type="button" onClick={() => toggleSendMessageModalOpen(true)}>
-          {contactButtonLabel}
-        </ContactButton>
-
         <Socials>
           {socials.map((social) => (
             <Tooltip key={social.name} title={social.name}>
@@ -56,6 +54,12 @@ export function Contact({ content, socials, contactButtonLabel }: ContactProps) 
             </Tooltip>
           ))}
         </Socials>
+
+        <ContactButton type="button" onClick={() => toggleSendMessageModalOpen(true)}>
+          {contactButtonLabel}
+          <IoPaperPlaneOutline size={22} />
+        </ContactButton>
+
       </Content>
 
       <img className="bearing-led" src="/images/bearing-led.svg" alt="Bearing with led" />

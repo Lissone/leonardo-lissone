@@ -47,8 +47,16 @@ export const Container = styled.footer`
       bottom: -7.5rem;
     }
 
-    @media (max-height: 630px) {
-      display: none;
+    @media (min-width: 920px) {
+      @media (max-height: 640px) {
+        display: none;
+      }
+    }
+
+    @media (max-width: 920px) {
+      @media(max-height: 700px) {
+        display: none;
+      }
     }
   }
 `;
@@ -57,6 +65,7 @@ export const Content = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+  gap: 1.5rem;
 
   @media (max-width: 350px) {
     padding: 0 2rem;
@@ -74,11 +83,20 @@ export const Heading = styled.div`
     font-weight: 700;
 
     line-height: 3.2rem;
+    text-align: center;
 
     color: var(--gray-100);
 
-    @media (max-width: 680px) {
-      font-size: 2.8rem;
+    @media (max-width: 850px) {
+      font-size: 2.5rem;
+    }
+
+    @media (max-width: 540px) {
+      font-size: 2.25rem;
+    }
+
+    @media (max-width: 400px) {
+      font-size: 2rem;
     }
   }
 `;
@@ -95,12 +113,15 @@ export const Subtitle = styled.div`
     text-shadow: 0rem 0.25rem 2.5rem rgba(202, 62, 71, 0.5);
 
     color: var(--red-400);
+
+    @media (max-width: 850px) {
+      font-size: 1.5rem;
+    }
   }
 `;
 
 export const Text = styled.p`
   max-width: 60%;
-  margin-top: 0.8rem;
 
   font-size: 1.2rem;
 
@@ -112,8 +133,12 @@ export const Text = styled.p`
 `;
 
 export const ContactButton = styled.button`
-  margin-top: 4rem;
+  margin-top: 2rem;
   padding: 0.8rem 4.2rem;
+
+  display: flex;
+  align-items: center;
+  gap: 0.875rem;
 
   font-size: 1.2rem;
 
@@ -130,13 +155,13 @@ export const ContactButton = styled.button`
     transform: scale(1.03);
   }
 
-  @media (max-height: 630px) {
-    margin-top: 2rem;
+  @media (max-width: 340px) {
+    padding: 0.8rem 3rem;
   }
 `;
 
 export const Socials = styled.div`
-  margin-top: 4rem;
+  margin-top: 1rem;
 
   display: none;
   gap: 2rem;
