@@ -37,21 +37,35 @@ export const Column = styled.div`
 
 export const Heading = styled.div`
   display: flex;
-  gap: 0.8rem;
+  flex-direction: column;
+  gap: 0.35rem;
 
   h1 {
     font-size: 3rem;
     font-weight: 700;
 
-    line-height: 3.5rem;
+    line-height: 3.2rem;
+
+    color: var(--gray-100);
+
+    @media (max-width: 680px) {
+      font-size: 2.8rem;
+    }
+  }
+`;
+
+export const Subtitle = styled.div`
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+
+  h2 {
+    font-size: 1.8rem;
+    font-weight: 700;
+
     text-shadow: 0rem 0.25rem 2.5rem rgba(202, 62, 71, 0.5);
 
     color: var(--red-400);
-
-    @media (max-width: 360px) {
-      font-size: 2.7rem;
-      line-height: 3.2rem;
-    }
   }
 `;
 

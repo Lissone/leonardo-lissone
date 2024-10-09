@@ -12,6 +12,7 @@ import {
   Heading,
   NotFoundText,
   ShowMoreButton,
+  Subtitle,
 } from './styles';
 
 const GRID_LIMIT = 6;
@@ -38,7 +39,14 @@ export function Projects({ content }: ProjectsProperties) {
   return (
     <Container id="projects">
       <header data-aos="fade-up">
-        <Heading>{content.heading}</Heading>
+        <Heading>
+          <Subtitle>
+            <img src="/icons/arrow-heading.svg" alt="Big arrow with led" />
+            <h2>{content.heading[0]}</h2>
+          </Subtitle>
+
+          <h1>{content.heading[1]}</h1>
+        </Heading>
 
         <FilterContainer>
           <span>{content.filterTitleLabel}:</span>

@@ -33,7 +33,7 @@ export const contentLanguages: ContentLang = {
       yearFirstWorkExperience: 2020,
     },
     aboutSection: {
-      heading: 'Sobre mim',
+      heading: ['Introdução', 'Sobre mim'],
       text: '<p>Amante da área de tecnologia, com foco em desenvolvimento <em>front-end/back-end</em>, <strong>interface de usuário</strong> e <strong>engenharia de software</strong>. Objetivo de me tornar um profissional cada vez mais <strong>completo</strong>, sempre buscando aprender e desenvolver projetos para aplicar e <strong>compartilhar conhecimentos</strong> e <strong>experiências</strong>. <strong>Formado</strong> no curso bacharel de <strong>Sistemas de Informação</strong>, criando aplicações de forma autônoma, em busca de desafios, trabalhando com carisma, vontade e paixão. <strong>Profissionalismo é meu foco</strong>.</p>',
       profilePhoto: {
         url: 'https://images.prismic.io/leonardo-lissone/f0ec48f1-86b2-4a45-bf0f-f643398ba1e5_Foto+com+fundo+s%C3%B3lido+%281%29.png?auto=compress,format',
@@ -50,7 +50,7 @@ export const contentLanguages: ContentLang = {
       ],
     },
     jobsSection: {
-      heading: 'Experiências',
+      heading: ['Minha jornada até aqui', 'Experiências'],
       jobs: [
         {
           company: 'G5 Partners',
@@ -122,7 +122,7 @@ export const contentLanguages: ContentLang = {
       ],
     },
     projectsSection: {
-      heading: 'Projetos que já desenvolvi',
+      heading: ['Meus trabalhos', 'Projetos'],
       projects: [
         {
           name: 'Point Control',
@@ -713,7 +713,7 @@ export const contentLanguages: ContentLang = {
       yearFirstWorkExperience: 2020,
     },
     aboutSection: {
-      heading: 'About me',
+      heading: ['Introduction', 'About me'],
       text: "<p>A technology lover, with a focus on <em>front-end/back-end</em> development, <strong>user interface</strong> and <strong>software engineering</strong>. Aim to become an increasingly <strong>complete</strong> professional, always looking to learn and develop projects to apply and <strong>share knowledge</strong> and <strong>experiences</strong>. <strong>Graduated</strong> in the bachelor's degree in <strong>Information Systems</strong>, creating applications autonomously, looking for challenges, working with charisma, will and passion. <strong>Professionalism is my focus</strong>.</p>",
       profilePhoto: {
         url: 'https://images.prismic.io/leonardo-lissone/f0ec48f1-86b2-4a45-bf0f-f643398ba1e5_Foto+com+fundo+s%C3%B3lido+%281%29.png?auto=compress,format',
@@ -730,7 +730,7 @@ export const contentLanguages: ContentLang = {
       ],
     },
     jobsSection: {
-      heading: 'Where I’ve Worked',
+      heading: ['What I Have Done So Far', 'Work Experiences'],
       jobs: [
         {
           company: 'G5 Partners',
@@ -802,7 +802,7 @@ export const contentLanguages: ContentLang = {
       ],
     },
     projectsSection: {
-      heading: "Projects I've Developed",
+      heading: ['My works', 'Projects'],
       projects: [
         {
           name: 'Point Control',

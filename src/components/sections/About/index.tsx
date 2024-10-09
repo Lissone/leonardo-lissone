@@ -7,6 +7,7 @@ import {
   Heading,
   PhotoContainer,
   SkillsList,
+  Subtitle,
   Text,
 } from './styles';
 
@@ -20,9 +21,12 @@ export function About({ content }: AboutProps) {
       <Content>
         <Column>
           <Heading>
-            <img src="/icons/arrow-heading.svg" alt="Big arrow with led" />
+            <Subtitle>
+              <img src="/icons/arrow-heading.svg" alt="Big arrow with led" />
+              <h2>{content.heading[0]}</h2>
+            </Subtitle>
 
-            <h1>{content.heading}</h1>
+            <h1>{content.heading[1]}</h1>
           </Heading>
 
           <Text

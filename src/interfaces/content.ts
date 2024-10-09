@@ -38,7 +38,7 @@ export interface PresentationSectionContent {
 // -----------------------------------------------------------//
 
 export interface AboutSectionContent {
-  readonly heading: string;
+  readonly heading: string[];
   readonly text: string;
   readonly profilePhoto: {
     readonly url: string;
@@ -50,7 +50,7 @@ export interface AboutSectionContent {
 // -----------------------------------------------------------//
 
 export interface JobsSectionContent {
-  readonly heading: string;
+  readonly heading: string[];
   readonly jobs: {
     readonly company: string;
     readonly experiences: {
@@ -66,7 +66,7 @@ export interface JobsSectionContent {
 // -----------------------------------------------------------//
 
 export interface ProjectsSectionContent {
-  readonly heading: string;
+  readonly heading: string[];
   readonly projects: ProjectContent[];
   readonly thumbnailAltLabel: string;
   readonly prototypeLabel: string;

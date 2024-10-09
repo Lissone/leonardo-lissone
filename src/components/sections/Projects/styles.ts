@@ -36,26 +36,37 @@ export const Container = styled.section`
   }
 `;
 
-export const Heading = styled.h1`
-  text-align: center;
-  font-size: 3rem;
-  font-weight: 700;
+export const Heading = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
 
-  line-height: 3.5rem;
-  text-shadow: 0rem 0.25rem 2.5rem rgba(202, 62, 71, 0.5);
+  h1 {
+    font-size: 3rem;
+    font-weight: 700;
 
-  color: var(--red-400);
+    line-height: 3.2rem;
 
-  @media (max-width: 680px) {
-    font-size: 2.5rem;
+    color: var(--gray-100);
+
+    @media (max-width: 680px) {
+      font-size: 2.8rem;
+    }
   }
+`;
 
-  @media (max-width: 580px) {
-    font-size: 2.1rem;
-  }
+export const Subtitle = styled.div`
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
 
-  @media (max-width: 480px) {
-    font-size: 1.9rem;
+  h2 {
+    font-size: 1.8rem;
+    font-weight: 700;
+
+    text-shadow: 0rem 0.25rem 2.5rem rgba(202, 62, 71, 0.5);
+
+    color: var(--red-400);
   }
 `;
 

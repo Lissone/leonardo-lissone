@@ -9,10 +9,10 @@ import {
   ContactButton,
   Container,
   Content,
+  Heading,
   Socials,
   Subtitle,
   Text,
-  Title,
 } from './styles';
 
 interface ContactProps {
@@ -27,13 +27,14 @@ export function Contact({ content, socials, contactButtonLabel }: ContactProps) 
   return (
     <Container id="contact">
       <Content data-aos="fade-up">
-        <Subtitle>
-          <img src="/icons/arrow-heading.svg" alt="Big arrow with led" />
+        <Heading>
+          <Subtitle>
+            <img src="/icons/arrow-heading.svg" alt="Big arrow with led" />
+            <h2>{content.heading[0]}</h2>
+          </Subtitle>
 
-          <h2>{content.heading[0]}</h2>
-        </Subtitle>
-
-        <Title>{content.heading[1]}</Title>
+          <h1>{content.heading[1]}</h1>
+        </Heading>
 
         <Text>{content.text}</Text>
 

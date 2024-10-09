@@ -2,7 +2,7 @@ import { JobsSectionContent } from '@interfaces/content';
 
 import { Tabs } from './Tabs';
 import { ContentTab, HeadingContentTab, Highlight } from './Tabs/styles';
-import { Container, Content, Heading, ImageContainer } from './styles';
+import { Container, Content, Heading, ImageContainer, Subtitle } from './styles';
 
 interface WorkExperiencesProps {
   readonly content: JobsSectionContent;
@@ -13,9 +13,12 @@ export function WorkExperiences({ content }: WorkExperiencesProps) {
     <Container id="work-experiences">
       <Content data-aos="fade-up">
         <Heading>
-          <img src="/icons/arrow-heading.svg" alt="Big arrow with led" />
+          <Subtitle>
+            <img src="/icons/arrow-heading.svg" alt="Big arrow with led" />
+            <h2>{content.heading[0]}</h2>
+          </Subtitle>
 
-          <h1>{content.heading}</h1>
+          <h1>{content.heading[1]}</h1>
         </Heading>
 
         <Tabs>

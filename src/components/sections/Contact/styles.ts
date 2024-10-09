@@ -63,6 +63,25 @@ export const Content = styled.div`
   }
 `;
 
+export const Heading = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+
+  h1 {
+    font-size: 3rem;
+    font-weight: 700;
+
+    line-height: 3.2rem;
+
+    color: var(--gray-100);
+
+    @media (max-width: 680px) {
+      font-size: 2.8rem;
+    }
+  }
+`;
+
 export const Subtitle = styled.div`
   display: flex;
   align-items: center;
@@ -70,23 +89,11 @@ export const Subtitle = styled.div`
 
   h2 {
     font-size: 1.8rem;
-    font-weight: 400;
+    font-weight: 700;
+
+    text-shadow: 0rem 0.25rem 2.5rem rgba(202, 62, 71, 0.5);
 
     color: var(--red-400);
-
-    @media (max-width: 440px) {
-      font-size: 1.4rem;
-    }
-  }
-`;
-
-export const Title = styled.h1`
-  font-size: 2.5rem;
-
-  text-align: center;
-
-  @media (max-width: 440px) {
-    font-size: 2rem;
   }
 `;
 
