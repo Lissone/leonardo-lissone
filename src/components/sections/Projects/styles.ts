@@ -46,6 +46,7 @@ export const Heading = styled.div`
     font-weight: 700;
 
     line-height: 3.2rem;
+    text-align: center;
 
     color: var(--gray-100);
 
