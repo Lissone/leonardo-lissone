@@ -66,6 +66,7 @@ export const Content = styled.div`
 export const Heading = styled.div`
   display: flex;
   flex-direction: column;
+  align-items: center;
   gap: 0.35rem;
 
   h1 {
