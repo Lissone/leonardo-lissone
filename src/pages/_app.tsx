@@ -3,8 +3,6 @@ import { useState } from 'react';
 import Modal from 'react-modal';
 import { Slide, ToastContainer } from 'react-toastify';
 
-import { FixedBorderLed } from '@components/layouts/FixedBorderLed';
-
 import { Container, Content } from '@styles/app';
 import { GlobalOverlay, GlobalStyle } from '@styles/global';
 
@@ -19,7 +17,6 @@ export default function MyApp({ Component, pageProps }: AppProps) {
 
       <Container>
         <GlobalOverlay $isActive={isOverlayActive} />
-        <FixedBorderLed />
 
         <Content>
           <ToastContainer
