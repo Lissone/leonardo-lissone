@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react';
+import { FiPlusCircle } from 'react-icons/fi';
 
 import { ProjectContent, ProjectsSectionContent } from '@interfaces/content';
 
@@ -86,6 +87,7 @@ export function Projects({ content }: ProjectsProperties) {
           onClick={handleShowMoreProjects}
         >
           {content.showMoreButtonLabel}
+          <FiPlusCircle size={22} />
         </ShowMoreButton>
       ) : null}
 

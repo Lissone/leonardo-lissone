@@ -105,6 +105,11 @@ export const ShowMoreButton = styled.button`
   margin-top: 4rem;
   padding: 0.8rem 4.2rem;
 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  
   font-size: 1.2rem;
 
   border: 2px solid var(--gray-800);
