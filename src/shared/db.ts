@@ -122,7 +122,7 @@ export const contentLanguages: ContentLang = {
       ],
     },
     projectsSection: {
-      heading: ['Meus trabalhos', 'Projetos'],
+      heading: ['Meus trabalhos', 'Projetos Desenvolvidos'],
       projects: [
         {
           name: 'Point Control',
@@ -802,7 +802,7 @@ export const contentLanguages: ContentLang = {
       ],
     },
     projectsSection: {
-      heading: ['My works', 'Projects'],
+      heading: ['My works', "Projects I've Developed"],
       projects: [
         {
           name: 'Point Control',

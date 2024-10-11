@@ -59,6 +59,7 @@ export const Heading = styled.div`
 export const Subtitle = styled.div`
   display: flex;
   align-items: center;
+  justify-content: center;
   gap: 0.35rem;
 
   h2 {
