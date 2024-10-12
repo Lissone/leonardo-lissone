@@ -1,4 +1,3 @@
-import Switch from 'react-switch';
 import styled from 'styled-components';
 
 export const Container = styled.header`
@@ -48,11 +47,7 @@ export const Hamburguer = styled.div`
   }
 `;
 
-interface MenuProps {
-  readonly $isOpen: boolean;
-}
-
-export const Menu = styled.div<MenuProps>`
+export const Menu = styled.div`
   display: flex;
   justify-content: space-between;
 
@@ -65,9 +60,9 @@ export const Menu = styled.div<MenuProps>`
     z-index: 15;
 
     top: 0rem;
-    left: ${({ $isOpen }) => ($isOpen ? '0' : '0.65rem')};
+    left: 0.65rem;
 
-    opacity: ${({ $isOpen }) => ($isOpen ? '100%' : '0%')};
+    opacity: 0%;
     overflow: hidden;
 
     flex-direction: column;
@@ -78,7 +73,7 @@ export const Menu = styled.div<MenuProps>`
 
     -webkit-font-smoothing: antialiased;
     transform-origin: 0% 0%;
-    transform: ${({ $isOpen }) => ($isOpen ? 'none' : 'translate(-110%, 0)')};
+    transform: translate(-110%, 0);
 
     transition: all 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
   }
@@ -136,11 +131,6 @@ export const Navigation = styled.nav`
   }
 `;
 
-export const NavLinkTitle = styled.span`
-  font-size: 1.125rem;
-  font-weight: 600;
-`;
-
 export const Buttons = styled.div`
   display: flex;
   align-items: center;
@@ -153,11 +143,6 @@ export const Buttons = styled.div`
 
     flex-direction: column;
   }
-`;
-
-export const LanguageSwitchContainer = styled(Switch)`
-  border: 2px solid var(--red-400);
-  box-shadow: 0rem 0rem 1.25rem var(--red-400);
 `;
 
 export const ResumeButton = styled.a`

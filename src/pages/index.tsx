@@ -2,19 +2,14 @@ import 'aos/dist/aos.css';
 
 import Aos from 'aos';
 import Head from 'next/head';
-import { useEffect, useState } from 'react';
+import { useEffect } from 'react';
 
-import { SendMessageModalProvider } from '@contexts/SendMessageModalContext';
-
-import { FixedSocials } from '@components/layouts/FixedSocials';
-import { Header } from '@components/layouts/Header';
+import { Layout } from '@components/layouts/Layout';
 import { About } from '@components/sections/About';
 import { Contact } from '@components/sections/Contact';
 import { Presentation } from '@components/sections/Presentation';
 import { Projects } from '@components/sections/Projects';
 import { WorkExperiences } from '@components/sections/WorkExperiences';
-
-import { contentLanguages } from '@shared/db';
 
 import { Container } from '@styles/home';
 
@@ -23,57 +18,41 @@ interface HomeProps {
 }
 
 export default function Home({ setIsOverlayActive }: HomeProps) {
-  const [content, setContent] = useState(contentLanguages['en-us']);
-
   useEffect(() => {
     Aos.init({ duration: 1500 });
   }, []);
 
-  const toggleContentLanguage = () => {
-    setContent(
-      content.lang === 'pt-br' ? contentLanguages['en-us'] : contentLanguages['pt-br'],
-    );
-  };
-
   return (
-    <SendMessageModalProvider content={content.contactSection.sendMessageModalContent}>
+    <>
       <Head>
         <title>Leonardo Lissone</title>
       </Head>
 
-      <FixedSocials socials={content.socials} />
+      <Layout setIsOverlayActive={setIsOverlayActive}>
+        {(content) => (
+          <Container>
+            <Presentation
+              content={content.presentationSection}
+              resumeCv={content.sharedButtons.resumeCv}
+              resumeButtonLabel={content.sharedButtons.resumeButtonLabel}
+              contactButtonLabel={content.sharedButtons.contactButtonLabel}
+              socials={content.socials}
+            />
 
-      <Header
-        language={content.lang}
-        resumeCv={content.sharedButtons.resumeCv}
-        resumeButtonLabel={content.sharedButtons.resumeButtonLabel}
-        headerButtons={content.headerButtons}
-        profilePhoto={content.aboutSection.profilePhoto}
-        toggleContentLanguage={toggleContentLanguage}
-        setIsOverlayActive={setIsOverlayActive}
-      />
+            <About content={content.aboutSection} />
 
-      <Container>
-        <Presentation
-          content={content.presentationSection}
-          resumeCv={content.sharedButtons.resumeCv}
-          resumeButtonLabel={content.sharedButtons.resumeButtonLabel}
-          contactButtonLabel={content.sharedButtons.contactButtonLabel}
-          socials={content.socials}
-        />
+            <WorkExperiences content={content.jobsSection} />
 
-        <About content={content.aboutSection} />
+            <Projects content={content.projectsSection} />
 
-        <WorkExperiences content={content.jobsSection} />
-
-        <Projects content={content.projectsSection} />
-
-        <Contact
-          content={content.contactSection}
-          socials={content.socials}
-          contactButtonLabel={content.sharedButtons.contactButtonLabel}
-        />
-      </Container>
-    </SendMessageModalProvider>
+            <Contact
+              content={content.contactSection}
+              socials={content.socials}
+              contactButtonLabel={content.sharedButtons.contactButtonLabel}
+            />
+          </Container>
+        )}
+      </Layout>
+    </>
   );
 }
