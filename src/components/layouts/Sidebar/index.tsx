@@ -1,6 +1,6 @@
 import { FiExternalLink } from 'react-icons/fi';
 
-import { HeaderButtons } from '@interfaces/content';
+import { useData } from '@contexts/DataContext';
 
 import { Books } from '@components/shared/Icons/Books';
 import { Home } from '@components/shared/Icons/Home';
@@ -19,38 +19,21 @@ import {
 
 interface SidebarProps {
   readonly show: boolean;
-  readonly language: string;
-  readonly resumeCv: string;
-  readonly resumeButtonLabel: string;
-  readonly headerButtons: HeaderButtons;
-  readonly profilePhoto: {
-    readonly url: string;
-    readonly alt: string;
-  };
-  readonly toggleContentLanguage: () => void;
 }
 
-export function Sidebar({
-  show = false,
-  language,
-  resumeCv,
-  resumeButtonLabel,
-  headerButtons,
-  profilePhoto,
-  toggleContentLanguage,
-}: SidebarProps) {
+export function Sidebar({ show = false }: SidebarProps) {
+  const { data } = useData();
+  const { headerButtons, aboutSection, sharedButtons } = data;
+
   return (
     <Container $show={show}>
       <PhotoContainer>
         <img src="/images/avatar-border.svg" alt="Avatar border" />
-        <img src={profilePhoto.url} alt={profilePhoto.alt} />
+        <img src={aboutSection.profilePhoto.url} alt={aboutSection.profilePhoto.alt} />
       </PhotoContainer>
 
       <LanguageSwitchContainer>
-        <LanguageSwitch
-          language={language}
-          toggleContentLanguage={toggleContentLanguage}
-        />
+        <LanguageSwitch />
       </LanguageSwitchContainer>
 
       <Navigation>
@@ -68,8 +51,8 @@ export function Sidebar({
         </NavLink>
       </Navigation>
 
-      <ResumeButton href={resumeCv} target="_blank" rel="noopener noreferrer">
-        {resumeButtonLabel}
+      <ResumeButton href={sharedButtons.resumeCv} target="_blank" rel="noopener noreferrer">
+        {sharedButtons.resumeButtonLabel}
         <FiExternalLink size={22} />
       </ResumeButton>
     </Container>

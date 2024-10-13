@@ -29,29 +29,13 @@ export default function Home({ setIsOverlayActive }: HomeProps) {
       </Head>
 
       <Layout setIsOverlayActive={setIsOverlayActive}>
-        {(content) => (
-          <Container>
-            <Presentation
-              content={content.presentationSection}
-              resumeCv={content.sharedButtons.resumeCv}
-              resumeButtonLabel={content.sharedButtons.resumeButtonLabel}
-              contactButtonLabel={content.sharedButtons.contactButtonLabel}
-              socials={content.socials}
-            />
-
-            <About content={content.aboutSection} />
-
-            <WorkExperiences content={content.jobsSection} />
-
-            <Projects content={content.projectsSection} />
-
-            <Contact
-              content={content.contactSection}
-              socials={content.socials}
-              contactButtonLabel={content.sharedButtons.contactButtonLabel}
-            />
-          </Container>
-        )}
+        <Container>
+          <Presentation />
+          <About />
+          <WorkExperiences />
+          <Projects />
+          <Contact />
+        </Container>
       </Layout>
     </>
   );

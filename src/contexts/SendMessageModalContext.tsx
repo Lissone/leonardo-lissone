@@ -1,7 +1,5 @@
 import { ReactNode, createContext, useContext, useMemo, useState } from 'react';
 
-import { SendMessageModalContent } from '@interfaces/content';
-
 import { SendMessageModal } from '@components/shared/SendMessageModal';
 
 interface SendMessageModalContextType {
@@ -9,7 +7,6 @@ interface SendMessageModalContextType {
 }
 
 interface SendMessageModalProviderProps {
-  readonly content: SendMessageModalContent;
   readonly children: ReactNode;
 }
 
@@ -17,7 +14,7 @@ interface SendMessageModalProviderProps {
 
 const SendMessageModalContext = createContext({} as SendMessageModalContextType);
 
-export function SendMessageModalProvider({ content, children }: SendMessageModalProviderProps) {
+export function SendMessageModalProvider({ children }: SendMessageModalProviderProps) {
   const [isSendMessageModalOpen, setIsSendMessageModalOpen] = useState(false);
 
   const contextValues = useMemo(
@@ -31,7 +28,6 @@ export function SendMessageModalProvider({ content, children }: SendMessageModal
 
       <SendMessageModal
         isOpen={isSendMessageModalOpen}
-        content={content}
         handleClose={() => setIsSendMessageModalOpen(false)}
       />
     </SendMessageModalContext.Provider>

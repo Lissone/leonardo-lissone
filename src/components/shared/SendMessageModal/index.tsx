@@ -6,7 +6,9 @@ import { BiSend } from 'react-icons/bi';
 import { toast } from 'react-toastify';
 import * as yup from 'yup';
 
-import { SendMessageModalContent } from '@interfaces/content';
+import { SendMessageModalContentValidationInput } from '@interfaces/content';
+
+import { useData } from '@contexts/DataContext';
 
 import { Loader } from '@components/shared/Loader';
 import { Modal } from '@components/shared/Modal';
@@ -26,33 +28,21 @@ type FormValuesType = {
 
 interface SendMessageModalProps {
   readonly isOpen: boolean;
-  readonly content: SendMessageModalContent;
   readonly handleClose: () => void;
 }
 
-export function SendMessageModal({
-  isOpen,
-  content,
-  handleClose,
-}: SendMessageModalProps) {
-  const { validationInput, input } = content;
-
+export function SendMessageModal({ isOpen, handleClose }: SendMessageModalProps) {
   const [isSubmitting, setIsSubmitting] = useState(false);
 
-  const validationSchema = yup.object().shape({
-    name: yup.string().required(validationInput.nameRequiredLabel),
-    email: yup
-      .string()
-      .required(validationInput.emailRequiredLabel)
-      .email(validationInput.emailInvalidLabel),
-    message: yup
-      .string()
-      .required(validationInput.messageRequiredLabel)
-      .min(20, validationInput.messageMinLabel),
-  });
+  const { data } = useData();
+  const {
+    title, text, buttonSendMessage,
+    validationInput, input,
+    emailMessageSuccess, emailMessageError,
+  } = data.contactSection.sendMessageModalContent;
 
   const { register, handleSubmit, reset, formState } = useForm<FormValuesType>({
-    resolver: yupResolver(validationSchema),
+    resolver: yupResolver(getSchema(validationInput)),
   });
 
   const onSubmit: SubmitHandler<FormValuesType> = async (formValues) => {
@@ -67,9 +57,9 @@ export function SendMessageModal({
 
       reset();
       handleClose();
-      toast.success(content.emailMessageSuccess);
+      toast.success(emailMessageSuccess);
     } catch {
-      toast.error(content.emailMessageError);
+      toast.error(emailMessageError);
     } finally {
       setIsSubmitting(false);
     }
@@ -78,12 +68,12 @@ export function SendMessageModal({
   return (
     <Modal
       isOpen={isOpen}
-      title={content.title}
+      title={title}
       headerIcon={<img src="/icons/paper-plane.svg" alt="Paper plane icon" />}
       handleClose={handleClose}
     >
       <Content>
-        <span>{content.text}</span>
+        <span>{text}</span>
 
         <Form onSubmit={handleSubmit(onSubmit)}>
           <FormControl name="name" label={input.name.label} error={formState.errors.name}>
@@ -123,7 +113,7 @@ export function SendMessageModal({
 
           <ButtonSubmit type="submit" disabled={isSubmitting}>
             <div />
-            {content.buttonSendMessage}
+            {buttonSendMessage}
             {isSubmitting ? <Loader /> : <BiSend size={18} />}
           </ButtonSubmit>
         </Form>
@@ -131,3 +121,17 @@ export function SendMessageModal({
     </Modal>
   );
 }
+
+const getSchema = (
+  validationInput: SendMessageModalContentValidationInput,
+) => yup.object().shape({
+  name: yup.string().required(validationInput.nameRequiredLabel),
+  email: yup
+    .string()
+    .required(validationInput.emailRequiredLabel)
+    .email(validationInput.emailInvalidLabel),
+  message: yup
+    .string()
+    .required(validationInput.messageRequiredLabel)
+    .min(20, validationInput.messageMinLabel),
+});

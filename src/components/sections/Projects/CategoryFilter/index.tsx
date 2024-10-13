@@ -6,11 +6,11 @@ import {
   ProjectsFiltersLabelsKeys,
 } from '@interfaces/content';
 
+import { useData } from '@contexts/DataContext';
+
 import { Container } from './styles';
 
 interface CategoryFilterProps {
-  readonly projects: ProjectContent[];
-  readonly filtersLabels: ProjectsFiltersLabels[];
   readonly setCurrentProjects: (projects: ProjectContent[]) => void;
 }
 
@@ -20,11 +20,11 @@ interface Filter {
   readonly name?: string;
 }
 
-export function CategoryFilter({
-  projects,
-  filtersLabels,
-  setCurrentProjects,
-}: CategoryFilterProps) {
+export function CategoryFilter({ setCurrentProjects }: CategoryFilterProps) {
+  const { data } = useData();
+  const { projectsSection } = data;
+  const { projects, filtersLabels } = projectsSection;
+
   const allFilters: Filter[] = [];
   populateFilterLabelByLanguage(allFilters, filtersLabels);
 

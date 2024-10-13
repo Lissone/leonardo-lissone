@@ -150,15 +150,17 @@ export interface SendMessageModalContent {
     readonly email: InputContent;
     readonly message: InputContent;
   };
-  readonly validationInput: {
-    readonly nameRequiredLabel: string;
-    // -------
-    readonly emailRequiredLabel: string;
-    readonly emailInvalidLabel: string;
-    // -------
-    readonly messageRequiredLabel: string;
-    readonly messageMinLabel: string;
-  };
+  readonly validationInput: SendMessageModalContentValidationInput;
+}
+
+export interface SendMessageModalContentValidationInput {
+  readonly nameRequiredLabel: string;
+  // -------
+  readonly emailRequiredLabel: string;
+  readonly emailInvalidLabel: string;
+  // -------
+  readonly messageRequiredLabel: string;
+  readonly messageMinLabel: string;
 }
 
 export interface ContactSectionContent {

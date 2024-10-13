@@ -1,5 +1,7 @@
 import { ProjectContent } from '@interfaces/content';
 
+import { useData } from '@contexts/DataContext';
+
 import { SocialIcon } from '@components/shared/Icons/SocialIcon';
 import { Modal } from '@components/shared/Modal';
 import { Tooltip } from '@components/shared/Tooltip';
@@ -13,30 +15,30 @@ import {
 
 interface CollaborationModalProps {
   readonly isOpen: boolean;
-  readonly title: string;
-  readonly text: string;
   readonly project: ProjectContent | null;
   readonly handleClose: () => void;
 }
 
 export function CollaborationModal({
   isOpen,
-  title,
-  text,
   project,
   handleClose,
 }: CollaborationModalProps) {
+  const { data } = useData();
+  const { projectsSection } = data;
+  const { collaborationModalTitle, collaborationModalText } = projectsSection;
+
   if (!project) return null;
 
   return (
     <Modal
       isOpen={isOpen}
-      title={`${project.name} - ${title}`}
+      title={`${project.name} - ${collaborationModalTitle}`}
       headerIcon={<img src="/icons/group-users.svg" alt="Group of users icon" />}
       handleClose={handleClose}
     >
       <Content>
-        <span>{text}</span>
+        <span>{collaborationModalText}</span>
 
         <ul>
           {project.collaborators?.map((collaborator) => (

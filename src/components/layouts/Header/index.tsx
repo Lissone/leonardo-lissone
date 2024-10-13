@@ -1,6 +1,6 @@
 import { FiExternalLink, FiMenu } from 'react-icons/fi';
 
-import { HeaderButtons } from '@interfaces/content';
+import { useData } from '@contexts/DataContext';
 
 import { Books } from '@components/shared/Icons/Books';
 import { Home } from '@components/shared/Icons/Home';
@@ -20,22 +20,13 @@ import {
 } from './styles';
 
 interface HeaderProps {
-  readonly language: string;
-  readonly resumeCv: string;
-  readonly resumeButtonLabel: string;
-  readonly headerButtons: HeaderButtons;
-  readonly toggleContentLanguage: () => void;
   readonly handleHamburguerClick: () => void;
 }
 
-export function Header({
-  language,
-  resumeCv,
-  resumeButtonLabel,
-  headerButtons,
-  handleHamburguerClick,
-  toggleContentLanguage,
-}: HeaderProps) {
+export function Header({ handleHamburguerClick }: HeaderProps) {
+  const { data } = useData();
+  const { headerButtons, sharedButtons } = data;
+
   return (
     <Container>
       <Content>
@@ -62,13 +53,10 @@ export function Header({
           </Navigation>
 
           <Buttons>
-            <LanguageSwitch
-              language={language}
-              toggleContentLanguage={toggleContentLanguage}
-            />
+            <LanguageSwitch />
 
-            <ResumeButton href={resumeCv} target="_blank" rel="noopener noreferrer">
-              {resumeButtonLabel}
+            <ResumeButton href={sharedButtons.resumeCv} target="_blank" rel="noopener noreferrer">
+              {sharedButtons.resumeButtonLabel}
               <FiExternalLink size={22} />
             </ResumeButton>
           </Buttons>

@@ -2,8 +2,7 @@ import { FiExternalLink } from 'react-icons/fi';
 import { IoPaperPlaneOutline } from 'react-icons/io5';
 import { ReactTyped } from 'react-typed';
 
-import { PresentationSectionContent, SocialsContent } from '@interfaces/content';
-
+import { useData } from '@contexts/DataContext';
 import { useSendMessageModal } from '@contexts/SendMessageModalContext';
 
 import { SocialIcon } from '@components/shared/Icons/SocialIcon';
@@ -23,20 +22,12 @@ import {
   SocialsContainer,
 } from './styles';
 
-interface PresentationProperties {
-  readonly content: PresentationSectionContent;
-  readonly resumeCv: string;
-  readonly resumeButtonLabel: string;
-  readonly contactButtonLabel: string;
-  readonly socials: SocialsContent[];
-}
-
-export function Presentation({
-  content, resumeCv, resumeButtonLabel, contactButtonLabel, socials,
-}: PresentationProperties) {
+export function Presentation() {
+  const { data } = useData();
   const { toggleSendMessageModalOpen } = useSendMessageModal();
 
-  const { heading, text, yearFirstWorkExperience } = content;
+  const { presentationSection, sharedButtons, socials } = data;
+  const { heading, text, yearFirstWorkExperience } = presentationSection;
 
   const currentYear = new Date().getFullYear();
   const carrerTime = (currentYear - yearFirstWorkExperience).toString();
@@ -83,13 +74,13 @@ export function Presentation({
         </SocialsContainer>
 
         <ButtonsContainer>
-          <ResumeLinkButton href={resumeCv} target="_blank" rel="noopener noreferrer">
-            {resumeButtonLabel}
+          <ResumeLinkButton href={sharedButtons.resumeCv} target="_blank" rel="noopener noreferrer">
+            {sharedButtons.resumeButtonLabel}
             <FiExternalLink size={22} />
           </ResumeLinkButton>
 
           <ContactButton type="button" onClick={() => toggleSendMessageModalOpen(true)}>
-            {contactButtonLabel}
+            {sharedButtons.contactButtonLabel}
             <IoPaperPlaneOutline size={22} />
           </ContactButton>
         </ButtonsContainer>

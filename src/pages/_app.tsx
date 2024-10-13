@@ -3,6 +3,8 @@ import { useState } from 'react';
 import Modal from 'react-modal';
 import { Slide, ToastContainer } from 'react-toastify';
 
+import { Providers } from '@contexts/Providers';
+
 import { Container } from '@styles/app';
 import { GlobalOverlay, GlobalStyle } from '@styles/global';
 
@@ -12,7 +14,7 @@ export default function MyApp({ Component, pageProps }: AppProps) {
   const [isOverlayActive, setIsOverlayActive] = useState(false);
 
   return (
-    <>
+    <Providers>
       <GlobalStyle />
 
       <Container>
@@ -31,6 +33,6 @@ export default function MyApp({ Component, pageProps }: AppProps) {
 
         <Component {...pageProps} setIsOverlayActive={setIsOverlayActive} />
       </Container>
-    </>
+    </Providers>
   );
 }

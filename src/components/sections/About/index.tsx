@@ -1,4 +1,4 @@
-import { AboutSectionContent } from '@interfaces/content';
+import { useData } from '@contexts/DataContext';
 
 import {
   Column,
@@ -11,11 +11,11 @@ import {
   Text,
 } from './styles';
 
-interface AboutProps {
-  readonly content: AboutSectionContent;
-}
+export function About() {
+  const { data } = useData();
+  const { aboutSection } = data;
+  const { heading, text, recentTechnologies, profilePhoto } = aboutSection;
 
-export function About({ content }: AboutProps) {
   return (
     <Container id="about" data-aos="fade-up">
       <Content>
@@ -23,20 +23,20 @@ export function About({ content }: AboutProps) {
           <Heading>
             <Subtitle>
               <img src="/icons/arrow-heading.svg" alt="Big arrow with led" />
-              <h2>{content.heading[0]}</h2>
+              <h2>{heading[0]}</h2>
             </Subtitle>
 
-            <h1>{content.heading[1]}</h1>
+            <h1>{heading[1]}</h1>
           </Heading>
 
           <Text
             dangerouslySetInnerHTML={{
-              __html: content.text,
+              __html: text,
             }}
           />
 
           <SkillsList>
-            {content.recentTechnologies.map((technology) => (
+            {recentTechnologies.map((technology) => (
               <li key={technology}>
                 <img src="/icons/arrow.svg" alt="Red arrow with led" />
                 {technology}
@@ -48,7 +48,7 @@ export function About({ content }: AboutProps) {
         <Column>
           <PhotoContainer>
             <img src="/images/avatar-border.svg" alt="Avatar border" />
-            <img src={content.profilePhoto.url} alt={content.profilePhoto.alt} />
+            <img src={profilePhoto.url} alt={profilePhoto.alt} />
           </PhotoContainer>
         </Column>
       </Content>

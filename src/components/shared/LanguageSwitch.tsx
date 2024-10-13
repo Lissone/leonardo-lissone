@@ -1,16 +1,16 @@
 import ReactSwitch from 'react-switch';
 import styled from 'styled-components';
 
-interface LanguageSwitchProps {
-  readonly language: string;
-  readonly toggleContentLanguage: () => void;
-}
+import { useData } from '@contexts/DataContext';
 
-export function LanguageSwitch({ language, toggleContentLanguage }: LanguageSwitchProps) {
+export function LanguageSwitch() {
+  const { data, toggleDataLanguage } = useData();
+  const { lang } = data;
+
   return (
     <Container
-      checked={language === 'en-us'}
-      onChange={toggleContentLanguage}
+      checked={lang === 'en-us'}
+      onChange={toggleDataLanguage}
       handleDiameter={26}
       width={100}
       height={40}

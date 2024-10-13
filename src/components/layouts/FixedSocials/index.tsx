@@ -1,15 +1,14 @@
-import { SocialsContent } from '@interfaces/content';
+import { useData } from '@contexts/DataContext';
 
 import { SocialIcon } from '@components/shared/Icons/SocialIcon';
 import { Tooltip } from '@components/shared/Tooltip';
 
 import { Container, Content } from './styles';
 
-interface FixedSocialsProps {
-  readonly socials: SocialsContent[];
-}
+export function FixedSocials() {
+  const { data } = useData();
+  const { socials } = data;
 
-export function FixedSocials({ socials }: FixedSocialsProps) {
   return (
     <Container>
       <Content>

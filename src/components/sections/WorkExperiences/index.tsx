@@ -1,28 +1,28 @@
-import { JobsSectionContent } from '@interfaces/content';
+import { useData } from '@contexts/DataContext';
 
 import { Tabs } from './Tabs';
 import { ContentTab, HeadingContentTab, Highlight } from './Tabs/styles';
 import { Container, Content, Heading, ImageContainer, Subtitle } from './styles';
 
-interface WorkExperiencesProps {
-  readonly content: JobsSectionContent;
-}
+export function WorkExperiences() {
+  const { data } = useData();
+  const { jobsSection } = data;
+  const { heading, jobs } = jobsSection;
 
-export function WorkExperiences({ content }: WorkExperiencesProps) {
   return (
     <Container id="work-experiences">
       <Content data-aos="fade-up">
         <Heading>
           <Subtitle>
             <img src="/icons/arrow-heading.svg" alt="Big arrow with led" />
-            <h2>{content.heading[0]}</h2>
+            <h2>{heading[0]}</h2>
           </Subtitle>
 
-          <h1>{content.heading[1]}</h1>
+          <h1>{heading[1]}</h1>
         </Heading>
 
         <Tabs>
-          {content.jobs.map((job) => (
+          {jobs.map((job) => (
             <div key={job.company} id={job.company}>
               {job.experiences.map((experience) => (
                 <ContentTab key={experience.role}>

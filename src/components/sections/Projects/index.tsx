@@ -1,7 +1,9 @@
 import { useEffect, useState } from 'react';
 import { FiPlusCircle } from 'react-icons/fi';
 
-import { ProjectContent, ProjectsSectionContent } from '@interfaces/content';
+import { ProjectContent } from '@interfaces/content';
+
+import { useData } from '@contexts/DataContext';
 
 import { CategoryFilter } from './CategoryFilter';
 import { CollaborationModal } from './CollaborationModal';
@@ -18,24 +20,28 @@ import {
 
 const GRID_LIMIT = 6;
 
-interface ProjectsProperties {
-  readonly content: ProjectsSectionContent;
-}
+export function Projects() {
+  const { data } = useData();
+  const { projectsSection } = data;
+  const {
+    heading, projects, filterTitleLabel,
+    projectsNotfoundLabel, showMoreButtonLabel,
+  } = projectsSection;
 
-export function Projects({ content }: ProjectsProperties) {
   const [currentGrid, setCurrentGrid] = useState(GRID_LIMIT);
-  const [currentProjects, setCurrentProjects] = useState(content.projects);
+  const [currentProjects, setCurrentProjects] = useState(projects);
   const [projectCollaboratorsSelected, setProjectCollaboratorsSelected]
     = useState<ProjectContent | null>(null);
-  const projectsSliced = currentProjects.slice(0, currentGrid);
 
-  useEffect(() => {
-    setProjectCollaboratorsSelected(null);
-  }, [content]);
+  const projectsSliced = currentProjects.slice(0, currentGrid);
 
   const handleShowMoreProjects = () => {
     setCurrentGrid((grid) => grid + GRID_LIMIT);
   };
+
+  useEffect(() => {
+    setProjectCollaboratorsSelected(null);
+  }, [data]);
 
   return (
     <Container id="projects">
@@ -43,19 +49,15 @@ export function Projects({ content }: ProjectsProperties) {
         <Heading>
           <Subtitle>
             <img src="/icons/arrow-heading.svg" alt="Big arrow with led" />
-            <h2>{content.heading[0]}</h2>
+            <h2>{heading[0]}</h2>
           </Subtitle>
 
-          <h1>{content.heading[1]}</h1>
+          <h1>{heading[1]}</h1>
         </Heading>
 
         <FilterContainer>
-          <span>{content.filterTitleLabel}:</span>
-          <CategoryFilter
-            projects={content.projects}
-            filtersLabels={content.filtersLabels}
-            setCurrentProjects={setCurrentProjects}
-          />
+          <span>{filterTitleLabel}:</span>
+          <CategoryFilter setCurrentProjects={setCurrentProjects} />
         </FilterContainer>
       </header>
 
@@ -63,11 +65,7 @@ export function Projects({ content }: ProjectsProperties) {
         {projectsSliced.map((project) => (
           <ProjectCard
             key={project.name}
-            content={project}
-            thumbnailAltLabel={content.thumbnailAltLabel}
-            collaborationLabel={content.collaborationLabel}
-            prototypeLabel={content.prototypeLabel}
-            repositoryLabel={content.repositoryLabel}
+            project={project}
             handleOpenCollaborationModal={() => setProjectCollaboratorsSelected(project)}
           />
         ))}
@@ -75,7 +73,7 @@ export function Projects({ content }: ProjectsProperties) {
 
       {currentProjects.length === 0 ? (
         <NotFoundText data-aos="fade-up" data-aos-duration="1100">
-          {content.projectsNotfoundLabel}
+          {projectsNotfoundLabel}
         </NotFoundText>
       ) : null}
 
@@ -86,15 +84,13 @@ export function Projects({ content }: ProjectsProperties) {
           data-aos-duration="1100"
           onClick={handleShowMoreProjects}
         >
-          {content.showMoreButtonLabel}
+          {showMoreButtonLabel}
           <FiPlusCircle size={22} />
         </ShowMoreButton>
       ) : null}
 
       <CollaborationModal
         project={projectCollaboratorsSelected}
-        title={content.collaborationModalTitle}
-        text={content.collaborationModalText}
         isOpen={!!projectCollaboratorsSelected}
         handleClose={() => setProjectCollaboratorsSelected(null)}
       />
