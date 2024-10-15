@@ -176,15 +176,10 @@ export const ButtonsContainer = styled.div`
   @media (max-height: 630px) {
     margin-top: 2rem;
   }
-
-  @media (max-width: 520px) {
-    flex-direction: column;
-    align-items: start;
-  }
 `;
 
 export const ResumeLinkButton = styled.a`
-  padding: 0.8rem 3rem;
+  padding: 0.8rem 3.5rem;
 
   display: flex;
   align-items: center;
@@ -199,10 +194,12 @@ export const ResumeLinkButton = styled.a`
   color: var(--gray-300);
   background: var(--gray-900-opacity-80);
 
-  transition: 0.3s transform;
+  transition: 0.3s all;
 
   &:hover {
     transform: scale(1.03);
+
+    color: var(--red-400);
   }
 
   @media (max-width: 300px) {
@@ -225,14 +222,19 @@ export const ContactButton = styled.button`
   color: var(--gray-300);
   background: var(--gray-900-opacity-80);
 
-  transition: 0.3s transform;
+  transition: 0.3s all;
 
   &:hover {
     transform: scale(1.03);
+
+    border-color: var(--red-400);
+    box-shadow: 0rem 0rem 1.25rem rgba(202, 62, 71, 0.7);
+
+    color: var(--red-400);
   }
 
-  @media (max-width: 300px) {
-    padding: 0.8rem 2.5rem;
+  @media (max-width: 570px) {
+    display: none;
   }
 `;
 
