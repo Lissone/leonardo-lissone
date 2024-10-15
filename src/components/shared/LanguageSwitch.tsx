@@ -23,6 +23,7 @@ export function LanguageSwitch() {
       activeBoxShadow="0rem 0rem 0.625rem #CA3E47"
       uncheckedIcon={
         <div
+          className="switch-label"
           style={{
             ...languageSwitchDefaultStyle,
             paddingRight: 14,
@@ -34,6 +35,7 @@ export function LanguageSwitch() {
       }
       checkedIcon={
         <div
+          className="switch-label"
           style={{
             ...languageSwitchDefaultStyle,
             paddingLeft: 14,
@@ -56,9 +58,21 @@ const languageSwitchDefaultStyle = {
 
   fontSize: 18,
   fontWeight: 700,
+
+  transition: '0.3s all',
 };
 
 export const Container = styled(ReactSwitch)`
   border: 2px solid var(--red-400);
   box-shadow: 0rem 0rem 1.25rem var(--red-400);
+
+  transition: 0.3s all !important;
+
+  &:hover {
+    transform: scale(1.03);
+
+    .switch-label {
+      color: var(--red-400) !important;
+    }
+  }
 `;
