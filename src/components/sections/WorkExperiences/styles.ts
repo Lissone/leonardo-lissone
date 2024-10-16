@@ -5,6 +5,8 @@ export const Container = styled.section`
   height: 100%;
   min-height: 100vh;
 
+  position: relative;
+
   display: flex;
   justify-content: space-between;
 `;
@@ -14,10 +16,13 @@ export const Content = styled.div`
   max-width: 1150px;
   margin: 0 auto;
   padding-top: 6rem;
-  padding-left: 9rem;
 
   display: flex;
   flex-direction: column;
+
+  @media (max-width: 1460px) {
+    padding-left: 8rem;
+  }
 
   @media (max-width: 1090px) {
     padding-right: 4rem;
@@ -42,6 +47,7 @@ export const Content = styled.div`
 export const Heading = styled.div`
   display: flex;
   flex-direction: column;
+  align-items: center;
   gap: 0.35rem;
 
   h1 {
@@ -92,16 +98,16 @@ export const Subtitle = styled.div`
 export const ImageContainer = styled.div`
   display: flex;
   align-items: center;
+  position: absolute;
+
+  top: 12.5rem;
+  right: 0;
+
+  @media (max-width: 1760px) {
+    display: none;
+  }
 
   img {
     height: 38rem;
-
-    @media (max-width: 1225px) {
-      height: 30rem;
-    }
-
-    @media (max-width: 1090px) {
-      display: none;
-    }
   }
 `;
