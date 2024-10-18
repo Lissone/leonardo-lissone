@@ -3,6 +3,7 @@ import { send as emailJsSend } from 'emailjs-com';
 import { useState } from 'react';
 import { SubmitHandler, useForm } from 'react-hook-form';
 import { BiSend } from 'react-icons/bi';
+import { IoPaperPlaneOutline } from 'react-icons/io5';
 import { toast } from 'react-toastify';
 import * as yup from 'yup';
 
@@ -69,7 +70,7 @@ export function SendMessageModal({ isOpen, handleClose }: SendMessageModalProps)
     <Modal
       isOpen={isOpen}
       title={title}
-      headerIcon={<img src="/icons/paper-plane.svg" alt="Paper plane icon" />}
+      headerIcon={<IoPaperPlaneOutline size={24} />}
       handleClose={handleClose}
     >
       <Content>
