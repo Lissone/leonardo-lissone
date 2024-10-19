@@ -76,11 +76,13 @@ export interface ProjectsSectionContent {
   readonly collaborationLabel: string;
   readonly collaborationModalTitle: string;
   readonly collaborationModalText: string;
-  readonly filterTitleLabel: string;
-  readonly filtersLabels: ProjectsFiltersLabels[];
+  readonly filterNameTitleLabel: string;
+  readonly filterCategoryTooltipLabel: string;
+  readonly filterCategoryTitleLabel: string;
+  readonly filterCategoryLabels: ProjectsCategoryFilterLabels[];
 }
 
-export type ProjectsFiltersLabelsKeys =
+export type ProjectsCategoryFilterLabelsKeys =
   | 'all'
   | 'repositories'
   | 'production'
@@ -89,8 +91,8 @@ export type ProjectsFiltersLabelsKeys =
   | 'web'
   | 'mobile'
   | 'responsive';
-export interface ProjectsFiltersLabels {
-  readonly key: ProjectsFiltersLabelsKeys;
+export interface ProjectsCategoryFilterLabels {
+  readonly key: ProjectsCategoryFilterLabelsKeys;
   readonly label: string;
 }
 

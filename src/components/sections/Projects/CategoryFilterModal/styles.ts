@@ -1,7 +1,8 @@
 import styled from 'styled-components';
 
-export const Container = styled.div`
-  margin-top: 0.75rem;
+export const Content = styled.div`
+  padding: 1.8rem 2.25rem;
+  width: 100%;
 
   display: flex;
   align-items: center;

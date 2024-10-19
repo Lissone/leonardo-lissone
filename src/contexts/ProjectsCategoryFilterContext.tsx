@@ -1,32 +1,46 @@
-import { useEffect, useState } from 'react';
+import {
+  ReactNode, createContext, useCallback, useContext,
+  useEffect, useMemo, useState,
+} from 'react';
 
 import {
   ProjectContent,
-  ProjectsFiltersLabels,
-  ProjectsFiltersLabelsKeys,
+  ProjectsCategoryFilterLabels,
+  ProjectsCategoryFilterLabelsKeys,
 } from '@interfaces/content';
 
-import { useData } from '@contexts/DataContext';
+import { useData } from './DataContext';
 
-import { Container } from './styles';
+interface ProjectsCategoryFilterContextType {
+  readonly allFilters: Filter[];
+  readonly filterExists: (name: string) => boolean;
+  readonly toggleFilter: (name: string, fnc: (project: ProjectContent) => boolean) => void;
+}
 
-interface CategoryFilterProps {
+interface ProjectsCategoryFilterProviderProps {
   readonly setCurrentProjects: (projects: ProjectContent[]) => void;
+  readonly children: ReactNode;
 }
 
 interface Filter {
   readonly func: (project: ProjectContent) => boolean;
-  readonly key?: ProjectsFiltersLabelsKeys;
+  readonly key?: ProjectsCategoryFilterLabelsKeys;
   readonly name?: string;
 }
 
-export function CategoryFilter({ setCurrentProjects }: CategoryFilterProps) {
+// --------------------
+
+const ProjectsCategoryFilterContext = createContext({} as ProjectsCategoryFilterContextType);
+
+// ! TODO: Combinar filtro de texto com categoria
+export function ProjectsCategoryFilterProvider({
+  setCurrentProjects, children,
+}: ProjectsCategoryFilterProviderProps) {
   const { data } = useData();
   const { projectsSection } = data;
-  const { projects, filtersLabels } = projectsSection;
+  const { projects, filterCategoryLabels } = projectsSection;
 
-  const allFilters: Filter[] = [];
-  populateFilterLabelByLanguage(allFilters, filtersLabels);
+  const allFilters: Filter[] = getFiltersByLanguage(filterCategoryLabels);
 
   const [currentFilters, setCurrentFilters] = useState<Filter[]>([allFilters[0]]);
 
@@ -35,13 +49,10 @@ export function CategoryFilter({ setCurrentProjects }: CategoryFilterProps) {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [currentFilters]);
 
-  useEffect(() => {
-    populateFilterLabelByLanguage(allFilters, filtersLabels);
-    setCurrentFilters([allFilters[0]]);
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [filtersLabels]);
-
-  const filterExists = (name: string) => currentFilters.some((f) => f.name === name);
+  const filterExists = useCallback(
+    (name: string) => currentFilters.some((f) => f.name === name),
+    [currentFilters],
+  );
 
   const addFilter = (name: string, fnc: (project: ProjectContent) => boolean) => {
     setCurrentFilters((filters) => [...filters, { name, func: fnc }]);
@@ -51,13 +62,15 @@ export function CategoryFilter({ setCurrentProjects }: CategoryFilterProps) {
     setCurrentFilters((filters) => filters.filter((f) => !(f.name === name)));
   };
 
-  const toggleFilter = (name: string, fnc: (project: ProjectContent) => boolean) => {
-    if (filterExists(name)) {
-      removeFilter(name);
-    } else {
-      addFilter(name, fnc);
-    }
-  };
+  const toggleFilter = useCallback(
+    (name: string, fnc: (project: ProjectContent) => boolean) => {
+      if (filterExists(name)) {
+        removeFilter(name);
+      } else {
+        addFilter(name, fnc);
+      }
+    }, [filterExists],
+  );
 
   const applyFilters = () => {
     let filteredProjects = projects;
@@ -71,36 +84,23 @@ export function CategoryFilter({ setCurrentProjects }: CategoryFilterProps) {
     setCurrentProjects(filteredProjects);
   };
 
-  return (
-    <Container>
-      <ul>
-        {allFilters.map((filter) => {
-          const { name, func } = filter;
-          if (!name) return null;
+  const contextValues = useMemo(
+    () => ({ allFilters, filterExists, toggleFilter }),
+    [allFilters, filterExists, toggleFilter],
+  );
 
-          const id = `checkbox-${filter.name}`;
-          return (
-            <li key={id}>
-              <input
-                id={id}
-                value={name}
-                type="checkbox"
-                checked={filterExists(name)}
-                onChange={() => toggleFilter(name, func)}
-              />
-              <label htmlFor={id}>{filter.name}</label>
-            </li>
-          );
-        })}
-      </ul>
-    </Container>
+  return (
+    <ProjectsCategoryFilterContext.Provider value={contextValues}>
+      {children}
+    </ProjectsCategoryFilterContext.Provider>
   );
 }
 
-const populateFilterLabelByLanguage = (
-  allFilters: Filter[],
-  filtersLabels: ProjectsFiltersLabels[],
-) => {
+export const useProjectsCategoryFilter = () => useContext(ProjectsCategoryFilterContext);
+
+const getFiltersByLanguage = (filtersLabels: ProjectsCategoryFilterLabels[]) => {
+  const allFilters: Filter[] = [];
+
   for (const filterFunc of allFiltersFuncs) {
     const filterLabel = filtersLabels.find((v) => v.key === filterFunc.key);
     if (filterLabel) {
@@ -110,6 +110,8 @@ const populateFilterLabelByLanguage = (
       });
     }
   }
+
+  return allFilters;
 };
 
 const allFiltersFuncs: Filter[] = [

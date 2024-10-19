@@ -4,7 +4,7 @@ export const Container = styled.div`
   max-width: 20rem;
   min-height: 26.85rem;
 
-  border: 2px solid var(--gray-800);
+  border: 1px solid var(--gray-800);
   border-radius: 0.35rem;
 
   background: var(--gray-900-opacity-80);
@@ -14,6 +14,7 @@ export const Container = styled.div`
   &:hover {
     transform: scale(1.02);
 
+    border-width: 1px;
     border-color: var(--red-400);
     box-shadow: 0rem 0rem 1rem var(--red-400);
   }

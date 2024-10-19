@@ -76,13 +76,72 @@ export const FilterContainer = styled.div`
   width: 100%;
 
   display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
+  align-items: center;
+  gap: 1rem;
+`;
 
-  span {
-    font-size: 1.25rem;
+export const SearchInputContainer = styled.div`
+  display: flex;
+  align-items: center;
 
-    color: var(--gray-300);
+  border: 1px solid var(--gray-800);
+  border-radius: 0.25rem;
+
+  color: var(--gray-300);
+
+  transition: all 0.2s;
+
+  &:focus-within {
+    border: 1px solid var(--red-400);
+    box-shadow: 0rem 0rem 0.35rem var(--red-400);
+    
+    color: var(--red-400);
+  }
+
+  svg {
+    margin-left: 1rem;
+  }
+
+  input {
+    width: 100%;
+    height: 100%;
+    padding: 0.875rem 1rem;
+
+    font-size: 1.125rem;
+
+    border-radius: 0.25rem;
+    
+    outline: 0;
+    
+    color: var(--gray-100);
+    background-color: transparent;
+
+    &::placeholder {
+      color: var(--gray-600);
+    }
+  }
+`;
+
+export const FilterButton = styled.button`
+  padding: 1rem;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: 1px solid var(--gray-800);
+  border-radius: 0.25rem;
+
+  color: var(--gray-300);
+  background-color: transparent;
+
+  transition: all 0.2s;
+
+  &:hover {
+    border: 1px solid var(--red-400);
+    box-shadow: 0rem 0rem 0.35rem var(--red-400);
+    
+    color: var(--red-400);
   }
 `;
 

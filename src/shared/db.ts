@@ -609,8 +609,10 @@ export const contentLanguages: ContentLang = {
       collaborationModalTitle: 'Colaboradores',
       collaborationModalText:
         'Faço questão de apresentar e agradecer a todos os colaboradores que influenciaram e ajudaram diretamente a planejar e desenvolver o projeto:',
-      filterTitleLabel: 'Pesquise por categorias',
-      filtersLabels: [
+      filterNameTitleLabel: 'Pesquise por nome',
+      filterCategoryTooltipLabel: 'Filtros',
+      filterCategoryTitleLabel: 'Pesquise por categorias',
+      filterCategoryLabels: [
         {
           key: 'all',
           label: 'Todos',
@@ -1273,8 +1275,10 @@ export const contentLanguages: ContentLang = {
       collaborationModalTitle: 'Collaborators',
       collaborationModalText:
         'I would like to introduce and thank all the collaborators who directly influenced and helped to plan and develop the project:',
-      filterTitleLabel: 'Search by categories',
-      filtersLabels: [
+      filterNameTitleLabel: 'Search by name',
+      filterCategoryTooltipLabel: 'Filters',
+      filterCategoryTitleLabel: 'Search by categories',
+      filterCategoryLabels: [
         {
           key: 'all',
           label: 'All',
