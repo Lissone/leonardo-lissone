@@ -125,6 +125,8 @@ export const SearchInputContainer = styled.div`
 export const FilterButton = styled.button`
   padding: 1rem;
 
+  position: relative;
+
   display: flex;
   align-items: center;
   justify-content: center;
@@ -140,9 +142,29 @@ export const FilterButton = styled.button`
   &:hover {
     border: 1px solid var(--red-400);
     box-shadow: 0rem 0rem 0.35rem var(--red-400);
-    
-    color: var(--red-400);
   }
+`;
+
+export const FilterBadge = styled.div`
+  width: 1rem;
+  height: 1rem;
+
+  position: absolute;
+  right: 0.35rem;
+  top: 0.35rem;
+
+  font-size: 0.6rem;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  text-align: center;
+
+  border-radius: 100%;
+
+  color: var(--gray-100);
+  background: var(--red-400);
 `;
 
 export const Content = styled.div`

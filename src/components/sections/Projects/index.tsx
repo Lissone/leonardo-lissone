@@ -6,7 +6,7 @@ import { IoIosSearch } from 'react-icons/io';
 import { ProjectContent } from '@interfaces/content';
 
 import { useData } from '@contexts/DataContext';
-import { ProjectsCategoryFilterProvider } from '@contexts/ProjectsCategoryFilterContext';
+import { ProjectsCategoryFilterProvider, useProjectsCategoryFilter } from '@contexts/ProjectsCategoryFilterContext';
 
 import { Tooltip } from '@components/shared/Tooltip';
 
@@ -16,6 +16,7 @@ import { ProjectCard } from './ProjectCard';
 import {
   Container,
   Content,
+  FilterBadge,
   FilterButton,
   FilterContainer,
   Heading,
@@ -88,12 +89,10 @@ export function Projects() {
               />
             </SearchInputContainer>
 
-            <Tooltip title={filterCategoryTooltipLabel}>
-              <FilterButton type="button" onClick={() => setShowFilterModal(true)}>
-                {/* // ! TODO: Adicionar informação flutuante de quantos filtros selecionados */}
-                <FaFilter size={18} />
-              </FilterButton>
-            </Tooltip>
+            <CategoryFilterButton
+              tooltip={filterCategoryTooltipLabel}
+              onClick={() => setShowFilterModal(true)}
+            />
           </FilterContainer>
         </header>
 
@@ -138,5 +137,22 @@ export function Projects() {
         />
       </Container>
     </ProjectsCategoryFilterProvider>
+  );
+}
+
+interface CategoryFilterButtonProps {
+  readonly tooltip: string;
+  readonly onClick: () => void;
+}
+
+function CategoryFilterButton({ tooltip, onClick }: CategoryFilterButtonProps) {
+  const { qtdFiltersSelected } = useProjectsCategoryFilter();
+  return (
+    <Tooltip title={tooltip}>
+      <FilterButton type="button" onClick={onClick}>
+        <FaFilter size={18} />
+        {qtdFiltersSelected > 0 ? <FilterBadge>{qtdFiltersSelected}</FilterBadge> : null}
+      </FilterButton>
+    </Tooltip>
   );
 }

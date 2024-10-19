@@ -13,6 +13,7 @@ import { useData } from './DataContext';
 
 interface ProjectsCategoryFilterContextType {
   readonly allFilters: Filter[];
+  readonly qtdFiltersSelected: number;
   readonly filterExists: (name: string) => boolean;
   readonly toggleFilter: (name: string, fnc: (project: ProjectContent) => boolean) => void;
 }
@@ -43,6 +44,11 @@ export function ProjectsCategoryFilterProvider({
   const allFilters: Filter[] = getFiltersByLanguage(filterCategoryLabels);
 
   const [currentFilters, setCurrentFilters] = useState<Filter[]>([allFilters[0]]);
+
+  // não deve contar o filtro "All" (todos)
+  const qtdFiltersSelected = currentFilters.some((f) => f.name === 'All')
+    ? currentFilters.length - 1
+    : currentFilters.length;
 
   useEffect(() => {
     applyFilters();
@@ -85,8 +91,8 @@ export function ProjectsCategoryFilterProvider({
   };
 
   const contextValues = useMemo(
-    () => ({ allFilters, filterExists, toggleFilter }),
-    [allFilters, filterExists, toggleFilter],
+    () => ({ allFilters, qtdFiltersSelected, filterExists, toggleFilter }),
+    [allFilters, qtdFiltersSelected, filterExists, toggleFilter],
   );
 
   return (
