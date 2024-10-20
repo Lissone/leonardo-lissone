@@ -3,7 +3,7 @@ import { FaFilter } from 'react-icons/fa';
 import { ProjectContent } from '@interfaces/content';
 
 import { useData } from '@contexts/DataContext';
-import { useProjectsCategoryFilter } from '@contexts/ProjectsCategoryFilterContext';
+import { useProjectsFilter } from '@contexts/ProjectsFilterContext';
 
 import { Modal } from '@components/shared/Modal';
 
@@ -22,7 +22,7 @@ export function CategoryFilterModal({
   const { projectsSection } = data;
   const { filterCategoryTitleLabel } = projectsSection;
 
-  const { allFilters, filterExists, toggleFilter } = useProjectsCategoryFilter();
+  const { allCategoryFilters, categoryFilterExists, handleToggleCategoryFilter } = useProjectsFilter();
 
   return (
     <Modal
@@ -33,7 +33,7 @@ export function CategoryFilterModal({
     >
       <Content>
         <ul>
-          {allFilters.map((filter) => {
+          {allCategoryFilters.map((filter) => {
             const { name, func } = filter;
             if (!name) return null;
 
@@ -44,8 +44,8 @@ export function CategoryFilterModal({
                   id={id}
                   value={name}
                   type="checkbox"
-                  checked={filterExists(name)}
-                  onChange={() => toggleFilter(name, func)}
+                  checked={categoryFilterExists(name)}
+                  onChange={() => handleToggleCategoryFilter(name, func)}
                 />
                 <label htmlFor={id}>{filter.name}</label>
               </li>

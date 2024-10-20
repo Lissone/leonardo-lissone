@@ -6,7 +6,7 @@ import { IoIosSearch } from 'react-icons/io';
 import { ProjectContent } from '@interfaces/content';
 
 import { useData } from '@contexts/DataContext';
-import { ProjectsCategoryFilterProvider, useProjectsCategoryFilter } from '@contexts/ProjectsCategoryFilterContext';
+import { ProjectsFilterProvider, useProjectsFilter } from '@contexts/ProjectsFilterContext';
 
 import { Tooltip } from '@components/shared/Tooltip';
 
@@ -36,7 +36,6 @@ export function Projects() {
     projects, projectsNotfoundLabel, showMoreButtonLabel,
   } = projectsSection;
 
-  const [filter, setFilter] = useState('');
   const [showFilterModal, setShowFilterModal] = useState(false);
   const [currentGrid, setCurrentGrid] = useState(GRID_LIMIT);
   const [currentProjects, setCurrentProjects] = useState(projects);
@@ -44,18 +43,6 @@ export function Projects() {
     = useState<ProjectContent | null>(null);
 
   const projectsSliced = currentProjects.slice(0, currentGrid);
-
-  const handleChangeFilter = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const { value } = e.target;
-    setFilter(value);
-
-    const productsFiltered = projects.filter((project) => {
-      const name = project.name.toLowerCase();
-      return name.includes(value.toLowerCase());
-    });
-
-    setCurrentProjects(productsFiltered);
-  };
 
   const handleShowMoreProjects = () => {
     setCurrentGrid((grid) => grid + GRID_LIMIT);
@@ -66,7 +53,7 @@ export function Projects() {
   }, [data]);
 
   return (
-    <ProjectsCategoryFilterProvider setCurrentProjects={setCurrentProjects}>
+    <ProjectsFilterProvider setCurrentProjects={setCurrentProjects}>
       <Container id="projects">
         <header data-aos="fade-up">
           <Heading>
@@ -79,15 +66,7 @@ export function Projects() {
           </Heading>
 
           <FilterContainer>
-            <SearchInputContainer>
-              <IoIosSearch size={24} />
-              <input
-                type="text"
-                value={filter}
-                placeholder={filterNameTitleLabel}
-                onChange={handleChangeFilter}
-              />
-            </SearchInputContainer>
+            <NameFilterInput placeholder={filterNameTitleLabel} />
 
             <CategoryFilterButton
               tooltip={filterCategoryTooltipLabel}
@@ -136,7 +115,28 @@ export function Projects() {
           handleClose={() => setShowFilterModal(false)}
         />
       </Container>
-    </ProjectsCategoryFilterProvider>
+    </ProjectsFilterProvider>
+  );
+}
+
+interface NameFilterInputProps {
+  readonly placeholder: string;
+}
+
+function NameFilterInput({ placeholder }: NameFilterInputProps) {
+  const { nameFilter, handleChangeNameFilter } = useProjectsFilter();
+  return (
+    <SearchInputContainer>
+      <IoIosSearch size={24} />
+      <input
+        type="text"
+        value={nameFilter}
+        placeholder={placeholder}
+        onChange={(e) => {
+          handleChangeNameFilter(e.target.value);
+        }}
+      />
+    </SearchInputContainer>
   );
 }
 
@@ -146,12 +146,12 @@ interface CategoryFilterButtonProps {
 }
 
 function CategoryFilterButton({ tooltip, onClick }: CategoryFilterButtonProps) {
-  const { qtdFiltersSelected } = useProjectsCategoryFilter();
+  const { qtdCategoryFiltersSelected } = useProjectsFilter();
   return (
     <Tooltip title={tooltip}>
       <FilterButton type="button" onClick={onClick}>
         <FaFilter size={18} />
-        {qtdFiltersSelected > 0 ? <FilterBadge>{qtdFiltersSelected}</FilterBadge> : null}
+        {qtdCategoryFiltersSelected > 0 ? <FilterBadge>{qtdCategoryFiltersSelected}</FilterBadge> : null}
       </FilterButton>
     </Tooltip>
   );
