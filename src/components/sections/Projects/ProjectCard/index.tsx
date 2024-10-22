@@ -12,7 +12,6 @@ import {
   Cover,
   CoverActions,
   Divider,
-  FeaturedInformation,
   Heading,
   Information,
   SeparateRow,
@@ -81,7 +80,7 @@ export function ProjectCard({ project, handleOpenCollaborationModal }: ProjectCa
         </Cover>
 
         <Information>
-          <FeaturedInformation>
+          <div>
             <Heading>
               <h2>{project.name}</h2>
 
@@ -101,7 +100,7 @@ export function ProjectCard({ project, handleOpenCollaborationModal }: ProjectCa
             <TechnologiesRow>
               <span>{project.mainTechnologies.join(' ')}</span>
             </TechnologiesRow>
-          </FeaturedInformation>
+          </div>
 
           <SeparateRow>
             <div>

@@ -10,29 +10,11 @@ export const Container = styled.section`
 
   header {
     width: 100%;
-    max-width: 1056px;
 
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 2.25rem;
-
-    @media (max-width: 1350px) {
-      max-width: 688px;
-    }
-
-    @media (max-width: 1080px) {
-      max-width: 645px;
-    }
-
-    @media (max-width: 850px) {
-      max-width: 100%;
-      padding: 0 4rem;
-    }
-
-    @media (max-width: 450px) {
-      padding: 0 2rem;
-    }
   }
 `;
 
@@ -77,10 +59,13 @@ export const FilterContainer = styled.div`
 
   display: flex;
   align-items: center;
-  gap: 1rem;
+  gap: 1.5rem;
 `;
 
 export const SearchInputContainer = styled.div`
+  width: 100%;
+  max-width: 22rem;
+
   display: flex;
   align-items: center;
 
@@ -172,7 +157,7 @@ export const Content = styled.div`
 
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  gap: 3rem;
+  gap: 1.5rem;
 
   @media (max-width: 1350px) {
     grid-template-columns: 1fr 1fr;

@@ -1,8 +1,8 @@
 import styled from 'styled-components';
 
 export const Container = styled.div`
-  max-width: 20rem;
-  min-height: 26.85rem;
+  max-width: 22rem;
+  min-height: 28rem;
 
   border: 1px solid var(--gray-800);
   border-radius: 0.35rem;
@@ -39,8 +39,8 @@ export const Cover = styled.div`
   position: relative;
 
   img {
-    max-width: 18rem;
-    max-height: 10rem;
+    width: 100%;
+    height: 100%;
 
     border-radius: 0.35rem;
   }
@@ -51,8 +51,6 @@ export const CoverActions = styled.div`
 
   width: 100%;
   height: 100%;
-  max-width: 18rem;
-  max-height: 10rem;
 
   position: absolute;
   left: 0;
@@ -146,8 +144,6 @@ export const TechnologiesRow = styled.div`
     color: var(--red-200);
   }
 `;
-
-export const FeaturedInformation = styled.div``;
 
 export const SeparateRow = styled.div`
   margin-top: 1.25rem;

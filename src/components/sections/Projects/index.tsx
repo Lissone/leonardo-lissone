@@ -52,38 +52,41 @@ export function Projects() {
     setProjectCollaboratorsSelected(null);
   }, [data]);
 
+  // ! FIX: responsividade
   return (
     <ProjectsFilterProvider setCurrentProjects={setCurrentProjects}>
       <Container id="projects">
-        <header data-aos="fade-up">
-          <Heading>
-            <Subtitle>
-              <img src="/icons/arrow-heading.svg" alt="Big arrow with led" />
-              <h2>{heading[0]}</h2>
-            </Subtitle>
+        <div>
+          <header data-aos="fade-up">
+            <Heading>
+              <Subtitle>
+                <img src="/icons/arrow-heading.svg" alt="Big arrow with led" />
+                <h2>{heading[0]}</h2>
+              </Subtitle>
 
-            <h1>{heading[1]}</h1>
-          </Heading>
+              <h1>{heading[1]}</h1>
+            </Heading>
 
-          <FilterContainer>
-            <NameFilterInput placeholder={filterNameTitleLabel} />
+            <FilterContainer>
+              <NameFilterInput placeholder={filterNameTitleLabel} />
 
-            <CategoryFilterButton
-              tooltip={filterCategoryTooltipLabel}
-              onClick={() => setShowFilterModal(true)}
-            />
-          </FilterContainer>
-        </header>
+              <CategoryFilterButton
+                tooltip={filterCategoryTooltipLabel}
+                onClick={() => setShowFilterModal(true)}
+              />
+            </FilterContainer>
+          </header>
 
-        <Content>
-          {projectsSliced.map((project) => (
-            <ProjectCard
-              key={project.name}
-              project={project}
-              handleOpenCollaborationModal={() => setProjectCollaboratorsSelected(project)}
-            />
-          ))}
-        </Content>
+          <Content>
+            {projectsSliced.map((project) => (
+              <ProjectCard
+                key={project.name}
+                project={project}
+                handleOpenCollaborationModal={() => setProjectCollaboratorsSelected(project)}
+              />
+            ))}
+          </Content>
+        </div>
 
         {currentProjects.length === 0 ? (
           <NotFoundText data-aos="fade-up" data-aos-duration="1100">
