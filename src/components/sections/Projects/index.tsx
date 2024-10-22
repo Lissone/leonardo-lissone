@@ -52,7 +52,6 @@ export function Projects() {
     setProjectCollaboratorsSelected(null);
   }, [data]);
 
-  // ! FIX: responsividade
   return (
     <ProjectsFilterProvider setCurrentProjects={setCurrentProjects}>
       <Container id="projects">

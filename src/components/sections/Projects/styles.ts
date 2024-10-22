@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 export const Container = styled.section`
   width: 100%;
-  padding: 3rem 0;
+  padding: 3rem 2rem;
 
   display: flex;
   flex-direction: column;
@@ -60,6 +60,10 @@ export const FilterContainer = styled.div`
   display: flex;
   align-items: center;
   gap: 1.5rem;
+
+  @media (max-width: 850px) {
+    justify-content: center;
+  }
 `;
 
 export const SearchInputContainer = styled.div`
@@ -104,6 +108,10 @@ export const SearchInputContainer = styled.div`
     &::placeholder {
       color: var(--gray-600);
     }
+  }
+
+  @media (max-width: 850px) {
+    max-width: 19.4rem;
   }
 `;
 
@@ -157,6 +165,7 @@ export const Content = styled.div`
 
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
+  justify-items: center;
   gap: 1.5rem;
 
   @media (max-width: 1350px) {

@@ -22,6 +22,11 @@ export const Container = styled.div`
   :hover .project-card-actions {
     opacity: 1;
   }
+
+  @media (max-width: 850px) {
+    max-width: 24rem;
+    min-height: 30rem;
+  }
 `;
 
 export const Content = styled.div`
