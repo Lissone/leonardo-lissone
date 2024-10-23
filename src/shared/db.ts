@@ -264,6 +264,10 @@ export const contentLanguages: ContentLang = {
               label: 'Figma',
             },
             {
+              key: 'freelance',
+              label: 'Freelance',
+            },
+            {
               key: 'web',
               label: 'Web',
             },
@@ -634,16 +638,20 @@ export const contentLanguages: ContentLang = {
           label: 'Fullstack',
         },
         {
-          key: 'responsive',
-          label: 'Responsivos',
-        },
-        {
           key: 'web',
           label: 'Sites',
         },
         {
           key: 'mobile',
           label: 'Aplicativos',
+        },
+        {
+          key: 'freelance',
+          label: 'Freelance',
+        },
+        {
+          key: 'responsive',
+          label: 'Responsivos',
         },
       ],
     },
@@ -944,6 +952,10 @@ export const contentLanguages: ContentLang = {
             {
               key: 'figma',
               label: 'Figma',
+            },
+            {
+              key: 'freelance',
+              label: 'Freelance',
             },
             {
               key: 'web',
@@ -1300,16 +1312,20 @@ export const contentLanguages: ContentLang = {
           label: 'Fullstack',
         },
         {
-          key: 'responsive',
-          label: 'Responsive',
-        },
-        {
           key: 'web',
           label: 'Websites',
         },
         {
           key: 'mobile',
           label: 'Mobile Applications',
+        },
+        {
+          key: 'freelance',
+          label: 'Freelance',
+        },
+        {
+          key: 'responsive',
+          label: 'Responsive',
         },
       ],
     },

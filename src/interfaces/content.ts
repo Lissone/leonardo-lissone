@@ -90,6 +90,7 @@ export type ProjectsCategoryFilterLabelsKeys =
   | 'fullstack'
   | 'web'
   | 'mobile'
+  | 'freelance'
   | 'responsive';
 export interface ProjectsCategoryFilterLabels {
   readonly key: ProjectsCategoryFilterLabelsKeys;
@@ -102,6 +103,7 @@ type GoodHabitsKeys = 'eslint' | 'prettier' | 'test' | 'commit-lint' | 'componen
 type DetailsKeys =
   | 'web'
   | 'mobile'
+  | 'freelance'
   | 'desktop'
   | 'responsive'
   | 'design'

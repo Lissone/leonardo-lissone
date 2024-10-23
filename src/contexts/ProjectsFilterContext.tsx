@@ -154,15 +154,19 @@ const allFiltersFuncs: CategoryFilter[] = [
     func: (project) => project.details.some((detail) => detail.key === 'fullstack'),
   },
   {
-    key: 'responsive',
-    func: (project) => project.details.some((detail) => detail.key === 'responsive'),
-  },
-  {
     key: 'web',
     func: (project) => project.details.some((detail) => detail.key === 'web'),
   },
   {
     key: 'mobile',
     func: (project) => project.details.some((detail) => detail.key === 'mobile'),
+  },
+  {
+    key: 'freelance',
+    func: (project) => project.details.some((detail) => detail.key === 'freelance'),
+  },
+  {
+    key: 'responsive',
+    func: (project) => project.details.some((detail) => detail.key === 'responsive'),
   },
 ];
