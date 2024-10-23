@@ -109,7 +109,7 @@ export const Information = styled.div`
 `;
 
 export const Heading = styled.div`
-  margin-top: 0.5rem;
+  margin-top: 1rem;
 
   display: flex;
   align-items: center;
@@ -127,7 +127,8 @@ export const Heading = styled.div`
 export const Divider = styled.div`
   width: 4.5rem;
   height: 1px;
-  margin: 0.5rem 0;
+  margin-top: 0.65rem;
+  margin-bottom: 1rem;
 
   border-radius: 100%;
 
@@ -136,7 +137,7 @@ export const Divider = styled.div`
 
 export const TechnologiesRow = styled.div`
   width: 100%;
-  margin-top: 0.5rem;
+  margin-top: 0.65rem;
 
   display: flex;
   align-items: center;
@@ -151,7 +152,7 @@ export const TechnologiesRow = styled.div`
 `;
 
 export const SeparateRow = styled.div`
-  margin-top: 1.25rem;
+  margin-top: 1.5rem;
 
   display: flex;
   align-items: center;
