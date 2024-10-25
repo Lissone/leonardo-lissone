@@ -94,20 +94,3 @@ export const Subtitle = styled.div`
     }
   }
 `;
-
-export const ImageContainer = styled.div`
-  display: flex;
-  align-items: center;
-  position: absolute;
-
-  top: 12.5rem;
-  right: 0;
-
-  @media (max-width: 1760px) {
-    display: none;
-  }
-
-  img {
-    height: 38rem;
-  }
-`;
