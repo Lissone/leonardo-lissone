@@ -3,6 +3,7 @@ import styled from 'styled-components';
 export const Container = styled.footer`
   width: 100%;
   height: calc(100vh - 5.625rem); // 100vh - header height
+  margin-top: 2rem;
   padding: 4rem 0;
 
   display: flex;

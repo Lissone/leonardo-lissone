@@ -3,7 +3,8 @@ import styled from 'styled-components';
 export const Container = styled.section`
   width: 100%;
   height: 100vh;
-  padding-top: 5.625rem; // header height
+  margin-top: 2rem;
+  padding: 4rem 0;
 
   display: flex;
 
