@@ -8,7 +8,6 @@ export const Container = styled.div`
 
   bottom: -1rem;
   left: 0;
-  right: 94rem;
 
   z-index: 100;
 
