@@ -54,9 +54,13 @@ export const contentLanguages: ContentLang = {
       jobs: [
         {
           company: 'G5 Partners',
+          siteLink: 'https://g5partners.com/',
+          logo: {
+            url: 'https://leonardo-lissone.cdn.prismic.io/leonardo-lissone/ZyFBF68jQArTz__I_G5Logo.svg',
+            contrastColor: '#F1F1F1',
+          },
           experiences: [
             {
-              siteLink: 'https://g5partners.com/',
               role: 'Analista de Desenvolvimento Pleno',
               startDate: 'Fevereiro 2024',
               endDate: 'Presente',
@@ -68,7 +72,6 @@ export const contentLanguages: ContentLang = {
               ],
             },
             {
-              siteLink: 'https://g5partners.com/',
               role: 'Analista de Desenvolvimento Júnior',
               startDate: 'Março 2022',
               endDate: 'Fevereiro 2024',
@@ -85,10 +88,14 @@ export const contentLanguages: ContentLang = {
         },
         {
           company: 'Santander',
+          siteLink:
+          'https://www.santander.com.br/sustentabilidade/gestao-de-atividades/risco-gestao-integrada',
+          logo: {
+            url: 'https://leonardo-lissone.cdn.prismic.io/leonardo-lissone/ZyFBHa8jQArTz__M_SantanderLogo.svg',
+            contrastColor: '#F1F1F1',
+          },
           experiences: [
             {
-              siteLink:
-                'https://www.santander.com.br/sustentabilidade/gestao-de-atividades/risco-gestao-integrada',
               role: 'Estagiário de inovação',
               startDate: 'Setembro 2021',
               endDate: 'Março 2022',
@@ -103,9 +110,13 @@ export const contentLanguages: ContentLang = {
         },
         {
           company: 'Serget',
+          siteLink: 'http://www.serget.com.br/',
+          logo: {
+            url: 'https://leonardo-lissone.cdn.prismic.io/leonardo-lissone/ZyFBJa8jQArTz__N_SergetLogo.svg',
+            contrastColor: '#D8D01D',
+          },
           experiences: [
             {
-              siteLink: 'http://www.serget.com.br/',
               role: 'Estagiário de desenvolvimento',
               startDate: 'Janeiro 2020',
               endDate: 'Setembro 2021',
@@ -744,9 +755,13 @@ export const contentLanguages: ContentLang = {
       jobs: [
         {
           company: 'G5 Partners',
+          siteLink: 'https://g5partners.com/',
+          logo: {
+            url: 'https://leonardo-lissone.cdn.prismic.io/leonardo-lissone/ZyFBF68jQArTz__I_G5Logo.svg',
+            contrastColor: '#F1F1F1',
+          },
           experiences: [
             {
-              siteLink: 'https://g5partners.com/',
               role: 'Development Analyst',
               startDate: 'February 2024',
               endDate: 'Present',
@@ -758,7 +773,6 @@ export const contentLanguages: ContentLang = {
               ],
             },
             {
-              siteLink: 'https://g5partners.com/',
               role: 'Junior Development Analyst',
               startDate: 'March 2022',
               endDate: 'February 2024',
@@ -775,10 +789,14 @@ export const contentLanguages: ContentLang = {
         },
         {
           company: 'Santander',
+          siteLink:
+          'https://www.santander.com.br/sustentabilidade/gestao-de-atividades/risco-gestao-integrada',
+          logo: {
+            url: 'https://leonardo-lissone.cdn.prismic.io/leonardo-lissone/ZyFBHa8jQArTz__M_SantanderLogo.svg',
+            contrastColor: '#F1F1F1',
+          },
           experiences: [
             {
-              siteLink:
-                'https://www.santander.com.br/sustentabilidade/gestao-de-atividades/risco-gestao-integrada',
               role: 'Innovation Intern',
               startDate: 'September 2021',
               endDate: 'March 2022',
@@ -793,9 +811,13 @@ export const contentLanguages: ContentLang = {
         },
         {
           company: 'Serget',
+          siteLink: 'http://www.serget.com.br/',
+          logo: {
+            url: 'https://leonardo-lissone.cdn.prismic.io/leonardo-lissone/ZyFBJa8jQArTz__N_SergetLogo.svg',
+            contrastColor: '#D8D01D',
+          },
           experiences: [
             {
-              siteLink: 'http://www.serget.com.br/',
               role: 'Development Intern',
               startDate: 'January 2020',
               endDate: 'September 2021',

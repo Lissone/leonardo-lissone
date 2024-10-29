@@ -51,15 +51,21 @@ export interface AboutSectionContent {
 
 export interface JobsSectionContent {
   readonly heading: string[];
-  readonly jobs: {
-    readonly company: string;
-    readonly experiences: {
-      readonly siteLink: string;
-      readonly role: string;
-      readonly startDate: string;
-      readonly endDate: string;
-      readonly activities: string[];
-    }[];
+  readonly jobs: Job[];
+}
+
+export interface Job {
+  readonly company: string;
+  readonly siteLink: string;
+  readonly logo: {
+    readonly url: string;
+    readonly contrastColor: string;
+  };
+  readonly experiences: {
+    readonly role: string;
+    readonly startDate: string;
+    readonly endDate: string;
+    readonly activities: string[];
   }[];
 }
 
