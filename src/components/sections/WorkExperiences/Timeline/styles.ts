@@ -11,6 +11,10 @@ export const Container = styled.div`
   align-items: center;
 `;
 
+export const Content = styled.div`
+  position: relative;
+`;
+
 export const Line = styled.div`
   width: 6px;
   height: 105%;
@@ -19,7 +23,7 @@ export const Line = styled.div`
   left: 50%;
 
   transform: translateX(-50%);
-  /* box-shadow: 0rem 0rem 0.5rem var(--red-400); */
+  box-shadow: 0rem 0rem 0.5rem var(--red-400);
   
   background: linear-gradient(
     to bottom,
@@ -31,13 +35,17 @@ export const Line = styled.div`
   );
 `;
 
-export const TimelineItem = styled.div<{ $side: 'left' | 'right'; }>`
+interface TimelineItemProps {
+  readonly $side: 'left' | 'right';
+}
+
+export const TimelineItem = styled.div<TimelineItemProps>`
   margin-top: 4rem;
-  ${({ $side }) => ($side === 'left' ? 'margin-right: 67.5rem;' : 'margin-left: 12.5rem;')};
   
   width: 100%;
-
+  
   position: relative;
+  ${({ $side }) => ($side === 'left' ? 'right: 45%;' : 'left: 45%;')};
 
   display: flex;
   flex-direction: ${({ $side }) => ($side === 'left' ? 'row-reverse' : 'row')};
@@ -46,9 +54,12 @@ export const TimelineItem = styled.div<{ $side: 'left' | 'right'; }>`
 `;
 
 export const Circle = styled.div`
-  width: 4.5rem;
+  min-width: 4.5rem;
   height: 4.5rem;
-
+  min-width: 4.5rem;
+  min-height: 4.5rem;
+  flex-shrink: 0;
+  
   z-index: 1;
 
   border: 4px solid var(--red-400);
