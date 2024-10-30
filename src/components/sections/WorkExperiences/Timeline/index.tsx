@@ -38,21 +38,29 @@ function TimelineItem({ job, index }: TimelineItemProps) {
 
   const currentExperiences = job.experiences.slice(0, currentExperiencesListItems);
   const showMoreExperiences = currentExperiences < job.experiences;
+  const isOddIndex = (index + 1) % 2 === 0;
 
   return (
-    <TimelineItemContainer key={job.company} $side={(index + 1) % 2 === 0 ? 'left' : 'right'}>
-      <Circle target="_blank" href={job.siteLink} $background={job.logo.contrastColor}>
+    <TimelineItemContainer key={job.company} $side={isOddIndex ? 'left' : 'right'}>
+      <Circle
+        target="_blank"
+        href={job.siteLink}
+        $background={job.logo.contrastColor}
+        data-aos="zoom-in"
+        data-aos-duration="500"
+      >
         <img src={job.logo.url} alt={`${job.company} Logo`} />
       </Circle>
 
-      <JobCardsList $hasGap={!showMoreExperiences} $side={(index + 1) % 2 === 0 ? 'left' : 'right'}>
+      <JobCardsList $hasGap={!showMoreExperiences} $side={isOddIndex ? 'left' : 'right'}>
         {currentExperiences.map((experience, i) => (
-          // ! TODO: adicionar animação
           <ExperienceCard
             key={experience.role}
             $hasBorderBottom={currentExperiences.length === 1 || i > 0}
+            data-aos={`fade-${isOddIndex ? 'right' : (i > 0 ? 'down' : 'left')}`}
+            data-aos-duration={!isOddIndex && i > 0 ? '500' : '1000'}
           >
-            <Arrow $side={(index + 1) % 2 === 0 ? 'left' : (i > 0 ? 'top' : 'right')} />
+            <Arrow $side={isOddIndex ? 'left' : (i > 0 ? 'top' : 'right')} />
 
             <ExperienceHeading>
               <CompanyTitle target="_blank" href={job.siteLink}>
@@ -75,7 +83,7 @@ function TimelineItem({ job, index }: TimelineItemProps) {
         ))}
 
         {showMoreExperiences ? (
-          <ButtonContainer>
+          <ButtonContainer data-aos="fade-up" data-aos-duration="1000">
             <ShowMoreExperiencesButton
               type="button"
               onClick={() => setCurrentExperiencesListItems((prevState) => prevState + 1)}
