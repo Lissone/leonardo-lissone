@@ -74,18 +74,17 @@ export const Circle = styled.a<CircleProps>`
 
   background-color: ${({ $background }) => $background};
 
+  transition: 0.3s transform,box-shadow !important;
+
   img {
     max-width: 3.25rem;
     max-height: 3.25rem;
   }
 
-  transition: 0.3s all;
-
   &:hover {
-    transform: scale(1.03);
+    transform: scale(1.03) !important;
 
     box-shadow: 0rem 0rem 1rem var(--red-400);
-    border-color: var(--red-400);
   }
 `;
 
