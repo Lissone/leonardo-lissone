@@ -19,7 +19,7 @@ export const Container = styled.div`
     box-shadow: 0rem 0rem 1rem var(--red-400);
   }
 
-  :hover .project-card-actions {
+  &:hover .project-card-actions {
     opacity: 1;
   }
 
@@ -80,23 +80,20 @@ export const CoverActions = styled.div`
     justify-content: center;
 
     border-radius: 100%;
+    border: 2px solid var(--gray-900);
 
     background: var(--gray-900);
 
-    transition: 0.3s filter;
+    transition: 0.3s border-color,box-shadow;
 
     &:hover {
-      filter: brightness(0.8);
+      border-color: var(--red-400);
+      box-shadow: 0rem 0rem 1rem var(--red-400);
     }
-
+    
     svg {
       color: var(--red-400);
     }
-  }
-
-  @media (max-width: 450px) {
-    width: 18.5rem;
-    height: 10rem;
   }
 `;
 
