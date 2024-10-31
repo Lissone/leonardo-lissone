@@ -9,6 +9,10 @@ export const Container = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+
+  @media (max-width: 1560px) {
+    align-items: flex-start;
+  }
 `;
 
 export const Content = styled.div`
@@ -31,6 +35,16 @@ export const Line = styled.div`
     var(--red-400) calc(100% - 10rem),
     transparent 100%
   );
+
+  @media (max-width: 1560px) {
+    left: 2.5rem;
+  }
+
+  @media (max-width: 680px) {
+    width: 4px;
+
+    left: 2rem;
+  }
 `;
 
 interface TimelineItemContainerProps {
@@ -49,6 +63,18 @@ export const TimelineItemContainer = styled.div<TimelineItemContainerProps>`
   flex-direction: ${({ $side }) => ($side === 'left' ? 'row-reverse' : 'row')};
   justify-content: ${({ $side }) => ($side === 'left' ? 'flex-start' : 'flex-end')};
   gap: 2rem;
+
+  @media (max-width: 1560px) {
+    right: 43.5%;
+    left: 0;
+
+    flex-direction: row;
+    justify-content: flex-start;
+  }
+
+  @media (max-width: 680px) {
+    gap: 1rem;
+  }
 `;
 
 interface CircleProps {
@@ -56,7 +82,7 @@ interface CircleProps {
 }
 
 export const Circle = styled.a<CircleProps>`
-  min-width: 5rem;
+  width: 5rem;
   height: 5rem;
   min-width: 5rem;
   min-height: 5rem;
@@ -70,11 +96,11 @@ export const Circle = styled.a<CircleProps>`
 
   border: 4px solid var(--red-400);
   border-radius: 50%;
-  box-shadow: 0rem 0rem 0.5rem var(--red-400);
+  box-shadow: 0rem 0rem 1rem var(--red-400);
 
   background-color: ${({ $background }) => $background};
 
-  transition: 0.3s transform,box-shadow !important;
+  transition: 0.3s transform !important;
 
   img {
     max-width: 3.25rem;
@@ -82,9 +108,19 @@ export const Circle = styled.a<CircleProps>`
   }
 
   &:hover {
-    transform: scale(1.03) !important;
+    transform: scale(1.05) !important;
+  }
 
-    box-shadow: 0rem 0rem 1rem var(--red-400);
+  @media (max-width: 680px) {
+    width: 4rem;
+    height: 4rem;
+    min-width: 4rem;
+    min-height: 4rem;
+
+    img {
+      max-width: 2.25rem;
+      max-height: 2.25rem;
+    }
   }
 `;
 
@@ -99,8 +135,13 @@ export const JobCardsList = styled.div<JobCardsListProps>`
   display: flex;
   flex-direction: column;
   align-items: ${({ $side }) => ($side === 'left' ? 'flex-start' : 'flex-end')};
-  ${({ $hasGap }) => ($hasGap ? 'gap: 2.5rem;' : '')}
+  ${({ $hasGap }) => ($hasGap ? 'gap: 2rem;' : '')}
   
+  @media (max-width: 1560px) {
+    max-width: 40rem;
+
+    align-items: flex-start;
+  }
 `;
 
 interface ExperienceCardProps {
@@ -120,6 +161,10 @@ export const ExperienceCard = styled.div<ExperienceCardProps>`
   border-radius: 0.5rem;
 
   background-color: var(--gray-800);
+
+  @media (max-width: 1560px) {
+    padding: 1.25rem;
+  }
 `;
 
 interface ArrowProps {
@@ -131,28 +176,49 @@ export const Arrow = styled.div<ArrowProps>`
   height: 2rem;
 
   position: absolute;
-  top: 1.5rem;
+  top: 1.6rem;
   
   border-style: solid;
   border-width: 1rem;
   border-color: transparent transparent transparent var(--gray-800);
 
   ${({ $side }) => {
+    const mediaQuery = `
+      @media (max-width: 1560px) {
+        top: 1.6rem;
+        left: -1.9rem;
+        right: 0;
+
+        transform: rotate(180deg);
+      }
+
+      @media (max-width: 680px) {
+        top: 1.3rem;
+        left: -1.7rem;
+      }   
+    `;
+
     switch ($side) {
       case 'top': {
         return `
-          top: -2rem;
+          top: -1.85rem;
           left: 50%;
           transform: rotate(270deg);
         `;
       }
       case 'left': {
-        return 'right: -2rem;';
+        return `
+          right: -2rem;
+
+          ${mediaQuery}
+        `;
       }
       case 'right': {
         return `
           left: -2rem;
           transform: rotate(180deg);
+
+          ${mediaQuery}
         `;
       }
       default: {
@@ -166,7 +232,7 @@ export const Arrow = styled.div<ArrowProps>`
 export const ExperienceHeading = styled.div`
   display: flex;
   flex-direction: column;
-  gap: 0.25rem;
+  gap: 0.15rem;
 `;
 
 export const CompanyTitle = styled.a`
@@ -192,18 +258,16 @@ export const Role = styled.h4`
 `;
 
 export const Period = styled.span`
-  margin-top: 0.25rem;
+  margin-top: 0.15rem;
 
-  font-size: 1.25rem;
+  font-size: 1.15rem;
   font-weight: 600;
-
-  color: var(--gray-500);
 `;
 
 export const ActivitiesList = styled.ul`
   display: flex;
   flex-direction: column;
-  gap: 0.8rem;
+  gap: 0.5rem;
 
   li {
     font-size: 1.2rem;

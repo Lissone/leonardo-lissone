@@ -34,14 +34,15 @@ export const Content = styled.div`
     padding-right: 4rem;
   }
 
+  @media (max-width: 680px) {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+
   @media (max-width: 540px) {
     padding-top: 3rem;
   }
 
-  @media (max-width: 450px) {
-    padding-left: 2rem;
-    padding-right: 2rem;
-  }
 `;
 
 export const Heading = styled.div`

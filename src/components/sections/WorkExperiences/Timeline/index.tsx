@@ -1,8 +1,10 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { TiArrowSortedDown } from 'react-icons/ti';
 
 
 import { Job } from '@interfaces/content';
+
+import { useWindowWidth } from '@shared/hooks/useWindowWidth';
 
 import {
   ActivitiesList, Arrow, ButtonContainer, Circle, CompanyTitle,
@@ -34,11 +36,18 @@ interface TimelineItemProps {
 }
 
 function TimelineItem({ job, index }: TimelineItemProps) {
+  const windowWidth = useWindowWidth();
+
   const [currentExperiencesListItems, setCurrentExperiencesListItems] = useState(1);
+  const [aosAnimation, setAosAnimation] = useState<string>();
 
   const currentExperiences = job.experiences.slice(0, currentExperiencesListItems);
   const showMoreExperiences = currentExperiences < job.experiences;
   const isOddIndex = (index + 1) % 2 === 0;
+
+  useEffect(() => {
+    setAosAnimation(windowWidth <= 1560 ? 'fade-up' : undefined);
+  }, [windowWidth]);
 
   return (
     <TimelineItemContainer key={job.company} $side={isOddIndex ? 'left' : 'right'}>
@@ -57,7 +66,7 @@ function TimelineItem({ job, index }: TimelineItemProps) {
           <ExperienceCard
             key={experience.role}
             $hasBorderBottom={currentExperiences.length === 1 || i > 0}
-            data-aos={`fade-${isOddIndex ? 'right' : (i > 0 ? 'down' : 'left')}`}
+            data-aos={aosAnimation || `fade-${isOddIndex ? 'right' : (i > 0 ? 'down' : 'left')}`}
             data-aos-duration={!isOddIndex && i > 0 ? '500' : '1000'}
           >
             <Arrow $side={isOddIndex ? 'left' : (i > 0 ? 'top' : 'right')} />
