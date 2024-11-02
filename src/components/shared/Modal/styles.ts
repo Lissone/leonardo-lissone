@@ -8,9 +8,7 @@ export const HeaderContainer = styled.header`
     width: 100%;
     height: 1px;
 
-    box-shadow: 0rem 0rem 0.625rem var(--red-400);
-
-    background: var(--red-400);
+    background: var(--gray-800);
   }
 `;
 
