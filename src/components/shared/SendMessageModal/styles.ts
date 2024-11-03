@@ -42,7 +42,7 @@ export const Form = styled.form`
 
   input,
   textarea {
-    padding: 1rem 1.5rem;
+    padding: 1rem 1.25rem;
 
     font-size: 1.125rem;
 
@@ -51,11 +51,10 @@ export const Form = styled.form`
     color: var(--gray-100);
     background-color: var(--gray-900);
 
-    transition: 0.2s all;
+    transition: 0.3s all;
 
     &:hover {
-      border-color: var(--red-400);
-      box-shadow: 0rem 0rem 0.5rem var(--red-400);
+      border-color: var(--gray-500);
     }
 
     &:focus {
@@ -64,6 +63,10 @@ export const Form = styled.form`
       border-color: var(--red-400);
       box-shadow: 0rem 0rem 0.5rem var(--red-400);
     }
+  }
+
+  textarea {
+    resize: none;
   }
 `;
 
