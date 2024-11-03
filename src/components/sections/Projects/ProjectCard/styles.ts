@@ -9,12 +9,9 @@ export const Container = styled.div`
 
   background: var(--gray-900-opacity-80);
 
-  transition: 0.3s all;
+  transition: border-color 0.3s, box-shadow 0.3s !important;
 
   &:hover {
-    transform: scale(1.02);
-
-    border-width: 1px;
     border-color: var(--red-400);
     box-shadow: 0rem 0rem 1rem var(--red-400);
   }
@@ -80,11 +77,11 @@ export const CoverActions = styled.div`
     justify-content: center;
 
     border-radius: 100%;
-    border: 2px solid var(--gray-900);
+    border: 1px solid var(--gray-900);
 
     background: var(--gray-900);
 
-    transition: 0.3s border-color,box-shadow;
+    transition: border-color 0.3s, box-shadow 0.3s;
 
     &:hover {
       border-color: var(--red-400);
