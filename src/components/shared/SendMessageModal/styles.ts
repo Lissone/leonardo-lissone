@@ -6,6 +6,14 @@ export const Content = styled.div`
   display: flex;
   flex-direction: column;
 
+  span {
+    color: var(--gray-300);
+
+    @media (max-width: 370px) {
+      text-align: center;
+    }
+  }
+
   @media (max-height: 820px) {
     max-height: 540px;
 
@@ -22,14 +30,6 @@ export const Content = styled.div`
 
   @media (max-height: 520px) {
     max-height: 200px;
-  }
-
-  span {
-    color: var(--gray-100);
-
-    @media (max-width: 370px) {
-      text-align: center;
-    }
   }
 `;
 
