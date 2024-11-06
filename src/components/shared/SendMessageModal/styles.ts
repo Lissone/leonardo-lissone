@@ -63,6 +63,12 @@ export const Form = styled.form`
       border-color: var(--red-400);
       box-shadow: 0rem 0rem 0.5rem var(--red-400);
     }
+
+    &:-webkit-autofill {
+      -webkit-box-shadow: 0 0 0 1000px var(--gray-900) inset;
+      -webkit-text-fill-color: var(--gray-100);
+      border-color: var(--gray-700);
+    }
   }
 
   textarea {
