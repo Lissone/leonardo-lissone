@@ -1,58 +1,39 @@
 import styled from 'styled-components';
 
-export const Container = styled.section`
+import { HeadingContainer, SectionContainer } from '../styles';
+
+export const Container = styled(SectionContainer)``;
+
+export const Content = styled.div`
+  max-width: 1200px;
+
+  margin: 0 auto;
+
+  @media (max-width: 1430px) {
+    max-width: 795px;
+  }
+
+  @media (max-width: 1080px) {
+    max-width: 745px;
+  }
+
+  @media (max-width: 835px) {
+    max-width: none;
+  }
+`;
+
+export const Header = styled.header`
   width: 100%;
-  margin-top: 2rem;
-  padding: 4rem 2rem;
 
   display: flex;
   flex-direction: column;
   align-items: center;
-
-  header {
-    width: 100%;
-
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 2.25rem;
-  }
+  gap: 3rem;
 `;
 
-export const Heading = styled.div`
-  display: flex;
-  flex-direction: column;
-  gap: 0.35rem;
-
-  h1 {
-    font-size: 3rem;
-    font-weight: 700;
-
-    line-height: 3.2rem;
-    text-align: center;
-
-    color: var(--gray-100);
-
-    @media (max-width: 680px) {
-      font-size: 2.8rem;
-    }
-  }
-`;
-
-export const Subtitle = styled.div`
-  display: flex;
+export const Heading = styled(HeadingContainer)`
   align-items: center;
-  justify-content: center;
-  gap: 0.35rem;
-
-  h2 {
-    font-size: 1.8rem;
-    font-weight: 700;
-
-    text-shadow: 0rem 0.25rem 2.5rem rgba(202, 62, 71, 0.5);
-
-    color: var(--red-400);
-  }
+  text-align: center;
 `;
 
 export const FilterContainer = styled.div`
@@ -69,7 +50,7 @@ export const FilterContainer = styled.div`
 
 export const SearchInputContainer = styled.div`
   width: 100%;
-  max-width: 22rem;
+  max-width: 24rem;
 
   display: flex;
   align-items: center;
@@ -111,8 +92,8 @@ export const SearchInputContainer = styled.div`
     }
   }
 
-  @media (max-width: 850px) {
-    max-width: 19.4rem;
+  @media (max-width: 835px) {
+    max-width: 19.4rem; //! alterar para px?
   }
 `;
 
@@ -161,41 +142,48 @@ export const FilterBadge = styled.div`
   background: var(--red-400);
 `;
 
-export const Content = styled.div`
+export const ProjectsList = styled.div`
   padding-top: 2rem;
 
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  justify-items: center;
+  grid-template-columns: repeat(3, 1fr);
+  justify-items: start;
   gap: 1.5rem;
 
-  @media (max-width: 1350px) {
-    grid-template-columns: 1fr 1fr;
+  @media (max-width: 1430px) {
+    grid-template-columns: repeat(2, 1fr);
   }
 
-  @media (max-width: 850px) {
+  @media (max-width: 835px) {
     grid-template-columns: 1fr;
+    justify-items: center;
   }
+`;
+
+export const Row = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
 `;
 
 export const ShowMoreButton = styled.button`
   margin-top: 4rem;
-  padding: 0.8rem 4.2rem;
+  padding: 0.8rem 3rem;
 
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 0.5rem;
+  gap: 0.65rem;
   
   font-size: 1.2rem;
 
-  border: 2px solid var(--gray-800);
+  border: 1px solid var(--gray-800);
   border-radius: 0.25rem;
 
   color: var(--gray-300);
   background: var(--gray-900-opacity-80);
 
-  transition: 0.3s all;
+  transition: all 0.3s;
 
   &:hover {
     transform: scale(1.03);

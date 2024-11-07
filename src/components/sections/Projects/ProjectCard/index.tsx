@@ -32,7 +32,7 @@ export function ProjectCard({ project, handleOpenCollaborationModal }: ProjectCa
   } = projectsSection;
 
   return (
-    <Container data-aos="fade-up" data-aos-duration="1100">
+    <Container data-aos="fade-up">
       <Content>
         <Cover>
           <img src={project.thumbnailUrl} alt={`${thumbnailAltLabel} ${project.name}`} />

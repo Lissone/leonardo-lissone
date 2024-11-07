@@ -19,11 +19,13 @@ import {
   FilterBadge,
   FilterButton,
   FilterContainer,
+  Header,
   Heading,
   NotFoundText,
+  ProjectsList,
+  Row,
   SearchInputContainer,
   ShowMoreButton,
-  Subtitle,
 } from './styles';
 
 const GRID_LIMIT = 6;
@@ -55,18 +57,18 @@ export function Projects() {
   return (
     <ProjectsFilterProvider setCurrentProjects={setCurrentProjects}>
       <Container id="projects">
-        <div>
-          <header data-aos="fade-up">
-            <Heading>
-              <Subtitle>
+        <Content>
+          <Header>
+            <Heading data-aos="fade-up">
+              <div className="heading-subtitle">
                 <img src="/icons/arrow-heading.svg" alt="Big arrow with led" />
                 <h2>{heading[0]}</h2>
-              </Subtitle>
+              </div>
 
               <h1>{heading[1]}</h1>
             </Heading>
 
-            <FilterContainer>
+            <FilterContainer data-aos="fade-up">
               <NameFilterInput placeholder={filterNameTitleLabel} />
 
               <CategoryFilterButton
@@ -74,49 +76,52 @@ export function Projects() {
                 onClick={() => setShowFilterModal(true)}
               />
             </FilterContainer>
-          </header>
+          </Header>
 
-          <Content>
+          <ProjectsList>
             {projectsSliced.map((project) => (
               <ProjectCard
                 key={project.name}
                 project={project}
+                // ! TODO: Abertura de modal pode ser diferente
                 handleOpenCollaborationModal={() => setProjectCollaboratorsSelected(project)}
               />
             ))}
-          </Content>
-        </div>
+          </ProjectsList>
 
-        {currentProjects.length === 0 ? (
-          <NotFoundText data-aos="fade-up" data-aos-duration="1100">
-            {projectsNotfoundLabel}
-          </NotFoundText>
-        ) : null}
+          <Row>
+            {currentProjects.length === 0 ? (
+              <NotFoundText data-aos="fade-up" data-aos-duration="1100">
+                {projectsNotfoundLabel}
+              </NotFoundText>
+            ) : null}
 
-        {currentProjects.length > 0 && currentGrid < currentProjects.length ? (
-          <ShowMoreButton
-            type="button"
-            data-aos="fade-up"
-            data-aos-duration="1100"
-            onClick={handleShowMoreProjects}
-          >
-            {showMoreButtonLabel}
-            <FiPlusCircle size={22} />
-          </ShowMoreButton>
-        ) : null}
-
-        <CollaborationModal
-          project={projectCollaboratorsSelected}
-          isOpen={!!projectCollaboratorsSelected}
-          handleClose={() => setProjectCollaboratorsSelected(null)}
-        />
-
-        <CategoryFilterModal
-          isOpen={showFilterModal}
-          setCurrentProjects={setCurrentProjects}
-          handleClose={() => setShowFilterModal(false)}
-        />
+            {currentProjects.length > 0 && currentGrid < currentProjects.length ? (
+              <ShowMoreButton
+                type="button"
+                data-aos="fade-up"
+                data-aos-duration="1100"
+                onClick={handleShowMoreProjects}
+              >
+                {showMoreButtonLabel}
+                <FiPlusCircle size={22} />
+              </ShowMoreButton>
+            ) : null}
+          </Row>
+        </Content>
       </Container>
+
+      <CollaborationModal
+        project={projectCollaboratorsSelected}
+        isOpen={!!projectCollaboratorsSelected}
+        handleClose={() => setProjectCollaboratorsSelected(null)}
+      />
+
+      <CategoryFilterModal
+        isOpen={showFilterModal}
+        setCurrentProjects={setCurrentProjects}
+        handleClose={() => setShowFilterModal(false)}
+      />
     </ProjectsFilterProvider>
   );
 }

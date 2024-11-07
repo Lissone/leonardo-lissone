@@ -1,10 +1,11 @@
 import styled from 'styled-components';
 
-export const Container = styled.footer`
-  width: 100%;
-  height: calc(100vh - 5.625rem); // 100vh - header height
-  margin-top: 2rem;
-  padding: 4rem 0;
+import { HeadingContainer, SectionContainer } from '../styles';
+
+export const Container = styled(SectionContainer)`
+  min-height: calc(100vh - 5.625rem); // Header height
+  
+  margin-top: 5.625rem; // Header height
 
   display: flex;
   flex-direction: column;
@@ -16,10 +17,6 @@ export const Container = styled.footer`
     rgba(49, 49, 49, 0.1) 38.91%,
     rgba(202, 62, 71, 0.5) 99.97%
   );
-
-  @media (max-height: 590px) {
-    height: 100%;
-  }
 
   .bearing-led {
     height: 44rem;
@@ -73,20 +70,12 @@ export const Content = styled.div`
   }
 `;
 
-export const Heading = styled.div`
-  display: flex;
-  flex-direction: column;
+export const Heading = styled(HeadingContainer)`
   align-items: center;
-  gap: 0.35rem;
+  text-align: center;
 
   h1 {
-    font-size: 3rem;
-    font-weight: 700;
-
-    line-height: 3.2rem;
     text-align: center;
-
-    color: var(--gray-100);
 
     @media (max-width: 850px) {
       font-size: 2.5rem;
@@ -98,25 +87,6 @@ export const Heading = styled.div`
 
     @media (max-width: 400px) {
       font-size: 2rem;
-    }
-  }
-`;
-
-export const Subtitle = styled.div`
-  display: flex;
-  align-items: center;
-  gap: 0.35rem;
-
-  h2 {
-    font-size: 1.8rem;
-    font-weight: 700;
-
-    text-shadow: 0rem 0.25rem 2.5rem rgba(202, 62, 71, 0.5);
-
-    color: var(--red-400);
-
-    @media (max-width: 850px) {
-      font-size: 1.5rem;
     }
   }
 `;

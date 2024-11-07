@@ -12,7 +12,6 @@ import {
   Content,
   Heading,
   Socials,
-  Subtitle,
   Text,
 } from './styles';
 
@@ -25,19 +24,19 @@ export function Contact() {
 
   return (
     <Container id="contact">
-      <Content data-aos="fade-up">
-        <Heading>
-          <Subtitle>
+      <Content>
+        <Heading data-aos="fade-down">
+          <div className="heading-subtitle">
             <img src="/icons/arrow-heading.svg" alt="Big arrow with led" />
             <h2>{heading[0]}</h2>
-          </Subtitle>
+          </div>
 
           <h1>{heading[1]}</h1>
         </Heading>
 
-        <Text>{text}</Text>
+        <Text data-aos="fade-up">{text}</Text>
 
-        <Socials>
+        <Socials data-aos="fade-up">
           {socials.map((social) => (
             <Tooltip key={social.name} title={social.name}>
               <a
@@ -52,11 +51,14 @@ export function Contact() {
           ))}
         </Socials>
 
-        <ContactButton type="button" onClick={() => toggleSendMessageModalOpen(true)}>
+        <ContactButton
+          type="button"
+          data-aos="fade-up"
+          onClick={() => toggleSendMessageModalOpen(true)}
+        >
           {sharedButtons.contactButtonLabel}
           <IoPaperPlaneOutline size={22} />
         </ContactButton>
-
       </Content>
 
       <img className="bearing-led" src="/images/bearing-led.svg" alt="Bearing with led" />

@@ -1,79 +1,32 @@
 import styled from 'styled-components';
 
-export const Container = styled.section`
-  width: 100%;
-  height: 100%;
-  min-height: 100vh;
-  margin-top: 2rem;
-  padding: 4rem 0;
+import { HeadingContainer, SectionContainer } from '../styles';
 
-  display: flex;
-`;
-
-export const Content = styled.div`
-  width: 100%;
-  max-width: 1260px;
-  margin: 0 auto;
-
+export const Container = styled(SectionContainer)`
   display: flex;
   align-items: center;
+  justify-content: center;
   gap: 3rem;
 
-  @media (max-width: 1430px) {
-    padding: 0 4rem;
-
+  @media (max-width: 1370px) {
     flex-direction: column;
     justify-content: center;
-  }
-
-  @media (max-width: 450px) {
-    padding: 0 2rem;
   }
 `;
 
 export const Column = styled.div`
+  width: fit-content;
+  
   display: flex;
   flex-direction: column;
 `;
 
-export const Heading = styled.div`
-  display: flex;
-  flex-direction: column;
-  gap: 0.35rem;
-
-  h1 {
-    font-size: 3rem;
-    font-weight: 700;
-
-    line-height: 3.2rem;
-
-    color: var(--gray-100);
-
-    @media (max-width: 680px) {
-      font-size: 2.8rem;
-    }
-  }
-`;
-
-export const Subtitle = styled.div`
-  display: flex;
-  align-items: center;
-  gap: 0.35rem;
-
-  h2 {
-    font-size: 1.8rem;
-    font-weight: 700;
-
-    text-shadow: 0rem 0.25rem 2.5rem rgba(202, 62, 71, 0.5);
-
-    color: var(--red-400);
-  }
-`;
+export const Heading = styled(HeadingContainer)``;
 
 export const Text = styled.div`
   max-width: 46rem;
 
-  padding-top: 2rem;
+  margin-top: 2rem;
 
   display: flex;
   flex-direction: column;
@@ -96,7 +49,8 @@ export const HighlightText = styled.span`
 
 export const SkillsList = styled.ul`
   max-width: 34rem;
-  padding-top: 1.5rem;
+
+  margin-top: 1.5rem;
 
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -114,8 +68,6 @@ export const SkillsList = styled.ul`
 `;
 
 export const PhotoContainer = styled.div`
-  margin: 0 auto;
-
   position: relative;
 
   display: flex;
@@ -133,7 +85,7 @@ export const PhotoContainer = styled.div`
     border-radius: 100%;
   }
 
-  @media (max-width: 1500px) {
+  @media (max-width: 1080px) {
     img {
       width: 28rem;
       height: 28rem;
@@ -145,15 +97,15 @@ export const PhotoContainer = styled.div`
     }
   }
 
-  @media (max-width: 420px) {
+  @media (max-width: 450px) {
     img {
       width: 21rem;
       height: 21rem;
     }
 
     img:nth-child(2) {
-      width: 16.5rem;
-      height: 16.5rem;
+      width: 16.75rem;
+      height: 16.75rem;
 
       top: 2rem;
     }

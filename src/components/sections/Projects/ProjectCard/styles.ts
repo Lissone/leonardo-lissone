@@ -1,8 +1,8 @@
 import styled from 'styled-components';
 
 export const Container = styled.div`
-  max-width: 22rem;
-  min-height: 28rem;
+  max-width: 24rem;
+  min-height: 30rem;
 
   border: 1px solid var(--gray-800);
   border-radius: 0.35rem;
@@ -18,11 +18,6 @@ export const Container = styled.div`
 
   &:hover .project-card-actions {
     opacity: 1;
-  }
-
-  @media (max-width: 850px) {
-    max-width: 24rem;
-    min-height: 30rem;
   }
 `;
 

@@ -92,7 +92,7 @@ function TimelineItem({ job, index }: TimelineItemProps) {
         ))}
 
         {showMoreExperiences ? (
-          <ButtonContainer data-aos="fade-up" data-aos-duration="1000">
+          <ButtonContainer data-aos="fade-down" data-aos-duration="800">
             <ShowMoreExperiencesButton
               type="button"
               onClick={() => setCurrentExperiencesListItems((prevState) => prevState + 1)}

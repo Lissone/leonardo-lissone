@@ -1,7 +1,7 @@
 import { useData } from '@contexts/DataContext';
 
 import { Timeline } from './Timeline';
-import { Container, Content, Heading, Subtitle } from './styles';
+import { Container, Heading } from './styles';
 
 export function WorkExperiences() {
   const { data } = useData();
@@ -10,18 +10,16 @@ export function WorkExperiences() {
 
   return (
     <Container id="work-experiences">
-      <Content data-aos="fade-up">
-        <Heading>
-          <Subtitle>
-            <img src="/icons/arrow-heading.svg" alt="Big arrow with led" />
-            <h2>{heading[0]}</h2>
-          </Subtitle>
+      <Heading data-aos="fade-down">
+        <div className="heading-subtitle">
+          <img src="/icons/arrow-heading.svg" alt="Big arrow with led" />
+          <h2>{heading[0]}</h2>
+        </div>
 
-          <h1>{heading[1]}</h1>
-        </Heading>
+        <h1>{heading[1]}</h1>
+      </Heading>
 
-        <Timeline jobs={jobs} />
-      </Content>
+      <Timeline jobs={jobs} />
     </Container>
   );
 }

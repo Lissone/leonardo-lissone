@@ -1,58 +1,17 @@
 import styled from 'styled-components';
 
-export const Container = styled.section`
-  width: 100%;
-  height: 100vh;
-  margin-top: 2rem;
-  padding: 4rem 0;
+import { SectionContainer } from '../styles';
 
-  display: flex;
+export const Container = styled(SectionContainer)`
+  min-height: calc(100vh - 5.625rem); // Header height
+  
+  margin-top: 5.625rem; // Header height
 
-  @media (max-width: 340px) or (min-height: 750px) or (max-height: 500px) {
-    height: 100%;
-    margin-bottom: 3rem;
-  }
-`;
-
-export const Content = styled.div`
-  width: 100%;
-  height: 100%;
-  max-width: 1260px;
-  margin: 0 auto;
-  padding-top: 6rem;
-  padding-left: 9rem;
-  padding-right: 9rem;
-
+  position: relative;
+  
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-
-  @media (max-width: 1240px) or (max-height: 630px) {
-    padding-right: 4rem;
-  }
-
-  @media (max-width: 920px) {
-    margin: 0;
-    padding-left: 4rem;
-    padding-right: 4rem;
-  }
-  @media (max-width: 540px) or (max-height: 520px) {
-    padding-top: 3rem;
-  }
-
-  @media (max-width: 450px) {
-    padding-left: 2rem;
-    padding-right: 2rem;
-  }
-
-  img {
-    margin-top: 6.2rem;
-    margin-right: 1rem;
-
-    @media (max-width: 770px) {
-      display: none;
-    }
-  }
 `;
 
 export const Heading = styled.div`
@@ -112,6 +71,8 @@ export const Heading = styled.div`
 `;
 
 export const ResumeText = styled.div`
+  max-width: 52rem;
+
   padding-top: 1rem;
 
   display: flex;
@@ -126,6 +87,10 @@ export const ResumeText = styled.div`
 
       color: var(--red-200);
     }
+  }
+
+  @media (max-width: 1240px) {
+    max-width: 40rem;
   }
 `;
 
@@ -240,15 +205,29 @@ export const ContactButton = styled.button`
 `;
 
 export const ImageContainer = styled.div`
+  height: 100%;
+
+  position: absolute;
+  top: 0;
+  right: 0;
+
   display: flex;
   align-items: center;
   justify-content: center;
 
   img {
-    height: 38rem;
+    height: 44rem;
+
+    @media (max-width: 1240px) or (min-height: 980px) {
+      height: 38rem;
+    }
+
+    @media (min-height: 980px) {
+      height: 30rem;
+    }
   }
 
-  @media (max-width: 965px) or (max-height: 500px) {
+  @media (max-width: 980px) or (max-height: 680px) {
     display: none;
   }
 `;
