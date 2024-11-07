@@ -1,5 +1,7 @@
 import { ReactNode, useEffect, useState } from 'react';
 
+import { useWindowWidth } from '@shared/hooks/useWindowWidth';
+
 import { Container } from './styles';
 import { FixedSocials } from '../FixedSocials';
 import { Header } from '../Header';
@@ -11,28 +13,19 @@ interface LayoutProps {
 }
 
 export function Layout({ setIsOverlayActive, children }: LayoutProps) {
+  const windowWidth = useWindowWidth();
+
   const [hamburguerIsOpen, setHamburguerIsOpen] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {
-    const handleResize = () => {
-      const { innerWidth } = window;
+    if (windowWidth > 920) {
+      setHamburguerIsOpen(false);
+      setIsOverlayActive(false);
+    }
 
-      if (innerWidth > 920) {
-        setHamburguerIsOpen(false);
-        setIsOverlayActive(false);
-      }
-
-      setIsMobile(innerWidth <= 920);
-    };
-
-    window.addEventListener('resize', handleResize);
-    handleResize();
-
-    return () => {
-      window.removeEventListener('resize', handleResize);
-    };
-  }, [setIsOverlayActive]);
+    setIsMobile(innerWidth <= 920);
+  }, [setIsOverlayActive, windowWidth]);
 
   const handleHamburguerClick = () => {
     setHamburguerIsOpen(!hamburguerIsOpen);
