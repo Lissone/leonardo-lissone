@@ -1,4 +1,5 @@
 import { FiExternalLink, FiMenu } from 'react-icons/fi';
+import { IoMdClose } from 'react-icons/io';
 
 import { useData } from '@contexts/DataContext';
 
@@ -20,10 +21,13 @@ import {
 } from './styles';
 
 interface HeaderProps {
+  readonly hamburguerIsOpen: boolean;
   readonly handleHamburguerClick: () => void;
 }
 
-export function Header({ handleHamburguerClick }: HeaderProps) {
+export function Header({
+  hamburguerIsOpen, handleHamburguerClick,
+}: HeaderProps) {
   const { data } = useData();
   const { headerButtons, sharedButtons } = data;
 
@@ -33,7 +37,7 @@ export function Header({ handleHamburguerClick }: HeaderProps) {
         <img src="/logo.svg" alt="Logo" />
 
         <Hamburguer onClick={handleHamburguerClick}>
-          <FiMenu size={30} />
+          {hamburguerIsOpen ? <IoMdClose size={30} /> : <FiMenu size={30} />}
         </Hamburguer>
 
         <Menu>

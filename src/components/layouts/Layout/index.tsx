@@ -1,4 +1,4 @@
-import { ReactNode, useEffect, useState } from 'react';
+import { ReactNode, useEffect, useRef, useState } from 'react';
 
 import { useWindowWidth } from '@shared/hooks/useWindowWidth';
 
@@ -18,6 +18,8 @@ export function Layout({ setIsOverlayActive, children }: LayoutProps) {
   const [hamburguerIsOpen, setHamburguerIsOpen] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
 
+  const sidebarRef = useRef<HTMLDivElement>(null);
+
   useEffect(() => {
     if (windowWidth > 920) {
       setHamburguerIsOpen(false);
@@ -26,6 +28,27 @@ export function Layout({ setIsOverlayActive, children }: LayoutProps) {
 
     setIsMobile(innerWidth <= 920);
   }, [setIsOverlayActive, windowWidth]);
+
+  // Verifica quando houver click fora do componente Sidebar
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      if (!(event.target instanceof Node)) return;
+      if (sidebarRef.current && !sidebarRef.current.contains(event.target)) {
+        setHamburguerIsOpen(false);
+        setIsOverlayActive(false);
+      }
+    };
+
+    if (hamburguerIsOpen) {
+      document.addEventListener('mousedown', handleClickOutside);
+    } else {
+      document.removeEventListener('mousedown', handleClickOutside);
+    }
+
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside);
+    };
+  }, [hamburguerIsOpen, setIsOverlayActive]);
 
   const handleHamburguerClick = () => {
     setHamburguerIsOpen(!hamburguerIsOpen);
@@ -36,9 +59,9 @@ export function Layout({ setIsOverlayActive, children }: LayoutProps) {
     <Container>
       <FixedSocials />
 
-      <Header handleHamburguerClick={handleHamburguerClick} />
+      <Header hamburguerIsOpen={hamburguerIsOpen} handleHamburguerClick={handleHamburguerClick} />
 
-      <Sidebar show={isMobile && hamburguerIsOpen} />
+      <Sidebar ref={sidebarRef} show={isMobile && hamburguerIsOpen} />
 
       {children}
     </Container>

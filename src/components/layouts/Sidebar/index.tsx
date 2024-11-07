@@ -1,3 +1,4 @@
+import { forwardRef } from 'react';
 import { FiExternalLink } from 'react-icons/fi';
 
 import { useData } from '@contexts/DataContext';
@@ -21,12 +22,12 @@ interface SidebarProps {
   readonly show: boolean;
 }
 
-export function Sidebar({ show = false }: SidebarProps) {
+export const Sidebar = forwardRef<HTMLDivElement, SidebarProps>(({ show }, ref) => {
   const { data } = useData();
   const { headerButtons, aboutSection, sharedButtons } = data;
 
   return (
-    <Container $show={show}>
+    <Container ref={ref} $show={show}>
       <PhotoContainer>
         <img src="/images/avatar-border.svg" alt="Avatar border" />
         <img src={aboutSection.profilePhoto.url} alt={aboutSection.profilePhoto.alt} />
@@ -57,4 +58,6 @@ export function Sidebar({ show = false }: SidebarProps) {
       </ResumeButton>
     </Container>
   );
-}
+});
+
+Sidebar.displayName = 'Sidebar';
