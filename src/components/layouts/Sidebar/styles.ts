@@ -17,8 +17,6 @@ export const Container = styled.aside<ContainerProps>`
   left: 0;
   left: ${({ $show }) => ($show ? '0' : '-18rem')};
 
-  /* opacity: ${({ $show }) => ($show ? '100%' : '0%')}; */
-
   overflow: auto;
 
   display: flex;
@@ -27,7 +25,6 @@ export const Container = styled.aside<ContainerProps>`
 
   background: var(--gray-800);
   box-shadow: 0rem 0rem 1.875rem rgba(0, 0, 0, 0.25);
-  /* transform: translate(-110%, 0); */
 
   transition: left 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
 `;
@@ -65,7 +62,7 @@ export const LanguageSwitchContainer = styled.div`
 `;
 
 export const Navigation = styled.nav`
-  margin-top: 2.5rem;
+  margin: 3rem 0;
   
   display: flex;
   flex-direction: column;
