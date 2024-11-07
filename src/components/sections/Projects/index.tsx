@@ -59,7 +59,7 @@ export function Projects() {
       <Container id="projects">
         <Content>
           <Header>
-            <Heading data-aos="fade-up">
+            <Heading data-aos="fade-down">
               <div className="heading-subtitle">
                 <img src="/icons/arrow-heading.svg" alt="Big arrow with led" />
                 <h2>{heading[0]}</h2>
@@ -80,18 +80,19 @@ export function Projects() {
 
           <ProjectsList>
             {projectsSliced.map((project) => (
-              <ProjectCard
-                key={project.name}
-                project={project}
-                // ! TODO: Abertura de modal pode ser diferente
-                handleOpenCollaborationModal={() => setProjectCollaboratorsSelected(project)}
-              />
+              <div key={project.name} data-aos="fade-up">
+                <ProjectCard
+                  project={project}
+                  // ! TODO: Abertura de modal pode ser diferente
+                  handleOpenCollaborationModal={() => setProjectCollaboratorsSelected(project)}
+                />
+              </div>
             ))}
           </ProjectsList>
 
           <Row>
             {currentProjects.length === 0 ? (
-              <NotFoundText data-aos="fade-up" data-aos-duration="1100">
+              <NotFoundText>
                 {projectsNotfoundLabel}
               </NotFoundText>
             ) : null}

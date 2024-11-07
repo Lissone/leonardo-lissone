@@ -26,17 +26,12 @@ interface ProjectCardProperties {
 export function ProjectCard({ project, handleOpenCollaborationModal }: ProjectCardProperties) {
   const { data } = useData();
   const { projectsSection } = data;
-  const {
-    thumbnailAltLabel, collaborationLabel,
-    prototypeLabel, repositoryLabel,
-  } = projectsSection;
+  const { collaborationLabel, prototypeLabel, repositoryLabel } = projectsSection;
 
   return (
-    <Container data-aos="fade-up">
+    <Container>
       <Content>
-        <Cover>
-          <img src={project.thumbnailUrl} alt={`${thumbnailAltLabel} ${project.name}`} />
-
+        <Cover $imageUrl={project.thumbnailUrl}>
           <CoverActions className="project-card-actions">
             {project.prototypeLink ? (
               <Tooltip title={prototypeLabel}>

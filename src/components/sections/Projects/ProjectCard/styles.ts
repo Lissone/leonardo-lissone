@@ -23,6 +23,7 @@ export const Container = styled.div`
 
 export const Content = styled.div`
   height: 100%;
+  
   padding: 0.875rem;
 
   display: flex;
@@ -30,16 +31,26 @@ export const Content = styled.div`
   justify-content: flex-start;
 `;
 
-export const Cover = styled.div`
+interface CoverProps {
+  readonly $imageUrl: string;
+}
+
+export const Cover = styled.div<CoverProps>`
   width: 100%;
+  height: 12.25rem;
 
   position: relative;
+  overflow: hidden;
 
-  img {
-    width: 100%;
-    height: 100%;
+  background-image: url(${({ $imageUrl }) => $imageUrl});
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 
-    border-radius: 0.35rem;
+  border-radius: 0.35rem;
+
+  @media (max-width: 320px) {
+    height: 11rem;
   }
 `;
 
