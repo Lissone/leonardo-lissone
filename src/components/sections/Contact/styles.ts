@@ -10,7 +10,7 @@ export const Container = styled(SectionContainer)`
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-between;
+  gap: 1.5rem;
 
   background: linear-gradient(
     179.96deg,
@@ -29,44 +29,25 @@ export const Container = styled(SectionContainer)`
 
     @media (max-width: 630px) {
       height: 34rem;
-
-      bottom: -10.5rem;
+      bottom: -10.55rem;
     }
 
     @media (max-width: 480px) {
-      height: 28rem;
-
-      bottom: -8.7rem;
+      height: 27rem;
+      bottom: -8.4rem;
     }
 
     @media (max-width: 370px) {
-      height: 24rem;
-
-      bottom: -7.5rem;
+      height: 22rem;
+      bottom: -6.8rem;
     }
-
-    @media (min-width: 920px) {
-      @media (max-height: 640px) {
-        display: none;
-      }
-    }
-
+    
     @media (max-width: 920px) {
-      @media(max-height: 700px) {
+      @media (max-height: 700px) or (max-height: 640px) {
         display: none;
       }
     }
-  }
-`;
 
-export const Content = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 1.5rem;
-
-  @media (max-width: 350px) {
-    padding: 0 2rem;
   }
 `;
 
@@ -75,12 +56,6 @@ export const Heading = styled(HeadingContainer)`
   text-align: center;
 
   h1 {
-    text-align: center;
-
-    @media (max-width: 850px) {
-      font-size: 2.5rem;
-    }
-
     @media (max-width: 540px) {
       font-size: 2.25rem;
     }
@@ -92,20 +67,20 @@ export const Heading = styled(HeadingContainer)`
 `;
 
 export const Text = styled.p`
-  max-width: 60%;
+  max-width: 50%;
 
   font-size: 1.2rem;
 
   text-align: center;
 
-  @media (max-width: 900px) {
-    max-width: 80%;
+  @media (max-width: 920px) {
+    max-width: 100%;
   }
 `;
 
 export const ContactButton = styled.button`
   margin-top: 2rem;
-  padding: 0.8rem 4.2rem;
+  padding: 0.8rem 4rem;
 
   display: flex;
   align-items: center;
