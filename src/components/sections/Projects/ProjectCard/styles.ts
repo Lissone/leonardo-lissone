@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 
 export const Container = styled.div`
+  height: 100%;
   max-width: 24rem;
   min-height: 30rem;
 
@@ -22,6 +23,7 @@ export const Container = styled.div`
 `;
 
 export const Content = styled.div`
+  width: 100%;
   height: 100%;
   
   padding: 0.875rem;
@@ -37,7 +39,8 @@ interface CoverProps {
 
 export const Cover = styled.div<CoverProps>`
   width: 100%;
-  height: 12.25rem;
+  height: 100%;
+  max-height: 12.25rem;
 
   position: relative;
   overflow: hidden;
@@ -106,6 +109,15 @@ export const Information = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+
+  p {
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
 `;
 
 export const Heading = styled.div`
