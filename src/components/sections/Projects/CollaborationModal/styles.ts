@@ -6,12 +6,6 @@ export const Content = styled.div`
   display: flex;
   flex-direction: column;
 
-  @media (max-height: 680px) {
-    max-height: 320px;
-
-    overflow-y: scroll;
-  }
-
   span {
     color: var(--gray-100);
 
@@ -30,11 +24,6 @@ export const Content = styled.div`
       align-items: center;
       justify-content: space-between;
 
-      @media (max-width: 370px) {
-        flex-direction: column;
-        gap: 1rem;
-      }
-
       div {
         div:nth-child(1) {
           @media (max-width: 430px) {
@@ -47,7 +36,18 @@ export const Content = styled.div`
         display: flex;
         gap: 1rem;
       }
+
+      @media (max-width: 370px) {
+        flex-direction: column;
+        gap: 1rem;
+      }
     }
+  }
+
+  @media (max-height: 680px) {
+    max-height: 320px;
+
+    overflow-y: scroll;
   }
 `;
 
@@ -62,10 +62,6 @@ export const CollaboratorAvatar = styled.div`
   box-shadow: 0rem 0rem 0.625rem var(--red-400);
 
   background: none;
-
-  @media (max-width: 430px) {
-    display: none;
-  }
 
   div {
     width: 100%;
@@ -91,15 +87,15 @@ export const CollaboratorAvatar = styled.div`
       height: 70%;
     }
   }
+
+  @media (max-width: 430px) {
+    display: none;
+  }
 `;
 
 export const CollaboratorInfos = styled.div`
   display: flex;
   flex-direction: column;
-
-  @media (max-width: 370px) {
-    text-align: center;
-  }
 
   p {
     font-size: 0.9rem;
@@ -107,6 +103,10 @@ export const CollaboratorInfos = styled.div`
 
   span {
     font-size: 1.25rem;
+  }
+
+  @media (max-width: 370px) {
+    text-align: center;
   }
 `;
 
@@ -120,11 +120,17 @@ export const CollaboratorSocials = styled.div`
 
     &:hover {
       transform: scale(1.08);
-      filter: brightness(0.9);
+
+      svg {
+        color: var(--red-400);
+        filter: drop-shadow(0 0 .675rem rgba(202, 62, 71, 0.7));
+      }
     }
 
     svg {
       color: var(--gray-500);
+
+      transition: 0.3s all;
     }
   }
 `;
