@@ -101,7 +101,6 @@ export function Projects() {
               <ShowMoreButton
                 type="button"
                 data-aos="fade-up"
-                data-aos-duration="1100"
                 onClick={handleShowMoreProjects}
               >
                 {showMoreButtonLabel}

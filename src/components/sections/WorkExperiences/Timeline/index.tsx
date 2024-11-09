@@ -56,7 +56,7 @@ function TimelineItem({ job, index }: TimelineItemProps) {
         href={job.siteLink}
         $background={job.logo.contrastColor}
         data-aos="zoom-in"
-        data-aos-duration="500"
+        data-aos-duration="800"
       >
         <img src={job.logo.url} alt={`${job.company} Logo`} />
       </Circle>
