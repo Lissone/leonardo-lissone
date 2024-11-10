@@ -34,7 +34,6 @@ export function Presentation() {
 
   return (
     <Container id="presentation">
-
       <Heading>
         <h3 data-aos="fade-left">{heading[0]}</h3>
         <h2 data-aos="fade-left">{heading[1]}</h2>
