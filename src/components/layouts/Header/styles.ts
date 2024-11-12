@@ -44,6 +44,8 @@ export const Hamburguer = styled.div`
   }
 
   @media (max-width: 920px) {
+    margin-right: 1rem;
+
     display: flex;
   }
 `;

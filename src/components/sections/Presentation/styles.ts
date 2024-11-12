@@ -3,15 +3,19 @@ import styled from 'styled-components';
 import { SectionContainer } from '../styles';
 
 export const Container = styled(SectionContainer)`
-  min-height: calc(100vh - 5.625rem); // Header height
+  min-height: calc(100vh - 90px); // Header height
 
-  margin-top: 5.625rem; // Header height
+  margin-top: 90px; // Header height
 
   position: relative;
   
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+
+  @media (max-width: 450px) {
+    padding-top: 2rem;
+  }
 `;
 
 export const Content = styled.div`

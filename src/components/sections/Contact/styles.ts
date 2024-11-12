@@ -3,9 +3,9 @@ import styled from 'styled-components';
 import { HeadingContainer, SectionContainer } from '../styles';
 
 export const Container = styled(SectionContainer)`
-  min-height: calc(100vh - 5.625rem); // Header height
+  min-height: calc(100vh - 90px); // Header height
   
-  margin-top: 5.625rem; // Header height
+  margin-top: 90px; // Header height
 
   display: flex;
   flex-direction: column;
