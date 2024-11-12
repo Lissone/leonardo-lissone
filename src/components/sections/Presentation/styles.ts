@@ -4,7 +4,7 @@ import { SectionContainer } from '../styles';
 
 export const Container = styled(SectionContainer)`
   min-height: calc(100vh - 5.625rem); // Header height
-  
+
   margin-top: 5.625rem; // Header height
 
   position: relative;
@@ -12,6 +12,13 @@ export const Container = styled(SectionContainer)`
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+`;
+
+export const Content = styled.div`
+  width: 100%;
+  max-width: 1650px;
+
+  margin: 0 auto;
 `;
 
 export const Heading = styled.div`

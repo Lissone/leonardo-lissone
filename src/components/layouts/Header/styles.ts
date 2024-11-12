@@ -12,7 +12,10 @@ export const Container = styled.header`
 `;
 
 export const Content = styled.div`
-  padding: 0 3rem;
+  max-width: calc(1600px + (2rem * 2)); // base width + padding
+
+  margin: 0 auto;
+  padding: 0 2rem;
 
   display: grid;
   align-items: center;
@@ -41,8 +44,6 @@ export const Hamburguer = styled.div`
   }
 
   @media (max-width: 920px) {
-    margin-right: 2rem;
-
     display: flex;
   }
 `;
