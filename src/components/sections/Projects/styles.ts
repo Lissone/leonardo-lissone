@@ -167,7 +167,7 @@ export const Row = styled.div`
 `;
 
 export const ShowMoreButton = styled.button`
-  margin-top: 4rem;
+  margin-top: 2rem;
   padding: 0.8rem 3rem;
 
   display: flex;
