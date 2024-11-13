@@ -47,7 +47,6 @@ export const Container = styled(SectionContainer)`
         display: none;
       }
     }
-
   }
 `;
 

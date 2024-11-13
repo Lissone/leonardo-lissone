@@ -13,6 +13,10 @@ export const Container = styled(SectionContainer)`
   flex-direction: column;
   align-items: flex-start;
 
+  @media (max-width: 920px) or (min-height: 980px) {
+    min-height: auto;
+  }
+
   @media (max-width: 450px) {
     padding-top: 2rem;
   }
