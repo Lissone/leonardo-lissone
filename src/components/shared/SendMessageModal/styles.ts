@@ -7,7 +7,7 @@ export const Content = styled.div`
   flex-direction: column;
 
   span {
-    color: var(--gray-300);
+    color: var(--gray-100);
 
     @media (max-width: 370px) {
       text-align: center;
