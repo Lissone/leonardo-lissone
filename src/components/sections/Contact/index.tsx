@@ -7,6 +7,7 @@ import { SocialIcon } from '@components/shared/Icons/SocialIcon';
 import { Tooltip } from '@components/shared/Tooltip';
 
 import {
+  BearingLedImage,
   ContactButton,
   Container,
   Heading,
@@ -58,7 +59,7 @@ export function Contact() {
         <IoPaperPlaneOutline size={22} />
       </ContactButton>
 
-      <img className="bearing-led" src="/images/bearing-led.svg" alt="Bearing with led" />
+      <BearingLedImage src="/images/bearing-led.svg" alt="Bearing with led" />
     </Container>
   );
 }

@@ -17,37 +17,6 @@ export const Container = styled(SectionContainer)`
     rgba(49, 49, 49, 0.1) 38.91%,
     rgba(202, 62, 71, 0.5) 99.97%
   );
-
-  .bearing-led {
-    height: 44rem;
-    z-index: 0;
-
-    position: absolute;
-    bottom: -13.6rem;
-
-    transform: rotateZ(90deg);
-
-    @media (max-width: 630px) {
-      height: 34rem;
-      bottom: -10.55rem;
-    }
-
-    @media (max-width: 480px) {
-      height: 27rem;
-      bottom: -8.4rem;
-    }
-
-    @media (max-width: 370px) {
-      height: 22rem;
-      bottom: -6.8rem;
-    }
-    
-    @media (max-width: 920px) {
-      @media (max-height: 700px) or (max-height: 640px) {
-        display: none;
-      }
-    }
-  }
 `;
 
 export const Heading = styled(HeadingContainer)`
@@ -134,5 +103,46 @@ export const Socials = styled.div`
 
   @media (max-width: 920px) {
     display: flex;
+  }
+`;
+
+export const BearingLedImage = styled.img`
+  height: 44rem;
+  z-index: 0;
+
+  position: absolute;
+  bottom: -13.68rem;
+
+  transform: rotateZ(90deg);
+
+  @media (max-width: 635px) and (min-width: 495px) {
+    height: 34rem;
+    bottom: -10.55rem;
+
+    @media (max-height: 670px) {
+      display: none;
+    }
+  }
+
+  @media (max-width: 495px) and (min-width: 370px) {
+    height: 27rem;
+    bottom: -8.4rem;
+
+    @media (max-height: 660px) {
+      display: none;
+    }
+  }
+
+  @media (max-width: 370px) {
+    height: 22rem;
+    bottom: -6.8rem;
+
+    @media (max-height: 600px) {
+      display: none;
+    }
+  }
+
+  @media (min-width: 636px) and (max-height: 700px) {
+    display: none;
   }
 `;
