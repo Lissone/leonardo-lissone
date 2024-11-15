@@ -93,7 +93,7 @@ export const SearchInputContainer = styled.div`
   }
 
   @media (max-width: 835px) {
-    max-width: 19.4rem; //! alterar para px?
+    max-width: 19.4rem;
   }
 `;
 

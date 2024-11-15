@@ -83,7 +83,6 @@ export function Projects() {
               <div key={project.name} data-aos="fade-up">
                 <ProjectCard
                   project={project}
-                  // ! TODO: Abertura de modal pode ser diferente
                   handleOpenCollaborationModal={() => setProjectCollaboratorsSelected(project)}
                 />
               </div>
