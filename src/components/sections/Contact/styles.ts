@@ -108,10 +108,9 @@ export const Socials = styled.div`
 
 export const BearingLedImage = styled.img`
   height: 44rem;
-  z-index: 0;
 
   position: absolute;
-  bottom: -13.68rem;
+  bottom: -13.69rem;
 
   transform: rotateZ(90deg);
 
