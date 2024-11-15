@@ -150,8 +150,8 @@ export const GlobalOverlay = styled.div<GlobalOverlayProps>`
   right: 0;
   bottom: 0;
 
-  display: ${({ $isActive }) => ($isActive ? 'block' : 'none')}; /* Hidden by default */
+  display: ${({ $isActive }) => ($isActive ? 'block' : 'none')};
 
-  z-index: 5; /* Specify a stack order in case you're using a different order for other elements */
+  z-index: 5;
   background-color: rgba(0, 0, 0, 0.5);
 `;

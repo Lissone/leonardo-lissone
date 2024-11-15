@@ -87,8 +87,6 @@ export const Circle = styled.a<CircleProps>`
   min-width: 5rem;
   min-height: 5rem;
   flex-shrink: 0;
-  
-  z-index: 1;
 
   display: flex;
   align-items: center;

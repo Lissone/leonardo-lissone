@@ -9,8 +9,6 @@ export const Container = styled.div`
   bottom: -1rem;
   left: 0;
 
-  z-index: 100;
-
   @media (max-width: 920px) or (max-height: 500px) {
     display: none;
   }
