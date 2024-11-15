@@ -47,9 +47,10 @@ export const Content = styled.div`
   }
 
   input[type='checkbox']:hover + label {
-    filter: brightness(0.9);
+    border-color: var(--gray-600);
+    color: var(--gray-500);
 
-    transition: filter 0.2s;
+    transition: all 0.2s;
   }
 
   input[type='checkbox']:checked + label {
