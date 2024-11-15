@@ -1,8 +1,8 @@
 import styled from 'styled-components';
 
-export const Content = styled.div`
-  padding: 1.8rem 2.25rem;
+import { ModalContent } from '../Modal/styles';
 
+export const Content = styled(ModalContent)`
   display: flex;
   flex-direction: column;
 
@@ -12,24 +12,6 @@ export const Content = styled.div`
     @media (max-width: 370px) {
       text-align: center;
     }
-  }
-
-  @media (max-height: 820px) {
-    max-height: 540px;
-
-    overflow-y: scroll;
-  }
-
-  @media (max-height: 750px) {
-    max-height: 400px;
-  }
-
-  @media (max-height: 620px) {
-    max-height: 280px;
-  }
-
-  @media (max-height: 520px) {
-    max-height: 200px;
   }
 `;
 

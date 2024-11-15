@@ -1,9 +1,8 @@
 import styled from 'styled-components';
 
-export const Content = styled.div`
-  padding: 1.8rem 2.25rem;
-  width: 100%;
+import { ModalContent } from '@components/shared/Modal/styles';
 
+export const Content = styled(ModalContent)`
   display: flex;
   align-items: center;
 

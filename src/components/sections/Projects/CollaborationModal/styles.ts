@@ -1,8 +1,8 @@
 import styled from 'styled-components';
 
-export const Content = styled.div`
-  padding: 1.8rem 2.25rem;
+import { ModalContent } from '@components/shared/Modal/styles';
 
+export const Content = styled(ModalContent)`
   display: flex;
   flex-direction: column;
 
@@ -42,12 +42,6 @@ export const Content = styled.div`
         gap: 1rem;
       }
     }
-  }
-
-  @media (max-height: 680px) {
-    max-height: 320px;
-
-    overflow-y: scroll;
   }
 `;
 
