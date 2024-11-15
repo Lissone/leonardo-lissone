@@ -5,9 +5,10 @@ export const Container = styled.div`
   margin-left: 5rem;
 
   position: fixed;
-
   bottom: -1rem;
   left: 0;
+
+  z-index: 2;
 
   @media (max-width: 920px) or (max-height: 500px) {
     display: none;
