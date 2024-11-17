@@ -15,12 +15,12 @@ export const contentLanguages: ContentLang = {
         link: 'https://github.com/Lissone',
       },
       {
-        name: 'Figma',
-        link: 'https://www.figma.com/@lissone',
+        name: 'LinkedIn',
+        link: 'https://www.linkedin.com/in/lissone/',
       },
       {
-        name: 'Linkedin',
-        link: 'https://www.linkedin.com/in/lissone/',
+        name: 'Figma',
+        link: 'https://www.figma.com/@lissone',
       },
       {
         name: 'Instagram',
@@ -33,7 +33,7 @@ export const contentLanguages: ContentLang = {
       yearFirstWorkExperience: 2020,
     },
     aboutSection: {
-      heading: 'Sobre mim',
+      heading: ['Introdução', 'Sobre mim'],
       text: '<p>Amante da área de tecnologia, com foco em desenvolvimento <em>front-end/back-end</em>, <strong>interface de usuário</strong> e <strong>engenharia de software</strong>. Objetivo de me tornar um profissional cada vez mais <strong>completo</strong>, sempre buscando aprender e desenvolver projetos para aplicar e <strong>compartilhar conhecimentos</strong> e <strong>experiências</strong>. <strong>Formado</strong> no curso bacharel de <strong>Sistemas de Informação</strong>, criando aplicações de forma autônoma, em busca de desafios, trabalhando com carisma, vontade e paixão. <strong>Profissionalismo é meu foco</strong>.</p>',
       profilePhoto: {
         url: 'https://images.prismic.io/leonardo-lissone/f0ec48f1-86b2-4a45-bf0f-f643398ba1e5_Foto+com+fundo+s%C3%B3lido+%281%29.png?auto=compress,format',
@@ -50,13 +50,17 @@ export const contentLanguages: ContentLang = {
       ],
     },
     jobsSection: {
-      heading: 'Experiências de trabalho',
+      heading: ['Minha jornada até aqui', 'Experiências'],
       jobs: [
         {
           company: 'G5 Partners',
+          siteLink: 'https://g5partners.com/',
+          logo: {
+            url: 'https://leonardo-lissone.cdn.prismic.io/leonardo-lissone/ZyFBF68jQArTz__I_G5Logo.svg',
+            contrastColor: '#F1F1F1',
+          },
           experiences: [
             {
-              siteLink: 'https://g5partners.com/',
               role: 'Analista de Desenvolvimento Pleno',
               startDate: 'Fevereiro 2024',
               endDate: 'Presente',
@@ -68,7 +72,6 @@ export const contentLanguages: ContentLang = {
               ],
             },
             {
-              siteLink: 'https://g5partners.com/',
               role: 'Analista de Desenvolvimento Júnior',
               startDate: 'Março 2022',
               endDate: 'Fevereiro 2024',
@@ -85,10 +88,14 @@ export const contentLanguages: ContentLang = {
         },
         {
           company: 'Santander',
+          siteLink:
+          'https://www.santander.com.br/sustentabilidade/gestao-de-atividades/risco-gestao-integrada',
+          logo: {
+            url: 'https://leonardo-lissone.cdn.prismic.io/leonardo-lissone/ZyFBHa8jQArTz__M_SantanderLogo.svg',
+            contrastColor: '#F1F1F1',
+          },
           experiences: [
             {
-              siteLink:
-                'https://www.santander.com.br/sustentabilidade/gestao-de-atividades/risco-gestao-integrada',
               role: 'Estagiário de inovação',
               startDate: 'Setembro 2021',
               endDate: 'Março 2022',
@@ -103,9 +110,13 @@ export const contentLanguages: ContentLang = {
         },
         {
           company: 'Serget',
+          siteLink: 'http://www.serget.com.br/',
+          logo: {
+            url: 'https://leonardo-lissone.cdn.prismic.io/leonardo-lissone/ZyFBJa8jQArTz__N_SergetLogo.svg',
+            contrastColor: '#D8D01D',
+          },
           experiences: [
             {
-              siteLink: 'http://www.serget.com.br/',
               role: 'Estagiário de desenvolvimento',
               startDate: 'Janeiro 2020',
               endDate: 'Setembro 2021',
@@ -122,7 +133,7 @@ export const contentLanguages: ContentLang = {
       ],
     },
     projectsSection: {
-      heading: 'Projetos que já desenvolvi',
+      heading: ['Meus trabalhos', 'Projetos Desenvolvidos'],
       projects: [
         {
           name: 'Point Control',
@@ -175,7 +186,7 @@ export const contentLanguages: ContentLang = {
                   link: 'https://github.com/MikaMorais',
                 },
                 {
-                  name: 'Linkedin',
+                  name: 'LinkedIn',
                   link: 'https://www.linkedin.com/in/moises-silva-de-morais/',
                 },
               ],
@@ -190,7 +201,7 @@ export const contentLanguages: ContentLang = {
                   link: 'https://github.com/steniodr',
                 },
                 {
-                  name: 'Linkedin',
+                  name: 'LinkedIn',
                   link: 'https://www.linkedin.com/in/stenio-dias-rapchan/',
                 },
               ],
@@ -205,7 +216,7 @@ export const contentLanguages: ContentLang = {
                   link: 'https://github.com/almeidavini',
                 },
                 {
-                  name: 'Linkedin',
+                  name: 'LinkedIn',
                   link: 'https://www.linkedin.com/in/vinicius-silva-de-almeida/',
                 },
               ],
@@ -262,6 +273,10 @@ export const contentLanguages: ContentLang = {
             {
               key: 'figma',
               label: 'Figma',
+            },
+            {
+              key: 'freelance',
+              label: 'Freelance',
             },
             {
               key: 'web',
@@ -589,7 +604,7 @@ export const contentLanguages: ContentLang = {
                   link: 'https://github.com/ccr5',
                 },
                 {
-                  name: 'Linkedin',
+                  name: 'LinkedIn',
                   link: 'https://www.linkedin.com/in/mattnobre/',
                 },
               ],
@@ -609,8 +624,10 @@ export const contentLanguages: ContentLang = {
       collaborationModalTitle: 'Colaboradores',
       collaborationModalText:
         'Faço questão de apresentar e agradecer a todos os colaboradores que influenciaram e ajudaram diretamente a planejar e desenvolver o projeto:',
-      filterTitleLabel: 'Pesquise por categorias',
-      filtersLabels: [
+      filterNameTitleLabel: 'Pesquise por nome',
+      filterCategoryTooltipLabel: 'Filtros',
+      filterCategoryTitleLabel: 'Pesquise por categorias',
+      filterCategoryLabels: [
         {
           key: 'all',
           label: 'Todos',
@@ -632,16 +649,20 @@ export const contentLanguages: ContentLang = {
           label: 'Fullstack',
         },
         {
-          key: 'responsive',
-          label: 'Responsivos',
-        },
-        {
           key: 'web',
           label: 'Sites',
         },
         {
           key: 'mobile',
           label: 'Aplicativos',
+        },
+        {
+          key: 'freelance',
+          label: 'Freelance',
+        },
+        {
+          key: 'responsive',
+          label: 'Responsivos',
         },
       ],
     },
@@ -695,12 +716,12 @@ export const contentLanguages: ContentLang = {
         link: 'https://github.com/Lissone',
       },
       {
-        name: 'Figma',
-        link: 'https://www.figma.com/@lissone',
+        name: 'LinkedIn',
+        link: 'https://www.linkedin.com/in/lissone/',
       },
       {
-        name: 'Linkedin',
-        link: 'https://www.linkedin.com/in/lissone/',
+        name: 'Figma',
+        link: 'https://www.figma.com/@lissone',
       },
       {
         name: 'Instagram',
@@ -713,7 +734,7 @@ export const contentLanguages: ContentLang = {
       yearFirstWorkExperience: 2020,
     },
     aboutSection: {
-      heading: 'About me',
+      heading: ['Introduction', 'About me'],
       text: "<p>A technology lover, with a focus on <em>front-end/back-end</em> development, <strong>user interface</strong> and <strong>software engineering</strong>. Aim to become an increasingly <strong>complete</strong> professional, always looking to learn and develop projects to apply and <strong>share knowledge</strong> and <strong>experiences</strong>. <strong>Graduated</strong> in the bachelor's degree in <strong>Information Systems</strong>, creating applications autonomously, looking for challenges, working with charisma, will and passion. <strong>Professionalism is my focus</strong>.</p>",
       profilePhoto: {
         url: 'https://images.prismic.io/leonardo-lissone/f0ec48f1-86b2-4a45-bf0f-f643398ba1e5_Foto+com+fundo+s%C3%B3lido+%281%29.png?auto=compress,format',
@@ -730,13 +751,17 @@ export const contentLanguages: ContentLang = {
       ],
     },
     jobsSection: {
-      heading: 'Where I’ve Worked',
+      heading: ['What I Have Done So Far', 'Work Experiences'],
       jobs: [
         {
           company: 'G5 Partners',
+          siteLink: 'https://g5partners.com/',
+          logo: {
+            url: 'https://leonardo-lissone.cdn.prismic.io/leonardo-lissone/ZyFBF68jQArTz__I_G5Logo.svg',
+            contrastColor: '#F1F1F1',
+          },
           experiences: [
             {
-              siteLink: 'https://g5partners.com/',
               role: 'Development Analyst',
               startDate: 'February 2024',
               endDate: 'Present',
@@ -748,7 +773,6 @@ export const contentLanguages: ContentLang = {
               ],
             },
             {
-              siteLink: 'https://g5partners.com/',
               role: 'Junior Development Analyst',
               startDate: 'March 2022',
               endDate: 'February 2024',
@@ -765,10 +789,14 @@ export const contentLanguages: ContentLang = {
         },
         {
           company: 'Santander',
+          siteLink:
+          'https://www.santander.com.br/sustentabilidade/gestao-de-atividades/risco-gestao-integrada',
+          logo: {
+            url: 'https://leonardo-lissone.cdn.prismic.io/leonardo-lissone/ZyFBHa8jQArTz__M_SantanderLogo.svg',
+            contrastColor: '#F1F1F1',
+          },
           experiences: [
             {
-              siteLink:
-                'https://www.santander.com.br/sustentabilidade/gestao-de-atividades/risco-gestao-integrada',
               role: 'Innovation Intern',
               startDate: 'September 2021',
               endDate: 'March 2022',
@@ -776,16 +804,20 @@ export const contentLanguages: ContentLang = {
                 'Planning, prototyping and development of an internal project with the objective of bringing productivity and systems integration to analysts who evaluate credit proposals.',
                 'Restructuring of Excel spreadsheets for interactive reports, applying UX principles and data analysis for employee customer productivity.',
                 'Front-end development of internal projects using Angular.',
-                'Routine reporting using big data data.',
+                'Routine reporting using big data.',
               ],
             },
           ],
         },
         {
           company: 'Serget',
+          siteLink: 'http://www.serget.com.br/',
+          logo: {
+            url: 'https://leonardo-lissone.cdn.prismic.io/leonardo-lissone/ZyFBJa8jQArTz__N_SergetLogo.svg',
+            contrastColor: '#D8D01D',
+          },
           experiences: [
             {
-              siteLink: 'http://www.serget.com.br/',
               role: 'Development Intern',
               startDate: 'January 2020',
               endDate: 'September 2021',
@@ -802,7 +834,7 @@ export const contentLanguages: ContentLang = {
       ],
     },
     projectsSection: {
-      heading: "Projects I've Developed",
+      heading: ['My works', "Projects I've Developed"],
       projects: [
         {
           name: 'Point Control',
@@ -855,7 +887,7 @@ export const contentLanguages: ContentLang = {
                   link: 'https://github.com/MikaMorais',
                 },
                 {
-                  name: 'Linkedin',
+                  name: 'LinkedIn',
                   link: 'https://www.linkedin.com/in/moises-silva-de-morais/',
                 },
               ],
@@ -870,7 +902,7 @@ export const contentLanguages: ContentLang = {
                   link: 'https://github.com/steniodr',
                 },
                 {
-                  name: 'Linkedin',
+                  name: 'LinkedIn',
                   link: 'https://www.linkedin.com/in/stenio-dias-rapchan/',
                 },
               ],
@@ -885,7 +917,7 @@ export const contentLanguages: ContentLang = {
                   link: 'https://github.com/almeidavini',
                 },
                 {
-                  name: 'Linkedin',
+                  name: 'LinkedIn',
                   link: 'https://www.linkedin.com/in/vinicius-silva-de-almeida/',
                 },
               ],
@@ -942,6 +974,10 @@ export const contentLanguages: ContentLang = {
             {
               key: 'figma',
               label: 'Figma',
+            },
+            {
+              key: 'freelance',
+              label: 'Freelance',
             },
             {
               key: 'web',
@@ -1273,8 +1309,10 @@ export const contentLanguages: ContentLang = {
       collaborationModalTitle: 'Collaborators',
       collaborationModalText:
         'I would like to introduce and thank all the collaborators who directly influenced and helped to plan and develop the project:',
-      filterTitleLabel: 'Search by categories',
-      filtersLabels: [
+      filterNameTitleLabel: 'Search by name',
+      filterCategoryTooltipLabel: 'Filters',
+      filterCategoryTitleLabel: 'Search by categories',
+      filterCategoryLabels: [
         {
           key: 'all',
           label: 'All',
@@ -1296,16 +1334,20 @@ export const contentLanguages: ContentLang = {
           label: 'Fullstack',
         },
         {
-          key: 'responsive',
-          label: 'Responsive',
-        },
-        {
           key: 'web',
           label: 'Websites',
         },
         {
           key: 'mobile',
           label: 'Mobile Applications',
+        },
+        {
+          key: 'freelance',
+          label: 'Freelance',
+        },
+        {
+          key: 'responsive',
+          label: 'Responsive',
         },
       ],
     },
@@ -1337,7 +1379,7 @@ export const contentLanguages: ContentLang = {
     },
     headerButtons: {
       presentationButtonTooltip: 'Presentation',
-      aboutButtonTooltip: 'About',
+      aboutButtonTooltip: 'About me',
       workExperiencesButtonTooltip: 'Work experiences',
       projectsButtonTooltip: 'Projects',
     },

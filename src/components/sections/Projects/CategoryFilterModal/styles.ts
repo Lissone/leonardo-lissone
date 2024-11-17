@@ -1,8 +1,8 @@
 import styled from 'styled-components';
 
-export const Container = styled.div`
-  margin-top: 0.75rem;
+import { ModalContent } from '@components/shared/Modal/styles';
 
+export const Content = styled(ModalContent)`
   display: flex;
   align-items: center;
 
@@ -46,9 +46,10 @@ export const Container = styled.div`
   }
 
   input[type='checkbox']:hover + label {
-    filter: brightness(0.9);
+    border-color: var(--gray-600);
+    color: var(--gray-500);
 
-    transition: filter 0.2s;
+    transition: all 0.2s;
   }
 
   input[type='checkbox']:checked + label {

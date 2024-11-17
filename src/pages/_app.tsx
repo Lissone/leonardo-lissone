@@ -1,11 +1,12 @@
 import { AppProps } from 'next/app';
+import Head from 'next/head';
 import { useState } from 'react';
 import Modal from 'react-modal';
 import { Slide, ToastContainer } from 'react-toastify';
 
-import { FixedBorderLed } from '@components/layouts/FixedBorderLed';
+import { Providers } from '@contexts/Providers';
 
-import { Container, Content } from '@styles/app';
+import { Container } from '@styles/app';
 import { GlobalOverlay, GlobalStyle } from '@styles/global';
 
 Modal.setAppElement('#__next');
@@ -15,13 +16,16 @@ export default function MyApp({ Component, pageProps }: AppProps) {
 
   return (
     <>
-      <GlobalStyle />
+      <Head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+      </Head>
 
-      <Container>
-        <GlobalOverlay $isActive={isOverlayActive} />
-        <FixedBorderLed />
+      <Providers>
+        <GlobalStyle />
 
-        <Content>
+        <Container>
+          <GlobalOverlay $isActive={isOverlayActive} />
+
           <ToastContainer
             position="bottom-center"
             autoClose={3000}
@@ -34,8 +38,8 @@ export default function MyApp({ Component, pageProps }: AppProps) {
           />
 
           <Component {...pageProps} setIsOverlayActive={setIsOverlayActive} />
-        </Content>
-      </Container>
+        </Container>
+      </Providers>
     </>
   );
 }

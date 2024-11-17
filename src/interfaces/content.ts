@@ -38,7 +38,7 @@ export interface PresentationSectionContent {
 // -----------------------------------------------------------//
 
 export interface AboutSectionContent {
-  readonly heading: string;
+  readonly heading: string[];
   readonly text: string;
   readonly profilePhoto: {
     readonly url: string;
@@ -50,23 +50,29 @@ export interface AboutSectionContent {
 // -----------------------------------------------------------//
 
 export interface JobsSectionContent {
-  readonly heading: string;
-  readonly jobs: {
-    readonly company: string;
-    readonly experiences: {
-      readonly siteLink: string;
-      readonly role: string;
-      readonly startDate: string;
-      readonly endDate: string;
-      readonly activities: string[];
-    }[];
+  readonly heading: string[];
+  readonly jobs: Job[];
+}
+
+export interface Job {
+  readonly company: string;
+  readonly siteLink: string;
+  readonly logo: {
+    readonly url: string;
+    readonly contrastColor: string;
+  };
+  readonly experiences: {
+    readonly role: string;
+    readonly startDate: string;
+    readonly endDate: string;
+    readonly activities: string[];
   }[];
 }
 
 // -----------------------------------------------------------//
 
 export interface ProjectsSectionContent {
-  readonly heading: string;
+  readonly heading: string[];
   readonly projects: ProjectContent[];
   readonly thumbnailAltLabel: string;
   readonly prototypeLabel: string;
@@ -76,11 +82,13 @@ export interface ProjectsSectionContent {
   readonly collaborationLabel: string;
   readonly collaborationModalTitle: string;
   readonly collaborationModalText: string;
-  readonly filterTitleLabel: string;
-  readonly filtersLabels: ProjectsFiltersLabels[];
+  readonly filterNameTitleLabel: string;
+  readonly filterCategoryTooltipLabel: string;
+  readonly filterCategoryTitleLabel: string;
+  readonly filterCategoryLabels: ProjectsCategoryFilterLabels[];
 }
 
-export type ProjectsFiltersLabelsKeys =
+export type ProjectsCategoryFilterLabelsKeys =
   | 'all'
   | 'repositories'
   | 'production'
@@ -88,9 +96,10 @@ export type ProjectsFiltersLabelsKeys =
   | 'fullstack'
   | 'web'
   | 'mobile'
+  | 'freelance'
   | 'responsive';
-export interface ProjectsFiltersLabels {
-  readonly key: ProjectsFiltersLabelsKeys;
+export interface ProjectsCategoryFilterLabels {
+  readonly key: ProjectsCategoryFilterLabelsKeys;
   readonly label: string;
 }
 
@@ -100,6 +109,7 @@ type GoodHabitsKeys = 'eslint' | 'prettier' | 'test' | 'commit-lint' | 'componen
 type DetailsKeys =
   | 'web'
   | 'mobile'
+  | 'freelance'
   | 'desktop'
   | 'responsive'
   | 'design'
@@ -150,15 +160,17 @@ export interface SendMessageModalContent {
     readonly email: InputContent;
     readonly message: InputContent;
   };
-  readonly validationInput: {
-    readonly nameRequiredLabel: string;
-    // -------
-    readonly emailRequiredLabel: string;
-    readonly emailInvalidLabel: string;
-    // -------
-    readonly messageRequiredLabel: string;
-    readonly messageMinLabel: string;
-  };
+  readonly validationInput: SendMessageModalContentValidationInput;
+}
+
+export interface SendMessageModalContentValidationInput {
+  readonly nameRequiredLabel: string;
+  // -------
+  readonly emailRequiredLabel: string;
+  readonly emailInvalidLabel: string;
+  // -------
+  readonly messageRequiredLabel: string;
+  readonly messageMinLabel: string;
 }
 
 export interface ContactSectionContent {

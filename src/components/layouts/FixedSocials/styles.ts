@@ -5,12 +5,10 @@ export const Container = styled.div`
   margin-left: 5rem;
 
   position: fixed;
-
   bottom: -1rem;
   left: 0;
-  right: 90.5rem;
 
-  z-index: 100;
+  z-index: 2;
 
   @media (max-width: 920px) or (max-height: 500px) {
     display: none;
@@ -30,11 +28,17 @@ export const Content = styled.div`
 
     &:hover {
       transform: scale(1.08);
-      filter: brightness(0.9);
+
+      svg {
+        color: var(--red-400);
+        filter: drop-shadow(0 0 .675rem rgba(202, 62, 71, 0.7));
+      }
     }
 
     svg {
       color: var(--gray-600);
+
+      transition: 0.3s all;
     }
   }
 

@@ -14,7 +14,7 @@ export function SocialIcon({ name }: SocialIconProps) {
     case 'Figma': {
       return <IoLogoFigma size={30} />;
     }
-    case 'Linkedin': {
+    case 'LinkedIn': {
       return <FaLinkedinIn size={30} />;
     }
     case 'Instagram': {

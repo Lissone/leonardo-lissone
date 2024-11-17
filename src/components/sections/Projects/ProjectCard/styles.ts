@@ -1,30 +1,31 @@
 import styled from 'styled-components';
 
 export const Container = styled.div`
-  max-width: 20rem;
-  min-height: 26.85rem;
+  height: 100%;
+  max-width: 24rem;
+  min-height: 30rem;
 
-  border: 2px solid var(--gray-800);
+  border: 1px solid var(--gray-800);
   border-radius: 0.35rem;
 
   background: var(--gray-900-opacity-80);
 
-  transition: 0.3s all;
+  transition: border-color 0.3s, box-shadow 0.3s !important;
 
   &:hover {
-    transform: scale(1.02);
-
     border-color: var(--red-400);
     box-shadow: 0rem 0rem 1rem var(--red-400);
   }
 
-  :hover .project-card-actions {
+  &:hover .project-card-actions {
     opacity: 1;
   }
 `;
 
 export const Content = styled.div`
+  width: 100%;
   height: 100%;
+  
   padding: 0.875rem;
 
   display: flex;
@@ -32,16 +33,27 @@ export const Content = styled.div`
   justify-content: flex-start;
 `;
 
-export const Cover = styled.div`
+interface CoverProps {
+  readonly $imageUrl: string;
+}
+
+export const Cover = styled.div<CoverProps>`
   width: 100%;
+  height: 100%;
+  max-height: 12.25rem;
 
   position: relative;
+  overflow: hidden;
 
-  img {
-    max-width: 18rem;
-    max-height: 10rem;
+  background-image: url(${({ $imageUrl }) => $imageUrl});
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 
-    border-radius: 0.625rem;
+  border-radius: 0.35rem;
+
+  @media (max-width: 320px) {
+    height: 11rem;
   }
 `;
 
@@ -50,8 +62,6 @@ export const CoverActions = styled.div`
 
   width: 100%;
   height: 100%;
-  max-width: 18rem;
-  max-height: 10rem;
 
   position: absolute;
   left: 0;
@@ -61,7 +71,7 @@ export const CoverActions = styled.div`
   align-items: center;
   justify-content: space-around;
 
-  border-radius: 0.625rem;
+  border-radius: 0.35rem;
 
   background-color: rgba(0, 0, 0, 0.6);
 
@@ -76,23 +86,20 @@ export const CoverActions = styled.div`
     justify-content: center;
 
     border-radius: 100%;
+    border: 1px solid var(--gray-900);
 
     background: var(--gray-900);
 
-    transition: 0.3s filter;
+    transition: border-color 0.3s, box-shadow 0.3s;
 
     &:hover {
-      filter: brightness(0.8);
+      border-color: var(--red-400);
+      box-shadow: 0rem 0rem 1rem var(--red-400);
     }
-
+    
     svg {
       color: var(--red-400);
     }
-  }
-
-  @media (max-width: 450px) {
-    width: 18.5rem;
-    height: 10rem;
   }
 `;
 
@@ -102,10 +109,19 @@ export const Information = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+
+  p {
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
 `;
 
 export const Heading = styled.div`
-  margin-top: 0.5rem;
+  margin-top: 1rem;
 
   display: flex;
   align-items: center;
@@ -123,7 +139,8 @@ export const Heading = styled.div`
 export const Divider = styled.div`
   width: 4.5rem;
   height: 1px;
-  margin: 0.5rem 0;
+  margin-top: 0.65rem;
+  margin-bottom: 1rem;
 
   border-radius: 100%;
 
@@ -132,7 +149,7 @@ export const Divider = styled.div`
 
 export const TechnologiesRow = styled.div`
   width: 100%;
-  margin-top: 0.5rem;
+  margin-top: 0.65rem;
 
   display: flex;
   align-items: center;
@@ -146,10 +163,8 @@ export const TechnologiesRow = styled.div`
   }
 `;
 
-export const FeaturedInformation = styled.div``;
-
 export const SeparateRow = styled.div`
-  margin-top: 1.25rem;
+  margin-top: 1.5rem;
 
   display: flex;
   align-items: center;

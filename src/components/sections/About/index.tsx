@@ -1,53 +1,49 @@
-import { AboutSectionContent } from '@interfaces/content';
+import { useData } from '@contexts/DataContext';
 
 import {
   Column,
   Container,
-  Content,
   Heading,
   PhotoContainer,
   SkillsList,
   Text,
 } from './styles';
 
-interface AboutProps {
-  readonly content: AboutSectionContent;
-}
+export function About() {
+  const { data } = useData();
+  const { aboutSection } = data;
+  const { heading, text, recentTechnologies, profilePhoto } = aboutSection;
 
-export function About({ content }: AboutProps) {
   return (
     <Container id="about" data-aos="fade-up">
-      <Content>
-        <Column>
-          <Heading>
+      <Column>
+        <Heading>
+          <div className="heading-subtitle">
             <img src="/icons/arrow-heading.svg" alt="Big arrow with led" />
+            <h2>{heading[0]}</h2>
+          </div>
 
-            <h1>{content.heading}</h1>
-          </Heading>
+          <h1>{heading[1]}</h1>
+        </Heading>
 
-          <Text
-            dangerouslySetInnerHTML={{
-              __html: content.text,
-            }}
-          />
+        <Text dangerouslySetInnerHTML={{ __html: text }} />
 
-          <SkillsList>
-            {content.recentTechnologies.map((technology) => (
-              <li key={technology}>
-                <img src="/icons/arrow.svg" alt="Red arrow with led" />
-                {technology}
-              </li>
-            ))}
-          </SkillsList>
-        </Column>
+        <SkillsList>
+          {recentTechnologies.map((technology) => (
+            <li key={technology}>
+              <img src="/icons/arrow.svg" alt="Red arrow with led" />
+              {technology}
+            </li>
+          ))}
+        </SkillsList>
+      </Column>
 
-        <Column>
-          <PhotoContainer>
-            <img src="/images/avatar-border.svg" alt="Avatar border" />
-            <img src={content.profilePhoto.url} alt={content.profilePhoto.alt} />
-          </PhotoContainer>
-        </Column>
-      </Content>
+      <Column>
+        <PhotoContainer>
+          <img src="/images/avatar-border.svg" alt="Avatar border" />
+          <img src={profilePhoto.url} alt={profilePhoto.alt} />
+        </PhotoContainer>
+      </Column>
     </Container>
   );
 }

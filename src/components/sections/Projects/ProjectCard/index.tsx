@@ -2,6 +2,8 @@ import { FiFigma, FiGithub, FiGlobe } from 'react-icons/fi';
 
 import { ProjectContent } from '@interfaces/content';
 
+import { useData } from '@contexts/DataContext';
+
 import { Tooltip } from '@components/shared/Tooltip';
 
 import {
@@ -10,7 +12,6 @@ import {
   Cover,
   CoverActions,
   Divider,
-  FeaturedInformation,
   Heading,
   Information,
   SeparateRow,
@@ -18,33 +19,24 @@ import {
 } from './styles';
 
 interface ProjectCardProperties {
-  readonly content: ProjectContent;
-  readonly thumbnailAltLabel: string;
-  readonly collaborationLabel: string;
-  readonly prototypeLabel: string;
-  readonly repositoryLabel: string;
+  readonly project: ProjectContent;
   readonly handleOpenCollaborationModal: () => void;
 }
 
-export function ProjectCard({
-  content,
-  thumbnailAltLabel,
-  collaborationLabel,
-  prototypeLabel,
-  repositoryLabel,
-  handleOpenCollaborationModal,
-}: ProjectCardProperties) {
-  return (
-    <Container data-aos="fade-up" data-aos-duration="1100">
-      <Content>
-        <Cover>
-          <img src={content.thumbnailUrl} alt={`${thumbnailAltLabel} ${content.name}`} />
+export function ProjectCard({ project, handleOpenCollaborationModal }: ProjectCardProperties) {
+  const { data } = useData();
+  const { projectsSection } = data;
+  const { collaborationLabel, prototypeLabel, repositoryLabel } = projectsSection;
 
+  return (
+    <Container>
+      <Content>
+        <Cover $imageUrl={project.thumbnailUrl}>
           <CoverActions className="project-card-actions">
-            {content.prototypeLink ? (
+            {project.prototypeLink ? (
               <Tooltip title={prototypeLabel}>
                 <a
-                  href={content.prototypeLink}
+                  href={project.prototypeLink}
                   target="_blank"
                   rel="noreferrer"
                   aria-label="Visit project Figma repository (in a new tab)"
@@ -54,10 +46,10 @@ export function ProjectCard({
               </Tooltip>
             ) : null}
 
-            {content.repositoryLink ? (
+            {project.repositoryLink ? (
               <Tooltip title={repositoryLabel}>
                 <a
-                  href={content.repositoryLink}
+                  href={project.repositoryLink}
                   target="_blank"
                   rel="noreferrer"
                   aria-label="Visit project Github repository (in a new tab)"
@@ -67,13 +59,13 @@ export function ProjectCard({
               </Tooltip>
             ) : null}
 
-            {content.productionLink ? (
+            {project.productionLink ? (
               <Tooltip title="Link">
                 <a
-                  href={content.productionLink}
+                  href={project.productionLink}
                   target="_blank"
                   rel="noreferrer"
-                  aria-label={`Visit ${content.name} website (in a new tab)`}
+                  aria-label={`Visit ${project.name} website (in a new tab)`}
                 >
                   <FiGlobe size={24} />
                 </a>
@@ -83,11 +75,11 @@ export function ProjectCard({
         </Cover>
 
         <Information>
-          <FeaturedInformation>
+          <div>
             <Heading>
-              <h2>{content.name}</h2>
+              <h2>{project.name}</h2>
 
-              {content.collaborators ? (
+              {project.collaborators ? (
                 <Tooltip title={collaborationLabel}>
                   <button type="button" onClick={handleOpenCollaborationModal}>
                     <img src="/icons/collaboration.svg" alt="icon for collaborative projects" />
@@ -98,26 +90,30 @@ export function ProjectCard({
 
             <Divider />
 
-            <p>{content.description}</p>
+            <p>{project.description}</p>
 
             <TechnologiesRow>
-              <span>{content.mainTechnologies.join(' ')}</span>
+              <span>{project.mainTechnologies.join(' ')}</span>
             </TechnologiesRow>
-          </FeaturedInformation>
+          </div>
 
           <SeparateRow>
             <div>
-              {content.goodHabits.map(({ key, label }) => (
+              {project.goodHabits.map(({ key, label }) => (
                 <Tooltip key={key} title={label}>
-                  <img src={`/icons/${key}.svg`} alt={`${label} icon`} />
+                  <div>
+                    <img src={`/icons/${key}.svg`} alt={`${label} icon`} />
+                  </div>
                 </Tooltip>
               ))}
             </div>
 
             <div>
-              {content.details.map(({ key, label }) => (
+              {project.details.map(({ key, label }) => (
                 <Tooltip key={key} title={label}>
-                  <img src={`/icons/${key}.svg`} alt={`${label} icon`} />
+                  <div>
+                    <img src={`/icons/${key}.svg`} alt={`${label} icon`} />
+                  </div>
                 </Tooltip>
               ))}
             </div>

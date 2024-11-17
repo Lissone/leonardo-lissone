@@ -8,9 +8,7 @@ export const HeaderContainer = styled.header`
     width: 100%;
     height: 1px;
 
-    box-shadow: 0rem 0rem 0.625rem var(--red-400);
-
-    background: var(--red-400);
+    background: var(--gray-800);
   }
 `;
 
@@ -62,12 +60,35 @@ export const Heading = styled.div`
   }
 `;
 
-export const Content = styled.div`
+export const ModalContent = styled.div`
   padding: 1.8rem 2.25rem;
 
-  @media (max-height: 680px) {
-    max-height: 320px;
+  display: flex;
+  flex-direction: column;
 
+  span {
+    color: var(--gray-100);
+
+    @media (max-width: 370px) {
+      text-align: center;
+    }
+  }
+
+  @media (max-height: 750px) {
+    max-height: 480px;
+    
     overflow-y: scroll;
+  }
+
+  @media (max-height: 660px) {
+    max-height: 380px;
+  }
+
+  @media (max-height: 560px) {
+    max-height: 280px;
+  }
+
+  @media (max-height: 460px) {
+    max-height: 200px;
   }
 `;

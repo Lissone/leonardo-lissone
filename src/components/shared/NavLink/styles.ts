@@ -4,6 +4,8 @@ import styled from 'styled-components';
 export const MenuLink = styled(Scroll)`
   display: flex;
   align-items: center;
+  justify-content: center;
+  gap: 1rem;
 
   background: none;
 
@@ -26,4 +28,9 @@ export const MenuLink = styled(Scroll)`
       }
     }
   }
+`;
+
+export const Label = styled.span`
+  font-size: 1.125rem;
+  font-weight: 600;
 `;

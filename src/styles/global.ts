@@ -78,10 +78,12 @@ export const GlobalStyle = createGlobalStyle`
   /* ===== Modal ===== */
   .react-modal-overlay {
     position: fixed;
-    top: 5.625rem; // tamanho do header
+    top: 90px; // tamanho do header
     bottom: 0;
     right: 0;
     left: 0;
+
+    z-index: 5;
 
     display: flex;
     align-items: center;
@@ -97,7 +99,7 @@ export const GlobalStyle = createGlobalStyle`
 
     position: relative;
 
-    border-radius: 0.5rem;
+    border-radius: 0.35rem;
 
     background: var(--gray-900);
 
@@ -150,8 +152,8 @@ export const GlobalOverlay = styled.div<GlobalOverlayProps>`
   right: 0;
   bottom: 0;
 
-  display: ${({ $isActive }) => ($isActive ? 'block' : 'none')}; /* Hidden by default */
+  display: ${({ $isActive }) => ($isActive ? 'block' : 'none')};
 
-  z-index: 5; /* Specify a stack order in case you're using a different order for other elements */
+  z-index: 5;
   background-color: rgba(0, 0, 0, 0.5);
 `;
