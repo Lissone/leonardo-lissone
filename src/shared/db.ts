@@ -136,6 +136,81 @@ export const contentLanguages: ContentLang = {
       heading: ['Meus trabalhos', 'Projetos Desenvolvidos'],
       projects: [
         {
+          name: 'Delicias da Si',
+          description:
+            'E-commerce de doces por delivery, com recompensas, marketplace de cupons, gestão dinâmica de pedidos e design exclusivo.',
+          thumbnailUrl:
+            'https://images.prismic.io/leonardo-lissone/Z97q9HdAxsiBvxDZ_delicias-da-si-thumbnail.png?auto=format,compress',
+          mainTechnologies: [
+            'ReactJs',
+            'NextJs',
+            'Typescript',
+            'Firebase',
+            'Prismic CMS',
+            'React Google Maps',
+            'Nodemailer',
+            'Styled Components',
+          ],
+          goodHabits: [
+            {
+              key: 'eslint',
+              label: 'Eslint',
+            },
+            {
+              key: 'prettier',
+              label: 'Prettier',
+            },
+          ],
+          details: [
+            {
+              key: 'web',
+              label: 'Web',
+            },
+            {
+              key: 'mobile',
+              label: 'Web App',
+            },
+            {
+              key: 'responsive',
+              label: 'Responsivo',
+            },
+          ],
+          collaborators: null,
+          prototypeLink:
+            'https://www.figma.com/design/527UaSPrJgF2QjP7gEtsuh/Delicias-da-Si?node-id=321-316&t=ilxtRqNf2zxyuEhD-1',
+          repositoryLink: 'https://github.com/Lissone/delicias-da-si',
+          productionLink: 'https://delicias-da-si.vercel.app/',
+        },
+        {
+          name: 'Dota 2 - Quiz Game',
+          description:
+            'Design de site de quiz para o jogo Dota 2, com salas privadas, níveis de dificuldade e tempo para respostas.',
+          thumbnailUrl:
+            'https://images.prismic.io/leonardo-lissone/Z97rUXdAxsiBvxDc_dota2-quiz-game-thumbnail.png?auto=format,compress',
+          mainTechnologies: ['Figma'],
+          goodHabits: [
+            {
+              key: 'componentized',
+              label: 'Design Componentizado',
+            },
+          ],
+          details: [
+            {
+              key: 'figma',
+              label: 'Figma',
+            },
+            {
+              key: 'mobile',
+              label: 'Aplicativo',
+            },
+          ],
+          collaborators: null,
+          prototypeLink:
+            'https://www.figma.com/design/7tr5WOFr1RiwALNjSTGtXQ/Dota-2---Quiz-Game?node-id=194-1697&t=7jBt2WXrEFjcJMPs-1',
+          repositoryLink: null,
+          productionLink: null,
+        },
+        {
           name: 'Point Control',
           description:
             'Um projeto completo de controle interno de gestão de pessoas, direcionado para o setor de recursos humanos de qualquer tipo de empresa.',
@@ -836,6 +911,81 @@ export const contentLanguages: ContentLang = {
     projectsSection: {
       heading: ['My works', "Projects I've Developed"],
       projects: [
+        {
+          name: 'Delicias da Si',
+          description:
+            'Sweet delivery e-commerce with rewards, coupon marketplace, dynamic order management, and exclusive design.',
+          thumbnailUrl:
+            'https://images.prismic.io/leonardo-lissone/Z97q9HdAxsiBvxDZ_delicias-da-si-thumbnail.png?auto=format,compress',
+          mainTechnologies: [
+            'ReactJs',
+            'NextJs',
+            'Typescript',
+            'Firebase',
+            'Prismic CMS',
+            'React Google Maps',
+            'Nodemailer',
+            'Styled Components',
+          ],
+          goodHabits: [
+            {
+              key: 'eslint',
+              label: 'Eslint',
+            },
+            {
+              key: 'prettier',
+              label: 'Prettier',
+            },
+          ],
+          details: [
+            {
+              key: 'web',
+              label: 'Web',
+            },
+            {
+              key: 'mobile',
+              label: 'Web App',
+            },
+            {
+              key: 'responsive',
+              label: 'Responsive',
+            },
+          ],
+          collaborators: null,
+          prototypeLink:
+            'https://www.figma.com/design/527UaSPrJgF2QjP7gEtsuh/Delicias-da-Si?node-id=321-316&t=ilxtRqNf2zxyuEhD-1',
+          repositoryLink: 'https://github.com/Lissone/delicias-da-si',
+          productionLink: 'https://delicias-da-si.vercel.app/',
+        },
+        {
+          name: 'Dota 2 - Quiz Game',
+          description:
+            'Quiz site design for the game Dota 2, with private rooms, difficulty levels, and time limits for answers.',
+          thumbnailUrl:
+            'https://images.prismic.io/leonardo-lissone/Z97rUXdAxsiBvxDc_dota2-quiz-game-thumbnail.png?auto=format,compress',
+          mainTechnologies: ['Figma'],
+          goodHabits: [
+            {
+              key: 'componentized',
+              label: 'Componentized Design',
+            },
+          ],
+          details: [
+            {
+              key: 'figma',
+              label: 'Figma',
+            },
+            {
+              key: 'mobile',
+              label: 'Mobile',
+            },
+          ],
+          collaborators: null,
+          prototypeLink:
+            'https://www.figma.com/design/7tr5WOFr1RiwALNjSTGtXQ/Dota-2---Quiz-Game?node-id=194-1697&t=7jBt2WXrEFjcJMPs-1',
+          repositoryLink: null,
+          productionLink: null,
+        },
         {
           name: 'Point Control',
           description:
