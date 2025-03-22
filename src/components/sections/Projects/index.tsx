@@ -51,6 +51,7 @@ export function Projects() {
   };
 
   useEffect(() => {
+    setCurrentProjects(data.projectsSection.projects);
     setProjectCollaboratorsSelected(null);
   }, [data]);
 
