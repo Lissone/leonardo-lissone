@@ -33,9 +33,9 @@ export function Contact() {
         <h1>{heading[1]}</h1>
       </Heading>
 
-      <Text data-aos="fade-up">{text}</Text>
+      <Text data-aos="fade-up" data-aos-delay="100">{text}</Text>
 
-      <Socials data-aos="fade-up">
+      <Socials data-aos="fade-up" data-aos-delay="200">
         {socials.map((social) => (
           <Tooltip key={social.name} title={social.name}>
             <a
@@ -53,6 +53,7 @@ export function Contact() {
       <ContactButton
         type="button"
         data-aos="fade-up"
+        data-aos-delay="300"
         onClick={() => toggleSendMessageModalOpen(true)}
       >
         {sharedButtons.contactButtonLabel}

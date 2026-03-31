@@ -24,7 +24,7 @@ export const Content = styled.div`
   a {
     opacity: 0.75;
 
-    transition: 0.3s all;
+    transition: 0.3s transform;
 
     &:hover {
       transform: scale(1.08);
@@ -38,7 +38,7 @@ export const Content = styled.div`
     svg {
       color: var(--gray-600);
 
-      transition: 0.3s all;
+      transition: 0.3s color, 0.3s filter;
     }
   }
 

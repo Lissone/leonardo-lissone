@@ -60,12 +60,12 @@ export const SearchInputContainer = styled.div`
 
   color: var(--gray-300);
 
-  transition: all 0.2s;
+  transition: 0.2s border-color, 0.2s box-shadow, 0.2s color;
 
   &:focus-within {
     border: 1px solid var(--red-400);
     box-shadow: 0rem 0rem 0.35rem var(--red-400);
-    
+
     color: var(--red-400);
   }
 
@@ -112,7 +112,7 @@ export const FilterButton = styled.button`
   color: var(--gray-300);
   background-color: transparent;
 
-  transition: all 0.2s;
+  transition: 0.2s border-color, 0.2s box-shadow;
 
   &:hover {
     border: 1px solid var(--red-400);
@@ -183,10 +183,10 @@ export const ShowMoreButton = styled.button`
   color: var(--gray-300);
   background: var(--gray-900-opacity-80);
 
-  transition: all 0.3s;
+  transition: 0.3s transform, 0.3s box-shadow, 0.3s border-color;
 
   &:hover {
-    transform: scale(1.03);
+    transform: scale(1.03) translateY(-2px);
 
     box-shadow: 0rem 0rem 1rem var(--red-400);
     border-color: var(--red-400);

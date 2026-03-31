@@ -40,8 +40,18 @@ export const GlobalStyle = createGlobalStyle`
     }
   }
 
+  html {
+    overflow-x: hidden;
+    overflow-y: scroll;
+    scrollbar-gutter: stable;
+  }
+
   body {
     background: var(--gray-900);
+
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
   }
 
   body, input, textarea, button {
@@ -54,6 +64,7 @@ export const GlobalStyle = createGlobalStyle`
 
   h1, h2, h3, h4, h5, h6 {
     font-weight: 600;
+    letter-spacing: -0.02em;
     color: var(--gray-100);
   }
 
@@ -78,62 +89,90 @@ export const GlobalStyle = createGlobalStyle`
   /* ===== Modal ===== */
   .react-modal-overlay {
     position: fixed;
-    top: 90px; // tamanho do header
-    bottom: 0;
-    right: 0;
-    left: 0;
+    inset: 0;
 
-    z-index: 5;
+    z-index: 15;
 
     display: flex;
     align-items: center;
     justify-content: center;
 
-    background: rgba(0, 0, 0, 0.5);
+    background: rgba(0, 0, 0, 0);
+    transition: background 0.2s ease;
+
+    &.ReactModal__Overlay--after-open {
+      background: rgba(0, 0, 0, 0.6);
+    }
+
+    &.ReactModal__Overlay--before-close {
+      background: rgba(0, 0, 0, 0);
+    }
   }
-  
+
   .react-modal-container {
     width: 100%;
     max-width: 576px;
-    max-height: 820px;
+    max-height: min(820px, calc(100dvh - 2rem));
 
     position: relative;
+
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
 
     border-radius: 0.35rem;
 
     background: var(--gray-900);
 
+    opacity: 0;
+    transform: scale(0.95) translateY(8px);
+    transition: opacity 0.2s ease, transform 0.2s ease;
+
+    &.ReactModal__Content--after-open {
+      opacity: 1;
+      transform: scale(1) translateY(0);
+    }
+
+    &.ReactModal__Content--before-close {
+      opacity: 0;
+      transform: scale(0.95) translateY(8px);
+    }
+
     &:focus {
       border: 0;
     }
 
-    @media (max-width: 720px) {  
-      margin: 0 2rem;
+    @media (max-width: 720px) {
+      margin: 0 1rem;
+    }
+
+    @media (max-width: 450px) {
+      margin: 0 0.5rem;
     }
   }
 
   /* ===== Scrollbar ===== */
   /* Firefox */
-  * {
+  html {
     scrollbar-width: auto;
     scrollbar-color: var(--red-400) var(--gray-800);
   }
 
   /* Chrome, Edge, and Safari */
-  *::-webkit-scrollbar {
+  html::-webkit-scrollbar {
     width: 0.3rem;
     height: 0.2rem;
   }
 
-  *::-webkit-scrollbar-track {
+  html::-webkit-scrollbar-track {
     background: var(--gray-800);
   }
 
-  *::-webkit-scrollbar-thumb {
+  html::-webkit-scrollbar-thumb {
     background-color: var(--red-400);
   }
 
-  ::-webkit-scrollbar-thumb:horizontal{
+  html::-webkit-scrollbar-thumb:horizontal {
     background-color: var(--gray-600);
   }
 `;

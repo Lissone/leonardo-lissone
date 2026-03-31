@@ -15,7 +15,7 @@ export function NavLink({ to, tooltip, children, hasLabel = false }: NavLinkProp
   return (
     <Tooltip title={tooltip} show={!hasLabel}>
       <div>
-        <MenuLink to={to} smooth duration={1000} spy offset={-90} className='menuLink'>
+        <MenuLink to={to} smooth duration={600} spy offset={-90} className='menuLink'>
           {children}
           {hasLabel ? <Label>{tooltip}</Label> : null}
         </MenuLink>

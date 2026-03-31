@@ -61,10 +61,15 @@ export const Heading = styled.div`
 `;
 
 export const ModalContent = styled.div`
+  flex: 1;
+  min-height: 0;
+
   padding: 1.8rem 2.25rem;
 
   display: flex;
   flex-direction: column;
+
+  overflow-y: auto;
 
   span {
     color: var(--gray-100);
@@ -72,23 +77,5 @@ export const ModalContent = styled.div`
     @media (max-width: 370px) {
       text-align: center;
     }
-  }
-
-  @media (max-height: 750px) {
-    max-height: 480px;
-    
-    overflow-y: scroll;
-  }
-
-  @media (max-height: 660px) {
-    max-height: 380px;
-  }
-
-  @media (max-height: 560px) {
-    max-height: 280px;
-  }
-
-  @media (max-height: 460px) {
-    max-height: 200px;
   }
 `;

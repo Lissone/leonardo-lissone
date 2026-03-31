@@ -9,13 +9,16 @@ interface ModalProps {
   readonly headerIcon: JSX.Element;
   readonly children: JSX.Element;
   readonly handleClose: () => void;
+  readonly onAfterClose?: () => void;
 }
 
-export function Modal({ isOpen, title, headerIcon, children, handleClose }: ModalProps) {
+export function Modal({ isOpen, title, headerIcon, children, handleClose, onAfterClose }: ModalProps) {
   return (
     <ReactModal
       isOpen={isOpen}
       onRequestClose={handleClose}
+      onAfterClose={onAfterClose}
+      closeTimeoutMS={200}
       overlayClassName="react-modal-overlay"
       className="react-modal-container"
     >

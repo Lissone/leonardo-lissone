@@ -123,7 +123,7 @@ export const SocialsContainer = styled.span`
   a {
     opacity: 0.75;
 
-    transition: 0.3s all;
+    transition: 0.3s transform;
 
     &:hover {
       transform: scale(1.08);
@@ -137,7 +137,7 @@ export const SocialsContainer = styled.span`
     svg {
       color: var(--gray-600);
 
-      transition: 0.3s all;
+      transition: 0.3s color, 0.3s filter;
     }
   }
 
@@ -175,10 +175,10 @@ export const ResumeLinkButton = styled.a`
   color: var(--gray-300);
   background: var(--gray-900-opacity-80);
 
-  transition: 0.3s all;
+  transition: 0.3s transform, 0.3s color;
 
   &:hover {
-    transform: scale(1.03);
+    transform: scale(1.03) translateY(-2px);
 
     color: var(--red-400);
   }
@@ -203,10 +203,10 @@ export const ContactButton = styled.button`
   color: var(--gray-300);
   background: var(--gray-900-opacity-80);
 
-  transition: 0.3s all;
+  transition: 0.3s transform, 0.3s color, 0.3s border-color, 0.3s box-shadow;
 
   &:hover {
-    transform: scale(1.03);
+    transform: scale(1.03) translateY(-2px);
 
     border-color: var(--red-400);
     box-shadow: 0rem 0rem 1.25rem rgba(202, 62, 71, 0.7);
@@ -229,6 +229,8 @@ export const ImageContainer = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
+
+  will-change: transform;
 
   img {
     height: 44rem;

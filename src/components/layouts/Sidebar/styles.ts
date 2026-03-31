@@ -90,7 +90,7 @@ export const ResumeButton = styled.a`
   color: var(--gray-300);
   background: var(--gray-900-opacity-80);
 
-  transition: 0.3s all;
+  transition: 0.3s transform, 0.3s color;
 
   &:hover {
     transform: scale(1.03);

@@ -66,7 +66,7 @@ export const ContactButton = styled.button`
   transition: 0.3s transform;
 
   &:hover {
-    transform: scale(1.03);
+    transform: scale(1.03) translateY(-2px);
   }
 
   @media (max-width: 340px) {
@@ -83,7 +83,7 @@ export const Socials = styled.div`
   a {
     opacity: 0.75;
 
-    transition: 0.3s all;
+    transition: 0.3s transform;
 
     &:hover {
       transform: scale(1.08);
@@ -97,7 +97,7 @@ export const Socials = styled.div`
     svg {
       color: var(--gray-600);
 
-      transition: 0.3s all;
+      transition: 0.3s color, 0.3s filter;
     }
   }
 

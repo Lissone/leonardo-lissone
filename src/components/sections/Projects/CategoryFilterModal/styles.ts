@@ -37,7 +37,7 @@ export const Content = styled(ModalContent)`
     user-select: none;
     -webkit-tap-highlight-color: transparent;
 
-    transition: all 0.2s;
+    transition: 0.2s border-color, 0.2s box-shadow, 0.2s color;
   }
 
   input[type='checkbox'] {
@@ -48,8 +48,6 @@ export const Content = styled(ModalContent)`
   input[type='checkbox']:hover + label {
     border-color: var(--gray-600);
     color: var(--gray-500);
-
-    transition: all 0.2s;
   }
 
   input[type='checkbox']:checked + label {
@@ -57,7 +55,5 @@ export const Content = styled(ModalContent)`
     box-shadow: 0rem 0rem 0.35rem var(--red-400);
 
     color: var(--red-400);
-
-    transition: all 0.2s;
   }
 `;

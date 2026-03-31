@@ -110,7 +110,7 @@ export const CollaboratorSocials = styled.div`
   gap: 1rem;
 
   a {
-    transition: 0.3s all;
+    transition: 0.3s transform;
 
     &:hover {
       transform: scale(1.08);
@@ -124,7 +124,7 @@ export const CollaboratorSocials = styled.div`
     svg {
       color: var(--gray-500);
 
-      transition: 0.3s all;
+      transition: 0.3s color, 0.3s filter;
     }
   }
 `;

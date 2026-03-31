@@ -60,9 +60,10 @@ function TimelineItem({ job, index }: TimelineItemProps) {
         <img src={job.logo.url} alt={`${job.company} Logo`} />
       </Circle>
 
-      <JobCardsList $hasGap={!showMoreExperiences} $side={isOddIndex ? 'left' : 'right'}>
+      <JobCardsList $side={isOddIndex ? 'left' : 'right'}>
         {currentExperiences.map((experience, i) => (
           <ExperienceCard
+            $hasMarginTop={showMoreExperiences}
             key={experience.role}
             $hasBorderBottom={currentExperiences.length === 1 || i > 0}
             data-aos={aosAnimation || `fade-${isOddIndex ? 'right' : (i > 0 ? 'down' : 'left')}`}

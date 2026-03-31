@@ -10,11 +10,12 @@ export const Container = styled.div`
 
   background: var(--gray-900-opacity-80);
 
-  transition: border-color 0.3s, box-shadow 0.3s !important;
+  transition: border-color 0.3s, box-shadow 0.3s, transform 0.3s !important;
 
   &:hover {
     border-color: var(--red-400);
     box-shadow: 0rem 0rem 1rem var(--red-400);
+    transform: translateY(-4px);
   }
 
   &:hover .project-card-actions {

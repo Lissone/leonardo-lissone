@@ -13,19 +13,20 @@ export const MenuLink = styled(Scroll)`
 
   &:hover {
     transform: scale(1.12);
-  }
 
-  svg {
-    path {
-      fill: var(--gray-600);
+    svg path {
+      fill: var(--red-400);
     }
   }
 
+  svg path {
+    fill: var(--gray-600);
+    transition: fill 0.3s ease;
+  }
+
   &.active {
-    svg {
-      path {
-        fill: var(--red-400);
-      }
+    svg path {
+      fill: var(--red-400);
     }
   }
 `;

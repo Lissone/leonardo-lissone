@@ -33,7 +33,7 @@ export const Form = styled.form`
     color: var(--gray-100);
     background-color: var(--gray-900);
 
-    transition: 0.3s all;
+    transition: 0.3s border-color, 0.3s box-shadow;
 
     &:hover {
       border-color: var(--gray-500);

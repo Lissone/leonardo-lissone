@@ -17,31 +17,34 @@ interface CollaborationModalProps {
   readonly isOpen: boolean;
   readonly project: ProjectContent | null;
   readonly handleClose: () => void;
+  readonly onAfterClose?: () => void;
 }
 
 export function CollaborationModal({
   isOpen,
   project,
   handleClose,
+  onAfterClose,
 }: CollaborationModalProps) {
   const { data } = useData();
   const { projectsSection } = data;
   const { collaborationModalTitle, collaborationModalText } = projectsSection;
 
-  if (!project) return null;
+  if (!project && !isOpen) return null;
 
   return (
     <Modal
       isOpen={isOpen}
-      title={`${project.name} - ${collaborationModalTitle}`}
+      title={`${project?.name ?? ''} - ${collaborationModalTitle}`}
       headerIcon={<img src="/icons/group-users.svg" alt="Group of users icon" />}
       handleClose={handleClose}
+      onAfterClose={onAfterClose}
     >
       <Content>
         <span>{collaborationModalText}</span>
 
         <ul>
-          {project.collaborators?.map((collaborator) => (
+          {project?.collaborators?.map((collaborator) => (
             <li key={collaborator.name}>
               <div>
                 <CollaboratorAvatar>

@@ -1,3 +1,4 @@
+import { useCallback, useEffect, useRef } from 'react';
 import { FiExternalLink } from 'react-icons/fi';
 import { IoPaperPlaneOutline } from 'react-icons/io5';
 import { ReactTyped } from 'react-typed';
@@ -25,6 +26,8 @@ import {
 export function Presentation() {
   const { data } = useData();
   const { toggleSendMessageModalOpen } = useSendMessageModal();
+  const imageRef = useRef<HTMLDivElement>(null);
+  const rafRef = useRef<number | null>(null);
 
   const { presentationSection, sharedButtons, socials } = data;
   const { heading, text, yearFirstWorkExperience } = presentationSection;
@@ -33,13 +36,31 @@ export function Presentation() {
   const carrerTime = (currentYear - yearFirstWorkExperience).toString();
   const contentText = replaceVariable(text, 'carrerTime', carrerTime);
 
+  const handleScroll = useCallback(() => {
+    if (!imageRef.current || rafRef.current) return;
+    rafRef.current = requestAnimationFrame(() => {
+      if (imageRef.current) {
+        imageRef.current.style.transform = `translateY(${window.scrollY * 0.15}px)`;
+      }
+      rafRef.current = null;
+    });
+  }, []);
+
+  useEffect(() => {
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+      if (rafRef.current) cancelAnimationFrame(rafRef.current);
+    };
+  }, [handleScroll]);
+
   return (
     <Container id="presentation">
       <Content>
         <Heading>
-          <h3 data-aos="fade-left">{heading[0]}</h3>
-          <h2 data-aos="fade-left">{heading[1]}</h2>
-          <h1 data-aos="fade-left">
+          <h3 data-aos="fade-left" data-aos-delay="0">{heading[0]}</h3>
+          <h2 data-aos="fade-left" data-aos-delay="100">{heading[1]}</h2>
+          <h1 data-aos="fade-left" data-aos-delay="200">
             <ReactTyped
               strings={[heading[2]]}
               typeSpeed={100}
@@ -54,12 +75,13 @@ export function Presentation() {
 
         <ResumeText
           data-aos="fade-up"
+          data-aos-delay="300"
           dangerouslySetInnerHTML={{
             __html: contentText,
           }}
         />
 
-        <SocialsContainer data-aos="fade-up">
+        <SocialsContainer data-aos="fade-up" data-aos-delay="400">
           {socials.map((social) => (
             <Tooltip key={social.name} title={social.name}>
               <a
@@ -74,7 +96,7 @@ export function Presentation() {
           ))}
         </SocialsContainer>
 
-        <ButtonsContainer data-aos="fade-up">
+        <ButtonsContainer data-aos="fade-up" data-aos-delay="400">
           <ResumeLinkButton href={sharedButtons.resumeCv} target="_blank" rel="noopener noreferrer">
             {sharedButtons.resumeButtonLabel}
             <FiExternalLink size={22} />
@@ -87,7 +109,7 @@ export function Presentation() {
         </ButtonsContainer>
       </Content>
 
-      <ImageContainer>
+      <ImageContainer ref={imageRef}>
         <img src="/images/bearing-led.svg" alt="Bearing with led" />
       </ImageContainer>
     </Container>

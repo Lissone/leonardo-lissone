@@ -53,11 +53,11 @@ interface TimelineItemContainerProps {
 
 export const TimelineItemContainer = styled.div<TimelineItemContainerProps>`
   margin-top: 4rem;
-  
+
   width: 100%;
-  
+
   position: relative;
-  ${({ $side }) => ($side === 'left' ? 'right: 43.5%;' : 'left: 43.5%;')};
+  ${({ $side }) => ($side === 'left' ? 'right: 46%;' : 'left: 46%;')};
 
   display: flex;
   flex-direction: ${({ $side }) => ($side === 'left' ? 'row-reverse' : 'row')};
@@ -65,7 +65,7 @@ export const TimelineItemContainer = styled.div<TimelineItemContainerProps>`
   gap: 2rem;
 
   @media (max-width: 1560px) {
-    right: 43.5%;
+    right: auto;
     left: 0;
 
     flex-direction: row;
@@ -124,19 +124,17 @@ export const Circle = styled.a<CircleProps>`
 
 interface JobCardsListProps {
   readonly $side: 'left' | 'right';
-  readonly $hasGap: boolean;
 }
 
 export const JobCardsList = styled.div<JobCardsListProps>`
-  max-width: 32rem;
+  max-width: 40rem;
 
   display: flex;
   flex-direction: column;
   align-items: ${({ $side }) => ($side === 'left' ? 'flex-start' : 'flex-end')};
-  ${({ $hasGap }) => ($hasGap ? 'gap: 2rem;' : '')}
-  
+
   @media (max-width: 1560px) {
-    max-width: 40rem;
+    max-width: 50rem;
 
     align-items: flex-start;
   }
@@ -144,9 +142,11 @@ export const JobCardsList = styled.div<JobCardsListProps>`
 
 interface ExperienceCardProps {
   readonly $hasBorderBottom: boolean;
+  readonly $hasMarginTop: boolean;
 }
 
 export const ExperienceCard = styled.div<ExperienceCardProps>`
+  margin-top: ${({ $hasMarginTop }) => ($hasMarginTop ? '1.75rem' : '0')};
   padding: 1.5rem;
 
   position: relative;
@@ -172,6 +172,7 @@ interface ArrowProps {
 export const Arrow = styled.div<ArrowProps>`
   width: 2rem;
   height: 2rem;
+  margin-top: 2rem;
 
   position: absolute;
   top: 1.6rem;
@@ -240,7 +241,7 @@ export const CompanyTitle = styled.a`
 
   color: var(--red-200);
 
-  transition: 0.3s all;
+  transition: 0.3s filter;
 
   &:hover {
     filter: brightness(1.05);
@@ -297,13 +298,13 @@ export const ShowMoreExperiencesButton = styled.button`
   background: transparent;
   
   svg {
-    transition: 0.3s all;
+    transition: 0.3s transform, 0.3s color;
   }
 
   &:hover {
     svg {
       transform: scale(1.03);
-  
+
       color: var(--red-400);
     }
   }

@@ -8,7 +8,10 @@ export const Container = styled.header`
 
   box-shadow: 0rem 0rem 1.875rem rgba(0, 0, 0, 0.25);
 
-  background: var(--gray-800);
+  background: rgba(65, 65, 65, 0.85);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  will-change: backdrop-filter;
 `;
 
 export const Content = styled.div`
@@ -121,10 +124,10 @@ export const ResumeButton = styled.a`
   color: var(--gray-300);
   background: var(--gray-900-opacity-80);
 
-  transition: 0.3s all;
+  transition: 0.3s transform, 0.3s color, 0.3s box-shadow;
 
   &:hover {
-    transform: scale(1.03);
+    transform: scale(1.03) translateY(-2px);
 
     color: var(--red-400);
   }

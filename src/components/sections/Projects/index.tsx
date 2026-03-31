@@ -39,6 +39,7 @@ export function Projects() {
   } = projectsSection;
 
   const [showFilterModal, setShowFilterModal] = useState(false);
+  const [showCollaborationModal, setShowCollaborationModal] = useState(false);
   const [currentGrid, setCurrentGrid] = useState(GRID_LIMIT);
   const [currentProjects, setCurrentProjects] = useState(projects);
   const [projectCollaboratorsSelected, setProjectCollaboratorsSelected]
@@ -69,7 +70,7 @@ export function Projects() {
               <h1>{heading[1]}</h1>
             </Heading>
 
-            <FilterContainer data-aos="fade-up">
+            <FilterContainer data-aos="fade-up" data-aos-delay="100">
               <NameFilterInput placeholder={filterNameTitleLabel} />
 
               <CategoryFilterButton
@@ -84,7 +85,10 @@ export function Projects() {
               <div key={project.name} data-aos="fade-up">
                 <ProjectCard
                   project={project}
-                  handleOpenCollaborationModal={() => setProjectCollaboratorsSelected(project)}
+                  handleOpenCollaborationModal={() => {
+                    setProjectCollaboratorsSelected(project);
+                    setShowCollaborationModal(true);
+                  }}
                 />
               </div>
             ))}
@@ -113,8 +117,9 @@ export function Projects() {
 
       <CollaborationModal
         project={projectCollaboratorsSelected}
-        isOpen={!!projectCollaboratorsSelected}
-        handleClose={() => setProjectCollaboratorsSelected(null)}
+        isOpen={showCollaborationModal}
+        handleClose={() => setShowCollaborationModal(false)}
+        onAfterClose={() => setProjectCollaboratorsSelected(null)}
       />
 
       <CategoryFilterModal
