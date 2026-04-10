@@ -4,7 +4,7 @@ import { Container, ErrorMessage, FormLabel } from './styles';
 
 interface FormControlProps extends React.InputHTMLAttributes<HTMLInputElement> {
   readonly name: string;
-  readonly children: JSX.Element;
+  readonly children: React.ReactElement;
   readonly label?: string;
   readonly error?: FieldError | null;
 }

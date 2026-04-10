@@ -6,8 +6,8 @@ import { HeaderContainer, HeaderContent, Heading } from './styles';
 interface ModalProps {
   readonly isOpen: boolean;
   readonly title: string;
-  readonly headerIcon: JSX.Element;
-  readonly children: JSX.Element;
+  readonly headerIcon: React.ReactElement;
+  readonly children: React.ReactElement;
   readonly handleClose: () => void;
   readonly onAfterClose?: () => void;
 }
