@@ -3,6 +3,6 @@ export const replaceVariable = (
   variableName: string,
   value: string,
 ) => {
-  const pattern = new RegExp(`{{\\s*${variableName}\\s*}}`, 'g');
+  const pattern = new RegExp(String.raw`{{\s*${variableName}\s*}}`, 'g');
   return textTemplate.replace(pattern, value);
 };

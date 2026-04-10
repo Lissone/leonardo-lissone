@@ -88,8 +88,8 @@ export interface ProjectsSectionContent {
   readonly filterCategoryLabels: ProjectsCategoryFilterLabels[];
 }
 
-export type ProjectsCategoryFilterLabelsKeys =
-  | 'all'
+export type ProjectsCategoryFilterLabelsKeys
+  = | 'all'
   | 'repositories'
   | 'production'
   | 'designs'
@@ -106,8 +106,8 @@ export interface ProjectsCategoryFilterLabels {
 // -------------
 
 type GoodHabitsKeys = 'eslint' | 'prettier' | 'test' | 'commit-lint' | 'componentized';
-type DetailsKeys =
-  | 'web'
+type DetailsKeys
+  = | 'web'
   | 'mobile'
   | 'freelance'
   | 'desktop'
