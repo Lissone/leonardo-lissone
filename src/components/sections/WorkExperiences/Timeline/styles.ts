@@ -133,6 +133,10 @@ export const JobCardsList = styled.div<JobCardsListProps>`
   flex-direction: column;
   align-items: ${({ $side }) => ($side === 'left' ? 'flex-start' : 'flex-end')};
 
+  & > *:first-child {
+    margin-top: 0;
+  }
+
   @media (max-width: 1560px) {
     max-width: 50rem;
 
@@ -142,11 +146,10 @@ export const JobCardsList = styled.div<JobCardsListProps>`
 
 interface ExperienceCardProps {
   readonly $hasBorderBottom: boolean;
-  readonly $hasMarginTop: boolean;
 }
 
 export const ExperienceCard = styled.div<ExperienceCardProps>`
-  margin-top: ${({ $hasMarginTop }) => ($hasMarginTop ? '1.75rem' : '0')};
+  margin-top: 1.75rem;
   padding: 1.5rem;
 
   position: relative;
@@ -172,7 +175,6 @@ interface ArrowProps {
 export const Arrow = styled.div<ArrowProps>`
   width: 2rem;
   height: 2rem;
-  margin-top: 2rem;
 
   position: absolute;
   top: 1.6rem;

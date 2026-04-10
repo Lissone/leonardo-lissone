@@ -60,7 +60,6 @@ function TimelineItem({ job, index }: TimelineItemProps) {
       <JobCardsList $side={isOddIndex ? 'left' : 'right'}>
         {currentExperiences.map((experience, i) => (
           <ExperienceCard
-            $hasMarginTop={showMoreExperiences}
             key={experience.role}
             $hasBorderBottom={currentExperiences.length === 1 || i > 0}
             data-aos={aosAnimation || `fade-${isOddIndex ? 'right' : (i > 0 ? 'down' : 'left')}`}
