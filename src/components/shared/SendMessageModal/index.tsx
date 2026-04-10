@@ -1,5 +1,5 @@
 import { yupResolver } from '@hookform/resolvers/yup';
-import { send as emailJsSend } from 'emailjs-com';
+import { send as emailJsSend } from '@emailjs/browser';
 import { useState } from 'react';
 import { SubmitHandler, useForm } from 'react-hook-form';
 import { BiSend } from 'react-icons/bi';
