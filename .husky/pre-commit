@@ -8,7 +8,7 @@ if [ -z "$STAGED_FILES" ]; then
 fi
 
 echo "... Running Linter ..."
-./node_modules/.bin/eslint $STAGED_FILES --quiet --ignore-path .gitignore
+./node_modules/.bin/eslint $STAGED_FILES --quiet
 LINTER_EXIT_CODE=$?
 
 # check linter exit code
