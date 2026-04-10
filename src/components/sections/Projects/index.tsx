@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import { FaFilter } from 'react-icons/fa';
 import { FiPlusCircle } from 'react-icons/fi';
 import { IoIosSearch } from 'react-icons/io';
@@ -44,17 +44,19 @@ export function Projects() {
   const [currentProjects, setCurrentProjects] = useState(projects);
   const [projectCollaboratorsSelected, setProjectCollaboratorsSelected]
     = useState<ProjectContent | null>(null);
+  const [prevData, setPrevData] = useState(data);
+
+  if (prevData !== data) {
+    setPrevData(data);
+    setCurrentProjects(data.projectsSection.projects);
+    setProjectCollaboratorsSelected(null);
+  }
 
   const projectsSliced = currentProjects.slice(0, currentGrid);
 
   const handleShowMoreProjects = () => {
     setCurrentGrid((grid) => grid + GRID_LIMIT);
   };
-
-  useEffect(() => {
-    setCurrentProjects(data.projectsSection.projects);
-    setProjectCollaboratorsSelected(null);
-  }, [data]);
 
   return (
     <ProjectsFilterProvider setCurrentProjects={setCurrentProjects}>

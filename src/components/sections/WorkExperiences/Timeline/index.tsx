@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import { TiArrowSortedDown } from 'react-icons/ti';
 
 
@@ -39,15 +39,12 @@ function TimelineItem({ job, index }: TimelineItemProps) {
   const windowWidth = useWindowWidth();
 
   const [currentExperiencesListItems, setCurrentExperiencesListItems] = useState(1);
-  const [aosAnimation, setAosAnimation] = useState<string>();
 
   const currentExperiences = job.experiences.slice(0, currentExperiencesListItems);
   const showMoreExperiences = currentExperiences < job.experiences;
   const isOddIndex = (index + 1) % 2 === 0;
 
-  useEffect(() => {
-    setAosAnimation(windowWidth <= 1560 ? 'fade-up' : undefined);
-  }, [windowWidth]);
+  const aosAnimation = windowWidth > 0 && windowWidth <= 1560 ? 'fade-up' : undefined;
 
   return (
     <TimelineItemContainer key={job.company} $side={isOddIndex ? 'left' : 'right'}>
